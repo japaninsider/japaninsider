@@ -53,3 +53,8 @@ If you later create a repository named `japaninsider.github.io`, that can be use
 │       └── site-preview.png
 └── README.md
 ```
+
+
+## Bilingual language switch
+
+The home page now supports English and Japanese with an **EN / 日本語** switch in the header. The selected language is stored in the browser using `localStorage`. First-time visitors whose browser language is Japanese are shown Japanese automatically.
