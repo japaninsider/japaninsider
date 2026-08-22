@@ -150,3 +150,18 @@ The homepage footer now shows the legal link in all three languages:
 - ES: Información legal
 
 Also added `legal.html` to the sitemap and added cross-navigation between policy pages.
+
+
+## v3 — explicit EUR sale prices
+
+The legal disclosure now clearly distinguishes:
+- USD on the website = reference display
+- Actual sale/checkout currency = EUR
+
+Current intended EUR sale prices:
+- Quick Help: €49
+- Personal Plan: €199
+- Premium: €499
+- VIP: €999+ / individual quotation
+
+The exact EUR amount must be visible before the customer confirms payment.

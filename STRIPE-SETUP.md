@@ -30,3 +30,13 @@ Before going live:
 8. Never commit Stripe secret keys or identity/bank details to GitHub.
 
 This file intentionally contains no bank account numbers, residential address, phone number, password, or API secret.
+
+
+## Exact EUR prices to create in Stripe
+
+- Japan Quick Help — EUR 49
+- Japan Personal Plan — EUR 199
+- Japan Premium — EUR 499
+- Japan VIP — from EUR 999 (individual quotation / custom payment link as appropriate)
+
+Keep the website's USD figures as reference prices only. The final Stripe Checkout page must show the exact EUR amount before payment.
