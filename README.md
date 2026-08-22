@@ -78,3 +78,14 @@ Pricing is denominated in EUR (€):
 - VIP: €999+
 
 English, Japanese and Spanish pricing copy identifies EUR as the service currency.
+
+
+## Language-specific display currencies
+
+The site now changes the **display currency with the selected language**, while the actual checkout currency remains EUR.
+
+- English: approximate USD — ≈$57 / ≈$233 / ≈$583 / ≈$1,168+
+- 日本語: approximate JPY — 約¥9,100 / 約¥37,000 / 約¥92,700 / 約¥185,600+
+- Español: EUR — €49 / €199 / €499 / €999+
+
+The inquiry form keeps each plan's underlying value in EUR so the business price remains unambiguous. USD and JPY are reference displays and should be reviewed periodically as exchange rates move.

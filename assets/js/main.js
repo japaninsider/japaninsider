@@ -9,14 +9,14 @@ const translations = {
     "hero.lede":"Skip the generic itinerary. We turn your dates, tastes, budget and travel style into a thoughtful Japan plan — with practical local research and human support when you need it.",
     "hero.choose":"Choose your plan","hero.explore":"Explore services","hero.trust1":"Japan-based research","hero.trust2":"100% personalized","hero.trust3":"English support",
     "hero.card_title":"Made around you","hero.card_text":"No templates. No tour-bus itinerary.",
-    "stats.research":"Personal research","stats.tiers":"Simple service tiers","stats.pricing":"Clear pricing","stats.local":"Local perspective",
+    "stats.research":"Personal research","stats.tiers":"Simple service tiers","stats.currency":"USD≈","stats.pricing":"Approx. pricing","stats.local":"Local perspective",
     "services.eyebrow":"WHAT WE DO","services.title":"Less searching. More experiencing.","services.intro":"Use Japan Insider for the parts of planning that take time, context and local judgement.",
     "services.travel_title":"Travel planning","services.travel_text":"Custom day-by-day ideas shaped around your pace, interests, dates and budget.",
     "services.food_title":"Food & experiences","services.food_text":"Research for restaurants, neighborhoods, activities and memorable local experiences.",
     "services.shop_title":"Shopping support","services.shop_text":"Help finding Japan-only products, specialty stores, gifts and harder-to-source items.",
     "services.stay_title":"Stay & area advice","services.stay_text":"Understand which area fits your trip before you commit to a hotel or longer stay.",
     "services.concierge_title":"Concierge support","services.concierge_text":"Extra help before and during your trip for questions, research and practical guidance.",
-    "pricing.eyebrow":"CHOOSE YOUR PLAN","pricing.title":"Start small. Upgrade when you need more.","pricing.intro":"Simple EUR pricing for international travelers. Final scope is confirmed before payment.",
+    "pricing.eyebrow":"CHOOSE YOUR PLAN","pricing.title":"Start small. Upgrade when you need more.","pricing.intro":"Approximate prices are shown in USD. Checkout is charged in EUR. Final scope is confirmed before payment.",
     "pricing.quick_kicker":"QUICK HELP","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"30-minute consultation",
     "pricing.quick_1":"30-min video or chat","pricing.quick_2":"Up to 3 focused questions","pricing.quick_3":"Practical recommendations",
     "pricing.personal_kicker":"PERSONAL PLAN","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Custom travel research",
@@ -53,14 +53,14 @@ const translations = {
     "hero.lede":"ありきたりな旅行プランではなく、日程・好み・予算・旅のスタイルに合わせて、日本での時間を丁寧に設計します。現地目線のリサーチと、必要なときに頼れる人のサポートを。",
     "hero.choose":"プランを見る","hero.explore":"サービスを見る","hero.trust1":"日本から現地リサーチ","hero.trust2":"100%パーソナル","hero.trust3":"英語・日本語対応",
     "hero.card_title":"あなたに合わせて設計","hero.card_text":"テンプレートではなく、一人ひとりに合う旅を。",
-    "stats.research":"1対1の個別リサーチ","stats.tiers":"わかりやすい4プラン","stats.pricing":"明確な料金","stats.local":"日本からの現地目線",
+    "stats.research":"1対1の個別リサーチ","stats.tiers":"わかりやすい4プラン","stats.currency":"JPY≈","stats.pricing":"参考価格","stats.local":"日本からの現地目線",
     "services.eyebrow":"サービス","services.title":"検索する時間を減らして、日本を楽しむ時間を増やす。","services.intro":"時間・土地勘・比較が必要な旅行準備を、Japan Insiderがお手伝いします。",
     "services.travel_title":"旅行プランニング","services.travel_text":"ペース、興味、日程、予算に合わせて、オーダーメイドの旅程アイデアをご提案します。",
     "services.food_title":"グルメ＆体験","services.food_text":"レストラン、街、アクティビティ、思い出に残るローカル体験をリサーチします。",
     "services.shop_title":"ショッピングサポート","services.shop_text":"日本限定商品、専門店、ギフト、見つけにくいアイテム探しをサポートします。",
     "services.stay_title":"滞在エリア相談","services.stay_text":"ホテルや長期滞在先を決める前に、旅に合うエリア選びをお手伝いします。",
     "services.concierge_title":"コンシェルジュサポート","services.concierge_text":"旅行前・旅行中の質問や追加リサーチ、実用的な情報収集をサポートします。",
-    "pricing.eyebrow":"料金プラン","pricing.title":"まずは小さく。必要に応じてアップグレード。","pricing.intro":"海外のお客様にもわかりやすいユーロ（EUR）料金。お支払い前にサービス範囲を確認します。",
+    "pricing.eyebrow":"料金プラン","pricing.title":"まずは小さく。必要に応じてアップグレード。","pricing.intro":"日本円は参考価格です。実際の決済はユーロ（EUR）で行われます。お支払い前にサービス範囲を確認します。",
     "pricing.quick_kicker":"クイック相談","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"30分の個別相談",
     "pricing.quick_1":"30分のビデオまたはチャット","pricing.quick_2":"集中質問 最大3件","pricing.quick_3":"実用的なおすすめ・アドバイス",
     "pricing.personal_kicker":"パーソナルプラン","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"オーダーメイド旅行リサーチ",
@@ -98,14 +98,14 @@ const translations = {
     "hero.lede":"Olvídate de los itinerarios genéricos. Convertimos tus fechas, gustos, presupuesto y estilo de viaje en un plan de Japón pensado para ti, con investigación local práctica y apoyo humano cuando lo necesites.",
     "hero.choose":"Ver planes","hero.explore":"Explorar servicios","hero.trust1":"Investigación desde Japón","hero.trust2":"100 % personalizado","hero.trust3":"Atención en español, inglés y japonés",
     "hero.card_title":"Diseñado a tu medida","hero.card_text":"Sin plantillas. Sin itinerarios de turismo en masa.",
-    "stats.research":"Investigación personal","stats.tiers":"Planes sencillos","stats.pricing":"Precios claros","stats.local":"Perspectiva local",
+    "stats.research":"Investigación personal","stats.tiers":"Planes sencillos","stats.currency":"EUR","stats.pricing":"Precios claros","stats.local":"Perspectiva local",
     "services.eyebrow":"QUÉ HACEMOS","services.title":"Menos búsquedas. Más experiencias.","services.intro":"Usa Japan Insider para las partes del viaje que requieren tiempo, contexto y criterio local.",
     "services.travel_title":"Planificación del viaje","services.travel_text":"Ideas día a día adaptadas a tu ritmo, intereses, fechas y presupuesto.",
     "services.food_title":"Gastronomía y experiencias","services.food_text":"Investigamos restaurantes, barrios, actividades y experiencias locales memorables.",
     "services.shop_title":"Ayuda con compras","services.shop_text":"Te ayudamos a encontrar productos exclusivos de Japón, tiendas especializadas, regalos y artículos difíciles de localizar.",
     "services.stay_title":"Alojamiento y zonas","services.stay_text":"Te ayudamos a entender qué zona encaja mejor con tu viaje antes de reservar hotel o una estancia más larga.",
     "services.concierge_title":"Servicio de concierge","services.concierge_text":"Apoyo adicional antes y durante el viaje para preguntas, investigación y orientación práctica.",
-    "pricing.eyebrow":"ELIGE TU PLAN","pricing.title":"Empieza por lo esencial. Amplía cuando lo necesites.","pricing.intro":"Precios sencillos en EUR para viajeros internacionales. El alcance final se confirma antes del pago.",
+    "pricing.eyebrow":"ELIGE TU PLAN","pricing.title":"Empieza por lo esencial. Amplía cuando lo necesites.","pricing.intro":"Precios en EUR. El pago se realiza en EUR y el alcance final se confirma antes del pago.",
     "pricing.quick_kicker":"AYUDA RÁPIDA","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"Consulta de 30 minutos",
     "pricing.quick_1":"30 min por vídeo o chat","pricing.quick_2":"Hasta 3 preguntas concretas","pricing.quick_3":"Recomendaciones prácticas",
     "pricing.personal_kicker":"PLAN PERSONAL","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Investigación de viaje personalizada",
@@ -137,6 +137,49 @@ const translations = {
   }
 };
 
+
+const displayPrices = {
+  en: {
+    quick: "≈$57",
+    personal: "≈$233",
+    premium: "≈$583",
+    vip: "≈$1,168+"
+  },
+  ja: {
+    quick: "約¥9,100",
+    personal: "約¥37,000",
+    premium: "約¥92,700",
+    vip: "約¥185,600+"
+  },
+  es: {
+    quick: "€49",
+    personal: "€199",
+    premium: "€499",
+    vip: "€999+"
+  }
+};
+
+const planNames = {
+  quick: "Japan Quick Help",
+  personal: "Japan Personal Plan",
+  premium: "Japan Premium",
+  vip: "Japan VIP"
+};
+
+function applyLocalizedPricing(lang) {
+  const prices = displayPrices[lang] || displayPrices.en;
+
+  document.querySelectorAll("[data-price-key]").forEach(el => {
+    const key = el.dataset.priceKey;
+    if (prices[key]) el.textContent = prices[key];
+  });
+
+  document.querySelectorAll("[data-plan-option]").forEach(option => {
+    const key = option.dataset.planOption;
+    if (prices[key]) option.textContent = `${planNames[key]} — ${prices[key]}`;
+  });
+}
+
 let currentLang = localStorage.getItem("japanInsiderLang");
 if (!currentLang) {
   const browserLang = navigator.language?.toLowerCase() || "";
@@ -163,6 +206,7 @@ function applyLanguage(lang){
     el.placeholder = translations[lang][key] ?? translations.en[key] ?? el.placeholder;
   });
   document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.toggle("active", btn.dataset.lang === lang));
+  applyLocalizedPricing(lang);
   document.title = translations[lang]["meta.title"];
 }
 
