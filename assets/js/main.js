@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "honeytoraesp@gmail.com";
+const CONTACT_EMAIL = "replace-with-your-email@example.com";
 
 const translations = {
   en: {
@@ -89,11 +89,59 @@ const translations = {
     "footer.desc":"日本旅行のパーソナルリサーチ＆コンシェルジュサポート。","footer.explore":"メニュー","footer.info":"情報","footer.project":"プロジェクト","footer.privacy":"プライバシー","footer.terms":"利用規約","footer.contact":"お問い合わせ","footer.tagline":"Your Japan, Better.","footer.built":"GitHub Pagesで公開できます。",
     "status.owner":"サイト管理者：公開前に assets/js/main.js のメールアドレスを実際の問い合わせ先へ変更してください。","status.open":"メールアプリが開き、問い合わせ文が作成されます。",
     "mail.subject":"Japan Insider お問い合わせ","mail.name":"お名前","mail.email":"メール","mail.plan":"プラン","mail.details":"旅行の詳細"
+  },
+  es: {
+    "meta.title":"Japan Insider — Planificación de viajes a Japón y concierge personal",
+    "nav.services":"Servicios","nav.pricing":"Precios","nav.how":"Cómo funciona","nav.about":"Sobre nosotros","nav.faq":"Preguntas frecuentes","nav.start":"Empezar",
+    "hero.eyebrow":"TU VIAJE A JAPÓN, INVESTIGADO Y DISEÑADO PARA TI",
+    "hero.title_html":"Tu Japón.<br><span>Mejor planificado.</span>",
+    "hero.lede":"Olvídate de los itinerarios genéricos. Convertimos tus fechas, gustos, presupuesto y estilo de viaje en un plan de Japón pensado para ti, con investigación local práctica y apoyo humano cuando lo necesites.",
+    "hero.choose":"Ver planes","hero.explore":"Explorar servicios","hero.trust1":"Investigación desde Japón","hero.trust2":"100 % personalizado","hero.trust3":"Atención en español, inglés y japonés",
+    "hero.card_title":"Diseñado a tu medida","hero.card_text":"Sin plantillas. Sin itinerarios de turismo en masa.",
+    "stats.research":"Investigación personal","stats.tiers":"Planes sencillos","stats.pricing":"Precios claros","stats.local":"Perspectiva local",
+    "services.eyebrow":"QUÉ HACEMOS","services.title":"Menos búsquedas. Más experiencias.","services.intro":"Usa Japan Insider para las partes del viaje que requieren tiempo, contexto y criterio local.",
+    "services.travel_title":"Planificación del viaje","services.travel_text":"Ideas día a día adaptadas a tu ritmo, intereses, fechas y presupuesto.",
+    "services.food_title":"Gastronomía y experiencias","services.food_text":"Investigamos restaurantes, barrios, actividades y experiencias locales memorables.",
+    "services.shop_title":"Ayuda con compras","services.shop_text":"Te ayudamos a encontrar productos exclusivos de Japón, tiendas especializadas, regalos y artículos difíciles de localizar.",
+    "services.stay_title":"Alojamiento y zonas","services.stay_text":"Te ayudamos a entender qué zona encaja mejor con tu viaje antes de reservar hotel o una estancia más larga.",
+    "services.concierge_title":"Servicio de concierge","services.concierge_text":"Apoyo adicional antes y durante el viaje para preguntas, investigación y orientación práctica.",
+    "pricing.eyebrow":"ELIGE TU PLAN","pricing.title":"Empieza por lo esencial. Amplía cuando lo necesites.","pricing.intro":"Precios sencillos en USD para viajeros internacionales. El alcance final se confirma antes del pago.",
+    "pricing.quick_kicker":"AYUDA RÁPIDA","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"Consulta de 30 minutos",
+    "pricing.quick_1":"30 min por vídeo o chat","pricing.quick_2":"Hasta 3 preguntas concretas","pricing.quick_3":"Recomendaciones prácticas",
+    "pricing.personal_kicker":"PLAN PERSONAL","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Investigación de viaje personalizada",
+    "pricing.personal_1":"Ideas de itinerario personalizadas","pricing.personal_2":"Investigación de zonas, comida y actividades","pricing.personal_3":"Plan de viaje fácil de compartir",
+    "pricing.popular":"MÁS POPULAR","pricing.premium_kicker":"PREMIUM","pricing.premium_title":"Japan Premium","pricing.premium_sub":"Plan + apoyo de concierge",
+    "pricing.premium_1":"Todo lo incluido en Personal Plan","pricing.premium_2":"7 días de soporte por chat durante el viaje","pricing.premium_3":"Investigación adicional y actualizaciones","pricing.choose_premium":"Elegir Premium",
+    "pricing.vip_kicker":"VIP","pricing.vip_title":"Japan VIP","pricing.vip_sub":"Concierge de atención personalizada","pricing.vip_1":"Apoyo totalmente personalizado","pricing.vip_2":"Investigación prioritaria","pricing.vip_3":"Servicio adaptado a tu viaje","pricing.contact":"Contactar",
+    "common.get_started":"Empezar",
+    "pricing.legal":"Japan Insider se centra actualmente en investigación, información, apoyo similar a traducción y asesoramiento de viajes. No vendemos transporte ni alojamiento como agencia de viajes.",
+    "how.eyebrow":"CÓMO FUNCIONA","how.title":"Cuatro pasos sencillos.","how.step1_title":"Cuéntanos tu viaje","how.step1_text":"Comparte tus fechas, número de viajeros, intereses, presupuesto y en qué necesitas ayuda.",
+    "how.step2_title":"Investigamos por ti","how.step2_text":"Filtramos el exceso de información y nos centramos en opciones que realmente encajan contigo.",
+    "how.step3_title":"Recibes tu plan","how.step3_text":"Obtén recomendaciones claras y prácticas que puedes utilizar de inmediato.",
+    "how.step4_title":"Seguimos disponibles","how.step4_text":"Los clientes Premium y VIP pueden añadir apoyo relacionado con el propio viaje.",
+    "about.eyebrow":"WHY JAPAN INSIDER","about.title":"Contexto local útil, sin viajes prefabricados.","about.text":"Japón es fácil de admirar, pero planificarlo bien puede llevar mucho tiempo. Japan Insider existe para hacer más ligera la investigación y más personal la experiencia.",
+    "about.b1_title":"Perspectiva local","about.b1_text":"Investigación basada en lo que realmente funciona en Japón.","about.b2_title":"Personal por diseño","about.b2_text":"Recomendaciones basadas en tu viaje, no en una plantilla.",
+    "about.b3_title":"Ahorra tiempo","about.b3_text":"Dedica menos tiempo de tus vacaciones a planificar tus vacaciones.","about.b4_title":"Apoyo humano","about.b4_text":"Pregunta a una persona real cuando los resultados de búsqueda no son suficientes.",
+    "faq.title":"Preguntas útiles antes de reservar.","faq.q1":"¿Japan Insider es una agencia de viajes?","faq.a1":"No. El servicio inicial está diseñado alrededor de investigación de viajes, asesoramiento, información y apoyo tipo concierge. No vendemos paquetes turísticos, transporte ni alojamiento.",
+    "faq.q2":"¿Hacéis reservas de restaurantes u hoteles?","faq.a2":"Podemos investigar opciones y explicar los pasos para reservar. Los servicios de reserva pueden estar limitados según el proveedor, la normativa local y el alcance de tu plan.",
+    "faq.q3":"¿Podéis ayudarme si es mi primer viaje a Japón?","faq.a3":"Sí. Los viajeros que visitan Japón por primera vez encajan especialmente bien, ya que elegir zonas, entender el transporte, la etiqueta y organizar los horarios puede resultar abrumador al principio.",
+    "faq.q4":"¿Ofrecéis apoyo para viajes fuera de Tokio?","faq.a4":"Sí. El servicio puede cubrir destinos de todo Japón, dependiendo de la investigación necesaria.",
+    "faq.q5":"¿Cuánto tardaré en recibir mi plan?","faq.a5":"El plazo depende del alcance. Confirmamos contigo una fecha de entrega antes del pago para que las expectativas estén claras.",
+    "contact.eyebrow":"EMPIEZA A PLANIFICAR JAPÓN","contact.title":"Cuéntanos qué estás planeando.","contact.text":"Utiliza el formulario para preparar una consulta. Esta versión inicial abre tu aplicación de correo para que puedas enviar el mensaje directamente, sin backend ni almacenamiento de datos personales.",
+    "contact.note_html":"Antes de publicar, sustituye el correo de contacto en <code>assets/js/main.js</code> por tu dirección comercial real.",
+    "form.name":"Nombre","form.email":"Correo electrónico","form.plan":"Me interesa","form.message":"Cuéntanos sobre tu viaje","form.submit":"Preparar correo de consulta","form.unsure":"Aún no lo sé",
+    "form.name_ph":"Tu nombre","form.email_ph":"tu@email.com","form.message_ph":"Fechas, ciudades, viajeros, intereses, presupuesto y en qué necesitas ayuda...",
+    "footer.desc":"Investigación de viajes personalizada y apoyo de concierge para Japón.","footer.explore":"Explorar","footer.info":"Información","footer.project":"Proyecto","footer.privacy":"Privacidad","footer.terms":"Términos","footer.contact":"Contacto","footer.tagline":"Your Japan, Better.","footer.built":"Preparado para GitHub Pages.",
+    "status.owner":"Propietario del sitio: añade tu correo real en assets/js/main.js antes de publicar.","status.open":"Tu aplicación de correo debería abrirse con la consulta preparada.",
+    "mail.subject":"Consulta de Japan Insider","mail.name":"Nombre","mail.email":"Correo","mail.plan":"Plan","mail.details":"Detalles del viaje"
   }
 };
 
 let currentLang = localStorage.getItem("japanInsiderLang");
-if (!currentLang) currentLang = navigator.language?.toLowerCase().startsWith("ja") ? "ja" : "en";
+if (!currentLang) {
+  const browserLang = navigator.language?.toLowerCase() || "";
+  currentLang = browserLang.startsWith("ja") ? "ja" : browserLang.startsWith("es") ? "es" : "en";
+}
 
 function t(key){ return translations[currentLang]?.[key] ?? translations.en[key] ?? key; }
 

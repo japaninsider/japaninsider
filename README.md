@@ -58,3 +58,13 @@ If you later create a repository named `japaninsider.github.io`, that can be use
 ## Bilingual language switch
 
 The home page now supports English and Japanese with an **EN / 日本語** switch in the header. The selected language is stored in the browser using `localStorage`. First-time visitors whose browser language is Japanese are shown Japanese automatically.
+
+
+## Trilingual language switch
+
+The homepage supports **English / 日本語 / Español**.
+
+- Japanese browser → Japanese on first visit
+- Spanish browser → Spanish on first visit
+- Other languages → English
+- The visitor's selected language is remembered in `localStorage`
