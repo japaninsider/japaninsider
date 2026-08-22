@@ -68,3 +68,13 @@ The homepage supports **English / 日本語 / Español**.
 - Spanish browser → Spanish on first visit
 - Other languages → English
 - The visitor's selected language is remembered in `localStorage`
+
+## Pricing currency
+
+Pricing is denominated in EUR (€):
+- Quick Help: €49
+- Personal Plan: €199
+- Premium: €499
+- VIP: €999+
+
+English, Japanese and Spanish pricing copy identifies EUR as the service currency.
