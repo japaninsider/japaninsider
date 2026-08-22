@@ -165,3 +165,7 @@ Current intended EUR sale prices:
 - VIP: €999+ / individual quotation
 
 The exact EUR amount must be visible before the customer confirms payment.
+
+
+## v4 — Client intake
+Added `intake.html` with EN / 日本語 / ES and plan-specific questions for Quick, Personal, Premium and VIP. Added Stripe post-payment URLs and `ORDER-WORKFLOW.md`.

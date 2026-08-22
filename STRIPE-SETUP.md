@@ -40,3 +40,12 @@ This file intentionally contains no bank account numbers, residential address, p
 - Japan VIP — from EUR 999 (individual quotation / custom payment link as appropriate)
 
 Keep the website's USD figures as reference prices only. The final Stripe Checkout page must show the exact EUR amount before payment.
+
+
+## Post-payment intake URLs
+- Quick Help: `https://japaninsider.github.io/japaninsider/intake.html?plan=quick`
+- Personal: `https://japaninsider.github.io/japaninsider/intake.html?plan=personal`
+- Premium: `https://japaninsider.github.io/japaninsider/intake.html?plan=premium`
+- VIP: `https://japaninsider.github.io/japaninsider/intake.html?plan=vip`
+
+Use the matching URL as the Stripe post-payment destination when supported. Each URL preselects the purchased plan and displays the relevant questions.
