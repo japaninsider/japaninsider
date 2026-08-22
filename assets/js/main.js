@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "replace-with-your-email@example.com";
+const CONTACT_EMAIL = "honeytoraesp@gmail.com";
 
 const translations = {
   en: {

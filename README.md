@@ -101,3 +101,40 @@ The website now uses **USD as the public pricing basis in all three languages**:
 - VIP: $999+
 
 The site explicitly explains that the actual payment/Stripe checkout is processed in **EUR**. The plan option values used internally remain EUR-based.
+
+
+## Japan / Stripe launch additions
+Added `legal.html` (特定商取引法に基づく表記), a footer link, and cancellation/refund terms.
+Public contact: `honeytoraesp@gmail.com`.
+For privacy, operator name/address/phone use 「請求があった場合には遅滞なく開示いたします。」 on the public page. Keep the actual legal details available for Stripe and prompt disclosure.
+Before payments: show the actual EUR charge before final purchase; register `legal.html` in Stripe's commerce disclosure setting; confirm all policies match actual operations.
+
+
+## Legal operator
+販売事業者・運営責任者：脇濱正靖
+
+
+## Complete Japan launch build — 2026-08-22
+
+Included in this package:
+- English / 日本語 / Español homepage language switching
+- Public pricing basis: USD
+- Intended checkout currency: EUR via Stripe
+- Real inquiry email configured: `honeytoraesp@gmail.com`
+- Legal operator name: `脇濱正靖`
+- `legal.html` — 特定商取引法に基づく表記
+- Trilingual `privacy.html`
+- Trilingual `terms.html`
+- Cancellation/refund policy
+- High-resolution replacement image for the WHY JAPAN INSIDER section
+- GitHub Pages-ready static structure
+
+### Private information
+The owner's residential address, telephone number, bank details, identity documents, Stripe secret keys, and other sensitive credentials are intentionally NOT stored in this public website package or README.
+
+The legal page uses the wording:
+「請求があった場合には遅滞なく開示いたします。」
+for address and telephone number.
+
+### Stripe status
+Stripe is not yet wired to live payment links in this build. When the Stripe account and EUR products are created, replace the inquiry/payment CTAs with Stripe Payment Links or Checkout URLs after testing them in Stripe test mode first.
