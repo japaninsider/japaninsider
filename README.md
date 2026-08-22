@@ -138,3 +138,15 @@ for address and telephone number.
 
 ### Stripe status
 Stripe is not yet wired to live payment links in this build. When the Stripe account and EUR products are created, replace the inquiry/payment CTAs with Stripe Payment Links or Checkout URLs after testing them in Stripe test mode first.
+
+
+## v2 footer/legal fix
+
+This rebuild fixes the missing homepage footer link to `legal.html`.
+
+The homepage footer now shows the legal link in all three languages:
+- EN: Legal / Commerce disclosure
+- 日本語: 特定商取引法に基づく表記
+- ES: Información legal
+
+Also added `legal.html` to the sitemap and added cross-navigation between policy pages.
