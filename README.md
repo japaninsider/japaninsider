@@ -89,3 +89,15 @@ The site now changes the **display currency with the selected language**, while 
 - Español: EUR — €49 / €199 / €499 / €999+
 
 The inquiry form keeps each plan's underlying value in EUR so the business price remains unambiguous. USD and JPY are reference displays and should be reviewed periodically as exchange rates move.
+
+
+## USD public pricing / EUR checkout
+
+The website now uses **USD as the public pricing basis in all three languages**:
+
+- Quick Help: $49
+- Personal Plan: $199
+- Premium: $499
+- VIP: $999+
+
+The site explicitly explains that the actual payment/Stripe checkout is processed in **EUR**. The plan option values used internally remain EUR-based.
