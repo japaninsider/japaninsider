@@ -189,3 +189,6 @@ Added Quick Help sample, sample links on every pricing card, and a prominent sam
 
 ## v9 — Quick Help asynchronous workflow
 Quick Help no longer includes video calls. Customers submit up to 3 focused questions through the online form and receive researched answers by email, usually within 2 business days. No appointment is required.
+
+## v10 — pricing language cleanup
+All text directly beneath the USD prices and all per-plan sample links are explicitly localized for EN / 日本語 / ES.

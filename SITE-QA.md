@@ -30,3 +30,7 @@ After uploading to GitHub, open the homepage, scroll to the footer, and confirm 
 
 ## v7 language QA
 Verified sample page supports explicit `?lang=en`, `?lang=ja`, `?lang=es` and fixed sample headings have translations.
+
+
+## v10 pricing QA
+Verified Japanese pricing labels include 最大3つの質問 / 通常2営業日以内にメールで回答 / 予約・ビデオ通話不要 / 1回払い, with Spanish and English equivalents.

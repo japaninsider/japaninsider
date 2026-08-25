@@ -269,3 +269,45 @@ applyLanguage(currentLang);
  document.addEventListener("DOMContentLoaded",sync);
  document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(sync,0);});
 })();
+
+
+// v10: pricing-card language cleanup.
+(function(){
+ const copy={
+  en:{
+   quick:"Up to 3 questions · Usually answered by email within 2 business days · No appointment or video call required",
+   personal:"Personalized travel plan · One-time payment",
+   premium:"Detailed travel plan + travel support · One-time payment",
+   vip:"High-touch concierge planning · One-time payment",
+   sample:"See sample →"
+  },
+  ja:{
+   quick:"最大3つの質問 · 通常2営業日以内にメールで回答 · 予約・ビデオ通話不要",
+   personal:"あなた専用の旅行プラン · 1回払い",
+   premium:"詳細な旅行プラン＋旅行中サポート · 1回払い",
+   vip:"コンシェルジュ型の個別プランニング · 1回払い",
+   sample:"このプランの納品例を見る →"
+  },
+  es:{
+   quick:"Hasta 3 preguntas · Normalmente respondemos por correo en 2 días laborables · Sin cita ni videollamada",
+   personal:"Plan de viaje personalizado · Pago único",
+   premium:"Plan detallado + soporte durante el viaje · Pago único",
+   vip:"Planificación concierge personalizada · Pago único",
+   sample:"Ver muestra →"
+  }
+ };
+ function lang(){
+   const x=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+   return ["en","ja","es"].includes(x)?x:"en";
+ }
+ function applyPricingCopy(){
+   const c=copy[lang()];
+   const map={"pricing.quickNote":"quick","pricing.personalNote":"personal","pricing.premiumNote":"premium","pricing.vipNote":"vip"};
+   Object.keys(map).forEach(k=>document.querySelectorAll('[data-i18n="'+k+'"]').forEach(e=>e.textContent=c[map[k]]));
+   document.querySelectorAll('[data-i18n="pricing.seeSample"]').forEach(e=>e.textContent=c.sample);
+ }
+ document.addEventListener("DOMContentLoaded",applyPricingCopy);
+ document.addEventListener("click",function(e){
+   if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(applyPricingCopy,0);
+ });
+})();
