@@ -181,3 +181,11 @@ Added a homepage 'See what you'll receive' section, trilingual `samples.html` wi
 ## v7 — sample language fix
 The selected site language is now passed to `samples.html`.
 Fixed labels inside the sample deliverables are translated for EN / 日本語 / ES.
+
+
+## v8
+Added Quick Help sample, sample links on every pricing card, and a prominent sample CTA immediately below pricing. Language and selected plan are preserved.
+
+
+## v9 — Quick Help asynchronous workflow
+Quick Help no longer includes video calls. Customers submit up to 3 focused questions through the online form and receive researched answers by email, usually within 2 business days. No appointment is required.

@@ -17,8 +17,8 @@ const translations = {
     "services.stay_title":"Stay & area advice","services.stay_text":"Understand which area fits your trip before you commit to a hotel or longer stay.",
     "services.concierge_title":"Concierge support","services.concierge_text":"Extra help before and during your trip for questions, research and practical guidance.",
     "pricing.eyebrow":"CHOOSE YOUR PLAN","pricing.title":"Start small. Upgrade when you need more.","pricing.intro":"Prices, sale amounts, and checkout are in USD, and the exact USD amount is shown before payment.",
-    "pricing.quick_kicker":"QUICK HELP","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"30-minute consultation",
-    "pricing.quick_1":"30-min video or chat","pricing.quick_2":"Up to 3 focused questions","pricing.quick_3":"Practical recommendations",
+    "pricing.quick_kicker":"QUICK HELP","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"Asynchronous email support",
+    "pricing.quick_1":"Online form — no appointment required","pricing.quick_2":"Up to 3 focused questions","pricing.quick_3":"Researched answers by email, usually within 2 business days",
     "pricing.personal_kicker":"PERSONAL PLAN","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Custom travel research",
     "pricing.personal_1":"Personalized itinerary ideas","pricing.personal_2":"Area, food & activity research","pricing.personal_3":"Shareable travel plan",
     "pricing.popular":"MOST POPULAR","pricing.premium_kicker":"PREMIUM","pricing.premium_title":"Japan Premium","pricing.premium_sub":"Plan + concierge support",
@@ -62,7 +62,7 @@ const translations = {
     "services.concierge_title":"コンシェルジュサポート","services.concierge_text":"旅行前・旅行中の質問や追加リサーチ、実用的な情報収集をサポートします。",
     "pricing.eyebrow":"料金プラン","pricing.title":"まずは小さく。必要に応じてアップグレード。","pricing.intro":"表示価格・販売価格・決済はUSDで統一していますで、決済前に正確なUSD金額を表示します。",
     "pricing.quick_kicker":"クイック相談","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"30分の個別相談",
-    "pricing.quick_1":"30分のビデオまたはチャット","pricing.quick_2":"集中質問 最大3件","pricing.quick_3":"実用的なおすすめ・アドバイス",
+    "pricing.quick_1":"予約不要・オンラインフォームで受付","pricing.quick_2":"集中質問 最大3件","pricing.quick_3":"個別に調査し、通常2営業日以内にメール回答",
     "pricing.personal_kicker":"パーソナルプラン","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"オーダーメイド旅行リサーチ",
     "pricing.personal_1":"あなた向けの旅程アイデア","pricing.personal_2":"エリア・食事・体験のリサーチ","pricing.personal_3":"共有しやすい旅行プラン",
     "pricing.popular":"一番人気","pricing.premium_kicker":"プレミアム","pricing.premium_title":"Japan Premium","pricing.premium_sub":"旅行プラン＋コンシェルジュ",
@@ -106,8 +106,8 @@ const translations = {
     "services.stay_title":"Alojamiento y zonas","services.stay_text":"Te ayudamos a entender qué zona encaja mejor con tu viaje antes de reservar hotel o una estancia más larga.",
     "services.concierge_title":"Servicio de concierge","services.concierge_text":"Apoyo adicional antes y durante el viaje para preguntas, investigación y orientación práctica.",
     "pricing.eyebrow":"ELIGE TU PLAN","pricing.title":"Empieza por lo esencial. Amplía cuando lo necesites.","pricing.intro":"Los precios en USD son orientativos. El precio real de venta y el pago se realizan en USD, y el importe exacto en USD se muestra antes de pagar.",
-    "pricing.quick_kicker":"AYUDA RÁPIDA","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"Consulta de 30 minutos",
-    "pricing.quick_1":"30 min por vídeo o chat","pricing.quick_2":"Hasta 3 preguntas concretas","pricing.quick_3":"Recomendaciones prácticas",
+    "pricing.quick_kicker":"AYUDA RÁPIDA","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"Soporte asíncrono por correo",
+    "pricing.quick_1":"Formulario online — sin cita","pricing.quick_2":"Hasta 3 preguntas concretas","pricing.quick_3":"Respuestas investigadas por correo, normalmente en 2 días laborables",
     "pricing.personal_kicker":"PLAN PERSONAL","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Investigación de viaje personalizada",
     "pricing.personal_1":"Ideas de itinerario personalizadas","pricing.personal_2":"Investigación de zonas, comida y actividades","pricing.personal_3":"Plan de viaje fácil de compartir",
     "pricing.popular":"MÁS POPULAR","pricing.premium_kicker":"PREMIUM","pricing.premium_title":"Japan Premium","pricing.premium_sub":"Plan + apoyo de concierge",
@@ -256,4 +256,16 @@ applyLanguage(currentLang);
     var b=e.target.closest && e.target.closest("[data-lang]");
     if(b) setTimeout(syncSampleLanguage,0);
   });
+})();
+
+// v8: preserve selected language in all sample links.
+(function(){
+ function sync(){
+  var l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+  if(!["en","ja","es"].includes(l))l="en";
+  document.querySelectorAll("[data-sample-plan]").forEach(function(a){a.href="samples.html?lang="+l+"&plan="+a.dataset.samplePlan;});
+  document.querySelectorAll(".sample-all-link").forEach(function(a){a.href="samples.html?lang="+l;});
+ }
+ document.addEventListener("DOMContentLoaded",sync);
+ document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(sync,0);});
 })();

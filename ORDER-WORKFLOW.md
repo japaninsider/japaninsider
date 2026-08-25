@@ -16,3 +16,10 @@
 - VIP: fully customized high-touch planning + priority research + concierge-style support.
 
 Do not request passport numbers, card details, passwords, or other sensitive credentials through the intake form.
+
+
+## Quick Help service standard
+- No video call or appointment.
+- Customer submits up to 3 focused questions through the intake form.
+- Research the questions and reply by email, usually within 2 business days.
+- If a question requires clarification, ask by email before completing the answer.
