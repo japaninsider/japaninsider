@@ -250,3 +250,6 @@ Language-aware EN/JA/ES typography; Japanese headline wrapping and mobile sizing
 
 ## v24 — advisor identity
 Added a multilingual role line beneath Masayasu Wakihama so first-time visitors immediately recognize the name as the person behind Japan Insider. Adjusted spacing and hierarchy around the About headline.
+
+## v25 — guest-review fixes
+Premium support is consistently email-based. Booking boundaries explicitly require customers to reserve and pay providers directly. Delivery wording remains aligned with Personal 5-business-day and Premium 7-business-day targets, with final timing confirmed before payment.

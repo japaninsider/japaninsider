@@ -33,7 +33,7 @@ const translations = {
     "about.b1_title":"Local perspective","about.b1_text":"Research grounded in what works in Japan.","about.b2_title":"Personal by design","about.b2_text":"Recommendations based on your trip, not a template.",
     "about.b3_title":"Time saved","about.b3_text":"Spend less of your holiday planning your holiday.","about.b4_title":"Human support","about.b4_text":"Ask a real person when search results are not enough.",
     "faq.title":"Good questions before you book.","faq.q1":"Is Japan Insider a travel agency?","faq.a1":"No. The initial service is designed around travel research, consultation, information and concierge-style support. We do not sell package travel, transportation or accommodation.",
-    "faq.q2":"Do you make restaurant or hotel bookings?","faq.a2":"We can research options and explain booking steps. Booking services may be limited depending on the provider, local rules and the scope of your plan.",
+    "faq.q2":"Do you make restaurant or hotel bookings?","faq.a2":"We can research options and explain booking steps. We research options and explain how to book. Customers make and pay for reservations directly with each provider.",
     "faq.q3":"Can you help with a first trip to Japan?","faq.a3":"Yes. First-time travelers are a great fit because area choices, transport, etiquette and scheduling can be overwhelming at first.",
     "faq.q4":"Do you support trips outside Tokyo?","faq.a4":"Yes. The service can cover destinations throughout Japan, depending on the research required.",
     "faq.q5":"How fast will I receive my plan?","faq.a5":"Turnaround depends on scope. A delivery date is confirmed with you before payment so expectations are clear.",
@@ -123,7 +123,7 @@ const translations = {
     "about.b1_title":"Perspectiva local","about.b1_text":"Investigación basada en lo que realmente funciona en Japón.","about.b2_title":"Personal por diseño","about.b2_text":"Recomendaciones basadas en tu viaje, no en una plantilla.",
     "about.b3_title":"Ahorra tiempo","about.b3_text":"Dedica menos tiempo de tus vacaciones a planificar tus vacaciones.","about.b4_title":"Apoyo humano","about.b4_text":"Pregunta a una persona real cuando los resultados de búsqueda no son suficientes.",
     "faq.title":"Preguntas útiles antes de reservar.","faq.q1":"¿Japan Insider es una agencia de viajes?","faq.a1":"No. El servicio inicial está diseñado alrededor de investigación de viajes, asesoramiento, información y apoyo tipo concierge. No vendemos paquetes turísticos, transporte ni alojamiento.",
-    "faq.q2":"¿Hacéis reservas de restaurantes u hoteles?","faq.a2":"Podemos investigar opciones y explicar los pasos para reservar. Los servicios de reserva pueden estar limitados según el proveedor, la normativa local y el alcance de tu plan.",
+    "faq.q2":"¿Hacéis reservas de restaurantes u hoteles?","faq.a2":"Podemos investigar opciones y explicar los pasos para reservar. Investigamos opciones y explicamos cómo reservar. El cliente realiza y paga las reservas directamente con cada proveedor.",
     "faq.q3":"¿Podéis ayudarme si es mi primer viaje a Japón?","faq.a3":"Sí. Los viajeros que visitan Japón por primera vez encajan especialmente bien, ya que elegir zonas, entender el transporte, la etiqueta y organizar los horarios puede resultar abrumador al principio.",
     "faq.q4":"¿Ofrecéis apoyo para viajes fuera de Tokio?","faq.a4":"Sí. El servicio puede cubrir destinos de todo Japón, dependiendo de la investigación necesaria.",
     "faq.q5":"¿Cuánto tardaré en recibir mi plan?","faq.a5":"El plazo depende del alcance. Confirmamos contigo una fecha de entrega antes del pago para que las expectativas estén claras.",
@@ -610,4 +610,15 @@ applyLanguage(currentLang);
  document.addEventListener("click",function(e){
    if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(apply,10);
  });
+})();
+
+(function(){
+const V25={
+en:{bookingDirect:"We research options and explain how to book. Customers make and pay for reservations directly with each provider."},
+ja:{bookingDirect:"Japan Insiderは候補を調査し、予約方法をご案内します。予約・契約・支払いは、お客様ご自身で各事業者に直接行っていただきます。"},
+es:{bookingDirect:"Investigamos opciones y explicamos cómo reservar. El cliente realiza y paga las reservas directamente con cada proveedor."}
+};
+function l(){const x=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";return V25[x]?x:"en"}
+function a(){document.querySelectorAll("[data-v25]").forEach(e=>{const v=V25[l()][e.dataset.v25];if(v)e.textContent=v})}
+document.addEventListener("DOMContentLoaded",a);document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(a,10)});
 })();
