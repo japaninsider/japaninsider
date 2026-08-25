@@ -247,3 +247,6 @@ Unified Premium as email support, aligned delivery wording, made the direct-book
 
 ## v23 — typography polish
 Language-aware EN/JA/ES typography; Japanese headline wrapping and mobile sizing improved; About copy refined.
+
+## v24 — advisor identity
+Added a multilingual role line beneath Masayasu Wakihama so first-time visitors immediately recognize the name as the person behind Japan Insider. Adjusted spacing and hierarchy around the About headline.

@@ -588,3 +588,26 @@ applyLanguage(currentLang);
  document.addEventListener("DOMContentLoaded",apply);
  document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(apply,10);});
 })();
+
+// v24 — make the advisor identity unmistakable.
+(function(){
+ const T={
+  en:{advisorRole:"Founder & Travel Advisor"},
+  ja:{advisorRole:"Japan Insider 代表・トラベルアドバイザー"},
+  es:{advisorRole:"Fundador y asesor de viajes"}
+ };
+ function lang(){
+   const l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+   return ["en","ja","es"].includes(l)?l:"en";
+ }
+ function apply(){
+   const c=T[lang()];
+   document.querySelectorAll("[data-v24]").forEach(function(el){
+     const v=c[el.dataset.v24]; if(v) el.textContent=v;
+   });
+ }
+ document.addEventListener("DOMContentLoaded",apply);
+ document.addEventListener("click",function(e){
+   if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(apply,10);
+ });
+})();
