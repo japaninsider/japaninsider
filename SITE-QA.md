@@ -17,7 +17,7 @@ Verified in this package:
 - Operator name is `脇濱正靖`
 - Home page supports EN / 日本語 / ES
 - Public pricing is USD
-- Site copy states that actual checkout is processed in EUR
+- Site copy states that actual checkout is processed in USD
 - High-resolution `assets/images/about.jpg` is included
 - No residential address, phone number, bank account number, password, or Stripe secret key is included in this public package
 

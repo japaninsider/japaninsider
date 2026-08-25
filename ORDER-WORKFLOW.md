@@ -1,7 +1,7 @@
 # Japan Insider — Order Workflow
 
 1. Customer chooses a plan.
-2. Stripe shows the exact EUR checkout amount.
+2. Stripe shows the exact USD checkout amount.
 3. After payment, send the customer to the matching intake URL.
 4. Customer submits travel details.
 5. Confirm any missing information and the delivery date.

@@ -71,11 +71,11 @@ The homepage supports **English / 日本語 / Español**.
 
 ## Pricing currency
 
-Pricing is denominated in EUR (€):
-- Quick Help: €49
-- Personal Plan: €199
-- Premium: €499
-- VIP: €999+
+Pricing is denominated in USD (€):
+- Quick Help: $49
+- Personal Plan: $199
+- Premium: $499
+- VIP: $999+
 
 English, Japanese and Spanish pricing copy identifies EUR as the service currency.
 
@@ -86,12 +86,12 @@ The site now changes the **display currency with the selected language**, while 
 
 - English: approximate USD — ≈$57 / ≈$233 / ≈$583 / ≈$1,168+
 - 日本語: approximate JPY — 約¥9,100 / 約¥37,000 / 約¥92,700 / 約¥185,600+
-- Español: EUR — €49 / €199 / €499 / €999+
+- Español: EUR — $49 / $199 / $499 / $999+
 
-The inquiry form keeps each plan's underlying value in EUR so the business price remains unambiguous. USD and JPY are reference displays and should be reviewed periodically as exchange rates move.
+The inquiry form keeps each plan's underlying value in USD so the business price remains unambiguous. USD and JPY are reference displays and should be reviewed periodically as exchange rates move.
 
 
-## USD public pricing / EUR checkout
+## USD public pricing / USD checkout
 
 The website now uses **USD as the public pricing basis in all three languages**:
 
@@ -100,14 +100,14 @@ The website now uses **USD as the public pricing basis in all three languages**:
 - Premium: $499
 - VIP: $999+
 
-The site explicitly explains that the actual payment/Stripe checkout is processed in **EUR**. The plan option values used internally remain EUR-based.
+The site explicitly explains that the actual payment/Stripe checkout is processed in **EUR**. The plan option values used internally remain USD-based.
 
 
 ## Japan / Stripe launch additions
 Added `legal.html` (特定商取引法に基づく表記), a footer link, and cancellation/refund terms.
 Public contact: `honeytoraesp@gmail.com`.
 For privacy, operator name/address/phone use 「請求があった場合には遅滞なく開示いたします。」 on the public page. Keep the actual legal details available for Stripe and prompt disclosure.
-Before payments: show the actual EUR charge before final purchase; register `legal.html` in Stripe's commerce disclosure setting; confirm all policies match actual operations.
+Before payments: show the actual USD charge before final purchase; register `legal.html` in Stripe's commerce disclosure setting; confirm all policies match actual operations.
 
 
 ## Legal operator
@@ -119,7 +119,7 @@ Before payments: show the actual EUR charge before final purchase; register `leg
 Included in this package:
 - English / 日本語 / Español homepage language switching
 - Public pricing basis: USD
-- Intended checkout currency: EUR via Stripe
+- Intended checkout currency: USD via Stripe
 - Real inquiry email configured: `honeytoraesp@gmail.com`
 - Legal operator name: `脇濱正靖`
 - `legal.html` — 特定商取引法に基づく表記
@@ -152,20 +152,24 @@ The homepage footer now shows the legal link in all three languages:
 Also added `legal.html` to the sitemap and added cross-navigation between policy pages.
 
 
-## v3 — explicit EUR sale prices
+## v3 — explicit USD sale prices
 
 The legal disclosure now clearly distinguishes:
 - USD on the website = reference display
 - Actual sale/checkout currency = EUR
 
-Current intended EUR sale prices:
-- Quick Help: €49
-- Personal Plan: €199
-- Premium: €499
-- VIP: €999+ / individual quotation
+Current intended USD sale prices:
+- Quick Help: $49
+- Personal Plan: $199
+- Premium: $499
+- VIP: $999+ / individual quotation
 
-The exact EUR amount must be visible before the customer confirms payment.
+The exact USD amount must be visible before the customer confirms payment.
 
 
 ## v4 — Client intake
 Added `intake.html` with EN / 日本語 / ES and plan-specific questions for Quick, Personal, Premium and VIP. Added Stripe post-payment URLs and `ORDER-WORKFLOW.md`.
+
+
+## v5 — USD unified pricing
+CURRENT CONFIGURATION: Website, official sale prices, Terms, commerce disclosure and Stripe checkout are USD. Prices: $49 / $199 / $499 / $999+. This supersedes all earlier currency notes.
