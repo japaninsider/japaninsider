@@ -16,6 +16,7 @@ const translations = {
     "services.shop_title":"Shopping support","services.shop_text":"Help finding Japan-only products, specialty stores, gifts and harder-to-source items.",
     "services.stay_title":"Stay & area advice","services.stay_text":"Understand which area fits your trip before you commit to a hotel or longer stay.",
     "services.concierge_title":"Concierge support","services.concierge_text":"Extra help before and during your trip for questions, research and practical guidance.",
+    "quickfirst.eyebrow":"START SMALL","quickfirst.title":"Ask up to 3 Japan travel questions.","quickfirst.body_html":"Individually researched by a Japan-based hospitality professional. <strong>$49 USD</strong> · Target reply within 2 business days after we receive the information needed to begin.","quickfirst.cta":"Get Quick Help — $49",
     "pricing.eyebrow":"CHOOSE YOUR PLAN","pricing.title":"Start small. Upgrade when you need more.","pricing.intro":"Prices, sale amounts, and checkout are in USD, and the exact USD amount is shown before payment.",
     "pricing.quick_kicker":"QUICK HELP","pricing.quick_title":"Japan Quick Help","pricing.quick_sub":"Asynchronous email support",
     "pricing.quick_1":"Online form — no appointment required","pricing.quick_2":"Up to 3 focused questions","pricing.quick_3":"Researched answers by email, usually within 2 business days",
@@ -33,10 +34,10 @@ const translations = {
     "about.b1_title":"Local perspective","about.b1_text":"Research grounded in what works in Japan.","about.b2_title":"Personal by design","about.b2_text":"Recommendations based on your trip, not a template.",
     "about.b3_title":"Time saved","about.b3_text":"Spend less of your holiday planning your holiday.","about.b4_title":"Human support","about.b4_text":"Ask a real person when search results are not enough.",
     "faq.title":"Good questions before you book.","faq.q1":"Is Japan Insider a travel agency?","faq.a1":"No. The initial service is designed around travel research, consultation, information and concierge-style support. We do not sell package travel, transportation or accommodation.",
-    "faq.q2":"Do you make restaurant or hotel bookings?","faq.a2":"We can research options and explain booking steps. We research options and explain how to book. Customers make and pay for reservations directly with each provider.",
+    "faq.q2":"Do you make restaurant or hotel bookings?","faq.a2":"We research options and explain how to book. Customers make and pay for reservations directly with each provider.",
     "faq.q3":"Can you help with a first trip to Japan?","faq.a3":"Yes. First-time travelers are a great fit because area choices, transport, etiquette and scheduling can be overwhelming at first.",
     "faq.q4":"Do you support trips outside Tokyo?","faq.a4":"Yes. The service can cover destinations throughout Japan, depending on the research required.",
-    "faq.q5":"How fast will I receive my plan?","faq.a5":"Turnaround depends on scope. A delivery date is confirmed with you before payment so expectations are clear.",
+    "faq.q5":"How fast will I receive my plan?","faq.a5":"Quick Help is usually delivered within 2 business days after we receive the information needed to begin. Personal targets 5 business days, Premium 7 business days, and VIP timing is agreed with the quote.",
     "contact.eyebrow":"START YOUR JAPAN PLAN","contact.title":"Tell us what you’re planning.","contact.text":"Send your inquiry directly from this page. No email app is required.",
     "contact.note_html":"Questions are sent to <strong>infojapaninsider@gmail.com</strong>.",
     "form.name":"Name","form.email":"Email","form.plan":"Interested in","form.message":"Tell us about your trip","form.submit":"Send inquiry","form.unsure":"Not sure yet",
@@ -60,13 +61,14 @@ const translations = {
     "services.shop_title":"ショッピングサポート","services.shop_text":"日本限定商品、専門店、ギフト、見つけにくいアイテム探しをサポートします。",
     "services.stay_title":"滞在エリア相談","services.stay_text":"ホテルや長期滞在先を決める前に、旅に合うエリア選びをお手伝いします。",
     "services.concierge_title":"コンシェルジュサポート","services.concierge_text":"旅行前・旅行中の質問や追加リサーチ、実用的な情報収集をサポートします。",
+    "quickfirst.eyebrow":"まずは小さく試す","quickfirst.title":"日本旅行について、最大3つまで質問できます。","quickfirst.body_html":"日本在住のホスピタリティ経験者が個別に調査します。<strong>49米ドル</strong> · 必要情報が揃ってから通常2営業日以内を目安に回答します。","quickfirst.cta":"Quick Helpを依頼 — $49",
     "pricing.eyebrow":"料金プラン","pricing.title":"まずは小さく。必要に応じてアップグレード。","pricing.intro":"表示価格・販売価格・決済はUSDで統一しています。決済前に正確なUSD金額を表示します。",
     "pricing.quick_kicker":"クイック相談","pricing.quick_title":"Japan Quick Help｜ピンポイント相談","pricing.quick_sub":"フォーム受付・メール回答",
     "pricing.quick_1":"予約不要・オンラインフォームで受付","pricing.quick_2":"集中質問 最大3件","pricing.quick_3":"個別に調査し、通常2営業日以内にメール回答",
     "pricing.personal_kicker":"パーソナルプラン","pricing.personal_title":"Japan Personal Plan｜個別旅行プラン","pricing.personal_sub":"オーダーメイド旅行リサーチ",
     "pricing.personal_1":"あなた向けの旅程アイデア","pricing.personal_2":"エリア・食事・体験のリサーチ","pricing.personal_3":"共有しやすい旅行プラン",
-    "pricing.popular":"一番人気","pricing.premium_kicker":"プレミアム","pricing.premium_title":"Japan Premium｜旅行プラン＋サポート","pricing.premium_sub":"旅行プラン＋コンシェルジュ",
-    "pricing.premium_1":"パーソナルプランの全内容","pricing.premium_2":"7日間の旅行チャットサポート","pricing.premium_3":"追加リサーチ＆最新情報","pricing.choose_premium":"プレミアムを選ぶ",
+    "pricing.popular":"プラン＋旅行中メールサポート","pricing.premium_kicker":"プレミアム","pricing.premium_title":"Japan Premium｜旅行プラン＋サポート","pricing.premium_sub":"旅行プラン＋コンシェルジュ",
+    "pricing.premium_1":"パーソナルプランの全内容","pricing.premium_2":"7日間の旅行中メールサポート","pricing.premium_3":"追加リサーチ＆最新情報","pricing.choose_premium":"プレミアムを選ぶ",
     "pricing.vip_kicker":"VIP","pricing.vip_title":"Japan VIP｜コンシェルジュプラン","pricing.vip_sub":"ハイタッチ・コンシェルジュ","pricing.vip_1":"完全カスタマイズのサポート","pricing.vip_2":"優先リサーチ","pricing.vip_3":"旅の内容に合わせて個別設計","pricing.contact":"問い合わせる",
     "common.get_started":"相談する",
     "pricing.legal":"Japan Insiderは現在、リサーチ、情報提供、翻訳に近いサポート、旅行相談を中心に提供しています。旅行会社として交通・宿泊を販売するサービスではありません。",
@@ -166,14 +168,15 @@ function applyLocalizedPricing(lang) {
 }
 
 let currentLang = localStorage.getItem("japanInsiderLang");
-if (!currentLang) {
+if (!["en","ja"].includes(currentLang)) {
   const browserLang = navigator.language?.toLowerCase() || "";
-  currentLang = browserLang.startsWith("ja") ? "ja" : browserLang.startsWith("es") ? "es" : "en";
+  currentLang = browserLang.startsWith("ja") ? "ja" : "en";
 }
 
 function t(key){ return translations[currentLang]?.[key] ?? translations.en[key] ?? key; }
 
 function applyLanguage(lang){
+  if (!["en","ja"].includes(lang)) lang = "en";
   currentLang = lang;
   localStorage.setItem("japanInsiderLang", lang);
   document.documentElement.lang = lang;
@@ -231,7 +234,7 @@ applyLanguage(currentLang);
 (function(){
   function syncSampleLanguage(){
     var lang=localStorage.getItem("japanInsiderLang") || document.documentElement.lang || "en";
-    if(!["en","ja","es"].includes(lang)) lang="en";
+    if(!["en","ja"].includes(lang)) lang="en";
     document.querySelectorAll('a[href^="samples.html"]').forEach(function(a){
       a.href="samples.html?lang="+encodeURIComponent(lang);
     });

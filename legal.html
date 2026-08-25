@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
 .legal{max-width:960px;margin:100px auto 70px;padding:0 22px;line-height:1.8}
-.legal-lang{display:flex;gap:8px;align-items:center;margin-bottom:24px}.legal-lang button{border:0;background:none;font-weight:800;padding:8px;cursor:pointer}.legal-lang button.active{color:#b42318}
+.legal-lang{display:flex;gap:8px;align-items:center;margin-bottom:24px}
+.legal-lang button{border:0;background:none;font-weight:800;padding:8px;cursor:pointer}
+.legal-lang button.active{color:#b42318}
 .legal-panel{display:none}.legal-panel.active{display:block}
-.legal table{width:100%;border-collapse:collapse}.legal th,.legal td{padding:15px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top}.legal th{width:31%;color:#17233c}
+.legal table{width:100%;border-collapse:collapse}
+.legal th,.legal td{padding:15px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top}
+.legal th{width:31%;color:#17233c}
 .notice{margin-top:24px;padding:16px;border-radius:12px;background:#f8fafc}
 @media(max-width:650px){.legal th,.legal td{display:block;width:auto}.legal th{padding-bottom:4px;border-bottom:0}}
 </style>
@@ -16,7 +20,7 @@
 <body>
 <main class="legal">
 <a href="index.html">← Japan Insider</a>
-<div class="legal-lang"><button data-lang="en">EN</button>/<button data-lang="ja" class="active">日本語</button>/<button data-lang="es">ES</button></div>
+<div class="legal-lang" aria-label="Language switcher"><button data-lang="en">EN</button>/<button data-lang="ja" class="active">日本語</button></div>
 
 <section class="legal-panel" data-panel="en">
 <h1>Commerce Disclosure</h1>
@@ -30,9 +34,10 @@
 <tr><th>Additional charges</th><td>Internet/communication costs and any card issuer or financial institution fees are borne by the customer.</td></tr>
 <tr><th>Payment</th><td>Credit card and other methods displayed by Stripe when available.</td></tr>
 <tr><th>Payment timing</th><td>Payment is made when the customer confirms the purchase through the payment page.</td></tr>
-<tr><th>Delivery</th><td>Quick Help: after payment and receipt of the required questions, answers are usually delivered by email within 2 business days. Personal/Premium: the delivery date is confirmed before payment. VIP: timeline is agreed with the quotation.</td></tr>
-<tr><th>Cancellation / refunds</th><td>Quick Help: a full refund is available before individualized research begins. Once individualized research has begun, customer-requested refunds are generally unavailable. Personal/Premium/VIP: cancellation and refund conditions are confirmed before payment and follow the same principle unless otherwise agreed. If Japan Insider cannot provide an agreed service, the unprovided portion will be refunded or an alternative will be offered.</td></tr>
-<tr><th>Bookings</th><td>Japan Insider provides research, comparison, information and booking guidance. Customers contract with and pay hotels, transportation providers, restaurants and other third parties directly.</td></tr>
+<tr><th>Delivery</th><td>Quick Help: usually within 2 business days after payment and receipt of the information needed to begin. Personal Plan: target 5 business days after required information is received. Premium: target 7 business days after required information is received. VIP: timeline is agreed with the quote.</td></tr>
+<tr><th>When research begins</th><td>Individualized research begins when Japan Insider sends the customer a work-start confirmation email.</td></tr>
+<tr><th>Cancellation / refunds</th><td>A full refund may be requested before individualized research begins. Once individualized research has begun, customer-requested refunds are generally unavailable because the service is customized. If Japan Insider cannot provide an agreed service, the unprovided portion will be refunded or an appropriate alternative will be offered, subject to applicable law.</td></tr>
+<tr><th>Bookings</th><td>Japan Insider provides research, comparisons, information, recommendations and booking guidance. Japan Insider does not book, purchase, resell, or contract with travel providers on the customer’s behalf. Customers make, contract and pay for third-party services directly with each provider.</td></tr>
 </table>
 </section>
 
@@ -48,41 +53,28 @@
 <tr><th>販売価格以外の費用</th><td>インターネット接続・通信料金、カード会社・金融機関が課す手数料等はお客様のご負担です。</td></tr>
 <tr><th>支払方法</th><td>クレジットカードその他、利用可能な場合はStripeの決済画面に表示される方法。</td></tr>
 <tr><th>支払時期</th><td>決済画面で購入を確定した時点でお支払いいただきます。</td></tr>
-<tr><th>サービス提供時期</th><td>Quick Help：決済後、必要な質問内容を受領してから通常2営業日以内にメールで回答します。Personal / Premium：支払い前に納期を確定します。VIP：見積時に納期を合意します。</td></tr>
-<tr><th>キャンセル・返金</th><td>Quick Help：個別リサーチ開始前は全額返金します。個別リサーチ開始後は、サービスの性質上、お客様都合による返金は原則承りません。Personal / Premium / VIP：別途合意がない限り同様の考え方とし、具体的条件を支払い前に確認します。当方が合意したサービスを提供できない場合は、未提供部分の返金または代替対応を行います。</td></tr>
-<tr><th>予約等の取扱い</th><td>Japan Insiderは調査、比較、情報提供、予約方法の案内を行います。ホテル、交通機関、飲食店等との契約・予約・支払いはお客様自身で行います。</td></tr>
+<tr><th>サービス提供時期</th><td>Quick Help：決済および開始に必要な情報の受領後、通常2営業日以内が目安です。Personal Plan：必要情報の受領後5営業日以内が目安です。Premium：必要情報の受領後7営業日以内が目安です。VIP：見積時に納期を合意します。</td></tr>
+<tr><th>個別リサーチの開始</th><td>Japan Insiderが「作業開始確認メール」をお客様へ送信した時点で、個別リサーチ開始とします。</td></tr>
+<tr><th>キャンセル・返金</th><td>個別リサーチ開始前は全額返金を請求できます。個別リサーチ開始後は、個別対応サービスの性質上、お客様都合による返金は原則承りません。当方が合意したサービスを提供できない場合は、適用法令に従い、未提供部分の返金または適切な代替対応を行います。</td></tr>
+<tr><th>予約等の取扱い</th><td>Japan Insiderは調査、比較、情報提供、おすすめの提案、予約方法の案内を行います。ホテル、交通機関、飲食店その他の旅行関連事業者について、お客様に代わって予約、購入、再販売、契約を行いません。第三者サービスの予約・契約・支払いは、お客様ご自身で各事業者に直接行っていただきます。</td></tr>
 </table>
 </section>
-
-<section class="legal-panel" data-panel="es">
-<h1>Información comercial</h1>
-<table>
-<tr><th>Servicio</th><td>Japan Insider</td></tr>
-<tr><th>Operador</th><td>Masayasu Wakihama</td></tr>
-<tr><th>Dirección</th><td>Se facilitará sin demora cuando sea solicitada.</td></tr>
-<tr><th>Teléfono</th><td>Se facilitará sin demora cuando sea solicitado.</td></tr>
-<tr><th>Contacto</th><td>infojapaninsider@gmail.com</td></tr>
-<tr><th>Precios</th><td>Quick Help $49 / Personal $199 / Premium $499 / VIP desde $999. El importe final se muestra en USD antes del pago.</td></tr>
-<tr><th>Pago</th><td>Tarjeta y otros métodos mostrados por Stripe cuando estén disponibles.</td></tr>
-<tr><th>Entrega</th><td>Quick Help: normalmente por correo en 2 días laborables después de recibir el pago y las preguntas necesarias. Personal/Premium: la fecha se confirma antes del pago. VIP: se acuerda con el presupuesto.</td></tr>
-<tr><th>Cancelación / reembolso</th><td>Quick Help: reembolso completo antes de comenzar la investigación individual. Una vez iniciada, normalmente no se aceptan reembolsos solicitados por el cliente. Para otros planes, las condiciones se confirman antes del pago.</td></tr>
-<tr><th>Reservas</th><td>Japan Insider ofrece investigación, comparación, información y orientación. El cliente reserva y paga directamente a los proveedores externos.</td></tr>
-</table>
-</section>
-<section><h2>When individualized research begins</h2><p>Individualized research begins when Japan Insider sends the customer a work-start confirmation email. Refund eligibility tied to the start of research is determined using that written confirmation.</p></section><section><h2>Travel-provider transactions</h2><p>Japan Insider does not book, purchase, resell or contract with travel providers on the customer’s behalf. Customers make and pay for reservations directly with each provider.</p></section></main>
+</main>
 <script>
 (function(){
+ const allowed=["en","ja"];
  const buttons=document.querySelectorAll("[data-lang]");
  const panels=document.querySelectorAll("[data-panel]");
  function show(l){
+  if(!allowed.includes(l)) l="ja";
   buttons.forEach(b=>b.classList.toggle("active",b.dataset.lang===l));
   panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===l));
   document.documentElement.lang=l;
  }
  buttons.forEach(b=>b.addEventListener("click",()=>show(b.dataset.lang)));
  const stored=localStorage.getItem("japanInsiderLang");
- show(["en","ja","es"].includes(stored)?stored:"ja");
+ show(allowed.includes(stored)?stored:"ja");
 })();
 </script>
-<span class="site-build-version" aria-label="site build">v32</span>
+<span class="site-build-version" aria-label="site build">v33</span>
 </body></html>
