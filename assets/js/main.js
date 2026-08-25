@@ -404,7 +404,7 @@ applyLanguage(currentLang);
  const T={
   en:{
    aboutEyebrow:"WHO IS BEHIND JAPAN INSIDER",
-   aboutTitle:"Hospitality judgement, journalistic research, and a real understanding of American travelers.",
+   aboutTitle:"Japan expertise shaped by five-star hospitality, journalism, and 10 years in Los Angeles.",
    aboutBody:"Japan Insider is built around a Japan-based hospitality professional with more than 20 years of experience in five-star international hotels, including InterContinental, ten years of living in Los Angeles, including Hollywood, and an earlier career as a Nikkei journalist. That mix of service, research and cross-cultural experience shapes every recommendation.",
    cred1t:"Five-star hospitality",cred1b:"More than 20 years of frontline experience in international luxury hotels.",
    cred2t:"10 years in Los Angeles",cred2b:"A practical understanding of American expectations around clarity, comfort and service.",
@@ -429,7 +429,7 @@ applyLanguage(currentLang);
   },
   ja:{
    aboutEyebrow:"JAPAN INSIDERを支える経験",
-   aboutTitle:"5つ星ホテルのホスピタリティ、記者としての調査力、そしてアメリカ人旅行者への理解。",
+   aboutTitle:"5つ星ホテル、記者経験、ロサンゼルス10年。3つの経験を日本旅行の判断力に。",
    aboutBody:"Japan Insiderは、インターコンチネンタルを含む国際的な5つ星ホテルで20年以上の経験を持ち、ロサンゼルス（ハリウッドを含む）で10年間暮らした日本在住のホスピタリティ専門家を軸にしています。キャリア初期には日経の記者として取材・調査に携わり、海外からのビジネス旅行者向けに個別の日本滞在プランを考えた経験もあります。サービス、調査、異文化理解の3つを、旅行提案に生かします。",
    cred1t:"5つ星ホテルでの経験",cred1b:"国際的なラグジュアリーホテルの現場で培った長年のホスピタリティ。",
    cred2t:"ロサンゼルス生活10年",cred2b:"分かりやすさ、快適さ、サービスに対するアメリカ人旅行者の期待を実感として理解。",
@@ -454,7 +454,7 @@ applyLanguage(currentLang);
   },
   es:{
    aboutEyebrow:"QUIÉN ESTÁ DETRÁS DE JAPAN INSIDER",
-   aboutTitle:"Criterio hotelero, investigación periodística y una comprensión real del viajero estadounidense.",
+   aboutTitle:"Experiencia en Japón respaldada por hospitalidad cinco estrellas, periodismo y 10 años en Los Ángeles.",
    aboutBody:"Japan Insider se apoya en un profesional de la hospitalidad en Japón con más de 20 años de experiencia en hoteles internacionales de cinco estrellas, incluido InterContinental, diez años viviendo en Los Ángeles, incluido Hollywood y una etapa anterior como periodista de Nikkei. Esa combinación de servicio, investigación y experiencia intercultural guía cada recomendación.",
    cred1t:"Hospitalidad cinco estrellas",cred1b:"Décadas de experiencia práctica en hoteles internacionales de lujo.",
    cred2t:"10 años en Los Ángeles",cred2b:"Comprensión práctica de las expectativas estadounidenses sobre claridad, comodidad y servicio.",

@@ -232,3 +232,6 @@ Major changes:
 
 ## v18
 Public name: Masayasu Wakihama. Biography: 20+ years five-star hospitality including InterContinental; former Nikkei journalist; lived in Los Angeles, including Hollywood, for 10 years. Added conservative launch scopes for paid plans. No custom domain initially; headshot remains optional.
+
+## v19 — conversion flow
+Homepage reordered to Services → About → Who this is for → Pricing → How it works → FAQ → Contact, with a stronger $49 entry message and a more compact About headline.

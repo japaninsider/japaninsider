@@ -46,3 +46,8 @@ html[lang="es"] body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Bli
 }
 
 .advisor-name{font-size:1.2rem;margin:.4rem 0 1rem}.launch-scope{margin-top:26px;padding:22px;border:1px solid #e5e7eb;border-radius:16px;background:#fff}.launch-scope p{margin:.65rem 0;line-height:1.65}
+
+/* v19 conversion-flow refinements */
+#about .about-copy h2{font-size:clamp(2.2rem,4.5vw,4.4rem);line-height:1.04}
+.starter-callout{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin:0 0 22px;padding:16px 18px;border:1px solid #e5e7eb;border-radius:14px;background:#fff}
+.starter-callout strong{font-size:1.05rem}.starter-callout span{color:#475467}
