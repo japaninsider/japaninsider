@@ -397,3 +397,100 @@ applyLanguage(currentLang);
  document.addEventListener("DOMContentLoaded",apply);
  document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(apply,0);});
 })();
+
+
+// v16 — credibility, audience fit, pricing comparison and commercial-scope copy.
+(function(){
+ const T={
+  en:{
+   aboutEyebrow:"WHO IS BEHIND JAPAN INSIDER",
+   aboutTitle:"Hospitality judgement, journalistic research, and a real understanding of American travelers.",
+   aboutBody:"Japan Insider is built around a Japan-based hospitality professional with more than 20 years of experience in five-star international hotels, including InterContinental, ten years of living in Los Angeles, including Hollywood, and an earlier career as a Nikkei journalist. That mix of service, research and cross-cultural experience shapes every recommendation.",
+   cred1t:"Five-star hospitality",cred1b:"More than 20 years of frontline experience in international luxury hotels.",
+   cred2t:"10 years in Los Angeles",cred2b:"A practical understanding of American expectations around clarity, comfort and service.",
+   cred3t:"Former Nikkei journalist",cred3b:"Research, interviewing and fact-checking skills applied to travel planning.",
+   cred4t:"Personalized planning experience",cred4b:"Previous experience designing Japan plans for international business travelers.",
+   aboutQuote:"The goal is not to give you more information. It is to help you make better decisions about Japan.",
+   fitEyebrow:"WHO THIS IS FOR",fitTitle:"For travelers who value comfort, efficiency and reliable local judgement.",
+   fitIntro:"Especially useful for first-time visitors, couples, independent travelers, business-plus-leisure trips and people who want thoughtful recommendations without joining a group tour.",
+   fit1t:"First trip to Japan",fit1b:"Get help making sense of neighborhoods, transport, etiquette and realistic pacing.",
+   fit2t:"Comfort without a package tour",fit2b:"Independent travel with professional judgement behind the choices.",
+   fit3t:"Food, hotels and neighborhoods",fit3b:"Recommendations based on how the pieces fit together, not isolated “best of” lists.",
+   fit4t:"American traveler perspective",fit4b:"Advice shaped by first-hand experience of both Japan and life in the United States.",
+   quickCta:"Request Quick Help — $49",personalCta:"Request a Personal Plan",premiumCta:"Check Premium availability",vipCta:"Request a VIP quote",
+   compareTitle:"What changes as you move up a plan?",compareIntro:"The difference is depth, customization and access to support—not simply a longer list of recommendations.",
+   cmpFeature:"What you get",cmpFormat:"Core deliverable",cmpTiming:"Delivery timing",cmpSupport:"During-trip support",cmpBooking:"Bookings / tickets",cmpBest:"Best for",
+   cmpQ1:"Up to 3 researched answers",cmpP1:"Personalized digital travel plan",cmpPr1:"Detailed plan + deeper research",cmpV1:"Custom high-touch plan",
+   cmpQ2:"Usually within 2 business days",cmpP2:"Confirmed before payment",cmpPr2:"Confirmed before payment",cmpV2:"Agreed with the quote",
+   cmpNo:"No",cmpNo2:"No",cmpPr3:"7-day support window",cmpV3:"Custom support scope",
+   cmpBooking2:"Research and booking guidance only. Customers book and pay third-party providers directly.",
+   cmpQ4:"A few specific questions",cmpP4:"A thoughtful independent trip",cmpPr4:"Travelers who want help before and during the trip",cmpV4:"Complex or special-occasion travel",
+   footerHelp:"Help",footerSamples:"Sample plans",footerLine:"Personal Japan travel research & consultation."
+  },
+  ja:{
+   aboutEyebrow:"JAPAN INSIDERを支える経験",
+   aboutTitle:"5つ星ホテルのホスピタリティ、記者としての調査力、そしてアメリカ人旅行者への理解。",
+   aboutBody:"Japan Insiderは、インターコンチネンタルを含む国際的な5つ星ホテルで20年以上の経験を持ち、ロサンゼルス（ハリウッドを含む）で10年間暮らした日本在住のホスピタリティ専門家を軸にしています。キャリア初期には日経の記者として取材・調査に携わり、海外からのビジネス旅行者向けに個別の日本滞在プランを考えた経験もあります。サービス、調査、異文化理解の3つを、旅行提案に生かします。",
+   cred1t:"5つ星ホテルでの経験",cred1b:"国際的なラグジュアリーホテルの現場で培った長年のホスピタリティ。",
+   cred2t:"ロサンゼルス生活10年",cred2b:"分かりやすさ、快適さ、サービスに対するアメリカ人旅行者の期待を実感として理解。",
+   cred3t:"元・日経記者",cred3b:"取材、比較、事実確認のスキルを旅行リサーチに活用。",
+   cred4t:"個別プラン作成経験",cred4b:"海外からのビジネス旅行者向けに、日本での過ごし方を個別に設計した経験。",
+   aboutQuote:"情報を増やすことではなく、日本でより良い判断ができるようにすることが目的です。",
+   fitEyebrow:"こんな方におすすめ",fitTitle:"快適さ、効率、信頼できる現地判断を重視する旅行者へ。",
+   fitIntro:"初めての訪日、夫婦旅行、個人旅行、出張＋観光、団体ツアーではなく自分らしく日本を楽しみたい方に特に向いています。",
+   fit1t:"初めての日本旅行",fit1b:"エリア選び、交通、マナー、無理のない時間配分を整理します。",
+   fit2t:"団体ツアーではなく快適に",fit2b:"自由旅行の良さを残しながら、プロの判断をプランに加えます。",
+   fit3t:"食・ホテル・街選び",fit3b:"単発の人気ランキングではなく、旅全体の流れから相性を考えます。",
+   fit4t:"アメリカ人旅行者の感覚",fit4b:"日本とアメリカ双方での実体験を背景に、分かりやすく提案します。",
+   quickCta:"Quick Helpを依頼する — $49",personalCta:"Personal Planを相談する",premiumCta:"Premiumの空き状況を確認",vipCta:"VIPの見積を依頼",
+   compareTitle:"プランが上がると、何が変わる？",compareIntro:"違いは単なる情報量ではなく、調査の深さ、個別化、旅行中サポートの範囲です。",
+   cmpFeature:"内容",cmpFormat:"主な納品物",cmpTiming:"納期",cmpSupport:"旅行中サポート",cmpBooking:"予約・チケット",cmpBest:"向いている方",
+   cmpQ1:"最大3問への個別調査回答",cmpP1:"あなた専用のデジタル旅行プラン",cmpPr1:"詳細プラン＋より深い個別調査",cmpV1:"完全個別のハイタッチプラン",
+   cmpQ2:"通常2営業日以内",cmpP2:"支払い前に確定",cmpPr2:"支払い前に確定",cmpV2:"見積時に合意",
+   cmpNo:"なし",cmpNo2:"なし",cmpPr3:"7日間のサポート枠",cmpV3:"個別にサポート範囲を設定",
+   cmpBooking2:"調査と予約方法の案内まで。ホテル・交通・店舗等の予約・支払いはお客様自身で行います。",
+   cmpQ4:"具体的な質問が数個ある方",cmpP4:"自分で動けるが、旅全体を上手に組みたい方",cmpPr4:"旅行前だけでなく旅行中も相談したい方",cmpV4:"複雑な旅・記念日・特別な旅行",
+   footerHelp:"サポート",footerSamples:"納品サンプル",footerLine:"日本旅行の個別リサーチ・相談サービス"
+  },
+  es:{
+   aboutEyebrow:"QUIÉN ESTÁ DETRÁS DE JAPAN INSIDER",
+   aboutTitle:"Criterio hotelero, investigación periodística y una comprensión real del viajero estadounidense.",
+   aboutBody:"Japan Insider se apoya en un profesional de la hospitalidad en Japón con más de 20 años de experiencia en hoteles internacionales de cinco estrellas, incluido InterContinental, diez años viviendo en Los Ángeles, incluido Hollywood y una etapa anterior como periodista de Nikkei. Esa combinación de servicio, investigación y experiencia intercultural guía cada recomendación.",
+   cred1t:"Hospitalidad cinco estrellas",cred1b:"Décadas de experiencia práctica en hoteles internacionales de lujo.",
+   cred2t:"10 años en Los Ángeles",cred2b:"Comprensión práctica de las expectativas estadounidenses sobre claridad, comodidad y servicio.",
+   cred3t:"Ex periodista de Nikkei",cred3b:"Investigación, entrevistas y verificación de datos aplicadas a la planificación de viajes.",
+   cred4t:"Experiencia en planes personalizados",cred4b:"Experiencia previa diseñando planes de Japón para viajeros internacionales de negocios.",
+   aboutQuote:"El objetivo no es darte más información, sino ayudarte a tomar mejores decisiones sobre Japón.",
+   fitEyebrow:"PARA QUIÉN ES",fitTitle:"Para viajeros que valoran comodidad, eficiencia y criterio local fiable.",
+   fitIntro:"Especialmente útil para primeras visitas, parejas, viajeros independientes, viajes de negocios con ocio y quienes quieren recomendaciones cuidadas sin un tour de grupo.",
+   fit1t:"Primer viaje a Japón",fit1b:"Ayuda para entender zonas, transporte, etiqueta y un ritmo realista.",
+   fit2t:"Comodidad sin tour organizado",fit2b:"Viaje independiente con criterio profesional detrás de las decisiones.",
+   fit3t:"Comida, hoteles y barrios",fit3b:"Recomendaciones según cómo encajan todas las piezas, no listas genéricas.",
+   fit4t:"Perspectiva del viajero estadounidense",fit4b:"Consejos basados en experiencia real tanto en Japón como en Estados Unidos.",
+   quickCta:"Solicitar Quick Help — $49",personalCta:"Solicitar Personal Plan",premiumCta:"Consultar disponibilidad Premium",vipCta:"Solicitar presupuesto VIP",
+   compareTitle:"¿Qué cambia al subir de plan?",compareIntro:"La diferencia está en la profundidad, personalización y acceso al soporte.",
+   cmpFeature:"Qué recibes",cmpFormat:"Entrega principal",cmpTiming:"Plazo",cmpSupport:"Soporte durante el viaje",cmpBooking:"Reservas / billetes",cmpBest:"Ideal para",
+   cmpQ1:"Hasta 3 respuestas investigadas",cmpP1:"Plan digital personalizado",cmpPr1:"Plan detallado + investigación profunda",cmpV1:"Plan totalmente personalizado",
+   cmpQ2:"Normalmente en 2 días laborables",cmpP2:"Se confirma antes del pago",cmpPr2:"Se confirma antes del pago",cmpV2:"Se acuerda con el presupuesto",
+   cmpNo:"No",cmpNo2:"No",cmpPr3:"Ventana de soporte de 7 días",cmpV3:"Soporte definido a medida",
+   cmpBooking2:"Solo investigación y orientación. El cliente reserva y paga directamente a los proveedores.",
+   cmpQ4:"Unas pocas preguntas concretas",cmpP4:"Un viaje independiente bien diseñado",cmpPr4:"Quien quiere ayuda antes y durante el viaje",cmpV4:"Viajes complejos u ocasiones especiales",
+   footerHelp:"Ayuda",footerSamples:"Muestras",footerLine:"Investigación y asesoramiento personalizado para viajar por Japón."
+  }
+ };
+ function lang(){
+   const l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+   return ["en","ja","es"].includes(l)?l:"en";
+ }
+ function apply(){
+   const c=T[lang()];
+   document.querySelectorAll("[data-v16]").forEach(el=>{
+     const k=el.dataset.v16;
+     if(c[k]) el.textContent=c[k];
+   });
+ }
+ document.addEventListener("DOMContentLoaded",apply);
+ document.addEventListener("click",e=>{
+   if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(apply,0);
+ });
+})();

@@ -213,3 +213,22 @@ All contact email references changed to `infojapaninsider@gmail.com`.
 Rebuilt `intake.html` around the actual operational workflow:
 Stripe payment → plan-aware intake → payment confirmation → research → delivery.
 Quick Help is explicitly asynchronous: up to 3 questions, no appointment/video call, usually delivered by email within 2 business days.
+
+## v16 — trust / commercial readiness rebuild
+
+Major changes:
+- Replaced generic About copy with the real differentiating background: five-star hospitality, 10 years in the U.S., former Nikkei journalist, international-business-traveler planning experience.
+- Added a clear “Who this is for” section.
+- Added a plan comparison table and clearer sales CTAs.
+- Quick Help remains asynchronous: up to 3 questions, usually within 2 business days.
+- Personal/Premium/VIP CTAs are inquiry/availability/quote based until scope is confirmed.
+- Removed visible GitHub/project-development branding from the footer.
+- Rebuilt Commerce Disclosure to EN / 日本語 / ES and removed the old scheduled-consultation contradiction.
+- Rebuilt Terms around the asynchronous Quick Help model and explicit third-party-booking boundary.
+- Expanded Privacy Policy.
+- Added `thank-you.html` for future Stripe redirect.
+- Added `assets/js/payments.js`; paste the live Quick Help Stripe Payment Link in one place after approval.
+- Added `LAUNCH-DECISIONS-NEEDED.md` listing business details still required before full commercial launch.
+
+## v18
+Public name: Masayasu Wakihama. Biography: 20+ years five-star hospitality including InterContinental; former Nikkei journalist; lived in Los Angeles, including Hollywood, for 10 years. Added conservative launch scopes for paid plans. No custom domain initially; headshot remains optional.

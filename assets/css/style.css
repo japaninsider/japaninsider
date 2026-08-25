@@ -24,3 +24,25 @@ html[lang="es"] body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Bli
 @media(max-width:760px){
   #hero-main-title .hero-line{white-space:normal;}
 }
+
+/* v16 — credibility, audience fit, and clearer commercial scope */
+.credential-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.credential{padding:16px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.05)}
+.credential strong,.credential span{display:block}.credential span{margin-top:6px;opacity:.78;line-height:1.55}
+.about-quote{margin-top:22px;padding-left:16px;border-left:3px solid #df2028;font-size:1.08rem;font-weight:700}
+.fit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.plan-comparison{margin-top:34px}
+.section-heading.compact{margin-bottom:14px}
+.comparison-scroll{overflow-x:auto;border:1px solid #e5e7eb;border-radius:16px;background:#fff}
+.comparison-table{width:100%;min-width:860px;border-collapse:collapse}
+.comparison-table th,.comparison-table td{padding:15px 16px;border-bottom:1px solid #eceff2;text-align:left;vertical-align:top}
+.comparison-table th{background:#f8fafc;font-size:.92rem}
+.comparison-table td:first-child{font-weight:800;color:#17233c}
+@media(max-width:850px){
+ .credential-grid,.fit-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:580px){
+ .credential-grid,.fit-grid{grid-template-columns:1fr}
+}
+
+.advisor-name{font-size:1.2rem;margin:.4rem 0 1rem}.launch-scope{margin-top:26px;padding:22px;border:1px solid #e5e7eb;border-radius:16px;background:#fff}.launch-scope p{margin:.65rem 0;line-height:1.65}
