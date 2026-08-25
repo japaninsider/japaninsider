@@ -535,3 +535,43 @@ applyLanguage(currentLang);
    if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(apply,10);
  });
 })();
+
+
+// v21 — footer and residual homepage language coverage.
+(function(){
+ const T={
+  en:{
+   footerIntake:"Client Intake",
+   contactPrompt:"Tell us about your trip",
+   quickFlowTitle:"Quick Help workflow",
+   quickFlowBody:"Pay → Send up to 3 questions → We research → Receive your answer by email, usually within 2 business days."
+  },
+  ja:{
+   footerIntake:"お申し込みフォーム",
+   contactPrompt:"旅行について教えてください",
+   quickFlowTitle:"Quick Helpの流れ",
+   quickFlowBody:"決済 → 最大3つの質問を送信 → Japan Insiderが調査 → 通常2営業日以内にメールで回答。"
+  },
+  es:{
+   footerIntake:"Formulario de solicitud",
+   contactPrompt:"Cuéntanos sobre tu viaje",
+   quickFlowTitle:"Cómo funciona Quick Help",
+   quickFlowBody:"Pago → Envía hasta 3 preguntas → Investigamos → Recibe la respuesta por correo, normalmente en 2 días laborables."
+  }
+ };
+ function current(){
+   const l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+   return ["en","ja","es"].includes(l)?l:"en";
+ }
+ function apply(){
+   const c=T[current()];
+   document.querySelectorAll("[data-v21]").forEach(function(el){
+     const v=c[el.dataset.v21];
+     if(v) el.textContent=v;
+   });
+ }
+ document.addEventListener("DOMContentLoaded",apply);
+ document.addEventListener("click",function(e){
+   if(e.target.closest && e.target.closest("[data-lang]")) setTimeout(apply,10);
+ });
+})();

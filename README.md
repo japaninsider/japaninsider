@@ -238,3 +238,6 @@ Homepage reordered to Services → About → Who this is for → Pricing → How
 
 ## v20 — language QA
 Fixed English-only customer-facing text introduced in v19. Launch service details and the $49 starter callout now switch correctly between English, Japanese and Spanish. Added LANGUAGE-QA-v20.md.
+
+## v21 — footer language audit
+Footer `Client Intake` now displays as `お申し込みフォーム` in Japanese and `Formulario de solicitud` in Spanish. Residual homepage English phrases were also given explicit language coverage.
