@@ -37,12 +37,12 @@ const translations = {
     "faq.q3":"Can you help with a first trip to Japan?","faq.a3":"Yes. First-time travelers are a great fit because area choices, transport, etiquette and scheduling can be overwhelming at first.",
     "faq.q4":"Do you support trips outside Tokyo?","faq.a4":"Yes. The service can cover destinations throughout Japan, depending on the research required.",
     "faq.q5":"How fast will I receive my plan?","faq.a5":"Turnaround depends on scope. A delivery date is confirmed with you before payment so expectations are clear.",
-    "contact.eyebrow":"START YOUR JAPAN PLAN","contact.title":"Tell us what you’re planning.","contact.text":"Use the form to prepare an inquiry. This starter site opens your email app so you can send the message directly — no backend or customer data storage required.",
+    "contact.eyebrow":"START YOUR JAPAN PLAN","contact.title":"Tell us what you’re planning.","contact.text":"Send your inquiry directly from this page. No email app is required.",
     "contact.note_html":"Questions are sent to <strong>infojapaninsider@gmail.com</strong>.",
-    "form.name":"Name","form.email":"Email","form.plan":"Interested in","form.message":"Tell us about your trip","form.submit":"Prepare email inquiry","form.unsure":"Not sure yet",
+    "form.name":"Name","form.email":"Email","form.plan":"Interested in","form.message":"Tell us about your trip","form.submit":"Send inquiry","form.unsure":"Not sure yet",
     "form.name_ph":"Your name","form.email_ph":"you@example.com","form.message_ph":"Dates, cities, travelers, interests, budget and what you need help with...",
     "footer.desc":"Personal travel research & concierge support for Japan.","footer.explore":"Explore","footer.info":"Info","footer.project":"Project","footer.privacy":"Privacy","footer.terms":"Terms","footer.legal":"Legal / Commerce disclosure","footer.contact":"Contact","footer.tagline":"Your Japan, Better.","footer.built":"Built for GitHub Pages.",
-    "status.owner":"Contact email is not configured.","status.open":"Your email app should open with the inquiry prepared.",
+    "status.owner":"Contact email is not configured.","status.open":"Your inquiry has been sent.",
     "mail.subject":"Japan Insider inquiry","mail.name":"Name","mail.email":"Email","mail.plan":"Plan","mail.details":"Trip details"
   },
   ja: {
@@ -82,12 +82,12 @@ const translations = {
     "faq.q3":"初めての日本旅行でも利用できますか？","faq.a3":"もちろんです。初めての方ほど、エリア選び、交通、マナー、スケジュール調整などでサービスをご活用いただけます。",
     "faq.q4":"東京以外の旅行にも対応していますか？","faq.a4":"はい。必要なリサーチ内容に応じて、日本各地の旅行に対応します。",
     "faq.q5":"どれくらいでプランが届きますか？","faq.a5":"内容によって異なります。お支払い前に納期をご案内し、双方で確認してから進めます。",
-    "contact.eyebrow":"日本旅行の相談をはじめる","contact.title":"どんな旅を計画していますか？","contact.text":"フォームに入力すると、お使いのメールアプリで問い合わせ文を作成できます。現在のスターター版では、サーバー側に個人情報を保存しません。",
+    "contact.eyebrow":"日本旅行の相談をはじめる","contact.title":"どんな旅を計画していますか？","contact.text":"このページのフォームから、そのままお問い合わせを送信できます。メールアプリを開く必要はありません。",
     "contact.note_html":"お問い合わせは <strong>infojapaninsider@gmail.com</strong> に送信されます。",
     "form.name":"お名前","form.email":"メールアドレス","form.plan":"興味のあるプラン","form.message":"旅行について教えてください","form.submit":"問い合わせメールを作成","form.unsure":"まだ決めていない",
     "form.name_ph":"お名前","form.email_ph":"you@example.com","form.message_ph":"日程、都市、人数、興味、予算、相談したいことなど...",
     "footer.desc":"日本旅行のパーソナルリサーチ＆コンシェルジュサポート。","footer.explore":"メニュー","footer.info":"情報","footer.project":"プロジェクト","footer.privacy":"プライバシー","footer.terms":"利用規約","footer.legal":"特定商取引法に基づく表記","footer.contact":"お問い合わせ","footer.tagline":"あなたの日本旅行を、もっと良く。","footer.built":"GitHub Pagesで公開できます。",
-    "status.owner":"問い合わせ先メールアドレスが設定されていません。","status.open":"メールアプリが開き、問い合わせ文が作成されます。",
+    "status.owner":"問い合わせ先メールアドレスが設定されていません。","status.open":"お問い合わせを送信しました。",
     "mail.subject":"Japan Insider お問い合わせ","mail.name":"お名前","mail.email":"メール","mail.plan":"プラン","mail.details":"旅行の詳細"
   },
   es: {
@@ -210,21 +210,6 @@ document.querySelectorAll('[data-plan]').forEach(link => {
     const select = document.getElementById('planSelect');
     if (select) select.value = link.dataset.plan;
   });
-});
-
-const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
-form?.addEventListener('submit', e => {
-  e.preventDefault();
-  if (CONTACT_EMAIL.includes('replace-with-your-email')) {
-    status.textContent = t("status.owner");
-    return;
-  }
-  const data = new FormData(form);
-  const subject = `${t("mail.subject")} — ${data.get('plan')}`;
-  const body = `${t("mail.name")}: ${data.get('name')}\n${t("mail.email")}: ${data.get('email')}\n${t("mail.plan")}: ${data.get('plan')}\n\n${t("mail.details")}:\n${data.get('message')}`;
-  window.location.href = `mailto:${encodeURIComponent(CONTACT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  status.textContent = t("status.open");
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
