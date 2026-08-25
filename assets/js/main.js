@@ -21,7 +21,7 @@ const translations = {
     "pricing.quick_1":"Online form — no appointment required","pricing.quick_2":"Up to 3 focused questions","pricing.quick_3":"Researched answers by email, usually within 2 business days",
     "pricing.personal_kicker":"PERSONAL PLAN","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Custom travel research",
     "pricing.personal_1":"Personalized itinerary ideas","pricing.personal_2":"Area, food & activity research","pricing.personal_3":"Shareable travel plan",
-    "pricing.popular":"MOST POPULAR","pricing.premium_kicker":"PREMIUM","pricing.premium_title":"Japan Premium","pricing.premium_sub":"Plan + concierge support",
+    "pricing.popular":"PLAN + DURING-TRIP SUPPORT","pricing.premium_kicker":"PREMIUM","pricing.premium_title":"Japan Premium","pricing.premium_sub":"Plan + concierge support",
     "pricing.premium_1":"Everything in Personal Plan","pricing.premium_2":"7 days of travel email support","pricing.premium_3":"Extra research & updates","pricing.choose_premium":"Choose Premium",
     "pricing.vip_kicker":"VIP","pricing.vip_title":"Japan VIP","pricing.vip_sub":"High-touch concierge","pricing.vip_1":"Fully customized support","pricing.vip_2":"Priority research","pricing.vip_3":"Scope built around your trip","pricing.contact":"Contact us",
     "common.get_started":"Get started",
