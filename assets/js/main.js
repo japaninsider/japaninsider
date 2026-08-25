@@ -494,3 +494,44 @@ applyLanguage(currentLang);
    if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(apply,0);
  });
 })();
+
+// v20 — translation coverage for customer-facing strings introduced in v19.
+(function(){
+ const T={
+  en:{
+   scopeTitle:"Launch service details",
+   personalLabel:"Personal $199:",personalScope:"up to 7 days / 2 main cities or regions, target delivery within 5 business days, 1 revision.",
+   premiumLabel:"Premium $499:",premiumScope:"up to 14 days / 4 main cities or regions, target delivery within 7 business days, 2 revisions, plus 7-day email support (09:00–18:00 JST; typical response target within 4 hours during support hours).",
+   vipLabel:"VIP $999+:",vipScope:"individually quoted; 100% upfront after scope and price are accepted.",
+   starterTitle:"Not ready for a full travel plan?",starterBody:"Start with up to 3 researched questions for $49. No appointment or video call required."
+  },
+  ja:{
+   scopeTitle:"各プランの具体的なサービス内容",
+   personalLabel:"Personal $199：",personalScope:"最大7日間・主要2都市／地域まで。必要情報の受領後、通常5営業日以内を目安に納品。修正1回を含みます。",
+   premiumLabel:"Premium $499：",premiumScope:"最大14日間・主要4都市／地域まで。必要情報の受領後、通常7営業日以内を目安に納品。修正2回＋7日間のメールサポート（日本時間9:00〜18:00、対応時間内は通常4時間以内の返信を目安）を含みます。",
+   vipLabel:"VIP $999〜：",vipScope:"内容に応じて個別見積。サービス範囲と料金に合意後、原則として全額前払いです。",
+   starterTitle:"まずは小さな相談から始めたい方へ",starterBody:"Quick Helpなら$49で最大3つの質問を個別に調査します。予約やビデオ通話は不要です。"
+  },
+  es:{
+   scopeTitle:"Detalles de cada plan",
+   personalLabel:"Personal $199:",personalScope:"hasta 7 días y 2 ciudades o regiones principales. Entrega estimada en 5 días laborables tras recibir toda la información necesaria. Incluye 1 revisión.",
+   premiumLabel:"Premium $499:",premiumScope:"hasta 14 días y 4 ciudades o regiones principales. Entrega estimada en 7 días laborables. Incluye 2 revisiones y 7 días de soporte por correo (09:00–18:00 JST; objetivo habitual de respuesta: dentro de 4 horas durante el horario de soporte).",
+   vipLabel:"VIP desde $999:",vipScope:"presupuesto individual; como norma inicial, pago completo después de aceptar por escrito el alcance y el precio.",
+   starterTitle:"¿Prefieres empezar con algo más sencillo?",starterBody:"Quick Help ofrece hasta 3 preguntas investigadas por $49. No requiere cita ni videollamada."
+  }
+ };
+ function current(){
+   const l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+   return ["en","ja","es"].includes(l)?l:"en";
+ }
+ function apply(){
+   const c=T[current()];
+   document.querySelectorAll("[data-v20]").forEach(el=>{
+     const v=c[el.dataset.v20]; if(v) el.textContent=v;
+   });
+ }
+ document.addEventListener("DOMContentLoaded",apply);
+ document.addEventListener("click",e=>{
+   if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(apply,10);
+ });
+})();
