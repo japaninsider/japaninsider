@@ -88,3 +88,9 @@ html:lang(ja) #about .advisor-role{letter-spacing:.03em}
 }
 
 .quick-first-offer{max-width:1180px;margin:38px auto;padding:28px 30px;border:1px solid #e5e7eb;border-radius:18px;display:flex;justify-content:space-between;align-items:center;gap:28px}.real-sample{max-width:980px;margin:0 auto;padding:54px 24px}.answer-card,.sample-method{max-width:820px;margin:24px 0;padding:24px;border:1px solid #e5e7eb;border-radius:16px;background:#fff}.answer-card p,.sample-method p{line-height:1.75}@media(max-width:760px){.quick-first-offer{margin:24px 16px;padding:22px;display:block}}
+/* v27 strict language display */
+.lang-ja{display:none!important}
+html:lang(ja) .lang-en{display:none!important}
+html:lang(ja) .lang-ja{display:block!important}
+html:lang(en) .lang-en{display:block!important}
+html:lang(en) .lang-ja{display:none!important}
