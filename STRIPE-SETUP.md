@@ -13,7 +13,7 @@ Customers must see the exact USD amount before confirming payment.
 Business type: Individual / sole proprietor (Japan)
 Service name: Japan Insider
 Legal operator: 脇濱正靖
-Contact: honeytoraesp@gmail.com
+Contact: infojapaninsider@gmail.com
 
 Create all Stripe products/prices in USD. Add the homepage, Privacy, Terms and 特定商取引法 URLs, and test payment/refund flows before launch.
 

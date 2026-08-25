@@ -13,7 +13,7 @@ Verified in this package:
 - `privacy.html` exists
 - `terms.html` exists
 - `legal.html` is included in `sitemap.xml`
-- Contact email is configured as `honeytoraesp@gmail.com`
+- Contact email is configured as `infojapaninsider@gmail.com`
 - Operator name is `脇濱正靖`
 - Home page supports EN / 日本語 / ES
 - Public pricing is USD

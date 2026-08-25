@@ -105,7 +105,7 @@ The site explicitly explains that the actual payment/Stripe checkout is processe
 
 ## Japan / Stripe launch additions
 Added `legal.html` (特定商取引法に基づく表記), a footer link, and cancellation/refund terms.
-Public contact: `honeytoraesp@gmail.com`.
+Public contact: `infojapaninsider@gmail.com`.
 For privacy, operator name/address/phone use 「請求があった場合には遅滞なく開示いたします。」 on the public page. Keep the actual legal details available for Stripe and prompt disclosure.
 Before payments: show the actual USD charge before final purchase; register `legal.html` in Stripe's commerce disclosure setting; confirm all policies match actual operations.
 
@@ -120,7 +120,7 @@ Included in this package:
 - English / 日本語 / Español homepage language switching
 - Public pricing basis: USD
 - Intended checkout currency: USD via Stripe
-- Real inquiry email configured: `honeytoraesp@gmail.com`
+- Real inquiry email configured: `infojapaninsider@gmail.com`
 - Legal operator name: `脇濱正靖`
 - `legal.html` — 特定商取引法に基づく表記
 - Trilingual `privacy.html`
@@ -204,3 +204,7 @@ Fixed the two homepage sample-deliverable blocks identified in screenshots, incl
 
 ## v13 — Japanese hero balance
 Japanese hero is intentionally composed as two lines: 「あなたの日本を、」 / 「もっとあなたらしく。」, with navy/red emphasis.
+
+
+## v14 — contact email
+All contact email references changed to `infojapaninsider@gmail.com`.

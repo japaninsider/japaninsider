@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "honeytoraesp@gmail.com";
+const CONTACT_EMAIL = "infojapaninsider@gmail.com";
 
 const translations = {
   en: {
@@ -38,7 +38,7 @@ const translations = {
     "faq.q4":"Do you support trips outside Tokyo?","faq.a4":"Yes. The service can cover destinations throughout Japan, depending on the research required.",
     "faq.q5":"How fast will I receive my plan?","faq.a5":"Turnaround depends on scope. A delivery date is confirmed with you before payment so expectations are clear.",
     "contact.eyebrow":"START YOUR JAPAN PLAN","contact.title":"Tell us what you’re planning.","contact.text":"Use the form to prepare an inquiry. This starter site opens your email app so you can send the message directly — no backend or customer data storage required.",
-    "contact.note_html":"Questions are sent to <strong>honeytoraesp@gmail.com</strong>.",
+    "contact.note_html":"Questions are sent to <strong>infojapaninsider@gmail.com</strong>.",
     "form.name":"Name","form.email":"Email","form.plan":"Interested in","form.message":"Tell us about your trip","form.submit":"Prepare email inquiry","form.unsure":"Not sure yet",
     "form.name_ph":"Your name","form.email_ph":"you@example.com","form.message_ph":"Dates, cities, travelers, interests, budget and what you need help with...",
     "footer.desc":"Personal travel research & concierge support for Japan.","footer.explore":"Explore","footer.info":"Info","footer.project":"Project","footer.privacy":"Privacy","footer.terms":"Terms","footer.legal":"Legal / Commerce disclosure","footer.contact":"Contact","footer.tagline":"Your Japan, Better.","footer.built":"Built for GitHub Pages.",
@@ -83,7 +83,7 @@ const translations = {
     "faq.q4":"東京以外の旅行にも対応していますか？","faq.a4":"はい。必要なリサーチ内容に応じて、日本各地の旅行に対応します。",
     "faq.q5":"どれくらいでプランが届きますか？","faq.a5":"内容によって異なります。お支払い前に納期をご案内し、双方で確認してから進めます。",
     "contact.eyebrow":"日本旅行の相談をはじめる","contact.title":"どんな旅を計画していますか？","contact.text":"フォームに入力すると、お使いのメールアプリで問い合わせ文を作成できます。現在のスターター版では、サーバー側に個人情報を保存しません。",
-    "contact.note_html":"お問い合わせは <strong>honeytoraesp@gmail.com</strong> に送信されます。",
+    "contact.note_html":"お問い合わせは <strong>infojapaninsider@gmail.com</strong> に送信されます。",
     "form.name":"お名前","form.email":"メールアドレス","form.plan":"興味のあるプラン","form.message":"旅行について教えてください","form.submit":"問い合わせメールを作成","form.unsure":"まだ決めていない",
     "form.name_ph":"お名前","form.email_ph":"you@example.com","form.message_ph":"日程、都市、人数、興味、予算、相談したいことなど...",
     "footer.desc":"日本旅行のパーソナルリサーチ＆コンシェルジュサポート。","footer.explore":"メニュー","footer.info":"情報","footer.project":"プロジェクト","footer.privacy":"プライバシー","footer.terms":"利用規約","footer.legal":"特定商取引法に基づく表記","footer.contact":"お問い合わせ","footer.tagline":"あなたの日本旅行を、もっと良く。","footer.built":"GitHub Pagesで公開できます。",
@@ -128,7 +128,7 @@ const translations = {
     "faq.q4":"¿Ofrecéis apoyo para viajes fuera de Tokio?","faq.a4":"Sí. El servicio puede cubrir destinos de todo Japón, dependiendo de la investigación necesaria.",
     "faq.q5":"¿Cuánto tardaré en recibir mi plan?","faq.a5":"El plazo depende del alcance. Confirmamos contigo una fecha de entrega antes del pago para que las expectativas estén claras.",
     "contact.eyebrow":"EMPIEZA A PLANIFICAR JAPÓN","contact.title":"Cuéntanos qué estás planeando.","contact.text":"Utiliza el formulario para preparar una consulta. Esta versión inicial abre tu aplicación de correo para que puedas enviar el mensaje directamente, sin backend ni almacenamiento de datos personales.",
-    "contact.note_html":"Las consultas se envían a <strong>honeytoraesp@gmail.com</strong>.",
+    "contact.note_html":"Las consultas se envían a <strong>infojapaninsider@gmail.com</strong>.",
     "form.name":"Nombre","form.email":"Correo electrónico","form.plan":"Me interesa","form.message":"Cuéntanos sobre tu viaje","form.submit":"Preparar correo de consulta","form.unsure":"Aún no lo sé",
     "form.name_ph":"Tu nombre","form.email_ph":"tu@email.com","form.message_ph":"Fechas, ciudades, viajeros, intereses, presupuesto y en qué necesitas ayuda...",
     "footer.desc":"Investigación de viajes personalizada y apoyo de concierge para Japón.","footer.explore":"Explorar","footer.info":"Información","footer.project":"Proyecto","footer.privacy":"Privacidad","footer.terms":"Términos","footer.legal":"Información legal","footer.contact":"Contacto","footer.tagline":"Your Japan, Better.","footer.built":"Preparado para GitHub Pages.",
