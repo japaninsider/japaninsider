@@ -173,3 +173,7 @@ Added `intake.html` with EN / 日本語 / ES and plan-specific questions for Qui
 
 ## v5 — USD unified pricing
 CURRENT CONFIGURATION: Website, official sale prices, Terms, commerce disclosure and Stripe checkout are USD. Prices: $49 / $199 / $499 / $999+. This supersedes all earlier currency notes.
+
+
+## v6 — sample deliverables
+Added a homepage 'See what you'll receive' section, trilingual `samples.html` with Personal/Premium/VIP examples, and `DELIVERY-TEMPLATE.md` for real client fulfilment.
