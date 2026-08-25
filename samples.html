@@ -23,6 +23,8 @@
 .sample-method{margin-top:26px;padding:22px;border-radius:16px;background:#f8fafc;border:1px solid #e5e7eb}
 .backlinks{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 @media(max-width:700px){.samples-top{flex-direction:column}.samples-wrap{margin-top:70px}}
+.answer-label{display:inline-block;margin-bottom:10px;padding:6px 10px;border-radius:999px;background:#eef2f7;font-size:.82rem;font-weight:800;letter-spacing:.03em}
+.sample-card{box-shadow:0 1px 0 rgba(16,24,40,.02)}
 </style>
 </head>
 <body>
@@ -51,17 +53,17 @@
     <h2 data-t="quickTitle">Three questions. Three usable answers.</h2>
     <p class="sample-note" data-t="quickNote">Illustrative sample. Transport times, fares and booking details are rechecked for the customer's actual travel date.</p>
 
-    <article class="sample-card">
+    <article class="sample-card"><div class="answer-label" data-t="answerLabel">Recommendation</div>
       <h2 data-t="q1">1. Should we stay in Shinjuku or Shibuya?</h2>
       <p data-t="a1"><strong>Recommendation: Shinjuku.</strong> For this couple's priorities—easy transportation, comfortable full-service hotels and a choice between lively and quieter areas—Shinjuku is the better fit. Shibuya is excellent for nightlife, fashion and a younger street atmosphere, but the station area can feel more hectic. Choose Shibuya instead if nightlife, contemporary shopping and proximity to Daikanyama/Harajuku matter more than the broadest transport options.</p>
     </article>
 
-    <article class="sample-card">
+    <article class="sample-card"><div class="answer-label" data-t="answerLabel2">Best route</div>
       <h2 data-t="q2">2. What is the simplest way from Haneda Airport to Shinjuku?</h2>
       <p data-t="a2"><strong>For comfort with luggage:</strong> first check an airport limousine bus serving your hotel or a nearby major hotel; it can avoid carrying bags through large stations. <strong>For speed and flexibility:</strong> rail is usually straightforward, but the best route depends on terminal, arrival time and hotel location. For a paid answer we verify the practical routes, closest stop, current timetable, fare and luggage convenience for your actual date.</p>
     </article>
 
-    <article class="sample-card">
+    <article class="sample-card"><div class="answer-label" data-t="answerLabel3">Trip balance</div>
       <h2 data-t="q3">3. Four nights Tokyo + four nights Kyoto — sensible?</h2>
       <p data-t="a3"><strong>Yes, for a first eight-night trip.</strong> It gives enough time to experience both cities without changing hotels too often. We would group sightseeing geographically rather than crossing each city repeatedly. If food and neighborhoods matter more than checklist sightseeing, keeping all four Kyoto nights is often better than adding another one-night stop. If your international flight departs from Tokyo, we may recommend returning to Tokyo the night before departure when that materially reduces travel-day risk.</p>
     </article>
@@ -133,7 +135,7 @@ vipEyebrow:"VIP — SAMPLE DELIVERY",vipTitle:"A Kyoto anniversary day designed 
 disclaimer:"Samples are illustrative. Specific venues, prices, opening hours, availability and travel conditions are checked for the actual client's dates when relevant. Japan Insider provides research and consultation; customers book and pay third-party providers directly.",viewPlans:"View plans",home:"Back to home"
 },
 ja:{
-title:"実際にどんなものが届くのか、ご覧いただけます。",intro:"以下は、実際の納品レベルと形式が分かるように作った具体的なサンプルです。",
+title:"実際にどんなものが届くのか、ご覧いただけます。",answerLabel:"おすすめ",answerLabel2:"移動方法",answerLabel3:"旅程バランス",intro:"以下は、実際の納品レベルと形式が分かるように作った具体的なサンプルです。",
 quickEyebrow:"QUICK HELP — 納品サンプル",quickTitle:"3つの質問に、実際にこう回答します。",quickNote:"サンプルです。交通所要時間、料金、予約情報などは、お客様の実際の旅行日程に合わせて改めて確認します。",
 q1:"1. 新宿と渋谷、どちらに泊まるのがおすすめですか？",a1:"おすすめは新宿です。このご夫婦の希望である、移動のしやすさ、快適なフルサービスホテルの選択肢、にぎやかな場所と落ち着いた場所の両方を選べる点を重視すると、新宿が合います。渋谷はナイトライフ、ファッション、若々しい街の雰囲気に強い一方、駅周辺はより慌ただしく感じることがあります。夜の楽しみや現代的なショッピング、代官山・原宿への近さをより重視するなら渋谷も有力です。",
 q2:"2. 羽田空港から新宿へ、いちばん楽な移動方法は？",a2:"荷物が多く快適さを優先するなら、まず宿泊ホテルまたは近隣の主要ホテルに停車する空港リムジンバスを確認します。大きな駅で荷物を持って乗り換える負担を減らせる場合があります。速さや柔軟性を優先するなら鉄道も便利ですが、最適な経路は到着ターミナル、到着時刻、ホテルの場所で変わります。有料回答では、実際の日程に合わせて利用しやすい経路、最寄りの降車場所、最新時刻表、料金、荷物を含めた移動負担まで確認します。",

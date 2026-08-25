@@ -253,3 +253,6 @@ Added a multilingual role line beneath Masayasu Wakihama so first-time visitors 
 
 ## v25 — guest-review fixes
 Premium support is consistently email-based. Booking boundaries explicitly require customers to reserve and pay providers directly. Delivery wording remains aligned with Personal 5-business-day and Premium 7-business-day targets, with final timing confirmed before payment.
+
+## v29 — Formspree direct submit
+Integrated Formspree endpoint xeajbpvn into the general inquiry and intake forms. Removed the email-app dependency and added inline success/error states. Improved Quick Help sample scanability.

@@ -94,3 +94,5 @@ html:lang(ja) .lang-en{display:none!important}
 html:lang(ja) .lang-ja{display:block!important}
 html:lang(en) .lang-en{display:block!important}
 html:lang(en) .lang-ja{display:none!important}
+
+.form-status{margin-top:12px;font-weight:700;line-height:1.5}button:disabled,.button:disabled{opacity:.65;cursor:wait}

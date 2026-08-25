@@ -56,7 +56,7 @@ textarea{min-height:115px;resize:vertical}
   <span class="step">4. <span data-t="s4">Receive your delivery</span></span>
 </div>
 
-<form id="intakeForm">
+<form id="intakeForm" action="https://formspree.io/f/xeajbpvn" method="POST"><input type="hidden" name="form_type" value="Post-payment intake">
 <section class="card">
   <h2 data-t="purchase">Purchase details</h2>
   <div class="grid">
@@ -148,7 +148,7 @@ textarea{min-height:115px;resize:vertical}
   </div>
   <p id="status" class="small" aria-live="polite"></p>
 
-  <div id="success" class="success" aria-live="polite">
+  <p id="intakeSubmitStatus" class="small" aria-live="polite"></p><div id="success" class="success" aria-live="polite">
     <h3 data-t="successTitle">Your intake is ready to send.</h3>
     <p data-t="successText">After we confirm your payment and details, research begins. Quick Help is usually delivered by email within 2 business days.</p>
   </div>
@@ -277,21 +277,36 @@ if (["quick","personal","premium","vip"].includes(qp)) {
 
 document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => applyLang(b.dataset.lang)));
 
-document.getElementById("intakeForm").addEventListener("submit", e => {
+
+document.getElementById("intakeForm").addEventListener("submit", async function(e){
   e.preventDefault();
-  const fd = new FormData(e.currentTarget);
-  const rows = [];
-  for (const [k,v] of fd.entries()) {
-    const val = String(v).trim();
-    if (val) rows.push(`${k}: ${val}`);
+  const form=e.currentTarget;
+  const langNow=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+  const msg={
+    en:{sending:"Sending…",ok:"Thank you. Your trip details have been sent to Japan Insider.",err:"We couldn't send the form. Please try again or email infojapaninsider@gmail.com."},
+    ja:{sending:"送信中…",ok:"ありがとうございます。旅行情報をJapan Insiderへ送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"},
+    es:{sending:"Enviando…",ok:"Gracias. Hemos recibido los datos de tu viaje.",err:"No pudimos enviar el formulario. Inténtalo de nuevo o escribe a infojapaninsider@gmail.com."}
+  };
+  const c=msg[langNow]||msg.en;
+  const status=document.getElementById("intakeSubmitStatus");
+  const btn=form.querySelector('[type="submit"]');
+  if(status)status.textContent=c.sending;
+  if(btn)btn.disabled=true;
+  try{
+    const res=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{"Accept":"application/json"}});
+    if(res.ok){
+      if(status)status.textContent=c.ok;
+      document.getElementById("success")?.classList.add("show");
+      form.reset();
+      if(typeof applyPlan==="function")applyPlan();
+    }else{
+      if(status)status.textContent=c.err;
+    }
+  }catch(err){
+    if(status)status.textContent=c.err;
+  }finally{
+    if(btn)btn.disabled=false;
   }
-  const subject = `Japan Insider intake — ${fd.get("plan") || "plan"} — ${fd.get("name") || ""}`;
-  const body = `Japan Insider Client Intake\n\n${rows.join("\n\n")}`;
-  document.getElementById("status").textContent = copy[lang].status;
-  document.getElementById("success").classList.add("show");
-  setTimeout(() => {
-    window.location.href = `mailto:${encodeURIComponent(CONTACT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, 250);
 });
 
 applyLang(lang);

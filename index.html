@@ -187,14 +187,14 @@
 <section class="section-pad contact-section" id="contact">
 <div class="container contact-grid">
 <div class="reveal"><p class="eyebrow" data-i18n="contact.eyebrow">START YOUR JAPAN PLAN</p><h2 data-i18n="contact.title">Tell us what you’re planning.</h2><p data-i18n="contact.text">Tell us your dates, priorities and what you want help with. For Personal, Premium and VIP, we confirm the scope and delivery timing before payment.</p><p class="small muted" data-i18n-html="contact.note_html">Questions are sent to <strong>infojapaninsider@gmail.com</strong>.</p></div>
-<form class="contact-form reveal" id="contactForm">
+<form action="https://formspree.io/f/xeajbpvn" method="POST" class="contact-form reveal" id="contactForm"><input type="hidden" name="form_type" value="General inquiry">
 <label>Name<input autocomplete="name" data-i18n-placeholder="form.name_ph" name="name" placeholder="Your name" required=""/></label>
 <label>Email<input autocomplete="email" data-i18n-placeholder="form.email_ph" name="email" placeholder="you@example.com" required="" type="email"/></label>
 <label>Interested in<select id="planSelect" name="plan"><option data-i18n="form.unsure" value="">Not sure yet</option><option data-plan-option="quick" value="Japan Quick Help — $49">Japan Quick Help — $49</option><option data-plan-option="personal" value="Japan Personal Plan — $199">Japan Personal Plan — $199</option><option data-plan-option="premium" value="Japan Premium — $499">Japan Premium — $499</option><option data-plan-option="vip" value="Japan VIP — $999+">Japan VIP — $999+</option></select></label>
 <label>Tell us about your trip<textarea data-i18n-placeholder="form.message_ph" name="message" placeholder="Dates, cities, travelers, interests, budget and what you need help with..." required="" rows="5"></textarea></label>
-<button class="button full" data-i18n="form.submit" type="submit">Prepare email inquiry</button>
+<button class="button full" data-i18n="form.submit" type="submit">Send inquiry</button>
 <p aria-live="polite" class="form-status" id="formStatus"></p>
-</form>
+<p id="contactFormStatus" class="form-status" aria-live="polite"></p></form>
 </div>
 </section>
 <footer class="site-footer">
@@ -207,5 +207,30 @@
 <div class="container footer-bottom"><span>© <span id="year"></span> Japan Insider.</span><span data-v16="footerLine">Personal Japan travel research & consultation.</span></div>
 </footer>
 <script src="assets/js/payments.js"></script>
+
+<script>
+(function(){
+const form=document.getElementById("contactForm");
+if(!form)return;
+const status=document.getElementById("contactFormStatus");
+form.addEventListener("submit",async function(e){
+e.preventDefault();
+const lang=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+const copy={
+en:{sending:"Sending…",ok:"Thank you. Your inquiry has been sent to Japan Insider.",err:"We couldn't send the form. Please try again, or email infojapaninsider@gmail.com."},
+ja:{sending:"送信中…",ok:"ありがとうございます。お問い合わせを送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"}
+};
+const c=copy[lang]||copy.en;
+if(status)status.textContent=c.sending;
+const btn=form.querySelector('[type="submit"]');
+if(btn)btn.disabled=true;
+try{
+const res=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{"Accept":"application/json"}});
+if(res.ok){form.reset();if(status)status.textContent=c.ok;}else{if(status)status.textContent=c.err;}
+}catch(err){if(status)status.textContent=c.err;}finally{if(btn)btn.disabled=false;}
+});
+})();
+</script>
+
 </body>
 </html>
