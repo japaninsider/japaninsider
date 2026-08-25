@@ -244,3 +244,6 @@ Footer `Client Intake` now displays as `お申し込みフォーム` in Japanese
 
 ## v22 — pre-launch consistency
 Unified Premium as email support, aligned delivery wording, made the direct-booking boundary explicit, and added a John & Susan Quick Help $49 Stripe test-mode checklist. The actual Stripe Payment Link must be inserted in `assets/js/payments.js` when available.
+
+## v23 — typography polish
+Language-aware EN/JA/ES typography; Japanese headline wrapping and mobile sizing improved; About copy refined.
