@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Japan Insider — Post-Payment Intake</title>
-<meta name="description" content="Post-payment intake form for Japan Insider travel research and concierge services.">
+<meta name="description" content="Post-payment intake form for Japan Insider travel research and advisory services.">
+<meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
 .intake-wrap{max-width:980px;margin:105px auto 70px;padding:0 22px}
@@ -44,8 +45,7 @@ textarea{min-height:115px;resize:vertical}
   </div>
   <div class="lang-switch-inline" aria-label="Language">
     <button type="button" data-lang="en" class="active">EN</button><span>/</span>
-    <button type="button" data-lang="ja">日本語</button><span>/</span>
-    <button type="button" data-lang="es">ES</button>
+    <button type="button" data-lang="ja">日本語</button>
   </div>
 </header>
 
@@ -128,14 +128,14 @@ textarea{min-height:115px;resize:vertical}
 </section>
 
 <section class="card plansec" data-plan-section="vip">
-  <h2 data-t="vipTitle">VIP — high-touch concierge brief</h2>
+  <h2 data-t="vipTitle">VIP — custom travel advisory brief</h2>
   <div class="grid">
     <label class="full"><span data-t="purpose">Main purpose of trip</span><textarea name="vip_purpose"></textarea></label>
     <label><span data-t="style">Preferred travel style</span><input name="vip_style"></label>
     <label><span data-t="dailybudget">Comfortable daily spend</span><input name="vip_daily_budget"></label>
     <label class="full"><span data-t="special">Special occasions / important dates</span><textarea name="vip_special"></textarea></label>
     <label class="full"><span data-t="dontlike">Things you definitely do not enjoy</span><textarea name="vip_dontlike"></textarea></label>
-    <label class="full"><span data-t="concierge">What would make this feel truly VIP?</span><textarea name="vip_concierge"></textarea></label>
+    <label class="full"><span data-t="concierge">What would make this support especially useful?</span><textarea name="vip_concierge"></textarea></label>
   </div>
 </section>
 
@@ -145,7 +145,7 @@ textarea{min-height:115px;resize:vertical}
   <label><span data-t="notes">Anything else?</span><textarea name="notes"></textarea></label>
   <div class="notice" style="margin-top:16px" data-t="privacy">Do not include passport numbers, card details, passwords, or other sensitive credentials.</div>
   <div class="actions">
-    <button class="button" type="submit" data-t="submit">Prepare intake email</button>
+    <button class="button" type="submit" data-t="submit">Send trip details</button>
     <a class="button button-secondary" href="index.html" data-t="back">Back to site</a>
   </div>
   <p id="status" class="small" aria-live="polite"></p>
@@ -155,10 +155,14 @@ textarea{min-height:115px;resize:vertical}
 <strong id="intakeReceiptTitle">Submission received</strong>
 <div><span id="intakeReceiptRefLabel">Reference:</span> <code id="intakeReceiptRef"></code></div>
 <div><span id="intakeReceiptTimeLabel">Submitted:</span> <span id="intakeReceiptTime"></span></div>
-<p id="intakeReceiptTip">Please keep this reference number. A copy of the details remains visible here until you leave or reload this page.</p>
+<p id="intakeReceiptTip">Please keep this reference number. Use the buttons below to save or copy your submission for later.</p>
 <pre id="intakeReceiptCopy" class="receipt-copy"></pre>
+<div class="receipt-actions">
+  <button type="button" class="button button-secondary" id="intakeSaveReceipt">Save a copy (.txt)</button>
+  <button type="button" class="button button-ghost" id="intakeCopyReceipt">Copy</button>
+</div>
 </div><div id="success" class="success" aria-live="polite">
-    <h3 data-t="successTitle">Your intake is ready to send.</h3>
+    <h3 data-t="successTitle">Your trip details have been received.</h3>
     <p data-t="successText">After we confirm your payment and details, research begins. Quick Help is usually delivered by email within 2 business days.</p>
   </div>
 </section>
@@ -182,17 +186,17 @@ const copy = {
     quickIntro:"No appointment or video call is required. Send up to three specific questions and we’ll reply by email, usually within 2 business days.",
     q1:"Question 1", q2:"Question 2", q3:"Question 3", context:"Anything else we should know?",
     personalTitle:"Personal Plan — custom travel design", premiumTitle:"Premium — plan + travel support",
-    vipTitle:"VIP — high-touch concierge brief", pace:"Preferred pace", foodbudget:"Meal budget per person",
+    vipTitle:"VIP — custom travel advisory brief", pace:"Preferred pace", foodbudget:"Meal budget per person",
     mustdo:"Must-do experiences / places", food:"Food preferences / allergies",
     mobility:"Mobility / accessibility considerations", support:"7-day support window",
     shopping:"Shopping / product research", realtime:"What help would be useful during the trip?",
     purpose:"Main purpose of trip", style:"Preferred travel style", dailybudget:"Comfortable daily spend",
     special:"Special occasions / important dates", dontlike:"Things you definitely do not enjoy",
-    concierge:"What would make this feel truly VIP?", final:"Final details", links:"Useful links",
+    concierge:"What would make this support especially useful?", final:"Final details", links:"Useful links",
     notes:"Anything else?", privacy:"Do not include passport numbers, card details, passwords, or other sensitive credentials.",
-    submit:"Prepare intake email", back:"Back to site",
+    submit:"Send trip details", back:"Back to site",
     status:"Your trip details will be sent directly from this page.",
-    successTitle:"Your intake is ready to send.",
+    successTitle:"Your trip details have been received.",
     successText:"After we confirm your payment and details, research begins. Quick Help is usually delivered by email within 2 business days."
   },
   ja: {
@@ -209,57 +213,30 @@ const copy = {
     q1:"質問1", q2:"質問2", q3:"質問3", context:"その他、知っておいてほしいこと",
     personalTitle:"Personal Plan｜あなた専用の旅行プラン",
     premiumTitle:"Premium｜詳細プラン＋旅行中サポート",
-    vipTitle:"VIP｜コンシェルジュ型の個別プラン",
+    vipTitle:"VIP｜高い個別性の旅行アドバイス",
     pace:"旅行のペース", foodbudget:"1人あたりの食事予算",
     mustdo:"絶対に行きたい場所・やりたいこと", food:"食事の好み・アレルギー",
     mobility:"移動・バリアフリー等の配慮事項", support:"7日間サポート希望期間",
     shopping:"探してほしい商品・買い物", realtime:"旅行中にどんなサポートがあると助かりますか？",
     purpose:"旅行の主な目的", style:"好みの旅行スタイル", dailybudget:"1日あたり快適に使える予算",
     special:"記念日・重要な日", dontlike:"苦手・避けたいこと",
-    concierge:"どんな対応があるとVIPらしいと感じますか？", final:"最後に",
+    concierge:"どんなサポートがあると特に役立ちますか？", final:"最後に",
     links:"参考リンク", notes:"その他",
     privacy:"パスポート番号、カード情報、パスワードなどの重要情報は入力しないでください。",
-    submit:"入力内容をメールで送る", back:"サイトへ戻る",
+    submit:"旅行情報を送信", back:"サイトへ戻る",
     status:"このページから旅行情報を直接送信します。",
-    successTitle:"入力内容の送信準備ができました。",
+    successTitle:"旅行情報を受け付けました。",
     successText:"決済と内容を確認後、リサーチを開始します。Quick Helpは通常2営業日以内にメールで納品します。"
   },
-  es: {
-    eyebrow:"FORMULARIO DESPUÉS DEL PAGO", title:"Cuéntanos sobre tu viaje a Japón.",
-    intro:"Complétalo después del pago. Revisaremos los datos antes de comenzar la investigación y preparar la entrega.",
-    s1:"Elegir plan", s2:"Pagar con Stripe", s3:"Enviar datos del viaje", s4:"Recibir la entrega",
-    purchase:"Datos de compra", plan:"Plan comprado", order:"Recibo de Stripe / referencia",
-    orderHelp:"Si la tienes, añade la referencia o recibo de Stripe.",
-    basics:"Sobre ti y tu viaje", name:"Nombre", email:"Correo", dates:"Fechas del viaje",
-    travelers:"Viajeros / edades", cities:"Ciudades / regiones", budget:"Presupuesto aproximado",
-    interests:"Intereses", avoid:"¿Algo que quieras evitar?",
-    quickTitle:"Quick Help — hasta 3 preguntas concretas",
-    quickIntro:"No necesitas cita ni videollamada. Envía hasta tres preguntas específicas y normalmente responderemos por correo en 2 días laborables.",
-    q1:"Pregunta 1", q2:"Pregunta 2", q3:"Pregunta 3", context:"¿Algo más que debamos saber?",
-    personalTitle:"Personal Plan — diseño personalizado",
-    premiumTitle:"Premium — plan + soporte durante el viaje",
-    vipTitle:"VIP — concierge personalizado", pace:"Ritmo preferido",
-    foodbudget:"Presupuesto por comida y persona", mustdo:"Lugares / experiencias imprescindibles",
-    food:"Preferencias alimentarias / alergias", mobility:"Movilidad / accesibilidad",
-    support:"Periodo de soporte de 7 días", shopping:"Compras / productos a investigar",
-    realtime:"¿Qué ayuda sería útil durante el viaje?", purpose:"Objetivo principal del viaje",
-    style:"Estilo de viaje preferido", dailybudget:"Gasto diario cómodo",
-    special:"Ocasiones especiales / fechas importantes", dontlike:"Cosas que no disfrutas",
-    concierge:"¿Qué haría que el servicio se sintiera realmente VIP?", final:"Detalles finales",
-    links:"Enlaces útiles", notes:"¿Algo más?",
-    privacy:"No incluyas números de pasaporte, datos de tarjetas, contraseñas u otras credenciales sensibles.",
-    submit:"Enviar", back:"Volver al sitio",
-    status:"Los datos se enviarán directamente desde esta página.",
-    successTitle:"El formulario está listo para enviar.",
-    successText:"Tras confirmar el pago y los datos, comenzamos la investigación. Quick Help normalmente se entrega por correo en 2 días laborables."
-  }
 };
 
-let lang = localStorage.getItem("japanInsiderLang") ||
-  (navigator.language.toLowerCase().startsWith("ja") ? "ja" :
-   navigator.language.toLowerCase().startsWith("es") ? "es" : "en");
+let lang = localStorage.getItem("japanInsiderLang");
+if (!["en","ja"].includes(lang)) {
+  lang = navigator.language.toLowerCase().startsWith("ja") ? "ja" : "en";
+}
 
 function applyLang(next) {
+  if (!["en","ja"].includes(next)) next = "en";
   lang = next;
   localStorage.setItem("japanInsiderLang", next);
   document.documentElement.lang = next;
@@ -298,14 +275,25 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
   document.getElementById("intakeSubmittedAt").value=now.toISOString();
   document.getElementById("intakeSubject").value="Japan Insider "+plan+" "+ref;
   const snapshot=new FormData(e.currentTarget);
+  const submittedLines=[];
+  [...e.currentTarget.elements].forEach(el=>{
+    if(!el.name || ["hidden","submit","button"].includes(el.type)) return;
+    let value="";
+    if(el.tagName==="SELECT") value=el.options[el.selectedIndex]?.text||"";
+    else value=el.value||"";
+    if(!String(value).trim()) return;
+    const label=el.closest("label");
+    const labelNode=label?.querySelector("[data-t]");
+    const labelText=labelNode?.textContent?.trim()||el.name;
+    submittedLines.push(labelText+": "+value);
+  });
 
   e.preventDefault();
   const form=e.currentTarget;
-  const langNow=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+  const langNow=(localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en")==="ja"?"ja":"en";
   const msg={
     en:{sending:"Sending…",ok:"Thank you. Your trip details have been sent to Japan Insider.",err:"We couldn't send the form. Please try again or email infojapaninsider@gmail.com."},
-    ja:{sending:"送信中…",ok:"ありがとうございます。旅行情報をJapan Insiderへ送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"},
-    es:{sending:"Enviando…",ok:"Gracias. Hemos recibido los datos de tu viaje.",err:"No pudimos enviar el formulario. Inténtalo de nuevo o escribe a infojapaninsider@gmail.com."}
+    ja:{sending:"送信中…",ok:"ありがとうございます。旅行情報をJapan Insiderへ送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"}
   };
   const c=msg[langNow]||msg.en;
   const status=document.getElementById("intakeSubmitStatus");
@@ -322,11 +310,37 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
       document.getElementById("intakeReceiptTitle").textContent=langNow==="ja"?"送信を受け付けました":"Submission received";
       document.getElementById("intakeReceiptRefLabel").textContent=langNow==="ja"?"受付番号：":"Reference:";
       document.getElementById("intakeReceiptTimeLabel").textContent=langNow==="ja"?"送信日時：":"Submitted:";
-      document.getElementById("intakeReceiptTip").textContent=langNow==="ja"?"この受付番号を控えてください。このページを閉じる／再読み込みするまでは、下に送信内容の控えを表示します。":"Please keep this reference number. A copy of the submitted details remains below until you leave or reload this page.";
-      const ignore=new Set(["subject","submitted_at"]);
-      const lines=[];
-      for(const [k,v] of snapshot.entries()){if(!ignore.has(k)&&String(v).trim())lines.push(k+": "+v);}
-      document.getElementById("intakeReceiptCopy").textContent=lines.join("\n");
+      document.getElementById("intakeReceiptTip").textContent=langNow==="ja"?"受付番号と送信内容の控えを保存しておくことをおすすめします。下のボタンから保存またはコピーできます。":"We recommend saving your reference number and submission. Use the buttons below to save or copy it for later.";
+      const receiptText=[
+        "Japan Insider",
+        (langNow==="ja"?"受付番号":"Reference")+": "+ref,
+        (langNow==="ja"?"送信日時":"Submitted")+": "+now.toLocaleString(langNow==="ja"?"ja-JP":"en-US"),
+        "",
+        ...submittedLines
+      ].join("\n");
+      document.getElementById("intakeReceiptCopy").textContent=receiptText;
+      const saveBtn=document.getElementById("intakeSaveReceipt");
+      const copyBtn=document.getElementById("intakeCopyReceipt");
+      saveBtn.textContent=langNow==="ja"?"控えを保存（.txt）":"Save a copy (.txt)";
+      copyBtn.textContent=langNow==="ja"?"控えをコピー":"Copy";
+      saveBtn.onclick=()=>{
+        const blob=new Blob([receiptText],{type:"text/plain;charset=utf-8"});
+        const url=URL.createObjectURL(blob);
+        const a=document.createElement("a");
+        a.href=url;
+        a.download=ref+".txt";
+        a.click();
+        setTimeout(()=>URL.revokeObjectURL(url),500);
+      };
+      copyBtn.onclick=async()=>{
+        try{
+          await navigator.clipboard.writeText(receiptText);
+          copyBtn.textContent=langNow==="ja"?"コピーしました":"Copied";
+          setTimeout(()=>copyBtn.textContent=langNow==="ja"?"控えをコピー":"Copy",1600);
+        }catch(_){
+          copyBtn.textContent=langNow==="ja"?"コピーできませんでした":"Copy failed";
+        }
+      };
       receipt.hidden=false;
       document.getElementById("success")?.classList.add("show");
       form.reset();
@@ -344,6 +358,6 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
 applyLang(lang);
 applyPlan();
 </script>
-<span class="site-build-version" aria-label="site build">v33</span>
+<span class="site-build-version" aria-label="site build">v34</span>
 </body>
 </html>

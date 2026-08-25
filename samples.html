@@ -21,11 +21,13 @@
 .sample-note{background:#f8fafc;border:1px solid #e5e7eb;border-radius:14px;padding:16px;line-height:1.75}
 .meta{color:#667085}
 .sample-method{margin-top:26px;padding:22px;border-radius:16px;background:#f8fafc;border:1px solid #e5e7eb}
+.option-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.option{border:1px solid #e5e7eb;border-radius:14px;padding:16px;background:#fafafa}.option strong{display:block;margin-bottom:6px}.sample-decision{font-weight:700;border-left:3px solid #17233c;padding-left:12px}.vip-timeline{display:grid;gap:10px;margin-top:14px}.vip-row{display:grid;grid-template-columns:85px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #edf0f3}.vip-row:last-child{border-bottom:0}@media(max-width:700px){.option-grid{grid-template-columns:1fr}.vip-row{grid-template-columns:70px 1fr}}
 .backlinks{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 @media(max-width:700px){.samples-top{flex-direction:column}.samples-wrap{margin-top:70px}}
 .answer-label{display:inline-block;margin-bottom:10px;padding:6px 10px;border-radius:999px;background:#eef2f7;font-size:.82rem;font-weight:800;letter-spacing:.03em}
 .sample-card{box-shadow:0 1px 0 rgba(16,24,40,.02)}
 .site-build-version{font-size:9px;opacity:.24;position:fixed;right:6px;bottom:4px;z-index:2;user-select:none}</style>
+<link rel="canonical" href="https://japaninsider.github.io/japaninsider/samples.html">
 </head>
 <body>
 <main class="samples-wrap">
@@ -92,7 +94,13 @@
     <article class="sample-card">
       <h2 data-t="prScenario">In-trip support example</h2>
       <p data-t="prClient">Client: “We're in Ginza and our first dinner choice is full. Can you help?”</p>
-      <p data-t="prAnswer">Japan Insider would research current alternatives that fit the agreed cuisine, location and budget, then return a concise shortlist with practical next steps. Availability is never invented and remains subject to the venue.</p>
+      <p class="sample-note" data-t="prLiveNote">Illustrative comparison format only. In a paid delivery, actual venue names, hours and availability are checked at the time of the request.</p>
+      <div class="option-grid">
+        <div class="option"><strong data-t="prAHead">Candidate A · closest fit</strong><span data-t="prABody">About 6 minutes on foot · $$$ · calm dining room · strongest match for the original request.</span></div>
+        <div class="option"><strong data-t="prBHead">Candidate B · easiest fallback</strong><span data-t="prBBody">About 4 minutes on foot · $$–$$$ · more casual · better if same-day flexibility matters most.</span></div>
+        <div class="option"><strong data-t="prCHead">Candidate C · special-occasion option</strong><span data-t="prCBody">A little farther · $$$$ · more formal · worth considering if atmosphere matters more than convenience.</span></div>
+      </div>
+      <p class="sample-decision" data-t="prAnswer">Recommendation: try Candidate A first because it best preserves the original cuisine, budget and atmosphere. If timing is tight, Candidate B is the practical backup. You contact and book the venue directly.</p>
     </article>
     <div class="sample-method"><h2 data-t="prIncludes">Typical Premium delivery includes</h2><p data-t="prIncludesBody">Everything in Personal · deeper restaurant/area research · more backup options · shopping research where requested · 7-day email support window within the agreed scope.</p></div>
   </section>
@@ -102,14 +110,17 @@
     <h2 data-t="vipTitle">A Kyoto anniversary day designed around the client</h2>
     <p class="meta" data-t="sampleClient3">Sample client: Alex & Emma · Example only</p>
     <article class="sample-card">
-      <h2 data-t="vipMorning">Morning — quiet start</h2>
-      <p data-t="vipMorningBody">A carefully timed cultural stop chosen around the client's pace and preference for calm places.</p>
-      <h2 data-t="vipLunch">Lunch — a meal with a reason</h2>
-      <p data-t="vipLunchBody">Restaurant research based on cuisine, atmosphere, budget, occasion and location—not simply a generic “best restaurants” list.</p>
-      <h2 data-t="vipEvening">Evening — anniversary finish</h2>
-      <p data-t="vipEveningBody">A considered evening sequence plus backups, transport notes and exactly what the client should reserve directly.</p>
+      <h2 data-t="vipDay">Example anniversary-day structure</h2>
+      <p class="sample-note" data-t="vipDayNote">Illustrative structure. The real delivery names and checks specific places for the client's dates and preferences.</p>
+      <div class="vip-timeline">
+        <div class="vip-row"><strong>08:00</strong><span data-t="vipMorningBody">Quiet cultural stop before peak crowds, selected for the client's preference for calm places and minimal rushing.</span></div>
+        <div class="vip-row"><strong>11:30</strong><span data-t="vipLateMorning">Short garden or neighborhood stop with a weather backup and a realistic transfer to lunch.</span></div>
+        <div class="vip-row"><strong>13:00</strong><span data-t="vipLunchBody">Lunch selected for cuisine, atmosphere, budget, occasion and location—not a generic “best restaurants” list.</span></div>
+        <div class="vip-row"><strong>16:00</strong><span data-t="vipReset">Hotel reset / free time so the anniversary does not feel over-scheduled.</span></div>
+        <div class="vip-row"><strong>18:30</strong><span data-t="vipEveningBody">Dinner and evening sequence with transport notes, a backup option and clear instructions for what the client should reserve directly.</span></div>
+      </div>
     </article>
-    <div class="sample-method"><h2 data-t="vipIncludes">Typical VIP delivery includes</h2><p data-t="vipIncludesBody">High-touch custom planning · priority research · special-occasion design · deeper preference matching · concierge-style guidance within the agreed scope.</p></div>
+    <div class="sample-method"><h2 data-t="vipIncludes">Typical VIP delivery includes</h2><p data-t="vipIncludesBody">High-touch custom planning · priority research · special-occasion design · deeper preference matching · high-touch research and advisory support within the agreed scope.</p></div>
   </section>
 
   <p class="sample-note" data-t="disclaimer">Samples are illustrative. Specific venues, prices, opening hours, availability and travel conditions are checked for the actual client's dates when relevant. Japan Insider provides research and consultation; customers book and pay third-party providers directly.</p>
@@ -130,8 +141,8 @@ q2:"2. What is the simplest way from Haneda Airport to Shinjuku?",a2:"For comfor
 q3:"3. Four nights Tokyo + four nights Kyoto — sensible?",a3:"Yes, for a first eight-night trip. It gives enough time to experience both cities without changing hotels too often. We would group sightseeing geographically rather than crossing each city repeatedly. If food and neighborhoods matter more than checklist sightseeing, keeping all four Kyoto nights is often better than adding another one-night stop. If your international flight departs from Tokyo, we may recommend returning to Tokyo the night before departure when that materially reduces travel-day risk.",
 paidAdds:"What a paid answer adds",paidAddsBody:"Your actual delivery is tailored to your dates, hotel area, pace and priorities. Where relevant, it includes named options, trade-offs, approximate travel time or price range, booking instructions, alternatives, the date information was checked, and source links.",
 personalEyebrow:"PERSONAL PLAN — SAMPLE DELIVERY",personalTitle:"Tokyo & Kyoto · 7 days",sampleClient:"Sample client: Alex & Emma · Example only",pDay:"Day 2 — Old Tokyo & local food",pBody:"09:00 Asakusa before the crowds → 11:30 Yanaka neighborhood walk → 13:00 a researched lunch shortlist → 15:00 Nezu to Ueno with a realistic walking/transit sequence. The real delivery includes current access notes, routing from your hotel, why each stop fits, and a practical rain alternative.",pIncludes:"Typical Personal delivery includes",pIncludesBody:"Personalized day-by-day plan · food/activity research · routing and timing · practical local notes · backup ideas · 1 reasonable revision.",
-premiumEyebrow:"PREMIUM — SAMPLE DELIVERY",premiumTitle:"Detailed plan + during-trip email support",sampleClient2:"Sample client: Alex & Emma · Example only",prScenario:"In-trip support example",prClient:"Client: “We're in Ginza and our first dinner choice is full. Can you help?”",prAnswer:"Japan Insider would research current alternatives that fit the agreed cuisine, location and budget, then return a concise shortlist with practical next steps. Availability is never invented and remains subject to the venue.",prIncludes:"Typical Premium delivery includes",prIncludesBody:"Everything in Personal · deeper restaurant/area research · more backup options · shopping research where requested · 7-day email support window within the agreed scope.",
-vipEyebrow:"VIP — SAMPLE DELIVERY",vipTitle:"A Kyoto anniversary day designed around the client",sampleClient3:"Sample client: Alex & Emma · Example only",vipMorning:"Morning — quiet start",vipMorningBody:"A carefully timed cultural stop chosen around the client's pace and preference for calm places.",vipLunch:"Lunch — a meal with a reason",vipLunchBody:"Restaurant research based on cuisine, atmosphere, budget, occasion and location—not simply a generic “best restaurants” list.",vipEvening:"Evening — anniversary finish",vipEveningBody:"A considered evening sequence plus backups, transport notes and exactly what the client should reserve directly.",vipIncludes:"Typical VIP delivery includes",vipIncludesBody:"High-touch custom planning · priority research · special-occasion design · deeper preference matching · concierge-style guidance within the agreed scope.",
+premiumEyebrow:"PREMIUM — SAMPLE DELIVERY",premiumTitle:"Detailed plan + during-trip email support",sampleClient2:"Sample client: Alex & Emma · Example only",prScenario:"In-trip support example",prClient:"Client: “We're in Ginza and our first dinner choice is full. Can you help?”",prLiveNote:"Illustrative comparison format only. In a paid delivery, actual venue names, hours and availability are checked at the time of the request.",prAHead:"Candidate A · closest fit",prABody:"About 6 minutes on foot · $$$ · calm dining room · strongest match for the original request.",prBHead:"Candidate B · easiest fallback",prBBody:"About 4 minutes on foot · $$–$$$ · more casual · better if same-day flexibility matters most.",prCHead:"Candidate C · special-occasion option",prCBody:"A little farther · $$$$ · more formal · worth considering if atmosphere matters more than convenience.",prAnswer:"Recommendation: try Candidate A first because it best preserves the original cuisine, budget and atmosphere. If timing is tight, Candidate B is the practical backup. You contact and book the venue directly.",prIncludes:"Typical Premium delivery includes",prIncludesBody:"Everything in Personal · deeper restaurant/area research · more backup options · shopping research where requested · 7-day email support window within the agreed scope.",
+vipEyebrow:"VIP — SAMPLE DELIVERY",vipTitle:"A Kyoto anniversary day designed around the client",sampleClient3:"Sample client: Alex & Emma · Example only",vipDay:"Example anniversary-day structure",vipDayNote:"Illustrative structure. The real delivery names and checks specific places for the client's dates and preferences.",vipMorningBody:"Quiet cultural stop before peak crowds, selected for the client's preference for calm places and minimal rushing.",vipLateMorning:"Short garden or neighborhood stop with a weather backup and a realistic transfer to lunch.",vipLunchBody:"Lunch selected for cuisine, atmosphere, budget, occasion and location—not a generic “best restaurants” list.",vipReset:"Hotel reset / free time so the anniversary does not feel over-scheduled.",vipEveningBody:"Dinner and evening sequence with transport notes, a backup option and clear instructions for what the client should reserve directly.",vipIncludes:"Typical VIP delivery includes",vipIncludesBody:"High-touch custom planning · priority research · special-occasion design · deeper preference matching · high-touch research and advisory support within the agreed scope.",
 disclaimer:"Samples are illustrative. Specific venues, prices, opening hours, availability and travel conditions are checked for the actual client's dates when relevant. Japan Insider provides research and consultation; customers book and pay third-party providers directly.",viewPlans:"View plans",home:"Back to home"
 },
 ja:{
@@ -142,8 +153,8 @@ q2:"2. 羽田空港から新宿へ、いちばん楽な移動方法は？",a2:"�
 q3:"3. 東京4泊＋京都4泊は、初めての日本旅行として妥当ですか？",a3:"はい。8泊の初訪日旅行としてバランスのよい組み方です。ホテル移動を増やしすぎず、東京と京都の両方を体験できます。東京も京都も同じ日に離れた場所を往復せず、エリアごとにまとめるのがおすすめです。名所を数多く回ることより食事や街歩きを重視するなら、別の都市に1泊追加するより京都4泊を維持する方が落ち着いて楽しめます。帰国便が東京発なら、移動リスクを大きく減らせる場合は前日に東京へ戻る案も検討します。",
 paidAdds:"実際の有料回答では、さらに何が加わる？",paidAddsBody:"実際の旅行日、ホテルの場所、旅行ペース、優先事項に合わせて個別に調査します。必要に応じて、具体的な候補名、メリット・デメリット、おおよその移動時間や価格帯、予約方法、代替案、情報確認日、参照リンクを含めます。",
 personalEyebrow:"PERSONAL PLAN — 納品サンプル",personalTitle:"東京＆京都 · 7日間",sampleClient:"サンプル顧客：Alex & Emma · 例示用",pDay:"2日目 — 東京の下町とローカルフード",pBody:"09:00 混雑前の浅草 → 11:30 谷中を街歩き → 13:00 条件に合う昼食候補を比較 → 15:00 根津から上野へ、無理のない徒歩・交通ルートで移動。実際の納品では、ホテルからの移動、各立ち寄り先を選んだ理由、最新アクセス情報、雨天時の代替案まで含めます。",pIncludes:"Personalの主な納品内容",pIncludesBody:"日別の個別旅行プラン · 飲食店／体験リサーチ · 移動経路と時間配分 · 実用的な現地情報 · 代替案 · 合理的な修正1回。",
-premiumEyebrow:"PREMIUM — 納品サンプル",premiumTitle:"詳細プラン＋旅行中メールサポート",sampleClient2:"サンプル顧客：Alex & Emma · 例示用",prScenario:"旅行中サポートの例",prClient:"お客様：「銀座にいます。第一候補の夕食店が満席でした。ほかを探せますか？」",prAnswer:"Japan Insiderが、事前に伺った料理の好み、場所、予算に合う現在の代替候補を調査し、次に何をすればよいか分かる短い候補リストとしてお返しします。空席状況を推測で断定することはなく、実際の利用可否は各店舗の状況によります。",prIncludes:"Premiumの主な納品内容",prIncludesBody:"Personalの全内容 · より深い飲食店／エリア調査 · 追加の代替案 · 希望時の商品・買い物調査 · 合意した範囲で7日間のメールサポート。",
-vipEyebrow:"VIP — 納品サンプル",vipTitle:"お客様に合わせて設計する、京都の記念日プラン",sampleClient3:"サンプル顧客：Alex & Emma · 例示用",vipMorning:"朝 — 静かに始める",vipMorningBody:"落ち着いた場所を好むお客様のペースに合わせ、混雑時間を考慮した文化体験を組み込みます。",vipLunch:"昼 — 理由のある一軒を選ぶ",vipLunchBody:"単なる人気店一覧ではなく、料理、雰囲気、予算、記念日の目的、場所を合わせて飲食店を調査します。",vipEvening:"夜 — 記念日を締めくくる",vipEveningBody:"夕方から夜までを一つの流れとして設計し、代替案、移動情報、お客様自身で予約すべき内容を明確にします。",vipIncludes:"VIPの主な納品内容",vipIncludesBody:"高い個別性のプランニング · 優先リサーチ · 記念日設計 · より深い嗜好の反映 · 合意した範囲でのコンシェルジュ型ガイダンス。",
+premiumEyebrow:"PREMIUM — 納品サンプル",premiumTitle:"詳細プラン＋旅行中メールサポート",sampleClient2:"サンプル顧客：Alex & Emma · 例示用",prScenario:"旅行中サポートの例",prClient:"お客様：「銀座にいます。第一候補の夕食店が満席でした。ほかを探せますか？」",prLiveNote:"比較形式の例です。実際の有料対応では、依頼時点で店舗名、営業時間、空き状況などを確認します。",prAHead:"候補A・元の希望に最も近い",prABody:"徒歩約6分 · $$$ · 落ち着いた雰囲気 · 当初の希望との一致度が最も高い候補。",prBHead:"候補B・当日の代替として使いやすい",prBBody:"徒歩約4分 · $$〜$$$ · ややカジュアル · 当日の柔軟性を優先する場合に便利。",prCHead:"候補C・記念日向け",prCBody:"少し離れる · $$$$ · よりフォーマル · 移動の楽さより雰囲気を優先する場合の候補。",prAnswer:"おすすめはまず候補A。当初の料理、予算、雰囲気を最も維持できるためです。時間が迫っている場合は候補Bを現実的な代替案にします。店舗への連絡・予約はお客様ご自身で行っていただきます。",prIncludes:"Premiumの主な納品内容",prIncludesBody:"Personalの全内容 · より深い飲食店／エリア調査 · 追加の代替案 · 希望時の商品・買い物調査 · 合意した範囲で7日間のメールサポート。",
+vipEyebrow:"VIP — 納品サンプル",vipTitle:"お客様に合わせて設計する、京都の記念日プラン",sampleClient3:"サンプル顧客：Alex & Emma · 例示用",vipDay:"記念日の1日を組み立てる例",vipDayNote:"構成例です。実際の納品では、お客様の日程・希望に合わせて具体的な場所を選び、必要な情報を確認します。",vipMorningBody:"混雑のピーク前に静かな文化体験。落ち着いた場所を好み、急ぎすぎないお客様に合わせます。",vipLateMorning:"庭園や街歩きを短く組み込み、天候時の代替案と昼食への無理のない移動も用意します。",vipLunchBody:"単なる人気店一覧ではなく、料理、雰囲気、予算、記念日の目的、場所を合わせて昼食候補を選びます。",vipReset:"ホテルで休憩／自由時間。記念日が詰め込みすぎにならない余白を確保します。",vipEveningBody:"夕食から夜までを一つの流れとして設計し、移動情報、代替候補、お客様自身で予約すべき内容を明確にします。",vipIncludes:"VIPの主な納品内容",vipIncludesBody:"高い個別性のプランニング · 優先リサーチ · 記念日設計 · より深い嗜好の反映 · 合意した範囲での高い個別性のリサーチ・旅行アドバイス。",
 disclaimer:"サンプルは例示です。店舗名、料金、営業時間、空き状況、交通条件などは、必要に応じて実際のお客様の日程に合わせて確認します。Japan Insiderは調査と相談を提供し、第三者サービスの予約・契約・支払いはお客様ご自身で行っていただきます。",viewPlans:"料金プランを見る",home:"ホームへ戻る"
 }
 };
@@ -170,6 +181,6 @@ const requested=new URLSearchParams(location.search).get("plan");
 if(["quick","personal","premium","vip"].includes(requested)) selectTab(requested);
 applyLang(lang);
 </script>
-<span class="site-build-version" aria-label="site build">v33</span>
+<span class="site-build-version" aria-label="site build">v34</span>
 </body>
 </html>

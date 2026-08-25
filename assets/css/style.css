@@ -106,3 +106,19 @@ body>.site-build-version{position:fixed;right:6px;bottom:4px;z-index:2}
 .submission-receipt strong{display:block;margin-bottom:8px}
 .submission-receipt code{font-weight:800}
 .receipt-copy{margin-top:12px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;border:1px solid #e5e7eb;border-radius:10px;font:inherit;font-size:.9rem}
+
+/* v34 sales-readiness */
+.deliverable-card{align-items:stretch}
+.deliverable-preview{min-height:300px;display:flex;align-items:center;justify-content:center;padding:24px;border-radius:18px;background:linear-gradient(145deg,#eef2f6,#f8fafc)}
+.deliverable-paper{width:min(100%,430px);background:#fff;border:1px solid #dfe3e8;border-radius:10px;padding:26px;box-shadow:0 14px 34px rgba(16,24,40,.10);transform:rotate(1deg)}
+.deliverable-brand{display:block;font-size:.72rem;letter-spacing:.14em;font-weight:900;margin-bottom:12px}
+.deliverable-paper strong{font-size:1.15rem}
+.deliverable-paper p{font-size:.9rem;margin:10px 0;color:#344054}
+.deliverable-rule{height:2px;background:#17233c;margin:13px 0}
+.deliverable-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:14px 0}
+.deliverable-mini-grid span{font-size:.68rem;font-weight:900;letter-spacing:.05em;text-align:center;padding:7px;border-radius:7px;background:#eef2f7}
+.public-record{margin-top:14px;font-size:.92rem}
+.public-record a{text-decoration:underline;text-underline-offset:3px}
+.receipt-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.receipt-actions .button{width:auto}
+@media(max-width:700px){.deliverable-preview{min-height:250px}.deliverable-paper{transform:none}.receipt-actions .button{width:100%}}
