@@ -311,3 +311,53 @@ applyLanguage(currentLang);
    if(e.target.closest&&e.target.closest("[data-lang]")) setTimeout(applyPricingCopy,0);
  });
 })();
+
+
+// v12: explicit localization for sample-deliverable blocks visible on the homepage.
+(function(){
+ const copy={
+  en:{
+   "sample.eyebrow":"SAMPLE DELIVERABLE",
+   "sample.title":"See what you'll receive.",
+   "sample.text":"Preview realistic Personal, Premium and VIP deliverables before you buy.",
+   "sample.cardtitle":"A real plan, not a generic list.",
+   "sample.cardtext":"See day-by-day planning, researched recommendations, backup ideas and examples of travel support.",
+   "sample.cta":"View sample plans",
+   "pricing.sampleTitle":"Want to see what you’ll receive?",
+   "pricing.sampleText":"Preview all four delivery styles before choosing your plan.",
+   "pricing.sampleCta":"View all delivery samples →"
+  },
+  ja:{
+   "sample.eyebrow":"納品サンプル",
+   "sample.title":"こんな形で納品します。",
+   "sample.text":"購入前にPersonal・Premium・VIPの実際に近い納品サンプルをご覧いただけます。",
+   "sample.cardtitle":"ただのおすすめ一覧ではありません。",
+   "sample.cardtext":"日別プラン、個別に調査したおすすめ、代替案、旅行中サポートの例までご確認いただけます。",
+   "sample.cta":"納品サンプルを見る",
+   "pricing.sampleTitle":"どんなものが届くか、購入前に確認できます。",
+   "pricing.sampleText":"4つのプランそれぞれの納品イメージをご覧いただけます。",
+   "pricing.sampleCta":"納品サンプルをすべて見る →"
+  },
+  es:{
+   "sample.eyebrow":"MUESTRA DE ENTREGA",
+   "sample.title":"Mira lo que recibirás.",
+   "sample.text":"Consulta ejemplos realistas de las entregas Personal, Premium y VIP antes de comprar.",
+   "sample.cardtitle":"Un plan real, no una lista genérica.",
+   "sample.cardtext":"Consulta planificación diaria, recomendaciones investigadas, alternativas y ejemplos de soporte durante el viaje.",
+   "sample.cta":"Ver muestras",
+   "pricing.sampleTitle":"¿Quieres ver qué recibirás?",
+   "pricing.sampleText":"Consulta ejemplos de entrega de los cuatro planes antes de elegir.",
+   "pricing.sampleCta":"Ver todas las muestras →"
+  }
+ };
+ function getLang(){
+   const x=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+   return ["en","ja","es"].includes(x)?x:"en";
+ }
+ function applyV12(){
+   const c=copy[getLang()];
+   Object.keys(c).forEach(k=>document.querySelectorAll('[data-i18n="'+k+'"]').forEach(e=>e.textContent=c[k]));
+ }
+ document.addEventListener("DOMContentLoaded",applyV12);
+ document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(applyV12,0)});
+})();

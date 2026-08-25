@@ -196,3 +196,7 @@ All text directly beneath the USD prices and all per-plan sample links are expli
 
 ## v11 — full Japanese display audit
 Reviewed the Japanese customer-facing display beyond pricing. Fixed stale Quick Help video-call wording, MOST POPULAR localization, Japanese plan labels, sample headings, and a pricing sentence typo.
+
+
+## v12 — screenshot-confirmed Japanese fix
+Fixed the two homepage sample-deliverable blocks identified in screenshots, including headings, descriptions and buttons, for EN/JA/ES.
