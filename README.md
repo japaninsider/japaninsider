@@ -200,3 +200,7 @@ Reviewed the Japanese customer-facing display beyond pricing. Fixed stale Quick 
 
 ## v12 — screenshot-confirmed Japanese fix
 Fixed the two homepage sample-deliverable blocks identified in screenshots, including headings, descriptions and buttons, for EN/JA/ES.
+
+
+## v13 — Japanese hero balance
+Japanese hero is intentionally composed as two lines: 「あなたの日本を、」 / 「もっとあなたらしく。」, with navy/red emphasis.

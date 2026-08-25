@@ -361,3 +361,18 @@ applyLanguage(currentLang);
  document.addEventListener("DOMContentLoaded",applyV12);
  document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(applyV12,0)});
 })();
+
+// v13: intentional Japanese hero line balance.
+(function(){
+ function fixHero(){
+   var el=document.getElementById("hero-main-title"); if(!el)return;
+   var l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+   if(l==="ja"){
+     el.innerHTML='<span class="hero-line hero-line-navy">あなたの日本を、</span><span class="hero-line hero-line-red">もっとあなたらしく。</span>';
+   }
+ }
+ document.addEventListener("DOMContentLoaded",function(){setTimeout(fixHero,20)});
+ document.addEventListener("click",function(e){
+   if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(fixHero,20);
+ });
+})();
