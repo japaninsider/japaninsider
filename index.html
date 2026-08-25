@@ -187,14 +187,22 @@
 <section class="section-pad contact-section" id="contact">
 <div class="container contact-grid">
 <div class="reveal"><p class="eyebrow" data-i18n="contact.eyebrow">START YOUR JAPAN PLAN</p><h2 data-i18n="contact.title">Tell us what you’re planning.</h2><p data-i18n="contact.text">Tell us your dates, priorities and what you want help with. For Personal, Premium and VIP, we confirm the scope and delivery timing before payment.</p><p class="small muted" data-i18n-html="contact.note_html">Questions are sent to <strong>infojapaninsider@gmail.com</strong>.</p></div>
-<form action="https://formspree.io/f/xeajbpvn" method="POST" class="contact-form reveal" id="contactForm"><input type="hidden" name="form_type" value="General inquiry">
+<form action="https://formspree.io/f/xeajbpvn" method="POST" class="contact-form reveal" id="contactForm"><input type="hidden" name="reference_id" id="contactReferenceId">
+<input type="hidden" name="submitted_at" id="contactSubmittedAt">
+<input type="hidden" name="subject" id="contactSubject" value="Japan Insider inquiry"><input type="hidden" name="form_type" value="General inquiry">
 <label>Name<input autocomplete="name" data-i18n-placeholder="form.name_ph" name="name" placeholder="Your name" required=""/></label>
 <label>Email<input autocomplete="email" data-i18n-placeholder="form.email_ph" name="email" placeholder="you@example.com" required="" type="email"/></label>
 <label>Interested in<select id="planSelect" name="plan"><option data-i18n="form.unsure" value="">Not sure yet</option><option data-plan-option="quick" value="Japan Quick Help — $49">Japan Quick Help — $49</option><option data-plan-option="personal" value="Japan Personal Plan — $199">Japan Personal Plan — $199</option><option data-plan-option="premium" value="Japan Premium — $499">Japan Premium — $499</option><option data-plan-option="vip" value="Japan VIP — $999+">Japan VIP — $999+</option></select></label>
 <label>Tell us about your trip<textarea data-i18n-placeholder="form.message_ph" name="message" placeholder="Dates, cities, travelers, interests, budget and what you need help with..." required="" rows="5"></textarea></label>
 <button class="button full" data-i18n="form.submit" type="submit">Send inquiry</button>
 <p aria-live="polite" class="form-status" id="formStatus"></p>
-<p id="contactFormStatus" class="form-status" aria-live="polite"></p></form>
+<p id="contactFormStatus" class="form-status" aria-live="polite"></p>
+<div id="contactReceipt" class="submission-receipt" hidden>
+  <strong id="contactReceiptTitle">Submission received</strong>
+  <div><span id="contactReceiptRefLabel">Reference:</span> <code id="contactReceiptRef"></code></div>
+  <div><span id="contactReceiptTimeLabel">Submitted:</span> <span id="contactReceiptTime"></span></div>
+  <p id="contactReceiptTip">Please keep this reference number for your records.</p>
+</div></form>
 </div>
 </section>
 <footer class="site-footer">
@@ -205,7 +213,7 @@
 <div><strong data-v16="footerHelp">Help</strong><a data-i18n="footer.contact" href="#contact">Contact</a><a href="samples.html" data-v16="footerSamples">Sample plans</a></div>
 </div>
 <div class="container footer-bottom"><span>© <span id="year"></span> Japan Insider.</span><span data-v16="footerLine">Personal Japan travel research & consultation.</span></div>
-<span class="site-build-version" aria-label="site build">v31</span>
+<span class="site-build-version" aria-label="site build">v32</span>
 </footer>
 <script src="assets/js/payments.js"></script>
 
@@ -215,6 +223,14 @@ const form=document.getElementById("contactForm");
 if(!form)return;
 const status=document.getElementById("contactFormStatus");
 form.addEventListener("submit",async function(e){
+const now=new Date();
+const stamp=now.toISOString().slice(0,10).replaceAll("-","");
+const rand=Math.random().toString(36).slice(2,7).toUpperCase();
+const ref="JI-INQ-"+stamp+"-"+rand;
+document.getElementById("contactReferenceId").value=ref;
+document.getElementById("contactSubmittedAt").value=now.toISOString();
+document.getElementById("contactSubject").value="Japan Insider inquiry "+ref;
+
 e.preventDefault();
 const lang=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
 const copy={
@@ -227,7 +243,20 @@ const btn=form.querySelector('[type="submit"]');
 if(btn)btn.disabled=true;
 try{
 const res=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{"Accept":"application/json"}});
-if(res.ok){form.reset();if(status)status.textContent=c.ok;}else{if(status)status.textContent=c.err;}
+if(res.ok){
+const refValue=document.getElementById("contactReferenceId").value;
+const submittedValue=document.getElementById("contactSubmittedAt").value;
+if(status)status.textContent=c.ok;
+const receipt=document.getElementById("contactReceipt");
+document.getElementById("contactReceiptRef").textContent=refValue;
+document.getElementById("contactReceiptTime").textContent=new Date(submittedValue).toLocaleString(lang==="ja"?"ja-JP":"en-US");
+document.getElementById("contactReceiptTitle").textContent=lang==="ja"?"送信を受け付けました":"Submission received";
+document.getElementById("contactReceiptRefLabel").textContent=lang==="ja"?"受付番号：":"Reference:";
+document.getElementById("contactReceiptTimeLabel").textContent=lang==="ja"?"送信日時：":"Submitted:";
+document.getElementById("contactReceiptTip").textContent=lang==="ja"?"お問い合わせの際は、この受付番号をお知らせください。":"Please keep this reference number for your records.";
+receipt.hidden=false;
+form.reset();
+}else{if(status)status.textContent=c.err;}
 }catch(err){if(status)status.textContent=c.err;}finally{if(btn)btn.disabled=false;}
 });
 })();

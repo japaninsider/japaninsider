@@ -56,7 +56,9 @@ textarea{min-height:115px;resize:vertical}
   <span class="step">4. <span data-t="s4">Receive your delivery</span></span>
 </div>
 
-<form id="intakeForm" action="https://formspree.io/f/xeajbpvn" method="POST"><input type="hidden" name="form_type" value="Post-payment intake">
+<form id="intakeForm" action="https://formspree.io/f/xeajbpvn" method="POST"><input type="hidden" name="reference_id" id="intakeReferenceId">
+<input type="hidden" name="submitted_at" id="intakeSubmittedAt">
+<input type="hidden" name="subject" id="intakeSubject" value="Japan Insider intake"><input type="hidden" name="form_type" value="Post-payment intake">
 <section class="card">
   <h2 data-t="purchase">Purchase details</h2>
   <div class="grid">
@@ -148,7 +150,14 @@ textarea{min-height:115px;resize:vertical}
   </div>
   <p id="status" class="small" aria-live="polite"></p>
 
-  <p id="intakeSubmitStatus" class="small" aria-live="polite"></p><div id="success" class="success" aria-live="polite">
+  <p id="intakeSubmitStatus" class="small" aria-live="polite"></p>
+<div id="intakeReceipt" class="submission-receipt" hidden>
+<strong id="intakeReceiptTitle">Submission received</strong>
+<div><span id="intakeReceiptRefLabel">Reference:</span> <code id="intakeReceiptRef"></code></div>
+<div><span id="intakeReceiptTimeLabel">Submitted:</span> <span id="intakeReceiptTime"></span></div>
+<p id="intakeReceiptTip">Please keep this reference number. A copy of the details remains visible here until you leave or reload this page.</p>
+<pre id="intakeReceiptCopy" class="receipt-copy"></pre>
+</div><div id="success" class="success" aria-live="polite">
     <h3 data-t="successTitle">Your intake is ready to send.</h3>
     <p data-t="successText">After we confirm your payment and details, research begins. Quick Help is usually delivered by email within 2 business days.</p>
   </div>
@@ -279,6 +288,17 @@ document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click"
 
 
 document.getElementById("intakeForm").addEventListener("submit", async function(e){
+  const now=new Date();
+  const plan=(new URLSearchParams(location.search).get("plan")||"general").toUpperCase();
+  const prefix=plan==="QUICK"?"QH":plan.slice(0,3);
+  const stamp=now.toISOString().slice(0,10).replaceAll("-","");
+  const rand=Math.random().toString(36).slice(2,7).toUpperCase();
+  const ref="JI-"+prefix+"-"+stamp+"-"+rand;
+  document.getElementById("intakeReferenceId").value=ref;
+  document.getElementById("intakeSubmittedAt").value=now.toISOString();
+  document.getElementById("intakeSubject").value="Japan Insider "+plan+" "+ref;
+  const snapshot=new FormData(e.currentTarget);
+
   e.preventDefault();
   const form=e.currentTarget;
   const langNow=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
@@ -296,6 +316,18 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
     const res=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{"Accept":"application/json"}});
     if(res.ok){
       if(status)status.textContent=c.ok;
+      const receipt=document.getElementById("intakeReceipt");
+      document.getElementById("intakeReceiptRef").textContent=ref;
+      document.getElementById("intakeReceiptTime").textContent=now.toLocaleString(langNow==="ja"?"ja-JP":"en-US");
+      document.getElementById("intakeReceiptTitle").textContent=langNow==="ja"?"送信を受け付けました":"Submission received";
+      document.getElementById("intakeReceiptRefLabel").textContent=langNow==="ja"?"受付番号：":"Reference:";
+      document.getElementById("intakeReceiptTimeLabel").textContent=langNow==="ja"?"送信日時：":"Submitted:";
+      document.getElementById("intakeReceiptTip").textContent=langNow==="ja"?"この受付番号を控えてください。このページを閉じる／再読み込みするまでは、下に送信内容の控えを表示します。":"Please keep this reference number. A copy of the submitted details remains below until you leave or reload this page.";
+      const ignore=new Set(["subject","submitted_at"]);
+      const lines=[];
+      for(const [k,v] of snapshot.entries()){if(!ignore.has(k)&&String(v).trim())lines.push(k+": "+v);}
+      document.getElementById("intakeReceiptCopy").textContent=lines.join("\n");
+      receipt.hidden=false;
       document.getElementById("success")?.classList.add("show");
       form.reset();
       if(typeof applyPlan==="function")applyPlan();
@@ -312,6 +344,6 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
 applyLang(lang);
 applyPlan();
 </script>
-<span class="site-build-version" aria-label="site build">v31</span>
+<span class="site-build-version" aria-label="site build">v32</span>
 </body>
 </html>
