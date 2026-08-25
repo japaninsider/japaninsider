@@ -208,3 +208,8 @@ Japanese hero is intentionally composed as two lines: 「あなたの日本を�
 
 ## v14 — contact email
 All contact email references changed to `infojapaninsider@gmail.com`.
+
+## v15 — post-payment intake flow
+Rebuilt `intake.html` around the actual operational workflow:
+Stripe payment → plan-aware intake → payment confirmation → research → delivery.
+Quick Help is explicitly asynchronous: up to 3 questions, no appointment/video call, usually delivered by email within 2 business days.

@@ -376,3 +376,24 @@ applyLanguage(currentLang);
    if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(fixHero,20);
  });
 })();
+
+
+// v15: localize the Quick Help workflow note added near pricing.
+(function(){
+ const c={
+  en:{title:"Quick Help workflow",text:"Pay → Send up to 3 questions → We research → Receive your answer by email, usually within 2 business days."},
+  ja:{title:"Quick Helpの流れ",text:"決済 → 最大3つの質問を送信 → Japan Insiderが調査 → 通常2営業日以内にメールで回答。"},
+  es:{title:"Cómo funciona Quick Help",text:"Pago → Envía hasta 3 preguntas → Investigamos → Recibe la respuesta por correo, normalmente en 2 días laborables."}
+ };
+ function apply(){
+  const l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";
+  const x=c[l]||c.en;
+  const box=document.querySelector(".quick-flow-note");
+  if(!box)return;
+  const strong=box.querySelector("strong"), p=box.querySelector("p");
+  if(strong)strong.textContent=x.title;
+  if(p)p.textContent=x.text;
+ }
+ document.addEventListener("DOMContentLoaded",apply);
+ document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(apply,0);});
+})();

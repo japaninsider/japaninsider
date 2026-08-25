@@ -23,3 +23,15 @@ Do not request passport numbers, card details, passwords, or other sensitive cre
 - Customer submits up to 3 focused questions through the intake form.
 - Research the questions and reply by email, usually within 2 business days.
 - If a question requires clarification, ask by email before completing the answer.
+
+## v15 — Quick Help operational flow
+
+1. Customer pays $49 in Stripe.
+2. Customer is redirected to `intake.html?plan=quick`.
+3. Customer enters basic trip details and up to 3 focused questions.
+4. Japan Insider confirms the Stripe payment.
+5. If necessary, only missing information is requested by email.
+6. Research begins.
+7. A concise researched answer is delivered to the customer's email, usually within 2 business days.
+
+No appointment or video call is required for Quick Help.

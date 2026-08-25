@@ -3,132 +3,299 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Japan Insider — Client Intake</title>
+<title>Japan Insider — Post-Payment Intake</title>
+<meta name="description" content="Post-payment intake form for Japan Insider travel research and concierge services.">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
-.wrap{max-width:980px;margin:105px auto 70px;padding:0 22px}
-.head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:28px}
-.lang{display:flex;gap:6px;align-items:center;font-weight:800}
-.lang button{border:0;background:none;padding:8px 6px;cursor:pointer;font-weight:800;color:#667085}
-.lang button.active{color:#b42318}
+.intake-wrap{max-width:980px;margin:105px auto 70px;padding:0 22px}
+.intake-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:30px}
+.lang-switch-inline{display:flex;gap:6px;align-items:center;font-weight:800}
+.lang-switch-inline button{border:0;background:none;font-weight:800;padding:8px 6px;cursor:pointer;color:#667085}
+.lang-switch-inline button.active{color:#b42318}
+.stepbar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 26px}
+.step{padding:8px 11px;border-radius:999px;background:#f3f4f6;color:#667085;font-weight:700;font-size:.9rem}
+.step.active{background:#17233c;color:#fff}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin:18px 0}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .full{grid-column:1/-1}
 label{display:flex;flex-direction:column;gap:7px;font-weight:700}
-input,select,textarea{width:100%;padding:12px;border:1px solid #cfd4dc;border-radius:10px;font:inherit}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid #cfd4dc;border-radius:10px;font:inherit;background:#fff}
 textarea{min-height:115px;resize:vertical}
-.plansec{display:none}.plansec.active{display:block}
-.note{padding:14px;border-radius:10px;background:#f8fafc;border:1px solid #e5e7eb;color:#475467}
+.plansec{display:none} .plansec.active{display:block}
+.notice{padding:15px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;color:#475467}
+.success{display:none;padding:22px;border-radius:14px;background:#f7f4ed;border:1px solid #e5e1d7;margin-top:18px}
+.success.show{display:block}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-@media(max-width:700px){.head{flex-direction:column}.grid{grid-template-columns:1fr}.full{grid-column:auto}}
+.small{font-size:.9rem;color:#667085;font-weight:400}
+@media(max-width:700px){
+  .intake-head{flex-direction:column}
+  .grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+}
 </style>
 </head>
 <body>
-<main class="wrap">
-<div class="head">
-  <div><p><strong data-t="badge">CLIENT INTAKE</strong></p><h1 data-t="title">Tell us about your Japan trip.</h1><p data-t="intro">Complete this after purchase. Questions change depending on your plan.</p></div>
-  <div class="lang"><button type="button" data-lang="en" class="active">EN</button>/<button type="button" data-lang="ja">日本語</button>/<button type="button" data-lang="es">ES</button></div>
+<main class="intake-wrap">
+<header class="intake-head">
+  <div>
+    <p><strong data-t="eyebrow">POST-PAYMENT INTAKE</strong></p>
+    <h1 data-t="title">Tell us about your Japan trip.</h1>
+    <p data-t="intro">Complete this form after payment. We use your answers to begin the research and prepare your delivery.</p>
+  </div>
+  <div class="lang-switch-inline" aria-label="Language">
+    <button type="button" data-lang="en" class="active">EN</button><span>/</span>
+    <button type="button" data-lang="ja">日本語</button><span>/</span>
+    <button type="button" data-lang="es">ES</button>
+  </div>
+</header>
+
+<div class="stepbar" aria-label="Order flow">
+  <span class="step">1. <span data-t="s1">Choose plan</span></span>
+  <span class="step">2. <span data-t="s2">Pay with Stripe</span></span>
+  <span class="step active">3. <span data-t="s3">Send trip details</span></span>
+  <span class="step">4. <span data-t="s4">Receive your delivery</span></span>
 </div>
 
-<form id="form">
+<form id="intakeForm">
 <section class="card">
-<h2 data-t="purchase">Purchase details</h2>
-<div class="grid">
-<label><span data-t="plan">Plan</span>
-<select id="plan" name="plan" required>
-<option value="">—</option>
-<option value="quick">Japan Quick Help</option>
-<option value="personal">Japan Personal Plan</option>
-<option value="premium">Japan Premium</option>
-<option value="vip">Japan VIP</option>
-</select></label>
-<label><span data-t="order">Stripe receipt / order reference</span><input name="order_reference"></label>
-</div>
-</section>
-
-<section class="card">
-<h2 data-t="basics">About you & your trip</h2>
-<div class="grid">
-<label><span data-t="name">Name</span><input name="name" required></label>
-<label><span data-t="email">Email</span><input name="email" type="email" required></label>
-<label><span data-t="dates">Travel dates</span><input name="dates"></label>
-<label><span data-t="travelers">Travelers / ages</span><input name="travelers"></label>
-<label class="full"><span data-t="cities">Cities / regions</span><input name="cities"></label>
-<label><span data-t="budget">Approximate trip budget</span><input name="budget"></label>
-<label class="full"><span data-t="interests">Interests</span><textarea name="interests"></textarea></label>
-<label class="full"><span data-t="avoid">Anything you want to avoid?</span><textarea name="avoid"></textarea></label>
-</div>
-</section>
-
-<section class="card plansec" data-plan="quick">
-<h2 data-t="quicktitle">Quick Help — up to 3 questions, answered by email</h2>
-<div class="grid">
-<label class="full"><span data-t="q1">Question 1</span><textarea name="quick_q1"></textarea></label>
-<label class="full"><span data-t="q2">Question 2</span><textarea name="quick_q2"></textarea></label>
-<label class="full"><span data-t="q3">Question 3</span><textarea name="quick_q3"></textarea></label>
-</div>
-</section>
-
-<section class="card plansec" data-plan="personal">
-<h2 data-t="personaltitle">Personal Plan — custom travel design</h2>
-<div class="grid">
-<label><span data-t="pace">Preferred pace</span><input name="personal_pace"></label>
-<label><span data-t="foodbudget">Meal budget per person</span><input name="personal_food_budget"></label>
-<label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="personal_mustdo"></textarea></label>
-<label class="full"><span data-t="food">Food preferences / allergies</span><textarea name="personal_food"></textarea></label>
-<label class="full"><span data-t="mobility">Mobility / accessibility considerations</span><textarea name="personal_mobility"></textarea></label>
-</div>
-</section>
-
-<section class="card plansec" data-plan="premium">
-<h2 data-t="premiumtitle">Premium — plan + travel support</h2>
-<div class="grid">
-<label><span data-t="support">7-day support window</span><input name="premium_support"></label>
-<label><span data-t="pace">Preferred pace</span><input name="premium_pace"></label>
-<label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="premium_mustdo"></textarea></label>
-<label class="full"><span data-t="shopping">Shopping / product research</span><textarea name="premium_shopping"></textarea></label>
-<label class="full"><span data-t="realtime">What help would be useful during the trip?</span><textarea name="premium_realtime"></textarea></label>
-</div>
-</section>
-
-<section class="card plansec" data-plan="vip">
-<h2 data-t="viptitle">VIP — high-touch concierge brief</h2>
-<div class="grid">
-<label class="full"><span data-t="purpose">Main purpose of trip</span><textarea name="vip_purpose"></textarea></label>
-<label><span data-t="style">Preferred travel style</span><input name="vip_style"></label>
-<label><span data-t="dailybudget">Comfortable daily spend</span><input name="vip_daily_budget"></label>
-<label class="full"><span data-t="special">Special occasions / important dates</span><textarea name="vip_special"></textarea></label>
-<label class="full"><span data-t="dontlike">Things you definitely do not enjoy</span><textarea name="vip_dontlike"></textarea></label>
-<label class="full"><span data-t="concierge">What would make this feel truly VIP?</span><textarea name="vip_concierge"></textarea></label>
-</div>
+  <h2 data-t="purchase">Purchase details</h2>
+  <div class="grid">
+    <label>
+      <span data-t="plan">Purchased plan</span>
+      <select id="plan" name="plan" required>
+        <option value="">—</option>
+        <option value="quick">Japan Quick Help — $49</option>
+        <option value="personal">Japan Personal Plan — $199</option>
+        <option value="premium">Japan Premium — $499</option>
+        <option value="vip">Japan VIP — $999+</option>
+      </select>
+    </label>
+    <label>
+      <span data-t="order">Stripe receipt / order reference</span>
+      <input name="order_reference" placeholder="Optional">
+      <span class="small" data-t="orderHelp">If available, paste the Stripe receipt or payment reference.</span>
+    </label>
+  </div>
 </section>
 
 <section class="card">
-<h2 data-t="final">Final details</h2>
-<label><span data-t="links">Useful links</span><textarea name="links"></textarea></label>
-<label><span data-t="notes">Anything else?</span><textarea name="notes"></textarea></label>
-<p class="note" data-t="privacy">Do not include passport numbers, card details, passwords, or other sensitive credentials.</p>
-<div class="actions"><button class="button" type="submit" data-t="submit">Prepare intake email</button><a class="button button-secondary" href="index.html" data-t="back">Back to site</a></div>
-<p id="status"></p>
+  <h2 data-t="basics">About you & your trip</h2>
+  <div class="grid">
+    <label><span data-t="name">Name</span><input name="name" required></label>
+    <label><span data-t="email">Email</span><input name="email" type="email" required></label>
+    <label><span data-t="dates">Travel dates</span><input name="dates" placeholder="e.g. Oct 10–18, 2026"></label>
+    <label><span data-t="travelers">Travelers / ages</span><input name="travelers"></label>
+    <label class="full"><span data-t="cities">Cities / regions</span><input name="cities"></label>
+    <label><span data-t="budget">Approximate trip budget</span><input name="budget" placeholder="USD / JPY"></label>
+    <label class="full"><span data-t="interests">Interests</span><textarea name="interests"></textarea></label>
+    <label class="full"><span data-t="avoid">Anything you want to avoid?</span><textarea name="avoid"></textarea></label>
+  </div>
+</section>
+
+<section class="card plansec" data-plan-section="quick">
+  <h2 data-t="quickTitle">Quick Help — up to 3 focused questions</h2>
+  <p data-t="quickIntro">No appointment or video call is required. Send up to three specific questions and we’ll reply by email, usually within 2 business days.</p>
+  <div class="grid">
+    <label class="full"><span data-t="q1">Question 1</span><textarea name="quick_q1" required></textarea></label>
+    <label class="full"><span data-t="q2">Question 2</span><textarea name="quick_q2"></textarea></label>
+    <label class="full"><span data-t="q3">Question 3</span><textarea name="quick_q3"></textarea></label>
+    <label class="full"><span data-t="context">Anything else we should know?</span><textarea name="quick_context"></textarea></label>
+  </div>
+</section>
+
+<section class="card plansec" data-plan-section="personal">
+  <h2 data-t="personalTitle">Personal Plan — custom travel design</h2>
+  <div class="grid">
+    <label><span data-t="pace">Preferred pace</span><input name="personal_pace"></label>
+    <label><span data-t="foodbudget">Meal budget per person</span><input name="personal_food_budget"></label>
+    <label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="personal_mustdo"></textarea></label>
+    <label class="full"><span data-t="food">Food preferences / allergies</span><textarea name="personal_food"></textarea></label>
+    <label class="full"><span data-t="mobility">Mobility / accessibility considerations</span><textarea name="personal_mobility"></textarea></label>
+  </div>
+</section>
+
+<section class="card plansec" data-plan-section="premium">
+  <h2 data-t="premiumTitle">Premium — plan + travel support</h2>
+  <div class="grid">
+    <label><span data-t="support">7-day support window</span><input name="premium_support"></label>
+    <label><span data-t="pace">Preferred pace</span><input name="premium_pace"></label>
+    <label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="premium_mustdo"></textarea></label>
+    <label class="full"><span data-t="shopping">Shopping / product research</span><textarea name="premium_shopping"></textarea></label>
+    <label class="full"><span data-t="realtime">What help would be useful during the trip?</span><textarea name="premium_realtime"></textarea></label>
+  </div>
+</section>
+
+<section class="card plansec" data-plan-section="vip">
+  <h2 data-t="vipTitle">VIP — high-touch concierge brief</h2>
+  <div class="grid">
+    <label class="full"><span data-t="purpose">Main purpose of trip</span><textarea name="vip_purpose"></textarea></label>
+    <label><span data-t="style">Preferred travel style</span><input name="vip_style"></label>
+    <label><span data-t="dailybudget">Comfortable daily spend</span><input name="vip_daily_budget"></label>
+    <label class="full"><span data-t="special">Special occasions / important dates</span><textarea name="vip_special"></textarea></label>
+    <label class="full"><span data-t="dontlike">Things you definitely do not enjoy</span><textarea name="vip_dontlike"></textarea></label>
+    <label class="full"><span data-t="concierge">What would make this feel truly VIP?</span><textarea name="vip_concierge"></textarea></label>
+  </div>
+</section>
+
+<section class="card">
+  <h2 data-t="final">Final details</h2>
+  <label><span data-t="links">Useful links</span><textarea name="links" placeholder="Hotel links, saved maps, restaurants, flight info..."></textarea></label>
+  <label><span data-t="notes">Anything else?</span><textarea name="notes"></textarea></label>
+  <div class="notice" style="margin-top:16px" data-t="privacy">Do not include passport numbers, card details, passwords, or other sensitive credentials.</div>
+  <div class="actions">
+    <button class="button" type="submit" data-t="submit">Prepare intake email</button>
+    <a class="button button-secondary" href="index.html" data-t="back">Back to site</a>
+  </div>
+  <p id="status" class="small" aria-live="polite"></p>
+
+  <div id="success" class="success" aria-live="polite">
+    <h3 data-t="successTitle">Your intake is ready to send.</h3>
+    <p data-t="successText">After we confirm your payment and details, research begins. Quick Help is usually delivered by email within 2 business days.</p>
+  </div>
 </section>
 </form>
 </main>
 
 <script>
-const CONTACT_EMAIL="infojapaninsider@gmail.com";
-const c={
-en:{badge:"CLIENT INTAKE",title:"Tell us about your Japan trip.",intro:"Complete this after purchase. Questions change depending on your plan.",purchase:"Purchase details",plan:"Plan",order:"Stripe receipt / order reference",basics:"About you & your trip",name:"Name",email:"Email",dates:"Travel dates",travelers:"Travelers / ages",cities:"Cities / regions",budget:"Approximate trip budget",interests:"Interests",avoid:"Anything you want to avoid?",quicktitle:"Quick Help — up to 3 questions, answered by email",q1:"Question 1",q2:"Question 2",q3:"Question 3",personaltitle:"Personal Plan — custom travel design",premiumtitle:"Premium — plan + travel support",viptitle:"VIP — high-touch concierge brief",pace:"Preferred pace",foodbudget:"Meal budget per person",mustdo:"Must-do experiences / places",food:"Food preferences / allergies",mobility:"Mobility / accessibility considerations",support:"7-day support window",shopping:"Shopping / product research",realtime:"What help would be useful during the trip?",purpose:"Main purpose of trip",style:"Preferred travel style",dailybudget:"Comfortable daily spend",special:"Special occasions / important dates",dontlike:"Things you definitely do not enjoy",concierge:"What would make this feel truly VIP?",final:"Final details",links:"Useful links",notes:"Anything else?",privacy:"Do not include passport numbers, card details, passwords, or other sensitive credentials.",submit:"Prepare intake email",back:"Back to site",sent:"Your email app should open with the intake prepared."},
-ja:{badge:"ご購入後フォーム",title:"日本旅行について教えてください。",intro:"ご購入後にご入力ください。プランに応じて質問内容が変わります。",purchase:"購入情報",plan:"プラン",order:"Stripe領収書 / 注文番号",basics:"お客様と旅行について",name:"お名前",email:"メール",dates:"旅行日程",travelers:"人数 / 年齢層",cities:"訪問予定の都市・地域",budget:"旅行のおおよその予算",interests:"興味・好きなこと",avoid:"避けたいことはありますか？",quicktitle:"Quick Help — 最大3問・メールで回答",q1:"質問1",q2:"質問2",q3:"質問3",personaltitle:"パーソナルプラン — 個別旅行プラン",premiumtitle:"プレミアム — 旅行プラン＋旅行中サポート",viptitle:"VIP — コンシェルジュプラン",pace:"旅行のペース",foodbudget:"1人あたりの食事予算",mustdo:"絶対に行きたい場所・やりたいこと",food:"食事の好み・アレルギー",mobility:"移動・バリアフリー等の配慮事項",support:"7日間サポート希望期間",shopping:"探してほしい商品・買い物",realtime:"旅行中にどんなサポートがあると助かりますか？",purpose:"旅行の主な目的",style:"好みの旅行スタイル",dailybudget:"1日あたり快適に使える予算",special:"記念日・重要な日",dontlike:"苦手・避けたいこと",concierge:"どんな対応があるとVIPらしいと感じますか？",final:"最後に",links:"参考リンク",notes:"その他",privacy:"パスポート番号、カード情報、パスワードなどの重要情報は入力しないでください。",submit:"入力内容をメールで送る",back:"サイトへ戻る",sent:"メールアプリが開き、入力内容が準備されます。"},
-es:{badge:"FORMULARIO DEL CLIENTE",title:"Cuéntanos sobre tu viaje a Japón.",intro:"Complétalo después de la compra. Las preguntas cambian según tu plan.",purchase:"Datos de compra",plan:"Plan",order:"Recibo de Stripe / referencia",basics:"Sobre ti y tu viaje",name:"Nombre",email:"Correo",dates:"Fechas del viaje",travelers:"Viajeros / edades",cities:"Ciudades / regiones",budget:"Presupuesto aproximado",interests:"Intereses",avoid:"¿Algo que quieras evitar?",quicktitle:"Quick Help — hasta 3 preguntas, respuesta por correo",q1:"Pregunta 1",q2:"Pregunta 2",q3:"Pregunta 3",personaltitle:"Personal Plan — diseño personalizado",premiumtitle:"Premium — plan + apoyo durante el viaje",viptitle:"VIP — concierge personalizado",pace:"Ritmo preferido",foodbudget:"Presupuesto por comida y persona",mustdo:"Lugares / experiencias imprescindibles",food:"Preferencias alimentarias / alergias",mobility:"Movilidad / accesibilidad",support:"Periodo de soporte de 7 días",shopping:"Compras / productos a investigar",realtime:"¿Qué ayuda sería útil durante el viaje?",purpose:"Objetivo principal del viaje",style:"Estilo de viaje preferido",dailybudget:"Gasto diario cómodo",special:"Ocasiones especiales / fechas importantes",dontlike:"Cosas que no disfrutas",concierge:"¿Qué haría que el servicio se sintiera realmente VIP?",final:"Detalles finales",links:"Enlaces útiles",notes:"¿Algo más?",privacy:"No incluyas números de pasaporte, datos de tarjetas, contraseñas u otras credenciales sensibles.",submit:"Preparar correo",back:"Volver al sitio",sent:"Tu aplicación de correo debería abrirse con el formulario preparado."}
+const CONTACT_EMAIL = "infojapaninsider@gmail.com";
+
+const copy = {
+  en: {
+    eyebrow:"POST-PAYMENT INTAKE", title:"Tell us about your Japan trip.",
+    intro:"Complete this form after payment. We use your answers to begin the research and prepare your delivery.",
+    s1:"Choose plan", s2:"Pay with Stripe", s3:"Send trip details", s4:"Receive your delivery",
+    purchase:"Purchase details", plan:"Purchased plan", order:"Stripe receipt / order reference",
+    orderHelp:"If available, paste the Stripe receipt or payment reference.",
+    basics:"About you & your trip", name:"Name", email:"Email", dates:"Travel dates",
+    travelers:"Travelers / ages", cities:"Cities / regions", budget:"Approximate trip budget",
+    interests:"Interests", avoid:"Anything you want to avoid?",
+    quickTitle:"Quick Help — up to 3 focused questions",
+    quickIntro:"No appointment or video call is required. Send up to three specific questions and we’ll reply by email, usually within 2 business days.",
+    q1:"Question 1", q2:"Question 2", q3:"Question 3", context:"Anything else we should know?",
+    personalTitle:"Personal Plan — custom travel design", premiumTitle:"Premium — plan + travel support",
+    vipTitle:"VIP — high-touch concierge brief", pace:"Preferred pace", foodbudget:"Meal budget per person",
+    mustdo:"Must-do experiences / places", food:"Food preferences / allergies",
+    mobility:"Mobility / accessibility considerations", support:"7-day support window",
+    shopping:"Shopping / product research", realtime:"What help would be useful during the trip?",
+    purpose:"Main purpose of trip", style:"Preferred travel style", dailybudget:"Comfortable daily spend",
+    special:"Special occasions / important dates", dontlike:"Things you definitely do not enjoy",
+    concierge:"What would make this feel truly VIP?", final:"Final details", links:"Useful links",
+    notes:"Anything else?", privacy:"Do not include passport numbers, card details, passwords, or other sensitive credentials.",
+    submit:"Prepare intake email", back:"Back to site",
+    status:"Your email app should open with the completed intake.",
+    successTitle:"Your intake is ready to send.",
+    successText:"After we confirm your payment and details, research begins. Quick Help is usually delivered by email within 2 business days."
+  },
+  ja: {
+    eyebrow:"お支払い後フォーム", title:"日本旅行について教えてください。",
+    intro:"決済後にご入力ください。内容を確認後、リサーチと納品準備を開始します。",
+    s1:"プランを選ぶ", s2:"Stripeで決済", s3:"旅行情報を送る", s4:"納品を受け取る",
+    purchase:"購入情報", plan:"購入済みプラン", order:"Stripe領収書 / 注文番号",
+    orderHelp:"お持ちの場合はStripeの領収書番号や決済番号を入力してください。",
+    basics:"お客様と旅行について", name:"お名前", email:"メールアドレス", dates:"旅行日程",
+    travelers:"人数 / 年齢層", cities:"訪問予定の都市・地域", budget:"旅行のおおよその予算",
+    interests:"興味・好きなこと", avoid:"避けたいことはありますか？",
+    quickTitle:"Quick Help｜最大3つのピンポイント相談",
+    quickIntro:"予約・ビデオ通話は不要です。具体的な質問を最大3つお送りください。通常2営業日以内にメールで回答します。",
+    q1:"質問1", q2:"質問2", q3:"質問3", context:"その他、知っておいてほしいこと",
+    personalTitle:"Personal Plan｜あなた専用の旅行プラン",
+    premiumTitle:"Premium｜詳細プラン＋旅行中サポート",
+    vipTitle:"VIP｜コンシェルジュ型の個別プラン",
+    pace:"旅行のペース", foodbudget:"1人あたりの食事予算",
+    mustdo:"絶対に行きたい場所・やりたいこと", food:"食事の好み・アレルギー",
+    mobility:"移動・バリアフリー等の配慮事項", support:"7日間サポート希望期間",
+    shopping:"探してほしい商品・買い物", realtime:"旅行中にどんなサポートがあると助かりますか？",
+    purpose:"旅行の主な目的", style:"好みの旅行スタイル", dailybudget:"1日あたり快適に使える予算",
+    special:"記念日・重要な日", dontlike:"苦手・避けたいこと",
+    concierge:"どんな対応があるとVIPらしいと感じますか？", final:"最後に",
+    links:"参考リンク", notes:"その他",
+    privacy:"パスポート番号、カード情報、パスワードなどの重要情報は入力しないでください。",
+    submit:"入力内容をメールで送る", back:"サイトへ戻る",
+    status:"メールアプリが開き、入力内容が準備されます。",
+    successTitle:"入力内容の送信準備ができました。",
+    successText:"決済と内容を確認後、リサーチを開始します。Quick Helpは通常2営業日以内にメールで納品します。"
+  },
+  es: {
+    eyebrow:"FORMULARIO DESPUÉS DEL PAGO", title:"Cuéntanos sobre tu viaje a Japón.",
+    intro:"Complétalo después del pago. Revisaremos los datos antes de comenzar la investigación y preparar la entrega.",
+    s1:"Elegir plan", s2:"Pagar con Stripe", s3:"Enviar datos del viaje", s4:"Recibir la entrega",
+    purchase:"Datos de compra", plan:"Plan comprado", order:"Recibo de Stripe / referencia",
+    orderHelp:"Si la tienes, añade la referencia o recibo de Stripe.",
+    basics:"Sobre ti y tu viaje", name:"Nombre", email:"Correo", dates:"Fechas del viaje",
+    travelers:"Viajeros / edades", cities:"Ciudades / regiones", budget:"Presupuesto aproximado",
+    interests:"Intereses", avoid:"¿Algo que quieras evitar?",
+    quickTitle:"Quick Help — hasta 3 preguntas concretas",
+    quickIntro:"No necesitas cita ni videollamada. Envía hasta tres preguntas específicas y normalmente responderemos por correo en 2 días laborables.",
+    q1:"Pregunta 1", q2:"Pregunta 2", q3:"Pregunta 3", context:"¿Algo más que debamos saber?",
+    personalTitle:"Personal Plan — diseño personalizado",
+    premiumTitle:"Premium — plan + soporte durante el viaje",
+    vipTitle:"VIP — concierge personalizado", pace:"Ritmo preferido",
+    foodbudget:"Presupuesto por comida y persona", mustdo:"Lugares / experiencias imprescindibles",
+    food:"Preferencias alimentarias / alergias", mobility:"Movilidad / accesibilidad",
+    support:"Periodo de soporte de 7 días", shopping:"Compras / productos a investigar",
+    realtime:"¿Qué ayuda sería útil durante el viaje?", purpose:"Objetivo principal del viaje",
+    style:"Estilo de viaje preferido", dailybudget:"Gasto diario cómodo",
+    special:"Ocasiones especiales / fechas importantes", dontlike:"Cosas que no disfrutas",
+    concierge:"¿Qué haría que el servicio se sintiera realmente VIP?", final:"Detalles finales",
+    links:"Enlaces útiles", notes:"¿Algo más?",
+    privacy:"No incluyas números de pasaporte, datos de tarjetas, contraseñas u otras credenciales sensibles.",
+    submit:"Preparar correo", back:"Volver al sitio",
+    status:"Tu aplicación de correo debería abrirse con el formulario preparado.",
+    successTitle:"El formulario está listo para enviar.",
+    successText:"Tras confirmar el pago y los datos, comenzamos la investigación. Quick Help normalmente se entrega por correo en 2 días laborables."
+  }
 };
-let lang=localStorage.getItem("japanInsiderLang")||(navigator.language.toLowerCase().startsWith("ja")?"ja":navigator.language.toLowerCase().startsWith("es")?"es":"en");
-function setLang(x){lang=x;localStorage.setItem("japanInsiderLang",x);document.documentElement.lang=x;document.querySelectorAll("[data-t]").forEach(e=>{let k=e.dataset.t;if(c[x][k])e.textContent=c[x][k]});document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===x))}
-document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
-const plan=document.getElementById("plan");
-function showPlan(){document.querySelectorAll(".plansec").forEach(s=>s.classList.toggle("active",s.dataset.plan===plan.value))}
-plan.addEventListener("change",showPlan);
-const qp=new URLSearchParams(location.search).get("plan");if(["quick","personal","premium","vip"].includes(qp)){plan.value=qp;showPlan()}
-document.getElementById("form").addEventListener("submit",e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const rows=[];for(const [k,v] of fd.entries()){if(String(v).trim())rows.push(`${k}: ${String(v).trim()}`)}const subject=`Japan Insider intake — ${fd.get("plan")||""} — ${fd.get("name")||""}`;const body=`Japan Insider Client Intake\n\n${rows.join("\n\n")}`;location.href=`mailto:${encodeURIComponent(CONTACT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;document.getElementById("status").textContent=c[lang].sent});
-setLang(lang);showPlan();
+
+let lang = localStorage.getItem("japanInsiderLang") ||
+  (navigator.language.toLowerCase().startsWith("ja") ? "ja" :
+   navigator.language.toLowerCase().startsWith("es") ? "es" : "en");
+
+function applyLang(next) {
+  lang = next;
+  localStorage.setItem("japanInsiderLang", next);
+  document.documentElement.lang = next;
+  document.querySelectorAll("[data-t]").forEach(el => {
+    const k = el.dataset.t;
+    if (copy[next][k]) el.textContent = copy[next][k];
+  });
+  document.querySelectorAll("[data-lang]").forEach(b => b.classList.toggle("active", b.dataset.lang === next));
+}
+
+const plan = document.getElementById("plan");
+function applyPlan() {
+  document.querySelectorAll("[data-plan-section]").forEach(s => {
+    s.classList.toggle("active", s.dataset.planSection === plan.value);
+  });
+}
+plan.addEventListener("change", applyPlan);
+
+const qp = new URLSearchParams(location.search).get("plan");
+if (["quick","personal","premium","vip"].includes(qp)) {
+  plan.value = qp;
+  applyPlan();
+}
+
+document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => applyLang(b.dataset.lang)));
+
+document.getElementById("intakeForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const fd = new FormData(e.currentTarget);
+  const rows = [];
+  for (const [k,v] of fd.entries()) {
+    const val = String(v).trim();
+    if (val) rows.push(`${k}: ${val}`);
+  }
+  const subject = `Japan Insider intake — ${fd.get("plan") || "plan"} — ${fd.get("name") || ""}`;
+  const body = `Japan Insider Client Intake\n\n${rows.join("\n\n")}`;
+  document.getElementById("status").textContent = copy[lang].status;
+  document.getElementById("success").classList.add("show");
+  setTimeout(() => {
+    window.location.href = `mailto:${encodeURIComponent(CONTACT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }, 250);
+});
+
+applyLang(lang);
+applyPlan();
 </script>
-</body></html>
+</body>
+</html>
