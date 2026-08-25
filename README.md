@@ -192,3 +192,7 @@ Quick Help no longer includes video calls. Customers submit up to 3 focused ques
 
 ## v10 — pricing language cleanup
 All text directly beneath the USD prices and all per-plan sample links are explicitly localized for EN / 日本語 / ES.
+
+
+## v11 — full Japanese display audit
+Reviewed the Japanese customer-facing display beyond pricing. Fixed stale Quick Help video-call wording, MOST POPULAR localization, Japanese plan labels, sample headings, and a pricing sentence typo.
