@@ -117,9 +117,9 @@ textarea{min-height:115px;resize:vertical}
 </section>
 
 <section class="card plansec" data-plan-section="premium">
-  <h2 data-t="premiumTitle">Premium — plan + travel support</h2>
+  <h2 data-t="premiumTitle">Premium — plan + 7-day email support</h2>
   <div class="grid">
-    <label><span data-t="support">7-day support window</span><input name="premium_support"></label>
+    <label><span data-t="support">7-day email support window</span><input name="premium_support"></label>
     <label><span data-t="pace">Preferred pace</span><input name="premium_pace"></label>
     <label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="premium_mustdo"></textarea></label>
     <label class="full"><span data-t="shopping">Shopping / product research</span><textarea name="premium_shopping"></textarea></label>
@@ -185,10 +185,10 @@ const copy = {
     quickTitle:"Quick Help — up to 3 focused questions",
     quickIntro:"No appointment or video call is required. Send up to three specific questions and we’ll reply by email, usually within 2 business days.",
     q1:"Question 1", q2:"Question 2", q3:"Question 3", context:"Anything else we should know?",
-    personalTitle:"Personal Plan — custom travel design", premiumTitle:"Premium — plan + travel support",
+    personalTitle:"Personal Plan — custom travel design", premiumTitle:"Premium — plan + 7-day email support",
     vipTitle:"VIP — custom travel advisory brief", pace:"Preferred pace", foodbudget:"Meal budget per person",
     mustdo:"Must-do experiences / places", food:"Food preferences / allergies",
-    mobility:"Mobility / accessibility considerations", support:"7-day support window",
+    mobility:"Mobility / accessibility considerations", support:"7-day email support window",
     shopping:"Shopping / product research", realtime:"What help would be useful during the trip?",
     purpose:"Main purpose of trip", style:"Preferred travel style", dailybudget:"Comfortable daily spend",
     special:"Special occasions / important dates", dontlike:"Things you definitely do not enjoy",
@@ -249,8 +249,19 @@ function applyLang(next) {
 
 const plan = document.getElementById("plan");
 function applyPlan() {
-  document.querySelectorAll("[data-plan-section]").forEach(s => {
-    s.classList.toggle("active", s.dataset.planSection === plan.value);
+  document.querySelectorAll("[data-plan-section]").forEach(section => {
+    const active = section.dataset.planSection === plan.value;
+    section.classList.toggle("active", active);
+    section.querySelectorAll("input, textarea, select").forEach(field => {
+      if (!active) {
+        if (field.required) field.dataset.requiredWhenActive = "true";
+        field.required = false;
+        field.disabled = true;
+      } else {
+        field.disabled = false;
+        if (field.dataset.requiredWhenActive === "true") field.required = true;
+      }
+    });
   });
 }
 plan.addEventListener("change", applyPlan);
@@ -258,22 +269,22 @@ plan.addEventListener("change", applyPlan);
 const qp = new URLSearchParams(location.search).get("plan");
 if (["quick","personal","premium","vip"].includes(qp)) {
   plan.value = qp;
-  applyPlan();
 }
+applyPlan();
 
 document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => applyLang(b.dataset.lang)));
 
 
 document.getElementById("intakeForm").addEventListener("submit", async function(e){
   const now=new Date();
-  const plan=(new URLSearchParams(location.search).get("plan")||"general").toUpperCase();
-  const prefix=plan==="QUICK"?"QH":plan.slice(0,3);
+  const selectedPlan=(document.getElementById("plan").value||new URLSearchParams(location.search).get("plan")||"general").toUpperCase();
+  const prefix=selectedPlan==="QUICK"?"QH":selectedPlan.slice(0,3);
   const stamp=now.toISOString().slice(0,10).replaceAll("-","");
   const rand=Math.random().toString(36).slice(2,7).toUpperCase();
   const ref="JI-"+prefix+"-"+stamp+"-"+rand;
   document.getElementById("intakeReferenceId").value=ref;
   document.getElementById("intakeSubmittedAt").value=now.toISOString();
-  document.getElementById("intakeSubject").value="Japan Insider "+plan+" "+ref;
+  document.getElementById("intakeSubject").value="Japan Insider "+selectedPlan+" "+ref;
   const snapshot=new FormData(e.currentTarget);
   const submittedLines=[];
   [...e.currentTarget.elements].forEach(el=>{
@@ -358,6 +369,6 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
 applyLang(lang);
 applyPlan();
 </script>
-<span class="site-build-version" aria-label="site build">v34</span>
+<span class="site-build-version" aria-label="site build">v35</span>
 </body>
 </html>
