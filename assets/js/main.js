@@ -22,7 +22,7 @@ const translations = {
     "pricing.personal_kicker":"PERSONAL PLAN","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Custom travel research",
     "pricing.personal_1":"Personalized itinerary ideas","pricing.personal_2":"Area, food & activity research","pricing.personal_3":"Shareable travel plan",
     "pricing.popular":"MOST POPULAR","pricing.premium_kicker":"PREMIUM","pricing.premium_title":"Japan Premium","pricing.premium_sub":"Plan + concierge support",
-    "pricing.premium_1":"Everything in Personal Plan","pricing.premium_2":"7 days of travel chat support","pricing.premium_3":"Extra research & updates","pricing.choose_premium":"Choose Premium",
+    "pricing.premium_1":"Everything in Personal Plan","pricing.premium_2":"7 days of travel email support","pricing.premium_3":"Extra research & updates","pricing.choose_premium":"Choose Premium",
     "pricing.vip_kicker":"VIP","pricing.vip_title":"Japan VIP","pricing.vip_sub":"High-touch concierge","pricing.vip_1":"Fully customized support","pricing.vip_2":"Priority research","pricing.vip_3":"Scope built around your trip","pricing.contact":"Contact us",
     "common.get_started":"Get started",
     "pricing.legal":"Japan Insider currently focuses on research, information, translation-style assistance and travel consultation. We do not sell transportation or accommodation as a travel agency.",
@@ -111,7 +111,7 @@ const translations = {
     "pricing.personal_kicker":"PLAN PERSONAL","pricing.personal_title":"Japan Personal Plan","pricing.personal_sub":"Investigación de viaje personalizada",
     "pricing.personal_1":"Ideas de itinerario personalizadas","pricing.personal_2":"Investigación de zonas, comida y actividades","pricing.personal_3":"Plan de viaje fácil de compartir",
     "pricing.popular":"MÁS POPULAR","pricing.premium_kicker":"PREMIUM","pricing.premium_title":"Japan Premium","pricing.premium_sub":"Plan + apoyo de concierge",
-    "pricing.premium_1":"Todo lo incluido en Personal Plan","pricing.premium_2":"7 días de soporte por chat durante el viaje","pricing.premium_3":"Investigación adicional y actualizaciones","pricing.choose_premium":"Elegir Premium",
+    "pricing.premium_1":"Todo lo incluido en Personal Plan","pricing.premium_2":"7 días de soporte por correo durante el viaje","pricing.premium_3":"Investigación adicional y actualizaciones","pricing.choose_premium":"Elegir Premium",
     "pricing.vip_kicker":"VIP","pricing.vip_title":"Japan VIP","pricing.vip_sub":"Concierge de atención personalizada","pricing.vip_1":"Apoyo totalmente personalizado","pricing.vip_2":"Investigación prioritaria","pricing.vip_3":"Servicio adaptado a tu viaje","pricing.contact":"Contactar",
     "common.get_started":"Empezar",
     "pricing.legal":"Japan Insider se centra actualmente en investigación, información, apoyo similar a traducción y asesoramiento de viajes. No vendemos transporte ni alojamiento como agencia de viajes.",
@@ -421,7 +421,7 @@ applyLanguage(currentLang);
    compareTitle:"What changes as you move up a plan?",compareIntro:"The difference is depth, customization and access to support—not simply a longer list of recommendations.",
    cmpFeature:"What you get",cmpFormat:"Core deliverable",cmpTiming:"Delivery timing",cmpSupport:"During-trip support",cmpBooking:"Bookings / tickets",cmpBest:"Best for",
    cmpQ1:"Up to 3 researched answers",cmpP1:"Personalized digital travel plan",cmpPr1:"Detailed plan + deeper research",cmpV1:"Custom high-touch plan",
-   cmpQ2:"Usually within 2 business days",cmpP2:"Confirmed before payment",cmpPr2:"Confirmed before payment",cmpV2:"Agreed with the quote",
+   cmpQ2:"Usually within 2 business days",cmpP2:"Target delivery applies; final date confirmed before payment",cmpPr2:"Target delivery applies; final date confirmed before payment",cmpV2:"Agreed with the quote",
    cmpNo:"No",cmpNo2:"No",cmpPr3:"7-day support window",cmpV3:"Custom support scope",
    cmpBooking2:"Research and booking guidance only. Customers book and pay third-party providers directly.",
    cmpQ4:"A few specific questions",cmpP4:"A thoughtful independent trip",cmpPr4:"Travelers who want help before and during the trip",cmpV4:"Complex or special-occasion travel",
@@ -446,7 +446,7 @@ applyLanguage(currentLang);
    compareTitle:"プランが上がると、何が変わる？",compareIntro:"違いは単なる情報量ではなく、調査の深さ、個別化、旅行中サポートの範囲です。",
    cmpFeature:"内容",cmpFormat:"主な納品物",cmpTiming:"納期",cmpSupport:"旅行中サポート",cmpBooking:"予約・チケット",cmpBest:"向いている方",
    cmpQ1:"最大3問への個別調査回答",cmpP1:"あなた専用のデジタル旅行プラン",cmpPr1:"詳細プラン＋より深い個別調査",cmpV1:"完全個別のハイタッチプラン",
-   cmpQ2:"通常2営業日以内",cmpP2:"支払い前に確定",cmpPr2:"支払い前に確定",cmpV2:"見積時に合意",
+   cmpQ2:"通常2営業日以内",cmpP2:"納期目安を基準に、最終納期は支払い前に確定",cmpPr2:"納期目安を基準に、最終納期は支払い前に確定",cmpV2:"見積時に合意",
    cmpNo:"なし",cmpNo2:"なし",cmpPr3:"7日間のサポート枠",cmpV3:"個別にサポート範囲を設定",
    cmpBooking2:"調査と予約方法の案内まで。ホテル・交通・店舗等の予約・支払いはお客様自身で行います。",
    cmpQ4:"具体的な質問が数個ある方",cmpP4:"自分で動けるが、旅全体を上手に組みたい方",cmpPr4:"旅行前だけでなく旅行中も相談したい方",cmpV4:"複雑な旅・記念日・特別な旅行",
@@ -574,4 +574,17 @@ applyLanguage(currentLang);
  document.addEventListener("click",function(e){
    if(e.target.closest && e.target.closest("[data-lang]")) setTimeout(apply,10);
  });
+})();
+
+// v22 — explicit booking boundary.
+(function(){
+ const T={
+  en:{bookingBoundary:"We research options and explain how to book. Customers make and pay for reservations directly with each provider."},
+  ja:{bookingBoundary:"Japan Insiderは候補を調査し、予約方法をご案内します。予約・契約・支払いは、お客様ご自身で各事業者に直接行っていただきます。"},
+  es:{bookingBoundary:"Investigamos opciones y explicamos cómo reservar. El cliente realiza y paga las reservas directamente con cada proveedor."}
+ };
+ function lang(){const l=localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en";return ["en","ja","es"].includes(l)?l:"en";}
+ function apply(){document.querySelectorAll("[data-v22]").forEach(el=>{const v=T[lang()][el.dataset.v22];if(v)el.textContent=v;});}
+ document.addEventListener("DOMContentLoaded",apply);
+ document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(apply,10);});
 })();

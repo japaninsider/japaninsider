@@ -241,3 +241,6 @@ Fixed English-only customer-facing text introduced in v19. Launch service detail
 
 ## v21 — footer language audit
 Footer `Client Intake` now displays as `お申し込みフォーム` in Japanese and `Formulario de solicitud` in Spanish. Residual homepage English phrases were also given explicit language coverage.
+
+## v22 — pre-launch consistency
+Unified Premium as email support, aligned delivery wording, made the direct-booking boundary explicit, and added a John & Susan Quick Help $49 Stripe test-mode checklist. The actual Stripe Payment Link must be inserted in `assets/js/payments.js` when available.
