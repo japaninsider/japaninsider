@@ -177,3 +177,7 @@ CURRENT CONFIGURATION: Website, official sale prices, Terms, commerce disclosure
 
 ## v6 — sample deliverables
 Added a homepage 'See what you'll receive' section, trilingual `samples.html` with Personal/Premium/VIP examples, and `DELIVERY-TEMPLATE.md` for real client fulfilment.
+
+## v7 — sample language fix
+The selected site language is now passed to `samples.html`.
+Fixed labels inside the sample deliverables are translated for EN / 日本語 / ES.

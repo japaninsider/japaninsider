@@ -26,3 +26,7 @@ Expected GitHub Pages URL for legal page:
 `https://japaninsider.github.io/japaninsider/legal.html`
 
 After uploading to GitHub, open the homepage, scroll to the footer, and confirm that the Legal / 特商法 link opens the page above.
+
+
+## v7 language QA
+Verified sample page supports explicit `?lang=en`, `?lang=ja`, `?lang=es` and fixed sample headings have translations.

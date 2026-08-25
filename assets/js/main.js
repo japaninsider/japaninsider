@@ -240,3 +240,20 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 applyLanguage(currentLang);
+
+
+// v7: keep selected language when opening sample deliverables.
+(function(){
+  function syncSampleLanguage(){
+    var lang=localStorage.getItem("japanInsiderLang") || document.documentElement.lang || "en";
+    if(!["en","ja","es"].includes(lang)) lang="en";
+    document.querySelectorAll('a[href^="samples.html"]').forEach(function(a){
+      a.href="samples.html?lang="+encodeURIComponent(lang);
+    });
+  }
+  document.addEventListener("DOMContentLoaded",syncSampleLanguage);
+  document.addEventListener("click",function(e){
+    var b=e.target.closest && e.target.closest("[data-lang]");
+    if(b) setTimeout(syncSampleLanguage,0);
+  });
+})();
