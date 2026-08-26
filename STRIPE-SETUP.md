@@ -21,9 +21,11 @@ Japan Insider sells travel research, comparison, information and consultation. C
 - Add `legal.html` as the Commerce Disclosure URL.
 - Add `privacy.html` and `terms.html`.
 - Use `JAPAN INSIDER` as a candidate statement descriptor, subject to Stripe’s current rules.
-- Configure the Quick Help product in USD 49.
-- Create a Stripe Payment Link.
-- Paste the live Payment Link into `assets/js/payments.js`.
+- Configure the Quick Help product with a base price of USD 49.
+- Note that Stripe may display a localized currency at checkout where supported; verify the final amount and currency shown to the customer.
+- Create a Stripe TEST/Sandbox Payment Link first and complete the end-to-end checkout test.
+- Paste only the actual TEST Payment Link into `assets/js/payments.js` for testing; never invent a URL.
+- After the TEST flow passes and the account is ready, replace it with the actual LIVE Payment Link.
 - Configure post-payment redirect to:
   `https://japaninsider.github.io/japaninsider/thank-you.html`
   (replace with the custom domain later).

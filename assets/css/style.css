@@ -107,7 +107,7 @@ body>.site-build-version{position:fixed;right:6px;bottom:4px;z-index:2}
 .submission-receipt code{font-weight:800}
 .receipt-copy{margin-top:12px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;border:1px solid #e5e7eb;border-radius:10px;font:inherit;font-size:.9rem}
 
-/* v34 sales-readiness */
+/* v36 sales-readiness */
 .deliverable-card{align-items:stretch}
 .deliverable-preview{min-height:300px;display:flex;align-items:center;justify-content:center;padding:24px;border-radius:18px;background:linear-gradient(145deg,#eef2f6,#f8fafc)}
 .deliverable-paper{width:min(100%,430px);background:#fff;border:1px solid #dfe3e8;border-radius:10px;padding:26px;box-shadow:0 14px 34px rgba(16,24,40,.10);transform:rotate(1deg)}

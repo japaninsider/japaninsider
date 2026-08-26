@@ -5,7 +5,7 @@
 - Premium $499: trips up to 14 days / 4 main cities or regions; target delivery within 7 business days; 2 revisions; one 7-day email support window.
 - Premium support hours: 09:00–18:00 JST; typical response target within 4 hours during support hours. Not an emergency service.
 - VIP $999+: individually quoted; launch default is 100% upfront after written scope and quote are accepted.
-- Research start for refund purposes: after completed intake is reviewed and Japan Insider sends written confirmation that individualized research has started.
+- Research start for refund purposes: individualized research begins when Japan Insider sends the customer the work-start confirmation email.
 - Customers book and pay third-party travel providers directly.
 
 ## Public biography

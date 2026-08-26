@@ -4,8 +4,8 @@ Static bilingual website for **Japan Insider**, a Japan travel research and advi
 
 - Live site: https://japaninsider.github.io/japaninsider/
 - Public languages at launch: English / Japanese
-- Public pricing currency: USD
-- Current build: **v35**
+- Public listed/base pricing currency: USD (Stripe may display localized checkout currency where supported)
+- Current build: **v36**
 - Hosting: GitHub Pages
 - Form delivery: Formspree
 - Payment integration: Stripe Payment Link prepared in `assets/js/payments.js` but intentionally blank until a real link is supplied.
@@ -70,14 +70,11 @@ https://japaninsider.github.io/japaninsider/
 
 After committing, wait for GitHub Pages deployment and hard-refresh if an older cached build is still visible.
 
-## v35 notes
+## v36 notes
 
-- Consolidated the homepage JavaScript into one EN/JA translation system; removed old stacked v7–v25 translation patches and Spanish runtime dictionaries.
-- Fixed the hidden `required` field problem in post-payment intake for Personal / Premium / VIP.
-- Disabled inactive plan fields so only the selected plan is submitted.
-- Reference numbers now use the selected plan even when the intake page was opened without a plan query parameter.
-- Made Premium wording consistently refer to the included 7-day **email** support window.
-- Made `thank-you.html` bilingual.
-- Corrected the `<main>` document structure.
-- Added explicit image dimensions/lazy loading and reduced image file sizes.
-- Updated the repository README to match the current product instead of the old mailto / trilingual prototype.
+- Aligned `intake.html` with the legal refund/start rule: individualized research begins when Japan Insider sends the work-start confirmation email.
+- Updated USD/checkout wording for Stripe localized currency display while keeping Japan Insider's listed/base prices in USD.
+- Fixed the saved/copied intake receipt so disabled fields from non-selected plans are excluded.
+- Updated Stripe checkout testing and workflow documentation to match the current Formspree flow and work-start confirmation process.
+- Standardized visible site build labels to **v36**.
+- Stripe Payment Link remains intentionally blank until an actual TEST/Sandbox link is created.
