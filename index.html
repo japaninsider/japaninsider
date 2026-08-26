@@ -1,278 +1,121 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LORUNEI — Personal Japan Trip Planning</title>
-<meta content="Personalized Japan travel advice, local research and practical trip planning by Masayasu Wakihama, a Japan-based travel advisor with 20+ years in five-star international hospitality." name="description"/>
-<meta content="#071b3a" name="theme-color"/>
-<meta content="LORUNEI — Personal Japan Trip Planning" property="og:title"/>
-<meta content="Personalized Japan travel advice and local research for independent travelers, researched in Japan and designed around your trip." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://japaninsider.github.io/japaninsider/assets/images/og-image.jpg" property="og:image"/>
-<meta content="https://japaninsider.github.io/japaninsider/" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="https://japaninsider.github.io/japaninsider/" rel="canonical"/>
-<link href="assets/images/logo.png" rel="icon"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
-<script defer="" src="assets/js/main.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "LORUNEI",
-  "url": "https://japaninsider.github.io/japaninsider/",
-  "email": "infojapaninsider@gmail.com",
-  "description": "Personalized Japan travel advice, research and trip planning for independent travelers.",
-  "founder": {
-    "@type": "Person",
-    "name": "Masayasu Wakihama",
-    "jobTitle": "Founder & Travel Advisor"
-  }
-}
-</script>
+<meta name="description" content="Thoughtful research and personal Japan trip planning for independent travelers.">
+<meta name="theme-color" content="#071d3b">
+<link rel="icon" href="assets/images/lorunei-mark.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/main.js"></script>
 </head>
-<body>
-<header class="site-header" id="top">
-<div class="container nav-wrap">
-<a aria-label="LORUNEI home" class="brand" href="#top"><img alt="LORUNEI emblem" class="header-mark" src="assets/images/lorunei-mark.png"/><span class="lorunei-wordmark"><strong>LORUNEI</strong></span></a>
-<button aria-expanded="false" aria-label="Open menu" class="menu-toggle"><span></span><span></span><span></span></button>
-<nav aria-label="Primary navigation" class="main-nav">
-<a data-i18n="nav.services" href="#pricing">Services</a>
-<a data-i18n="nav.pricing" href="#pricing">Pricing</a>
-<a data-i18n="nav.how" href="#how">How it works</a>
-<a data-i18n="nav.about" href="#about">About</a>
-<a data-i18n="nav.faq" href="#faq">FAQ</a>
-<div aria-label="Language switcher" class="lang-switch"><button class="lang-btn active" data-lang="en" type="button">EN</button><span>/</span><button class="lang-btn" data-lang="ja" type="button">日本語</button></div><a class="button button-sm" data-i18n="nav.start" href="#contact">Get started</a>
-</nav>
-</div>
+<body class="v39-home">
+<header class="site-header v39-header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand v39-brand" href="#top" aria-label="LORUNEI home">
+      <img src="assets/images/lorunei-mark.png" alt="LORUNEI emblem" class="header-mark">
+      <span class="lorunei-wordmark"><strong>LORUNEI</strong></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="#services">Services</a><a href="#about">About</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+      <div class="lang-switch"><button class="lang-btn active" data-lang="en" type="button">EN</button><span>/</span><button class="lang-btn" data-lang="ja" type="button">日本語</button></div>
+      <a class="button button-sm" href="#contact">Get Started →</a>
+    </nav>
+  </div>
 </header>
+
 <main>
-<section class="hero lorunei-hero" id="hero">
-<div class="hero-overlay"></div>
-<div class="container hero-stage">
-<div class="hero-copy reveal">
-<div class="lang-en">
-<p class="lorunei-name">LORUNEI</p>
-<p class="pronunciation"><span></span>pronounced lor-OO-nay<span></span></p>
-<p class="category-line">Personal Japan Trip Planning</p>
-<h1>Your Japan, <span>Well Chosen.</span></h1>
-<p class="hero-lede">Thoughtful research and trip planning for independent travelers who want to make better choices in Japan—without spending weeks figuring everything out.</p>
-<div class="brand-manifesto"><span>Researched<br/>like a journalist.</span><span>Chosen<br/>like a hotelier.</span><span>Planned<br/>around you.</span></div>
-<div class="hero-actions"><a class="button hero-button" href="#pricing">View Services ↓</a><a class="button hero-button ghost" href="#pricing">サービスを見る</a><span class="based">⌖ Based in Japan</span></div>
-</div>
-<div class="lang-ja">
-<p class="lorunei-name">LORUNEI</p>
-<p class="pronunciation"><span></span>ロルーネイ<span></span></p>
-<p class="category-line">日本旅行のパーソナル・プランニング</p>
-<h1>あなたの日本を、<span>より良い選択で。</span></h1>
-<p class="hero-lede">情報を探し続けるのではなく、あなたに合う選択へ。個人旅行を楽しみたい方のために、丁寧なリサーチと旅のプランニングを提供します。</p>
-<div class="brand-manifesto"><span>ジャーナリストのように<br/>調べる。</span><span>ホテルマンのように<br/>選ぶ。</span><span>あなたを中心に<br/>組み立てる。</span></div>
-<div class="hero-actions"><a class="button hero-button" href="#pricing">サービスを見る ↓</a><span class="based">⌖ 日本を拠点にリサーチ</span></div>
-</div>
-</div>
-</div>
+<section class="hero lorunei-hero v39-hero" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-stage">
+    <div class="hero-copy reveal">
+      <div class="lang-en">
+        <p class="lorunei-name">LORUNEI</p>
+        <p class="pronunciation"><span></span>pronounced lor-OO-nay<span></span></p>
+        <p class="category-line">Personal Japan Trip Planning</p>
+        <h1>Your Japan, Well Chosen.</h1>
+        <p class="hero-lede">Thoughtful research and trip planning for independent travelers who want to make better choices in Japan—without spending weeks figuring everything out.</p>
+        <div class="brand-manifesto"><span>Researched<br>like a journalist.</span><span>Chosen<br>like a hotelier.</span><span>Planned<br>around you.</span></div>
+        <div class="hero-actions"><a class="button hero-button" href="#services">View Services ↓</a><a class="button hero-button ghost" href="#services">サービスを見る</a><span class="based">● Based in Japan</span></div>
+      </div>
+      <div class="lang-ja">
+        <p class="lorunei-name">LORUNEI</p>
+        <p class="pronunciation"><span></span>ロルーネイ<span></span></p>
+        <p class="category-line">日本旅行のパーソナル・プランニング</p>
+        <h1>あなたの日本を、より良い選択で。</h1>
+        <p class="hero-lede">情報を探し続けるのではなく、あなたに合う選択へ。個人旅行を楽しみたい方のために、丁寧なリサーチと旅のプランニングを提供します。</p>
+        <div class="brand-manifesto"><span>ジャーナリストのように<br>調べる。</span><span>ホテルマンのように<br>選ぶ。</span><span>あなたを中心に<br>組み立てる。</span></div>
+        <div class="hero-actions"><a class="button hero-button" href="#services">サービスを見る ↓</a><span class="based">● 日本を拠点にリサーチ</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<section class="v39-intro" id="about">
+  <div class="v39-intro-grid">
+    <div class="v39-intro-title reveal">
+      <div class="lang-en"><h2>More Than<br>a List.</h2><p>A Considered Answer.</p></div>
+      <div class="lang-ja"><h2>リスト以上の、<br>確かな答えを。</h2><p>考え抜いた選択を。</p></div>
+    </div>
+    <div class="v39-intro-copy reveal">
+      <div class="lang-en"><h3>Japan is easy to search. Harder to get right.</h3><p>There is no shortage of information about Japan. The harder part is knowing what is actually right for you.</p><p>LORUNEI helps you make those decisions with personal research, local knowledge, and real-world hospitality experience.</p><a href="#founder">Learn more about LORUNEI →</a></div>
+      <div class="lang-ja"><h3>日本は検索しやすい。でも、自分に合う答えを選ぶのは難しい。</h3><p>日本の情報はあふれています。難しいのは、その中から自分に本当に合うものを見極めることです。</p><p>LORUNEIは、丁寧なリサーチ、現地感覚、ホテルで培った判断力で、その選択をお手伝いします。</p><a href="#founder">LORUNEIについて →</a></div>
+    </div>
+    <div class="v39-intro-image reveal"><img src="assets/images/intro-side.jpg" alt="Traditional Japan street scene"></div>
+  </div>
+</section>
 
+<section class="v39-services" id="services">
+  <div class="container v39-services-grid">
+    <div class="v39-services-lead reveal">
+      <p class="v39-eyebrow">SERVICES</p>
+      <div class="lang-en"><h2>Start with the decision<br>you need to make.</h2><p>Sometimes you just need one good answer. Sometimes you need deeper research. And sometimes you want your entire Japan journey planned with care.</p><a href="#contact">About the services →</a></div>
+      <div class="lang-ja"><h2>必要な判断から、<br>始めましょう。</h2><p>一つの答えだけ欲しい時も、深いリサーチが必要な時も、旅全体を丁寧に組み立てたい時も。</p><a href="#contact">サービスについて →</a></div>
+    </div>
+    <div class="v39-service-list">
+      <article class="v39-service-card reveal">
+        <img src="assets/images/service-answer.jpg" alt="Japan travel notes">
+        <div class="v39-service-body"><p class="v39-plan-kicker">JAPAN ANSWER</p><h3>One question.<br>A considered answer.</h3><p class="lang-en">For a specific Japan travel question where generic search results are not enough.</p><p class="lang-ja">一つの具体的な日本旅行の疑問に、個別に調べて答えます。</p></div>
+        <div class="v39-service-action"><div class="v39-price">$99<small>1件 $99</small></div><a class="v39-btn" href="#contact">Ask a Question</a><a class="v39-btn alt" href="#contact">質問する</a></div>
+      </article>
+      <article class="v39-service-card research reveal">
+        <img src="assets/images/service-research.jpg" alt="Japan travel research">
+        <div class="v39-service-body"><p class="v39-plan-kicker">JAPAN RESEARCH</p><h3>When the decision<br>deserves a deeper look.</h3><p class="lang-en">Compare options. Understand trade-offs. Get a focused research brief.</p><p class="lang-ja">選択肢を比較し、違いを整理して、判断のための調査レポートを作ります。</p></div>
+        <div class="v39-service-action"><div class="v39-price">$299<small>1件 $299</small></div><a class="v39-btn" href="#contact">Request Research</a><a class="v39-btn alt" href="#contact">調査を依頼する</a></div>
+      </article>
+      <article class="v39-service-card private reveal">
+        <img src="assets/images/service-private.jpg" alt="Private Japan planning">
+        <div class="v39-service-body"><p class="v39-plan-kicker">PRIVATE JAPAN PLANNING</p><h3>Japan, planned around you.</h3><p class="lang-en">For travelers who want their entire journey considered—destinations, stays, dining, experiences and logistics.</p><p class="lang-ja">旅全体を、行き先・滞在・食・体験・移動まで一つにつないで設計します。</p></div>
+        <div class="v39-service-action"><div class="v39-price"><small>From</small>$999<small>$999 から</small></div><a class="v39-btn light" href="#contact">Discuss Your Trip</a><a class="v39-btn alt light-outline" href="#contact">旅行相談をする</a></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-<section class="section-pad founder-section" id="about">
-<div class="container about-grid">
-<div class="about-photo reveal"><img alt="Vermilion torii gates and lantern in Japan" decoding="async" height="800" loading="lazy" src="assets/images/about.jpg" width="1200"/></div>
-<div class="about-copy reveal">
-<p class="eyebrow" data-v16="aboutEyebrow">WHO IS BEHIND JAPAN INSIDER</p>
-<p class="advisor-name"><strong>Masayasu Wakihama</strong></p>
-<p class="advisor-role" data-v24="advisorRole">Founder &amp; Travel Advisor</p>
-<h2 data-v16="aboutTitle">Japan expertise shaped by five-star hospitality, journalism, and 10 years in Los Angeles.</h2>
-<p data-v16="aboutBody">Japan Insider is built around a Japan-based hospitality professional with more than 20 years of experience in five-star international hotels, including InterContinental, ten years of living in Los Angeles, including Hollywood, and an earlier career as a Nikkei journalist. That mix of service, research and cross-cultural experience shapes every recommendation.</p>
-<div class="credential-grid">
-<div class="credential"><strong data-v16="cred1t">Five-star hospitality</strong><span data-v16="cred1b">More than 20 years of frontline experience in international luxury hotels.</span></div>
-<div class="credential"><strong data-v16="cred2t">10 years in Los Angeles</strong><span data-v16="cred2b">A practical understanding of American expectations around clarity, comfort and service.</span></div>
-<div class="credential"><strong data-v16="cred3t">Former Nikkei journalist</strong><span data-v16="cred3b">Nikkei is one of Japan’s leading business newspapers; research, interviewing and fact-checking skills are applied to travel planning.</span></div>
-<div class="credential"><strong data-v16="cred4t">Personalized planning experience</strong><span data-v16="cred4b">Previous experience designing Japan plans for international business travelers.</span></div>
-</div>
-<p class="about-quote" data-v16="aboutQuote">The goal is not to give you more information. It is to help you make better decisions about Japan.</p><p class="public-record"><a data-i18n="about.public_record" href="https://www.tripadvisor.com.au/Hotel_Review-g1066451-d299142-Reviews-or60-InterContinental_Tokyo_Bay_an_IHG_Hotel-Minato_Tokyo_Tokyo_Prefecture_Kanto.html" rel="noopener noreferrer" target="_blank">Public InterContinental hospitality record (2020) ↗</a></p>
-</div>
-</div>
+<section class="v39-founder" id="founder">
+  <div class="v39-founder-grid">
+    <div class="v39-founder-image"><img src="assets/images/founder-no-face.jpg" alt="Vermilion torii gates in Japan"></div>
+    <div class="v39-founder-copy reveal">
+      <p class="v39-eyebrow">FOUNDER</p>
+      <div class="lang-en"><h2>Inside Japan.<br>Outside Perspective.</h2><p>Masayasu Wakihama brings 20+ years in five-star hospitality, including InterContinental, Nikkei experience, and a decade in Los Angeles. A perspective that understands both Japan and how international travelers experience it.</p><a href="#contact">Meet Masayasu →</a></div>
+      <div class="lang-ja"><h2>日本の内側から。<br>海外旅行者の視点で。</h2><p>Masayasu Wakihamaは、InterContinentalを含む5つ星ホテルで20年以上、日経での経験、ロサンゼルスでの10年間を背景に、日本と海外旅行者双方の感覚から旅を考えます。</p><a href="#contact">Masayasuについて →</a></div>
+    </div>
+    <div class="v39-founder-facts reveal"><div>20+ years in 5-star hospitality</div><div>InterContinental experience</div><div>Nikkei background</div><div>10 years in Los Angeles</div><div>Based in Japan</div></div>
+  </div>
 </section>
-<section class="section-pad" id="who-for">
-<div class="container">
-<div class="section-heading reveal">
-<p class="eyebrow" data-v16="fitEyebrow">WHO THIS IS FOR</p>
-<h2 data-v16="fitTitle">For travelers who value comfort, efficiency and reliable local judgement.</h2>
-<p data-v16="fitIntro">Especially useful for first-time visitors, couples, independent travelers, business-plus-leisure trips and people who want thoughtful recommendations without joining a group tour.</p>
-</div>
-<div class="fit-grid">
-<article class="service-card reveal"><h3 data-v16="fit1t">First trip to Japan</h3><p data-v16="fit1b">Get help making sense of neighborhoods, transport, etiquette and realistic pacing.</p></article>
-<article class="service-card reveal"><h3 data-v16="fit2t">Comfort without a package tour</h3><p data-v16="fit2b">Independent travel with professional judgement behind the choices.</p></article>
-<article class="service-card reveal"><h3 data-v16="fit3t">Food, hotels and neighborhoods</h3><p data-v16="fit3b">Recommendations based on how the pieces fit together, not isolated “best of” lists.</p></article>
-<article class="service-card reveal"><h3 data-v16="fit4t">American traveler perspective</h3><p data-v16="fit4b">Advice shaped by first-hand experience of both Japan and life in the United States.</p></article>
-</div>
-</div>
-</section>
-<section class="editorial-intro" id="services"><div class="intro-grid">
-<div class="intro-title reveal"><h2 class="lang-en">More Than<br/>a List.</h2><h2 class="lang-ja">リスト以上の、<br/>確かな答えを。</h2><p class="lang-en">A Considered Answer.</p><p class="lang-ja">考え抜いた選択を。</p></div>
-<div class="intro-copy reveal"><div class="lang-en"><h3>Japan is easy to search. Harder to get right.</h3><p>There is no shortage of information about Japan. The harder part is knowing what is actually right for you.</p><p>LORUNEI helps you make those decisions with personal research, local knowledge, and real-world hospitality experience.</p><a href="#about">Learn more about LORUNEI →</a></div><div class="lang-ja"><h3>日本は検索しやすい。でも、自分に合う答えを選ぶのは難しい。</h3><p>日本の情報はあふれています。難しいのは、その中から自分に本当に合うものを見極めることです。</p><p>LORUNEIは、丁寧なリサーチ、現地感覚、ホテルで培った判断力で、その選択をお手伝いします。</p><a href="#about">LORUNEIについて →</a></div></div>
-<div class="intro-image reveal"><img alt="Quiet torii path in Japan" src="assets/images/about.jpg"/></div>
-</div></section><section class="section-pad lorunei-menu" id="pricing"><div class="container">
-<div class="menu-lead reveal"><p class="eyebrow">SERVICES</p><div class="lang-en"><h2>Start with the decision<br/>you need to make.</h2><p>Sometimes you just need one good answer. Sometimes you need deeper research. And sometimes you want your entire Japan journey planned with care.</p></div><div class="lang-ja"><h2>必要な判断から、<br/>始めましょう。</h2><p>一つの答えだけ欲しい時も、深いリサーチが必要な時も、旅全体を丁寧に組み立てたい時も。LORUNEIは3つの方法でお手伝いします。</p></div></div>
-<div class="section-heading reveal lang-ja"><p class="eyebrow">プランニング・オプション</p><h2>必要なサポートから始める。</h2><p>パッケージに旅を合わせるのではなく、あなたの旅に必要な深さで選べる3つのサービスです。</p></div>
-<div class="lorunei-pricing-flow">
-<article class="journey-tier reveal"><div class="tier-no">01</div><div class="tier-copy"><p class="plan-kicker">JAPAN ANSWER</p><h3>One question. A considered answer.</h3><p>For a specific Japan travel question where generic search results are not enough.</p><ul><li>One focused travel decision</li><li>Personal research and recommendation</li><li>Clear reasoning behind the answer</li></ul></div><div class="tier-action"><div class="price">$99</div><a class="button button-ghost" data-plan="Japan Answer — $99" href="#contact">Ask your question</a></div></article>
-<article class="journey-tier reveal"><div class="tier-no">02</div><div class="tier-copy"><p class="plan-kicker">JAPAN RESEARCH</p><h3>When the decision deserves a deeper look.</h3><p>For choices that need several options investigated, compared and understood properly.</p><ul><li>Focused research brief</li><li>Hotels, areas, dining, experiences or route choices</li><li>Trade-offs and a clear recommendation</li></ul></div><div class="tier-action"><div class="price">$299</div><a class="button button-ghost" data-plan="Japan Research — $299" href="#contact">Request research</a></div></article>
-<article class="journey-tier private reveal"><div class="tier-no">03</div><div class="tier-copy"><p class="plan-kicker">PRIVATE JAPAN PLANNING</p><h3>Japan, planned around you.</h3><p>For travelers who want their journey considered as a whole—destinations, stays, dining, experiences and practical logistics.</p><ul><li>Trip-wide planning and research</li><li>Independent recommendations</li><li>Scope built around your priorities</li></ul></div><div class="tier-action"><div class="price"><small>From</small> $999</div><a class="button" data-plan="Private Japan Planning — From $999" href="#contact">Discuss your trip</a></div></article>
-</div>
-<p class="legal-note">LORUNEI provides independent travel research, comparisons, recommendations and planning guidance. Customers book and pay hotels, transport, restaurants and other third parties directly.</p>
-</div></section>
-<section class="section-pad" id="how">
-<div class="container">
-<div class="section-heading reveal"><p class="eyebrow" data-i18n="how.eyebrow">HOW IT WORKS</p><h2 data-i18n="how.title">Four easy steps.</h2></div>
-<div class="steps-grid">
-<article class="step reveal"><span>01</span><h3 data-i18n="how.step1_title">Tell us your trip</h3><p data-i18n="how.step1_text">Share your dates, travelers, interests, budget and what you want help with.</p></article>
-<article class="step reveal"><span>02</span><h3 data-i18n="how.step2_title">We research</h3><p data-i18n="how.step2_text">We filter the noise and focus on options that actually fit you.</p></article>
-<article class="step reveal"><span>03</span><h3 data-i18n="how.step3_title">You receive your plan</h3><p data-i18n="how.step3_text">Get clear recommendations you can use immediately.</p></article>
-<article class="step reveal"><span>04</span><h3 data-i18n="how.step4_title">We stay available</h3><p data-i18n="how.step4_text">Premium includes a 7-day email support window. VIP support is defined in the written quote.</p></article>
-</div>
-</div>
-</section><section class="section" id="sample-deliverable"><div class="container"><div class="section-head"><p class="eyebrow" data-i18n="sample.eyebrow">SAMPLE DELIVERABLE</p><h2 data-i18n="sample.title">See what you'll receive.</h2><p data-i18n="sample.text">Preview realistic Quick Help, Personal, Premium and VIP deliverables before you buy.</p></div><div class="about-card deliverable-card"><div><h3 data-i18n="sample.cardtitle">A real plan, not a generic list.</h3><p data-i18n="sample.cardtext">See day-by-day planning, researched recommendations, backup ideas and examples of travel support.</p><a class="button" data-i18n="sample.cta" href="samples.html">View sample plans</a></div><div aria-label="Example Japan Insider deliverable" class="deliverable-preview"><div class="deliverable-paper"><span class="deliverable-brand">LORUNEI</span><strong>Tokyo → Kyoto · 7 days</strong><div class="deliverable-rule"></div><p><b>Day 2</b> · Asakusa → Yanaka → Nezu</p><p>Why this order · transport notes · lunch shortlist</p><div class="deliverable-mini-grid"><span>BEST FIT</span><span>BACKUP</span><span>CHECKED</span></div><small>Source links + date checked included where relevant</small></div></div></div></div></section>
-<section class="section-pad" id="faq">
-<div class="container narrow">
-<div class="section-heading reveal"><p class="eyebrow" data-i18n="nav.faq">FAQ</p><h2 data-i18n="faq.title">Good questions before you book.</h2></div>
-<div class="faq-list">
-<details class="reveal"><summary data-i18n="faq.q1">Is Japan Insider a travel agency?</summary><p data-i18n="faq.a1">No. Japan Insider provides travel research, consultation, information and advisory support. We do not sell package travel, transportation or accommodation.</p></details>
-<details class="reveal"><summary data-i18n="faq.q2">Do you make restaurant or hotel bookings?</summary><p data-i18n="faq.a2">We research options and explain how to book. Customers make and pay for reservations directly with each provider.</p></details>
-<details class="reveal"><summary data-i18n="faq.q3">Can you help with a first trip to Japan?</summary><p data-i18n="faq.a3">Yes. First-time travelers are a great fit because area choices, transport, etiquette and scheduling can be overwhelming at first.</p></details>
-<details class="reveal"><summary data-i18n="faq.q4">Do you support trips outside Tokyo?</summary><p data-i18n="faq.a4">Yes. The service can cover destinations throughout Japan, depending on the research required.</p></details>
-<details class="reveal"><summary data-i18n="faq.q5">How fast will I receive my plan?</summary><p data-i18n="faq.a5">Turnaround depends on scope. A delivery date is confirmed with you before payment so expectations are clear.</p></details>
-</div>
-</div>
-</section>
-<section class="section-pad contact-section" id="contact">
-<div class="container contact-grid">
-<div class="reveal"><p class="eyebrow" data-i18n="contact.eyebrow">START YOUR JAPAN PLAN</p><h2 data-i18n="contact.title">Tell us what you’re planning.</h2><p data-i18n="contact.text">Tell us your dates, priorities and what you want help with. For Personal, Premium and VIP, we confirm the scope and delivery timing before payment.</p><p class="small muted" data-i18n-html="contact.note_html">Questions are sent to <strong>infojapaninsider@gmail.com</strong>.</p></div>
-<form action="https://formspree.io/f/xeajbpvn" class="contact-form reveal" id="contactForm" method="POST"><input id="contactReferenceId" name="reference_id" type="hidden"/>
-<input id="contactSubmittedAt" name="submitted_at" type="hidden"/>
-<input id="contactSubject" name="subject" type="hidden" value="LORUNEI inquiry"/><input name="form_type" type="hidden" value="General inquiry"/>
-<label><span data-i18n="form.name">Name</span><input autocomplete="name" data-i18n-placeholder="form.name_ph" name="name" placeholder="Your name" required=""/></label>
-<label><span data-i18n="form.email">Email</span><input autocomplete="email" data-i18n-placeholder="form.email_ph" name="email" placeholder="you@example.com" required="" type="email"/></label>
-<label><span data-i18n="form.plan">Interested in</span><select id="planSelect" name="plan"><option data-i18n="form.unsure" value="">Not sure yet</option><option value="Japan Answer — $99">Japan Answer — $99</option><option value="Japan Research — $299">Japan Research — $299</option><option value="Private Japan Planning — From $999">Private Japan Planning — From $999</option></select></label>
-<label><span data-i18n="form.message">Tell us about your trip</span><textarea data-i18n-placeholder="form.message_ph" name="message" placeholder="Dates, cities, travelers, interests, budget and what you need help with..." required="" rows="5"></textarea></label>
-<button class="button full" data-i18n="form.submit" type="submit">Send inquiry</button>
-<p aria-live="polite" class="form-status" id="formStatus"></p>
-<p aria-live="polite" class="form-status" id="contactFormStatus"></p>
-<div class="submission-receipt" hidden="" id="contactReceipt">
-<strong id="contactReceiptTitle">Submission received</strong>
-<div><span id="contactReceiptRefLabel">Reference:</span> <code id="contactReceiptRef"></code></div>
-<div><span id="contactReceiptTimeLabel">Submitted:</span> <span id="contactReceiptTime"></span></div>
-<p id="contactReceiptTip">Please keep this reference number for your records.</p>
-<pre class="receipt-copy" id="contactReceiptCopy"></pre>
-<div class="receipt-actions">
-<button class="button button-secondary" id="contactSaveReceipt" type="button">Save a copy (.txt)</button>
-<button class="button button-ghost" id="contactCopyReceipt" type="button">Copy</button>
-</div>
-</div></form>
-</div>
-</section>
+
+<section class="v39-process" id="process"><div class="container"><p class="v39-eyebrow">PROCESS</p><div class="v39-process-row"><div><strong>01</strong><span>Tell me your trip</span></div><div><strong>02</strong><span>I research</span></div><div><strong>03</strong><span>You receive clear choices</span></div></div></div></section>
+
+<section class="v39-faq" id="faq"><div class="container narrow"><p class="v39-eyebrow">FAQ</p><details><summary>Is LORUNEI a travel agency?</summary><p>No. LORUNEI provides travel research, consultation, information and advisory support. You make and pay for third-party bookings directly.</p></details><details><summary>Can you help with a first trip to Japan?</summary><p>Yes. First-time travelers are a strong fit, especially when neighborhood choices, transport, pacing and reservations feel overwhelming.</p></details><details><summary>Do you support trips outside Tokyo?</summary><p>Yes. Research and planning can cover destinations throughout Japan depending on scope.</p></details></div></section>
+
+<section class="v39-cta" id="contact"><div class="v39-cta-overlay"></div><div class="container v39-cta-inner reveal"><p>READY TO START?</p><h2>Tell me about your Japan.</h2><span>Have a question? Need deeper research? Planning an important trip?</span><strong>Let’s make your Japan journey well chosen.</strong><div><a href="mailto:infojapaninsider@gmail.com" class="v39-cta-btn">Get Started</a><a href="mailto:infojapaninsider@gmail.com" class="v39-cta-btn outline">相談をはじめる</a></div></div></section>
 </main>
-<footer class="site-footer">
-<div class="container footer-grid">
-<div class="footer-brand"><a class="brand" href="#top"><img alt="LORUNEI logo" class="footer-logo" decoding="async" loading="lazy" src="assets/images/lorunei-logo.png"/></a><p data-i18n="footer.desc">Personal Japan travel research &amp; advisory support.</p></div>
-<div><strong data-i18n="footer.explore">Explore</strong><a data-i18n="nav.services" href="#services">Services</a><a data-i18n="nav.pricing" href="#pricing">Pricing</a><a data-i18n="nav.how" href="#how">How it works</a></div>
-<div><strong data-i18n="footer.info">Info</strong><a data-i18n="nav.faq" href="#faq">FAQ</a><a data-i18n="footer.privacy" href="privacy.html">Privacy</a><a data-i18n="footer.terms" href="terms.html">Terms</a><a data-i18n="footer.legal" href="legal.html">Legal / 特商法</a></div>
-<div><strong data-v16="footerHelp">Help</strong><a data-i18n="footer.contact" href="#contact">Contact</a><a data-v16="footerSamples" href="samples.html">Sample plans</a></div>
-</div>
-<div class="container footer-bottom"><span>© <span id="year"></span> LORUNEI.</span><span data-v16="footerLine">Personal Japan Trip Planning · Your Japan, Well Chosen.</span></div>
-<span aria-label="site build" class="site-build-version">v38</span>
-</footer>
-<script src="assets/js/payments.js"></script>
-<script>
-(function(){
-const form=document.getElementById("contactForm");
-if(!form)return;
-const status=document.getElementById("contactFormStatus");
-form.addEventListener("submit",async function(e){
-const now=new Date();
-const stamp=now.toISOString().slice(0,10).replaceAll("-","");
-const rand=Math.random().toString(36).slice(2,7).toUpperCase();
-const ref="JI-INQ-"+stamp+"-"+rand;
-document.getElementById("contactReferenceId").value=ref;
-document.getElementById("contactSubmittedAt").value=now.toISOString();
-document.getElementById("contactSubject").value="Japan Insider inquiry "+ref;
-const snapshot=new FormData(form);
-const fieldText={
-  name:snapshot.get("name")||"",
-  email:snapshot.get("email")||"",
-  plan:snapshot.get("plan")||"",
-  message:snapshot.get("message")||""
-};
 
-e.preventDefault();
-const lang=(localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en")==="ja"?"ja":"en";
-const copy={
-en:{sending:"Sending…",ok:"Thank you. Your inquiry has been sent to Japan Insider.",err:"We couldn't send the form. Please try again, or email infojapaninsider@gmail.com."},
-ja:{sending:"送信中…",ok:"ありがとうございます。お問い合わせを送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"}
-};
-const c=copy[lang]||copy.en;
-if(status)status.textContent=c.sending;
-const btn=form.querySelector('[type="submit"]');
-if(btn)btn.disabled=true;
-try{
-const res=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{"Accept":"application/json"}});
-if(res.ok){
-const refValue=document.getElementById("contactReferenceId").value;
-const submittedValue=document.getElementById("contactSubmittedAt").value;
-if(status)status.textContent=c.ok;
-const receipt=document.getElementById("contactReceipt");
-document.getElementById("contactReceiptRef").textContent=refValue;
-document.getElementById("contactReceiptTime").textContent=new Date(submittedValue).toLocaleString(lang==="ja"?"ja-JP":"en-US");
-document.getElementById("contactReceiptTitle").textContent=lang==="ja"?"送信を受け付けました":"Submission received";
-document.getElementById("contactReceiptRefLabel").textContent=lang==="ja"?"受付番号：":"Reference:";
-document.getElementById("contactReceiptTimeLabel").textContent=lang==="ja"?"送信日時：":"Submitted:";
-document.getElementById("contactReceiptTip").textContent=lang==="ja"?"受付番号と送信内容の控えを保存しておくことをおすすめします。":"We recommend saving the reference number and a copy of what you submitted.";
-const labels=lang==="ja"
-  ? {ref:"受付番号",time:"送信日時",name:"お名前",email:"メールアドレス",plan:"プラン",message:"旅行について"}
-  : {ref:"Reference",time:"Submitted",name:"Name",email:"Email",plan:"Plan",message:"Trip details"};
-const receiptText=[
-  "Japan Insider",
-  labels.ref+": "+refValue,
-  labels.time+": "+new Date(submittedValue).toLocaleString(lang==="ja"?"ja-JP":"en-US"),
-  "",
-  labels.name+": "+fieldText.name,
-  labels.email+": "+fieldText.email,
-  labels.plan+": "+(fieldText.plan||"—"),
-  labels.message+":",
-  fieldText.message
-].join("\n");
-document.getElementById("contactReceiptCopy").textContent=receiptText;
-const saveBtn=document.getElementById("contactSaveReceipt");
-const copyBtn=document.getElementById("contactCopyReceipt");
-saveBtn.textContent=lang==="ja"?"控えを保存（.txt）":"Save a copy (.txt)";
-copyBtn.textContent=lang==="ja"?"控えをコピー":"Copy";
-saveBtn.onclick=()=>{
-  const blob=new Blob([receiptText],{type:"text/plain;charset=utf-8"});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a");
-  a.href=url;
-  a.download=refValue+".txt";
-  a.click();
-  setTimeout(()=>URL.revokeObjectURL(url),500);
-};
-copyBtn.onclick=async()=>{
-  try{
-    await navigator.clipboard.writeText(receiptText);
-    copyBtn.textContent=lang==="ja"?"コピーしました":"Copied";
-    setTimeout(()=>copyBtn.textContent=lang==="ja"?"控えをコピー":"Copy",1600);
-  }catch(_){
-    copyBtn.textContent=lang==="ja"?"コピーできませんでした":"Copy failed";
-  }
-};
-receipt.hidden=false;
-form.reset();
-}else{if(status)status.textContent=c.err;}
-}catch(err){if(status)status.textContent=c.err;}finally{if(btn)btn.disabled=false;}
-});
-})();
-</script>
+<footer class="v39-footer">
+  <div class="container v39-footer-top"><div class="v39-footer-brand"><img src="assets/images/lorunei-mark.png" alt=""><div><strong>LORUNEI</strong><span>Personal Japan Trip Planning</span><em>Your Japan, Well Chosen.</em></div></div><nav><a href="#services">Services</a><a href="#about">About</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav><div class="v39-footer-lang">EN&nbsp;&nbsp;|&nbsp;&nbsp;日本語</div></div>
+  <div class="container v39-footer-bottom"><span>© 2026 LORUNEI. All rights reserved.</span><span><a href="privacy.html">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="terms.html">Terms</a>&nbsp;&nbsp;|&nbsp;&nbsp;<b>v39</b></span></div>
+</footer>
 </body>
 </html>
