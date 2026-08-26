@@ -122,3 +122,19 @@ body>.site-build-version{position:fixed;right:6px;bottom:4px;z-index:2}
 .receipt-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .receipt-actions .button{width:auto}
 @media(max-width:700px){.deliverable-preview{min-height:250px}.deliverable-paper{transform:none}.receipt-actions .button{width:100%}}
+/* v37 — LORUNEI brand launch */
+:root{--navy:#082343;--navy2:#12375d;--red:#a46f45;--soft:#f5f2ec;--line:#e3ded5;--shadow:0 22px 60px rgba(8,35,67,.12)}
+.lorunei-wordmark strong{font-family:Georgia,'Times New Roman',serif;font-size:1.28rem;letter-spacing:.22em;color:var(--navy)}
+.lorunei-wordmark small{letter-spacing:.12em;text-transform:uppercase}
+.lorunei-hero{background:linear-gradient(135deg,#f8f5ef 0%,#fff 58%)}
+.lorunei-name{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.2rem,4vw,3.6rem);letter-spacing:.22em;color:var(--navy);margin:0;line-height:1}
+.pronunciation{font-family:Georgia,serif;font-style:italic;color:#7c7369;font-size:.9rem;margin:10px 0 24px;letter-spacing:.04em}
+.category-line{font-family:Georgia,serif;color:var(--navy);font-size:1.25rem;margin:0 0 16px}
+.lorunei-hero h1{font-size:clamp(3rem,5.6vw,5.2rem);line-height:1.02;margin-bottom:22px}
+.lorunei-hero h1 span{color:var(--navy)}
+.brand-manifesto{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:28px 0;color:var(--navy);font-family:Georgia,serif}
+.brand-manifesto span{padding:0 18px;border-left:1px solid #b8b0a4}.brand-manifesto span:first-child{padding-left:0;border-left:0}
+.lorunei-hero .hero-media img{aspect-ratio:.95/1;border-radius:4px;filter:saturate(.86) contrast(.98)}
+.lorunei-pricing-flow{display:grid;gap:16px;max-width:980px;margin:0 auto}.journey-tier{display:grid;grid-template-columns:70px 1fr 190px;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);padding:30px;border-radius:18px}.journey-tier.private{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:var(--shadow)}.journey-tier.private h3,.journey-tier.private .price,.journey-tier.private .plan-kicker{color:#fff}.journey-tier.private p,.journey-tier.private li{color:#d7e0eb}.tier-no{font-family:Georgia,serif;font-size:2rem;color:#b4aa9e}.tier-copy h3{font-family:Georgia,serif;color:var(--navy);font-size:1.65rem;margin:4px 0 8px}.tier-copy p{color:var(--muted);margin:0}.tier-copy ul{margin:14px 0 0;padding-left:18px;color:#475467}.tier-action{text-align:right}.tier-action .price{font-family:Georgia,serif;font-weight:500;font-size:2.6rem;margin-bottom:14px}.tier-action .price small{display:block;font-family:Inter,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em}.footer-logo{width:210px!important;height:auto!important;border-radius:0!important;background:#fff;padding:8px}
+.site-build-version{font-size:18px!important}
+@media(max-width:760px){.lorunei-name{font-size:2rem}.brand-manifesto{grid-template-columns:1fr;gap:10px}.brand-manifesto span{border-left:0;padding:0}.journey-tier{grid-template-columns:1fr;gap:12px;padding:24px}.tier-no{font-size:1.2rem}.tier-action{text-align:left}.tier-action .button{width:100%}.lorunei-wordmark small{display:none}.lorunei-wordmark strong{font-size:1.05rem}.lorunei-hero .hero-media img{aspect-ratio:1.25/1}}

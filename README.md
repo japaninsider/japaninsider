@@ -78,3 +78,9 @@ After committing, wait for GitHub Pages deployment and hard-refresh if an older 
 - Updated Stripe checkout testing and workflow documentation to match the current Formspree flow and work-start confirmation process.
 - Standardized visible site build labels to **v36**.
 - Stripe Payment Link remains intentionally blank until an actual TEST/Sandbox link is created.
+
+## v37 — LORUNEI brand rebuild
+- EN / Japanese only.
+- LORUNEI hero and pronunciation guide.
+- Pricing rebuilt to $99 / $299 / From $999.
+- No generated founder/person imagery.
