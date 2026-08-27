@@ -96,3 +96,10 @@ After committing, wait for GitHub Pages deployment and hard-refresh if an older 
 - Header/footer-only LORUNEI logo treatment using supplied artwork.
 - Removed oversized hero logo.
 - Mobile Japanese overflow hardening retained.
+
+
+## v44
+- Rebuilt desktop/mobile header navigation.
+- Working synchronized footer language switch.
+- Language-preserving internal links.
+- Clean transparent LORUNEI header/footer lockup from supplied logo.

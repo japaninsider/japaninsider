@@ -56,6 +56,24 @@ function syncSampleLinks(language) {
   });
 }
 
+
+function syncInternalLanguageLinks(language) {
+  document.querySelectorAll('a[href]').forEach(a => {
+    const raw = a.getAttribute('href');
+    if (!raw || raw.startsWith('#') || raw.startsWith('http:') || raw.startsWith('https:') ||
+        raw.startsWith('mailto:') || raw.startsWith('tel:') || raw.startsWith('javascript:')) return;
+    const parts = raw.split('#');
+    const pathAndQuery = parts[0];
+    if (!/\.html(?:\?|$)/i.test(pathAndQuery)) return;
+    try {
+      const u = new URL(pathAndQuery, window.location.href);
+      u.searchParams.set('lang', language);
+      const rel = u.pathname.split('/').pop() + u.search + (parts[1] ? '#' + parts[1] : '');
+      a.setAttribute('href', rel);
+    } catch (_) {}
+  });
+}
+
 function applyLanguage(language) {
   if (!["en","ja"].includes(language)) language = "en";
   currentLang = language;
@@ -83,6 +101,7 @@ function applyLanguage(language) {
   applyLegacy(language);
   applyLocalizedPricing(language);
   syncSampleLinks(language);
+  syncInternalLanguageLinks(language);
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === language);
@@ -109,7 +128,16 @@ menuButton?.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(Boolean(open)));
 });
 document.querySelectorAll(".main-nav a").forEach(a => {
-  a.addEventListener("click", () => nav?.classList.remove("open"));
+  a.addEventListener("click", () => {
+    nav?.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  });
+});
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900) {
+    nav?.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  }
 });
 
 document.querySelectorAll("[data-plan]").forEach(link => {
