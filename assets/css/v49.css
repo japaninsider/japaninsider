@@ -1,0 +1,23 @@
+
+/* v49 — desktop Japanese footer brand nowrap fix only */
+@media(min-width:901px){
+  html:lang(ja) .v49-home .v39-footer-brand{
+    min-width:245px!important;
+  }
+  html:lang(ja) .v49-home .footer-brand-lockup{
+    display:flex!important;
+    align-items:center!important;
+    flex-wrap:nowrap!important;
+    gap:12px!important;
+    width:max-content!important;
+    max-width:none!important;
+  }
+  html:lang(ja) .v49-home .footer-brand-lockup strong{
+    display:block!important;
+    white-space:nowrap!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+    max-width:none!important;
+    min-width:max-content!important;
+  }
+}
