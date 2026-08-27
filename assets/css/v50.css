@@ -1,0 +1,82 @@
+
+/* ==========================================================
+   LORUNEI v50
+   Japanese desktop footer only.
+   Mobile/tablet intentionally unchanged from v49.
+   ========================================================== */
+@media (min-width: 901px) {
+  html:lang(ja) .v50-home .v39-footer-brand {
+    display:grid!important;
+    grid-template-columns:150px minmax(220px,1fr)!important;
+    grid-template-rows:auto!important;
+    column-gap:28px!important;
+    align-items:center!important;
+    min-width:0!important;
+    width:100%!important;
+  }
+
+  /* Left stack: symbol on top, LORUNEI directly underneath */
+  html:lang(ja) .v50-home .footer-brand-lockup {
+    grid-column:1!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:10px!important;
+    width:150px!important;
+    max-width:150px!important;
+    margin:0!important;
+  }
+
+  html:lang(ja) .v50-home .footer-brand-lockup img {
+    width:78px!important;
+    height:78px!important;
+    flex:0 0 78px!important;
+    object-fit:contain!important;
+    margin:0 auto!important;
+  }
+
+  html:lang(ja) .v50-home .footer-brand-lockup strong {
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin:0!important;
+    text-align:center!important;
+    white-space:nowrap!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+    font-size:1.32rem!important;
+    line-height:1!important;
+    letter-spacing:.16em!important;
+  }
+
+  /* Right copy gets its own column, so it can never overlap the brand */
+  html:lang(ja) .v50-home .footer-tagline-block {
+    grid-column:2!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    gap:8px!important;
+    width:100%!important;
+    min-width:0!important;
+    padding-left:28px!important;
+    border-left:1px solid rgba(255,255,255,.22)!important;
+  }
+
+  html:lang(ja) .v50-home .footer-tagline-block .lang-ja {
+    display:block!important;
+    max-width:100%!important;
+    margin:0!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere!important;
+    line-height:1.55!important;
+  }
+
+  html:lang(ja) .v50-home .footer-tagline-block em {
+    display:block!important;
+    margin:0!important;
+    max-width:100%!important;
+    white-space:normal!important;
+  }
+}
