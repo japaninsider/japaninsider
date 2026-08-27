@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Japan Insider — Post-Payment Intake</title>
-<meta name="description" content="Post-payment intake form for Japan Insider travel research and advisory services.">
+<title>LORUNEI — Post-Payment Intake</title>
+<meta name="description" content="Post-payment intake form for LORUNEI travel research and advisory services.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
@@ -41,7 +41,7 @@ textarea{min-height:115px;resize:vertical}
   <div>
     <p><strong data-t="eyebrow">POST-PAYMENT INTAKE</strong></p>
     <h1 data-t="title">Tell us about your Japan trip.</h1>
-    <p data-t="intro">Complete this form after payment. We use your answers to prepare your delivery. Individualized research begins when Japan Insider sends the work-start confirmation email.</p>
+    <p data-t="intro">Complete this form after payment. We use your answers to prepare your delivery. Individualized research begins when LORUNEI sends the work-start confirmation email.</p>
   </div>
   <div class="lang-switch-inline" aria-label="Language">
     <button type="button" data-lang="en" class="active">EN</button><span>/</span>
@@ -58,7 +58,7 @@ textarea{min-height:115px;resize:vertical}
 
 <form id="intakeForm" action="https://formspree.io/f/xeajbpvn" method="POST"><input type="hidden" name="reference_id" id="intakeReferenceId">
 <input type="hidden" name="submitted_at" id="intakeSubmittedAt">
-<input type="hidden" name="subject" id="intakeSubject" value="Japan Insider intake"><input type="hidden" name="form_type" value="Post-payment intake">
+<input type="hidden" name="subject" id="intakeSubject" value="LORUNEI intake"><input type="hidden" name="form_type" value="Post-payment intake">
 <section class="card">
   <h2 data-t="purchase">Purchase details</h2>
   <div class="grid">
@@ -163,7 +163,7 @@ textarea{min-height:115px;resize:vertical}
 </div>
 </div><div id="success" class="success" aria-live="polite">
     <h3 data-t="successTitle">Your trip details have been received.</h3>
-    <p data-t="successText">After we confirm your payment and required details, Japan Insider will send a work-start confirmation email. Individualized research begins when that email is sent. Quick Help is usually delivered by email within 2 business days after the information needed to begin is received.</p>
+    <p data-t="successText">After we confirm your payment and required details, LORUNEI will send a work-start confirmation email. Individualized research begins when that email is sent. Quick Help is usually delivered by email within 2 business days after the information needed to begin is received.</p>
   </div>
 </section>
 </form>
@@ -175,7 +175,7 @@ const CONTACT_EMAIL = "infojapaninsider@gmail.com";
 const copy = {
   en: {
     eyebrow:"POST-PAYMENT INTAKE", title:"Tell us about your Japan trip.",
-    intro:"Complete this form after payment. We use your answers to prepare your delivery. Individualized research begins when Japan Insider sends the work-start confirmation email.",
+    intro:"Complete this form after payment. We use your answers to prepare your delivery. Individualized research begins when LORUNEI sends the work-start confirmation email.",
     s1:"Choose plan", s2:"Pay with Stripe", s3:"Send trip details", s4:"Receive your delivery",
     purchase:"Purchase details", plan:"Purchased plan", order:"Stripe receipt / order reference",
     orderHelp:"If available, paste the Stripe receipt or payment reference.",
@@ -197,11 +197,11 @@ const copy = {
     submit:"Send trip details", back:"Back to site",
     status:"Your trip details will be sent directly from this page.",
     successTitle:"Your trip details have been received.",
-    successText:"After we confirm your payment and required details, Japan Insider will send a work-start confirmation email. Individualized research begins when that email is sent. Quick Help is usually delivered by email within 2 business days after the information needed to begin is received."
+    successText:"After we confirm your payment and required details, LORUNEI will send a work-start confirmation email. Individualized research begins when that email is sent. Quick Help is usually delivered by email within 2 business days after the information needed to begin is received."
   },
   ja: {
     eyebrow:"お支払い後フォーム", title:"日本旅行について教えてください。",
-    intro:"決済後にご入力ください。いただいた内容をもとに納品準備を進めます。個別リサーチは、Japan Insiderが作業開始確認メールを送信した時点で開始します。",
+    intro:"決済後にご入力ください。いただいた内容をもとに納品準備を進めます。個別リサーチは、LORUNEIが作業開始確認メールを送信した時点で開始します。",
     s1:"プランを選ぶ", s2:"Stripeで決済", s3:"旅行情報を送る", s4:"納品を受け取る",
     purchase:"購入情報", plan:"購入済みプラン", order:"Stripe領収書 / 注文番号",
     orderHelp:"お持ちの場合はStripeの領収書番号や決済番号を入力してください。",
@@ -226,7 +226,7 @@ const copy = {
     submit:"旅行情報を送信", back:"サイトへ戻る",
     status:"このページから旅行情報を直接送信します。",
     successTitle:"旅行情報を受け付けました。",
-    successText:"決済と開始に必要な情報を確認後、Japan Insiderから作業開始確認メールを送信します。個別リサーチは、そのメールを送信した時点で開始します。Quick Helpは、開始に必要な情報の受領後、通常2営業日以内を目安にメールで納品します。"
+    successText:"決済と開始に必要な情報を確認後、LORUNEIから作業開始確認メールを送信します。個別リサーチは、そのメールを送信した時点で開始します。Quick Helpは、開始に必要な情報の受領後、通常2営業日以内を目安にメールで納品します。"
   },
 };
 
@@ -284,7 +284,7 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
   const ref="JI-"+prefix+"-"+stamp+"-"+rand;
   document.getElementById("intakeReferenceId").value=ref;
   document.getElementById("intakeSubmittedAt").value=now.toISOString();
-  document.getElementById("intakeSubject").value="Japan Insider "+selectedPlan+" "+ref;
+  document.getElementById("intakeSubject").value="LORUNEI "+selectedPlan+" "+ref;
   const submittedLines=[];
   [...e.currentTarget.elements].forEach(el=>{
     if(el.disabled || !el.name || ["hidden","submit","button"].includes(el.type)) return;
@@ -302,8 +302,8 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
   const form=e.currentTarget;
   const langNow=(localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en")==="ja"?"ja":"en";
   const msg={
-    en:{sending:"Sending…",ok:"Thank you. Your trip details have been sent to Japan Insider.",err:"We couldn't send the form. Please try again or email infojapaninsider@gmail.com."},
-    ja:{sending:"送信中…",ok:"ありがとうございます。旅行情報をJapan Insiderへ送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"}
+    en:{sending:"Sending…",ok:"Thank you. Your trip details have been sent to LORUNEI.",err:"We couldn't send the form. Please try again or email infojapaninsider@gmail.com."},
+    ja:{sending:"送信中…",ok:"ありがとうございます。旅行情報をLORUNEIへ送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"}
   };
   const c=msg[langNow]||msg.en;
   const status=document.getElementById("intakeSubmitStatus");
@@ -322,7 +322,7 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
       document.getElementById("intakeReceiptTimeLabel").textContent=langNow==="ja"?"送信日時：":"Submitted:";
       document.getElementById("intakeReceiptTip").textContent=langNow==="ja"?"受付番号と送信内容の控えを保存しておくことをおすすめします。下のボタンから保存またはコピーできます。":"We recommend saving your reference number and submission. Use the buttons below to save or copy it for later.";
       const receiptText=[
-        "Japan Insider",
+        "LORUNEI",
         (langNow==="ja"?"受付番号":"Reference")+": "+ref,
         (langNow==="ja"?"送信日時":"Submitted")+": "+now.toLocaleString(langNow==="ja"?"ja-JP":"en-US"),
         "",
