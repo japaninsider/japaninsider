@@ -1,0 +1,48 @@
+
+/* v46 — exact LORUNEI symbol to the LEFT of brand name */
+.v46-home .nav-wrap{grid-template-columns:300px 1fr!important}
+.v46-home .v39-brand{
+  width:290px!important;min-width:290px!important;
+  display:flex!important;align-items:center!important;gap:12px!important;
+  text-decoration:none!important;
+}
+.v46-home .header-symbol{
+  display:block!important;width:54px!important;height:54px!important;object-fit:contain!important;
+  flex:0 0 54px!important;background:transparent!important;border:0!important;border-radius:0!important;
+}
+.v46-home .header-brand-name{
+  display:block!important;color:#f7f1e7!important;
+  font-family:Georgia,"Times New Roman",serif!important;font-size:1.52rem!important;
+  line-height:1!important;font-weight:500!important;letter-spacing:.19em!important;white-space:nowrap!important;
+}
+.v46-home .v39-footer-brand{display:block!important}
+.v46-home .footer-brand-lockup{
+  display:flex!important;align-items:center!important;gap:12px!important;margin-bottom:14px!important;
+}
+.v46-home .footer-brand-lockup img{
+  display:block!important;width:58px!important;height:58px!important;object-fit:contain!important;
+  flex:0 0 58px!important;background:transparent!important;border-radius:0!important;
+}
+.v46-home .footer-brand-lockup strong{
+  display:block!important;color:#fff!important;font-family:Georgia,"Times New Roman",serif!important;
+  font-size:1.55rem!important;line-height:1!important;font-weight:500!important;letter-spacing:.16em!important;
+}
+.v46-home .v39-footer-brand>div:last-child{display:grid!important;gap:4px!important}
+@media(max-width:1100px) and (min-width:901px){
+ .v46-home .nav-wrap{grid-template-columns:245px 1fr!important;gap:14px!important}
+ .v46-home .v39-brand{width:235px!important;min-width:235px!important;gap:9px!important}
+ .v46-home .header-symbol{width:43px!important;height:43px!important;flex-basis:43px!important}
+ .v46-home .header-brand-name{font-size:1.22rem!important;letter-spacing:.14em!important}
+ .v46-home .main-nav,.v46-home .main-nav .nav-localized{gap:14px!important}
+}
+@media(max-width:900px){
+ .v46-home .v39-brand{width:auto!important;min-width:0!important;gap:8px!important}
+ .v46-home .header-symbol{width:42px!important;height:42px!important;flex-basis:42px!important}
+ .v46-home .header-brand-name{font-size:1.16rem!important;letter-spacing:.13em!important}
+ .v46-home .footer-brand-lockup img{width:48px!important;height:48px!important;flex-basis:48px!important}
+ .v46-home .footer-brand-lockup strong{font-size:1.35rem!important}
+}
+@media(max-width:390px){
+ .v46-home .header-symbol{width:36px!important;height:36px!important;flex-basis:36px!important}
+ .v46-home .header-brand-name{font-size:1.02rem!important;letter-spacing:.1em!important}
+}
