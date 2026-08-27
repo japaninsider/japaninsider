@@ -90,3 +90,9 @@ After committing, wait for GitHub Pages deployment and hard-refresh if an older 
 - Mobile Japanese overflow hardened across all homepage sections.
 - Formspree submission is asynchronous and does not open a mail client.
 - Guest confirmation email workflow is prepared; enable Formspree Autoresponse using `FORMSPREE-AUTORESPONSE-v41.md`.
+
+
+## v43
+- Header/footer-only LORUNEI logo treatment using supplied artwork.
+- Removed oversized hero logo.
+- Mobile Japanese overflow hardening retained.
