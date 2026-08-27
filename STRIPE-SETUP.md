@@ -4,9 +4,9 @@
 Japan Insider sells travel research, comparison, information and consultation. Customers book and pay hotels, transportation, restaurants and other travel providers directly.
 
 ## Official prices
-- Quick Help — $49
+- Quick Help — $45
 - Personal Plan — $199
-- Premium — $499
+- Premium — $459
 - VIP — $999+
 
 ## Quick Help product description for Stripe
@@ -21,7 +21,7 @@ Japan Insider sells travel research, comparison, information and consultation. C
 - Add `legal.html` as the Commerce Disclosure URL.
 - Add `privacy.html` and `terms.html`.
 - Use `JAPAN INSIDER` as a candidate statement descriptor, subject to Stripe’s current rules.
-- Configure the Quick Help product with a base price of USD 49.
+- Configure the Quick Help product with a base price of USD 45.
 - Note that Stripe may display a localized currency at checkout where supported; verify the final amount and currency shown to the customer.
 - Create a Stripe TEST/Sandbox Payment Link first and complete the end-to-end checkout test.
 - Paste only the actual TEST Payment Link into `assets/js/payments.js` for testing; never invent a URL.

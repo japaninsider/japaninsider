@@ -12,9 +12,9 @@ Static bilingual website for **Japan Insider**, a Japan travel research and advi
 
 ## Launch services
 
-- **Quick Help — $49**: up to 3 focused questions, asynchronous email delivery, usually within 2 business days after required information is received.
+- **Quick Help — $45**: up to 3 focused questions, asynchronous email delivery, usually within 2 business days after required information is received.
 - **Personal Plan — $199**: up to 7 days / 2 main cities or regions, target 5 business days, 1 reasonable revision.
-- **Premium — $499**: up to 14 days / 4 main cities or regions, target 7 business days, 2 revisions, plus one 7-day email support window.
+- **Premium — $459**: up to 14 days / 4 main cities or regions, target 7 business days, 2 revisions, plus one 7-day email support window.
 - **VIP — $999+**: custom quote and written scope.
 
 Japan Insider provides research, comparisons, information, recommendations and booking guidance. Customers book, contract and pay hotels, transport providers, restaurants and other third parties directly.
@@ -50,7 +50,7 @@ const STRIPE_QUICK_PAYMENT_LINK = "";
 
 in `assets/js/payments.js`.
 
-With the field blank, Quick Help buttons say **Request Quick Help — $49** and go to the inquiry form. With a real link configured, they change to the purchase CTA and open Stripe.
+With the field blank, Quick Help buttons say **Request Quick Help — $45** and go to the inquiry form. With a real link configured, they change to the purchase CTA and open Stripe.
 
 The intended Quick Help path is:
 

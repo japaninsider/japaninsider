@@ -27,7 +27,7 @@ Do not request passport numbers, card details, passwords, or other sensitive cre
 
 ## v15 — Quick Help operational flow
 
-1. Customer pays $49 in Stripe.
+1. Customer pays $45 in Stripe.
 2. Customer is redirected to `intake.html?plan=quick`.
 3. Customer enters basic trip details and up to 3 focused questions.
 4. Japan Insider confirms the Stripe payment.

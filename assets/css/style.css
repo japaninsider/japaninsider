@@ -172,3 +172,26 @@ body{background:var(--lorunei-cream);color:var(--lorunei-ink)}
 .v39-footer{background:#061c38;color:#fff;padding:24px 0 12px}.v39-footer-top{display:grid;grid-template-columns:290px 1fr 140px;align-items:center;gap:30px}.v39-footer-brand{display:flex;align-items:center;gap:14px}.v39-footer-brand img{width:54px;filter:brightness(0) invert(1)}.v39-footer-brand strong{display:block;font:500 1rem Georgia,serif;letter-spacing:.25em}.v39-footer-brand span,.v39-footer-brand em{display:block;font:italic .68rem Georgia,serif}.v39-footer-top nav{display:flex;justify-content:center;gap:28px;font-size:.68rem}.v39-footer-lang{text-align:right;font-size:.68rem}.v39-footer-bottom{border-top:1px solid rgba(255,255,255,.16);margin-top:18px;padding-top:10px;display:flex;justify-content:space-between;font-size:.58rem;color:rgba(255,255,255,.72)}
 @media(max-width:900px){.v39-home .container{width:min(100% - 32px,1180px)}.v39-intro-grid{grid-template-columns:1fr 1fr}.v39-intro-image{grid-column:1/-1;height:220px}.v39-services-grid{grid-template-columns:1fr}.v39-service-card{grid-template-columns:150px 1fr 155px}.v39-founder-grid{grid-template-columns:1fr 1fr}.v39-founder-facts{grid-column:1/-1;grid-template-columns:repeat(3,1fr);padding:20px 32px}.v39-footer-top{grid-template-columns:1fr}.v39-footer-top nav{justify-content:flex-start}.v39-footer-lang{text-align:left}}
 @media(max-width:680px){.v39-header .main-nav{top:72px;background:#071d3b}.v39-hero{min-height:650px!important;background-position:62% center!important}.v39-hero .hero-stage{padding-top:108px!important}.v39-hero .lorunei-name{font-size:2.7rem!important}.v39-hero .hero-actions{align-items:stretch}.v39-hero .based{margin:4px 0 0!important}.v39-intro-grid{grid-template-columns:1fr}.v39-intro-title,.v39-intro-copy{padding:28px 22px}.v39-intro-image{grid-column:auto;height:210px}.v39-services{padding-top:35px}.v39-service-card{grid-template-columns:1fr}.v39-service-card>img{height:155px}.v39-service-action{padding:0 18px 18px}.v39-price{text-align:left}.v39-founder-grid{grid-template-columns:1fr}.v39-founder-image{height:220px}.v39-founder-facts{grid-column:auto;grid-template-columns:1fr;padding:22px}.v39-process-row{grid-template-columns:1fr}.v39-process-row div{border-right:0;border-bottom:1px solid #d9d5cf}.v39-footer-top nav{flex-wrap:wrap;gap:16px}.v39-footer-bottom{flex-direction:column;gap:8px}.v39-cta-inner>div{flex-direction:column;align-items:center}}
+
+/* ===== v40 functional cleanup ===== */
+.v40-home .nav-localized{display:flex;align-items:center;gap:24px}
+.v40-home .main-nav>.lang-en,.v40-home .main-nav>.lang-ja{align-items:center}
+html:lang(en) .v40-home .main-nav>.lang-en{display:flex!important}
+html:lang(ja) .v40-home .main-nav>.lang-ja{display:flex!important}
+.v39-service-card.quick{background:#f8f0e4;border-color:#dbc6a6}
+.v39-service-list{gap:10px}
+.founder-facts-local{display:grid;align-content:center;gap:10px}
+.founder-facts-local>div:before{content:'◇';margin-right:10px;color:#7f8c98}
+.v39-founder-facts>div:before{content:none}
+.v40-inquiry{background:#f3efe8;padding:64px 0}
+.v40-inquiry-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.v40-inquiry h2{font:400 clamp(2rem,3vw,3rem)/1.05 Georgia,serif;margin:0 0 16px}
+.v40-inquiry p{color:#5d6873;line-height:1.7}
+.v40-form{background:#fff;border:1px solid rgba(7,29,59,.12);border-radius:14px;padding:28px;box-shadow:0 16px 38px rgba(7,29,59,.06)}
+.v40-form label{display:block;margin-bottom:15px;font-size:.76rem;font-weight:700;color:#263d55}
+.v40-form input,.v40-form select,.v40-form textarea{display:block;width:100%;margin-top:6px;border:1px solid #d1d7dc;border-radius:8px;padding:12px 13px;background:#fff;color:#132d48;font:400 .9rem/1.4 Inter,sans-serif}
+.v40-submit{width:100%;border:0;border-radius:999px;background:#082b50;color:#fff;padding:12px 18px;font-weight:800;cursor:pointer}
+.v40-home .v39-footer-top nav.lang-en,.v40-home .v39-footer-top nav.lang-ja{justify-content:center;gap:22px}
+html:lang(en) .v40-home .v39-footer-top nav.lang-en{display:flex!important}
+html:lang(ja) .v40-home .v39-footer-top nav.lang-ja{display:flex!important}
+@media(max-width:900px){.v40-home .nav-localized{flex-direction:column;gap:18px}.v40-inquiry-grid{grid-template-columns:1fr;gap:24px}}
