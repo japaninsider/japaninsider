@@ -1,0 +1,38 @@
+
+/* v45 — restore brand pronunciation guide without enlarging the logo */
+.v45-home .hero-name-guide{
+  display:inline-block;
+  margin:0 0 18px;
+  color:#fff;
+}
+.v45-home .hero-brand-name{
+  margin:0 0 2px!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+  font-size:1rem!important;
+  line-height:1.2!important;
+  font-weight:750!important;
+  letter-spacing:.08em!important;
+  color:#fff!important;
+}
+.v45-home .hero-pronunciation{
+  margin:0!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:1.05rem!important;
+  line-height:1.25!important;
+  font-style:italic!important;
+  letter-spacing:.01em!important;
+  color:rgba(255,255,255,.88)!important;
+}
+html:lang(ja) .v45-home .hero-pronunciation{
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif!important;
+  font-style:normal!important;
+  font-size:.92rem!important;
+  letter-spacing:.04em!important;
+}
+.v45-home .category-line{margin-top:0!important}
+@media(max-width:680px){
+  .v45-home .hero-name-guide{margin-bottom:14px}
+  .v45-home .hero-brand-name{font-size:.92rem!important}
+  .v45-home .hero-pronunciation{font-size:.96rem!important}
+  html:lang(ja) .v45-home .hero-pronunciation{font-size:.88rem!important}
+}
