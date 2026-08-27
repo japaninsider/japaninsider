@@ -195,3 +195,75 @@ html:lang(ja) .v40-home .main-nav>.lang-ja{display:flex!important}
 html:lang(en) .v40-home .v39-footer-top nav.lang-en{display:flex!important}
 html:lang(ja) .v40-home .v39-footer-top nav.lang-ja{display:flex!important}
 @media(max-width:900px){.v40-home .nav-localized{flex-direction:column;gap:18px}.v40-inquiry-grid{grid-template-columns:1fr;gap:24px}}
+
+/* ===== v41 approved logo + Japanese mobile hardening ===== */
+html,body{max-width:100%;overflow-x:hidden}
+.v41-home *{min-width:0}
+.v41-home .header-mark{width:64px!important;height:64px!important;object-fit:contain!important;border-radius:14px!important;filter:none!important;background:#f7f2e8}
+.v41-home .v39-brand .lorunei-wordmark{display:none!important}
+.v41-home .v39-footer-brand img{width:78px!important;height:78px!important;object-fit:contain!important;filter:none!important;border-radius:16px;background:#f7f2e8}
+.v41-home .v39-footer-brand strong{display:none}
+.v41-home .hp-field{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+.v41-home .form-status{font-size:.76rem;line-height:1.55;margin:10px 0 0;color:#52616e}
+html:lang(ja) .v41-home{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif}
+html:lang(ja) .v41-home h1,html:lang(ja) .v41-home h2,html:lang(ja) .v41-home h3,html:lang(ja) .v41-home p,html:lang(ja) .v41-home a,html:lang(ja) .v41-home span,html:lang(ja) .v41-home div,html:lang(ja) .v41-home label,html:lang(ja) .v41-home button,html:lang(ja) .v41-home summary{white-space:normal;word-break:normal;overflow-wrap:anywhere}
+html:lang(ja) .v41-home .v39-plan-kicker{letter-spacing:.04em}
+html:lang(ja) .v41-home .v39-service-body h3{line-height:1.35}
+html:lang(ja) .v41-home .v39-btn{line-height:1.45}
+html:lang(ja) .v41-home .brand-manifesto span{line-height:1.55}
+
+@media(max-width:900px){
+  .v41-home .main-nav{max-width:100vw;overflow-x:hidden}
+  .v41-home .nav-localized{width:100%;align-items:stretch!important}
+  .v41-home .nav-localized a{width:100%;text-align:center}
+  .v41-home .v39-service-card,.v41-home .v39-service-body,.v41-home .v39-service-action{min-width:0}
+}
+@media(max-width:680px){
+  .v41-home .container{width:calc(100% - 28px)!important;max-width:100%!important}
+  .v41-home .nav-wrap{height:76px}
+  .v41-home .header-mark{width:56px!important;height:56px!important;border-radius:13px!important}
+  .v41-home .v39-header .main-nav{top:76px;padding:18px 14px;max-height:calc(100vh - 76px);overflow-y:auto}
+  .v41-home .nav-localized{gap:10px!important}
+  .v41-home .nav-localized a{padding:8px 10px;overflow-wrap:anywhere}
+  .v41-home .v39-hero{min-height:auto!important;padding:0!important;background-position:67% center!important}
+  .v41-home .v39-hero .hero-stage{padding:108px 0 38px!important}
+  .v41-home .v39-hero .hero-copy{width:100%;max-width:100%!important}
+  .v41-home .v39-hero .lorunei-name{font-size:clamp(2.15rem,11vw,2.85rem)!important;letter-spacing:.09em!important;overflow-wrap:normal}
+  html:lang(ja) .v41-home .v39-hero .category-line{font-size:1rem!important;line-height:1.5!important}
+  html:lang(ja) .v41-home .v39-hero h1{font-size:clamp(1.9rem,9.2vw,2.55rem)!important;line-height:1.28!important;letter-spacing:0!important}
+  html:lang(ja) .v41-home .v39-hero .hero-lede{font-size:.9rem!important;line-height:1.75!important;max-width:100%!important}
+  .v41-home .v39-hero .brand-manifesto{width:100%;max-width:100%!important}
+  .v41-home .hero-actions{width:100%;gap:9px!important}
+  .v41-home .hero-actions a,.v41-home .v39-btn,.v41-home .v40-submit{width:100%;max-width:100%;white-space:normal!important;height:auto!important;min-height:42px}
+  .v41-home .v39-intro-title,.v41-home .v39-intro-copy{padding:26px 18px!important}
+  html:lang(ja) .v41-home .v39-intro-title h2{font-size:clamp(1.8rem,8vw,2.4rem)!important;line-height:1.35!important}
+  html:lang(ja) .v41-home .v39-intro-copy h3{font-size:1rem!important;line-height:1.6!important}
+  .v41-home .v39-services-grid{width:calc(100% - 28px)!important;gap:20px!important}
+  .v41-home .v39-services-lead{padding-top:0}
+  html:lang(ja) .v41-home .v39-services-lead h2{font-size:clamp(1.8rem,8vw,2.3rem)!important;line-height:1.35!important}
+  .v41-home .v39-service-card{width:100%;grid-template-columns:minmax(0,1fr)!important;overflow:hidden}
+  .v41-home .v39-service-card>img{width:100%;height:140px}
+  .v41-home .v39-service-body{padding:16px!important}
+  .v41-home .v39-service-action{padding:0 16px 16px!important;width:100%}
+  .v41-home .v39-price{text-align:left!important}
+  html:lang(ja) .v41-home .v39-service-body h3{font-size:1.18rem!important;line-height:1.45!important}
+  html:lang(ja) .v41-home .v39-service-body p{font-size:.82rem!important;line-height:1.7!important}
+  .v41-home .v39-founder-copy{padding:24px 18px!important}
+  html:lang(ja) .v41-home .v39-founder-copy h2{font-size:1.8rem!important;line-height:1.4!important}
+  .v41-home .v39-founder-facts{padding:18px!important}
+  .v41-home .v39-process-row div{padding:17px 12px!important;align-items:flex-start}
+  html:lang(ja) .v41-home .v39-process-row span{font-size:.88rem!important;line-height:1.55}
+  .v41-home .v40-inquiry{padding:42px 0}
+  .v41-home .v40-inquiry-grid{width:calc(100% - 28px)!important}
+  .v41-home .v40-form{padding:18px!important;width:100%;overflow:hidden}
+  .v41-home .v40-form input,.v41-home .v40-form select,.v41-home .v40-form textarea{max-width:100%;min-width:0;font-size:16px}
+  .v41-home .v39-footer-top{width:calc(100% - 28px)!important;grid-template-columns:1fr!important}
+  .v41-home .v39-footer-brand{align-items:flex-start}
+  .v41-home .v39-footer-brand img{width:72px!important;height:72px!important}
+  .v41-home .v39-footer-top nav{width:100%;display:grid!important;grid-template-columns:1fr 1fr;gap:10px 14px!important}
+  .v41-home .v39-footer-top nav a{overflow-wrap:anywhere}
+}
+@media(max-width:390px){
+  html:lang(ja) .v41-home .v39-hero h1{font-size:1.82rem!important}
+  .v41-home .v39-footer-top nav{grid-template-columns:1fr}
+}

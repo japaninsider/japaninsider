@@ -84,3 +84,9 @@ After committing, wait for GitHub Pages deployment and hard-refresh if an older 
 - LORUNEI hero and pronunciation guide.
 - Pricing rebuilt to $99 / $299 / From $999.
 - No generated founder/person imagery.
+
+## v41 update
+- Approved navy/gold LORUNEI logo installed (`assets/images/lorunei-logo-v41.png`).
+- Mobile Japanese overflow hardened across all homepage sections.
+- Formspree submission is asynchronous and does not open a mail client.
+- Guest confirmation email workflow is prepared; enable Formspree Autoresponse using `FORMSPREE-AUTORESPONSE-v41.md`.

@@ -136,3 +136,32 @@ if ("IntersectionObserver" in window) {
 }
 
 applyLanguage(currentLang);
+
+// v41: async Formspree submission. Keeps the user on-page and never opens a mail app.
+(() => {
+  const form = document.getElementById('loruneiInquiry');
+  if (!form) return;
+  const emailInput = form.querySelector('input[name="email"]');
+  const replyTo = document.getElementById('replyToField');
+  const status = document.getElementById('formStatus');
+  emailInput?.addEventListener('input', () => { if (replyTo) replyTo.value = emailInput.value.trim(); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const ja = document.documentElement.lang === 'ja';
+    if (replyTo && emailInput) replyTo.value = emailInput.value.trim();
+    if (status) status.textContent = ja ? '送信しています…' : 'Sending…';
+    const button = form.querySelector('button[type="submit"]:not([style*="display: none"])') || form.querySelector('button[type="submit"]');
+    if (button) button.disabled = true;
+    try {
+      const response = await fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
+      if (!response.ok) throw new Error('Formspree submit failed');
+      form.reset();
+      if (replyTo) replyTo.value = '';
+      if (status) status.textContent = ja ? '送信しました。確認メールが届く設定の場合は、入力したメールアドレスをご確認ください。' : 'Sent. If guest autoresponse is enabled in Formspree, a confirmation email will arrive at the address you entered.';
+    } catch (err) {
+      if (status) status.textContent = ja ? '送信できませんでした。時間をおいてもう一度お試しください。' : 'We could not send your inquiry. Please try again in a moment.';
+    } finally {
+      if (button) button.disabled = false;
+    }
+  });
+})();
