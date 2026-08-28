@@ -66,10 +66,10 @@ textarea{min-height:115px;resize:vertical}
       <span data-t="plan">Purchased plan</span>
       <select id="plan" name="plan" required>
         <option value="">—</option>
-        <option value="quick">Japan Quick Help — $45</option>
-        <option value="personal">Japan Personal Plan — $199</option>
-        <option value="premium">Japan Premium — $459</option>
-        <option value="vip">Japan VIP — $999+</option>
+        <option value="quick">Quick Help — $45</option>
+        <option value="answer">Japan Answer — $99</option>
+        <option value="research">Japan Research — $299</option>
+        <option value="private">Private Japan Planning — from $999</option>
       </select>
     </label>
     <label>
@@ -105,37 +105,34 @@ textarea{min-height:115px;resize:vertical}
   </div>
 </section>
 
-<section class="card plansec" data-plan-section="personal">
-  <h2 data-t="personalTitle">Personal Plan — custom travel design</h2>
+<section class="card plansec" data-plan-section="answer">
+  <h2 data-t="answerTitle">Japan Answer — one focused request</h2>
   <div class="grid">
-    <label><span data-t="pace">Preferred pace</span><input name="personal_pace"></label>
-    <label><span data-t="foodbudget">Meal budget per person</span><input name="personal_food_budget"></label>
-    <label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="personal_mustdo"></textarea></label>
-    <label class="full"><span data-t="food">Food preferences / allergies</span><textarea name="personal_food"></textarea></label>
-    <label class="full"><span data-t="mobility">Mobility / accessibility considerations</span><textarea name="personal_mobility"></textarea></label>
+    <label class="full"><span data-t="answerQuestion">Your question or decision</span><textarea name="answer_question"></textarea></label>
+    <label class="full"><span data-t="answerContext">Useful context</span><textarea name="answer_context"></textarea></label>
+    <label class="full"><span data-t="answerConstraints">Priorities, budget or constraints</span><textarea name="answer_constraints"></textarea></label>
   </div>
 </section>
 
-<section class="card plansec" data-plan-section="premium">
-  <h2 data-t="premiumTitle">Premium — plan + 7-day email support</h2>
+<section class="card plansec" data-plan-section="research">
+  <h2 data-t="researchTitle">Japan Research — deeper comparison & research</h2>
   <div class="grid">
-    <label><span data-t="support">7-day email support window</span><input name="premium_support"></label>
-    <label><span data-t="pace">Preferred pace</span><input name="premium_pace"></label>
-    <label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="premium_mustdo"></textarea></label>
-    <label class="full"><span data-t="shopping">Shopping / product research</span><textarea name="premium_shopping"></textarea></label>
-    <label class="full"><span data-t="realtime">What help would be useful during the trip?</span><textarea name="premium_realtime"></textarea></label>
+    <label class="full"><span data-t="researchTopic">What should we research?</span><textarea name="research_topic"></textarea></label>
+    <label class="full"><span data-t="researchOptions">Options already under consideration</span><textarea name="research_options"></textarea></label>
+    <label class="full"><span data-t="researchPriorities">What matters most in the decision?</span><textarea name="research_priorities"></textarea></label>
   </div>
 </section>
 
-<section class="card plansec" data-plan-section="vip">
-  <h2 data-t="vipTitle">VIP — custom travel advisory brief</h2>
+<section class="card plansec" data-plan-section="private">
+  <h2 data-t="privateTitle">Private Japan Planning — custom journey planning</h2>
   <div class="grid">
-    <label class="full"><span data-t="purpose">Main purpose of trip</span><textarea name="vip_purpose"></textarea></label>
-    <label><span data-t="style">Preferred travel style</span><input name="vip_style"></label>
-    <label><span data-t="dailybudget">Comfortable daily spend</span><input name="vip_daily_budget"></label>
-    <label class="full"><span data-t="special">Special occasions / important dates</span><textarea name="vip_special"></textarea></label>
-    <label class="full"><span data-t="dontlike">Things you definitely do not enjoy</span><textarea name="vip_dontlike"></textarea></label>
-    <label class="full"><span data-t="concierge">What would make this support especially useful?</span><textarea name="vip_concierge"></textarea></label>
+    <label><span data-t="pace">Preferred pace</span><input name="private_pace"></label>
+    <label><span data-t="style">Preferred travel style</span><input name="private_style"></label>
+    <label class="full"><span data-t="mustdo">Must-do experiences / places</span><textarea name="private_mustdo"></textarea></label>
+    <label class="full"><span data-t="food">Food preferences / allergies</span><textarea name="private_food"></textarea></label>
+    <label class="full"><span data-t="mobility">Mobility / accessibility considerations</span><textarea name="private_mobility"></textarea></label>
+    <label class="full"><span data-t="special">Special occasions / important dates</span><textarea name="private_special"></textarea></label>
+    <label class="full"><span data-t="concierge">What would make the planning especially useful?</span><textarea name="private_goals"></textarea></label>
   </div>
 </section>
 
@@ -185,14 +182,14 @@ const copy = {
     quickTitle:"Quick Help — up to 3 focused questions",
     quickIntro:"No appointment or video call is required. Send up to three specific questions and we’ll reply by email, usually within 2 business days.",
     q1:"Question 1", q2:"Question 2", q3:"Question 3", context:"Anything else we should know?",
-    personalTitle:"Personal Plan — custom travel design", premiumTitle:"Premium — plan + 7-day email support",
-    vipTitle:"VIP — custom travel advisory brief", pace:"Preferred pace", foodbudget:"Meal budget per person",
+    answerTitle:"Japan Answer — one focused request", answerQuestion:"Your question or decision",
+    answerContext:"Useful context", answerConstraints:"Priorities, budget or constraints",
+    researchTitle:"Japan Research — deeper comparison & research", researchTopic:"What should we research?",
+    researchOptions:"Options already under consideration", researchPriorities:"What matters most in the decision?",
+    privateTitle:"Private Japan Planning — custom journey planning", pace:"Preferred pace", style:"Preferred travel style",
     mustdo:"Must-do experiences / places", food:"Food preferences / allergies",
-    mobility:"Mobility / accessibility considerations", support:"7-day email support window",
-    shopping:"Shopping / product research", realtime:"What help would be useful during the trip?",
-    purpose:"Main purpose of trip", style:"Preferred travel style", dailybudget:"Comfortable daily spend",
-    special:"Special occasions / important dates", dontlike:"Things you definitely do not enjoy",
-    concierge:"What would make this support especially useful?", final:"Final details", links:"Useful links",
+    mobility:"Mobility / accessibility considerations", special:"Special occasions / important dates",
+    concierge:"What would make the planning especially useful?", final:"Final details", links:"Useful links",
     notes:"Anything else?", privacy:"Do not include passport numbers, card details, passwords, or other sensitive credentials.",
     submit:"Send trip details", back:"Back to site",
     status:"Your trip details will be sent directly from this page.",
@@ -211,16 +208,15 @@ const copy = {
     quickTitle:"Quick Help｜最大3つのピンポイント相談",
     quickIntro:"予約・ビデオ通話は不要です。具体的な質問を最大3つお送りください。通常2営業日以内にメールで回答します。",
     q1:"質問1", q2:"質問2", q3:"質問3", context:"その他、知っておいてほしいこと",
-    personalTitle:"Personal Plan｜あなた専用の旅行プラン",
-    premiumTitle:"Premium｜詳細プラン＋旅行中サポート",
-    vipTitle:"VIP｜高い個別性の旅行アドバイス",
-    pace:"旅行のペース", foodbudget:"1人あたりの食事予算",
+    answerTitle:"Japan Answer｜1つのテーマを個別に回答", answerQuestion:"質問・判断したいこと",
+    answerContext:"参考になる背景情報", answerConstraints:"重視すること・予算・条件",
+    researchTitle:"Japan Research｜より深い比較・リサーチ", researchTopic:"何を調べてほしいですか？",
+    researchOptions:"すでに検討している候補", researchPriorities:"判断で重視すること",
+    privateTitle:"Private Japan Planning｜旅行全体の個別プランニング",
+    pace:"旅行のペース", style:"好みの旅行スタイル",
     mustdo:"絶対に行きたい場所・やりたいこと", food:"食事の好み・アレルギー",
-    mobility:"移動・バリアフリー等の配慮事項", support:"7日間サポート希望期間",
-    shopping:"探してほしい商品・買い物", realtime:"旅行中にどんなサポートがあると助かりますか？",
-    purpose:"旅行の主な目的", style:"好みの旅行スタイル", dailybudget:"1日あたり快適に使える予算",
-    special:"記念日・重要な日", dontlike:"苦手・避けたいこと",
-    concierge:"どんなサポートがあると特に役立ちますか？", final:"最後に",
+    mobility:"移動・バリアフリー等の配慮事項", special:"記念日・重要な日",
+    concierge:"どんなプランニングだと特に役立ちますか？", final:"最後に",
     links:"参考リンク", notes:"その他",
     privacy:"パスポート番号、カード情報、パスワードなどの重要情報は入力しないでください。",
     submit:"旅行情報を送信", back:"サイトへ戻る",
@@ -267,7 +263,7 @@ function applyPlan() {
 plan.addEventListener("change", applyPlan);
 
 const qp = new URLSearchParams(location.search).get("plan");
-if (["quick","personal","premium","vip"].includes(qp)) {
+if (["quick","answer","research","private"].includes(qp)) {
   plan.value = qp;
 }
 applyPlan();
@@ -278,7 +274,8 @@ document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click"
 document.getElementById("intakeForm").addEventListener("submit", async function(e){
   const now=new Date();
   const selectedPlan=(document.getElementById("plan").value||new URLSearchParams(location.search).get("plan")||"general").toUpperCase();
-  const prefix=selectedPlan==="QUICK"?"QH":selectedPlan.slice(0,3);
+  const prefixMap={QUICK:"QH",ANSWER:"ANS",RESEARCH:"RES",PRIVATE:"PRI"};
+  const prefix=prefixMap[selectedPlan]||selectedPlan.slice(0,3);
   const stamp=now.toISOString().slice(0,10).replaceAll("-","");
   const rand=Math.random().toString(36).slice(2,7).toUpperCase();
   const ref="JI-"+prefix+"-"+stamp+"-"+rand;
@@ -368,6 +365,6 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
 applyLang(lang);
 applyPlan();
 </script>
-<span class="site-build-version" aria-label="site build">v41</span>
+<span class="site-build-version" aria-label="site build">v52</span>
 </body>
 </html>
