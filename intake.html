@@ -95,10 +95,12 @@ textarea{min-height:115px;resize:vertical}
 </section>
 
 <section class="card plansec" data-plan-section="quick">
-  <h2 data-t="quickTitle">Quick Help — one focused Japan travel issue</h2>
-  <p data-t="quickIntro">No appointment or video call is required. Tell us the one specific issue you want help with and the context that matters. We’ll provide a written answer, usually within 2 business days. If Japan Answer is clearly a better fit, we’ll tell you before deeper work begins; you can keep Quick Help scope or apply the full $49 toward Japan Answer.</p>
+  <h2 data-t="quickTitle">Quick Help — one focused topic, up to 3 related questions</h2>
+  <p data-t="quickIntro">No appointment or video call is required. Tell us one focused Japan travel topic and up to 3 closely related questions, plus the context that matters. We’ll provide a written answer, usually within 2 business days. If Japan Answer is clearly a better fit, we’ll tell you before deeper work begins; you can keep Quick Help scope or apply the full $49 toward Japan Answer.</p>
   <div class="grid">
-    <label class="full"><span data-t="q1">Your focused question or issue</span><textarea name="quick_q1" required></textarea></label>
+    <label class="full"><span data-t="q1">Main question</span><textarea name="quick_q1" required></textarea></label>
+    <label class="full"><span data-t="q2">Related question 2 (optional)</span><textarea name="quick_q2"></textarea></label>
+    <label class="full"><span data-t="q3">Related question 3 (optional)</span><textarea name="quick_q3"></textarea></label>
     <label class="full"><span data-t="context">Context, priorities or constraints</span><textarea name="quick_context"></textarea></label>
   </div>
 </section>
@@ -177,9 +179,9 @@ const copy = {
     basics:"About you & your trip", name:"Name", email:"Email", dates:"Travel dates",
     travelers:"Travelers / ages", cities:"Cities / regions", budget:"Approximate trip budget",
     interests:"Interests", avoid:"Anything you want to avoid?",
-    quickTitle:"Quick Help — one focused Japan travel issue",
-    quickIntro:"No appointment or video call is required. Tell us the one specific issue you want help with and the context that matters. We’ll provide a written answer, usually within 2 business days. If Japan Answer is clearly a better fit, we’ll tell you before deeper work begins; you can keep Quick Help scope or apply the full $49 toward Japan Answer.",
-    q1:"Your focused question or issue", q2:"Question 2", q3:"Question 3", context:"Context, priorities or constraints",
+    quickTitle:"Quick Help — one focused topic, up to 3 related questions",
+    quickIntro:"No appointment or video call is required. Tell us one focused Japan travel topic and up to 3 closely related questions, plus the context that matters. We’ll provide a written answer, usually within 2 business days. If Japan Answer is clearly a better fit, we’ll tell you before deeper work begins; you can keep Quick Help scope or apply the full $49 toward Japan Answer.",
+    q1:"Main question", q2:"Related question 2 (optional)", q3:"Related question 3 (optional)", context:"Context, priorities or constraints",
     answerTitle:"Japan Answer — one focused request", answerQuestion:"Your question or decision",
     answerContext:"Useful context", answerConstraints:"Priorities, budget or constraints",
     researchTitle:"Japan Research — deeper comparison & research", researchTopic:"What should we research?",
@@ -203,9 +205,9 @@ const copy = {
     basics:"お客様と旅行について", name:"お名前", email:"メールアドレス", dates:"旅行日程",
     travelers:"人数 / 年齢層", cities:"訪問予定の都市・地域", budget:"旅行のおおよその予算",
     interests:"興味・好きなこと", avoid:"避けたいことはありますか？",
-    quickTitle:"クイックヘルプ｜1つのピンポイントな旅行テーマ",
-    quickIntro:"予約・ビデオ通話は不要です。相談したい1つの具体的なテーマと、判断に必要な背景をお送りください。通常2営業日以内を目安に文章で回答します。ジャパン・アンサーの方が明らかに適している場合は、深い作業前にお知らせし、クイックヘルプの範囲に収めるか49ドル全額をジャパン・アンサーへ充当できます。",
-    q1:"相談したい1つの質問・テーマ", q2:"質問2", q3:"質問3", context:"背景・重視すること・条件",
+    quickTitle:"クイックヘルプ｜1テーマ・関連質問3つまで",
+    quickIntro:"予約・ビデオ通話は不要です。相談したい1つのテーマについて、関連する質問を3つまでと、判断に必要な背景をお送りください。通常2営業日以内を目安に文章で回答します。ジャパン・アンサーの方が明らかに適している場合は、深い作業前にお知らせし、クイックヘルプの範囲に収めるか49ドル全額をジャパン・アンサーへ充当できます。",
+    q1:"中心となる質問", q2:"関連質問2（任意）", q3:"関連質問3（任意）", context:"背景・重視すること・条件",
     answerTitle:"ジャパン・アンサー｜1つのテーマを個別に回答", answerQuestion:"質問・判断したいこと",
     answerContext:"参考になる背景情報", answerConstraints:"重視すること・予算・条件",
     researchTitle:"ジャパン・リサーチ｜より深い比較・リサーチ", researchTopic:"何を調べてほしいですか？",
@@ -363,6 +365,6 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
 applyLang(lang);
 applyPlan();
 </script>
-<span class="site-build-version" aria-label="site build">v55</span>
+<span class="site-build-version" aria-label="site build">v56</span>
 </body>
 </html>

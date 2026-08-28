@@ -10,7 +10,7 @@ LORUNEI provides personal Japan trip research and planning in English and Japane
 - Japan Research — **$299**
 - Private Japan Planning — **from $999**
 
-Quick Help is the entry service: one focused Japan travel issue, no call required. If a request is clearly better suited to Japan Answer before deeper individualized work begins, the customer may keep Quick Help scope or apply the full $49 toward Japan Answer, leaving $50 due. No upgrade is charged without customer approval.
+Quick Help is the entry service: one focused Japan travel topic with up to 3 closely related questions, no call required. If a request is clearly better suited to Japan Answer before deeper individualized work begins, the customer may keep Quick Help scope or apply the full $49 toward Japan Answer, leaving $50 due. No upgrade is charged without customer approval.
 
 ## Current public experience
 - EN / 日本語 only
@@ -30,7 +30,7 @@ The Quick Help Stripe Payment Link remains intentionally blank unless a real Str
 
 ## v55
 - Unified Quick Help at $49 across current public pages and current operating docs.
-- Repositioned Quick Help as the lowest-risk way to try LORUNEI with one focused travel issue.
+- Repositioned Quick Help as the lowest-risk way to try LORUNEI with one focused topic and up to 3 related questions.
 - Added concrete Quick Help vs Japan Answer deliverable previews using the same example question.
 - Clarified that Japan Answer is a Decision Brief, not two Quick Helps combined.
 - Added a $49-to-$99 upgrade credit policy with explicit customer approval before any additional charge.
