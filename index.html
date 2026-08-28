@@ -8,10 +8,10 @@
 <meta name="theme-color" content="#071d3b">
 <link rel="icon" href="assets/images/lorunei-logo-v41.png">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/v53.css">
-<script defer src="assets/js/v53.js"></script>
+<link rel="stylesheet" href="assets/css/v54.css">
+<script defer src="assets/js/v54.js"></script>
 </head>
-<body class="v53-home">
+<body class="v54-home">
 <header class="site-header v39-header" id="top">
   <div class="container nav-wrap">
     <a class="brand v39-brand" href="#top" aria-label="LORUNEI home">
@@ -212,6 +212,9 @@
     <form class="v40-form reveal" id="loruneiInquiry" action="https://formspree.io/f/xeajbpvn" method="POST" data-formspree-form>
       <input type="hidden" name="_subject" value="LORUNEI website inquiry">
       <input type="hidden" name="_replyto" id="replyToField" value="">
+      <input type="hidden" name="submission_reference" id="submissionReferenceField" value="">
+      <input type="hidden" name="submitted_at_jst" id="submittedAtJstField" value="">
+      <input type="hidden" name="page_language" id="pageLanguageField" value="">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
       <label><span class="lang-en">Name</span><span class="lang-ja">お名前</span><input name="name" required></label>
       <label><span class="lang-en">Email</span><span class="lang-ja">メールアドレス</span><input name="email" type="email" required></label>
@@ -235,6 +238,30 @@
       <button class="v40-submit lang-en" type="submit">Send Inquiry</button>
       <button class="v40-submit lang-ja" type="submit">相談内容を送信</button>
       <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+      <section class="submission-receipt" id="submissionReceipt" hidden aria-live="polite">
+        <p class="receipt-kicker lang-en">SUBMISSION RECEIPT</p>
+        <p class="receipt-kicker lang-ja">送信控え</p>
+        <h3 class="lang-en">Your inquiry has been received.</h3>
+        <h3 class="lang-ja">お問い合わせを受け付けました。</h3>
+        <p class="receipt-intro lang-en">Please keep this reference for your records. The same reference is included in LORUNEI's Formspree submission record.</p>
+        <p class="receipt-intro lang-ja">この控えを保存してください。同じ受付番号がLORUNEI側のFormspree送信記録にも保存されます。</p>
+        <dl class="receipt-details">
+          <div><dt class="lang-en">Reference</dt><dt class="lang-ja">受付番号</dt><dd id="receiptReference"></dd></div>
+          <div><dt class="lang-en">Submitted</dt><dt class="lang-ja">送信日時</dt><dd id="receiptSubmittedAt"></dd></div>
+          <div><dt class="lang-en">Name</dt><dt class="lang-ja">お名前</dt><dd id="receiptName"></dd></div>
+          <div><dt>Email</dt><dd id="receiptEmail"></dd></div>
+          <div><dt class="lang-en">Service</dt><dt class="lang-ja">サービス</dt><dd id="receiptService"></dd></div>
+          <div class="receipt-message-row"><dt class="lang-en">Message</dt><dt class="lang-ja">相談内容</dt><dd id="receiptMessage"></dd></div>
+        </dl>
+        <div class="receipt-actions">
+          <button type="button" class="receipt-button" id="copyReceipt"><span class="lang-en">Copy receipt</span><span class="lang-ja">控えをコピー</span></button>
+          <button type="button" class="receipt-button" id="printReceipt"><span class="lang-en">Print / Save PDF</span><span class="lang-ja">印刷 / PDF保存</span></button>
+        </div>
+        <p class="receipt-action-status" id="receiptActionStatus" role="status" aria-live="polite"></p>
+        <p class="receipt-note lang-en">For privacy, LORUNEI does not store the detailed message in your browser after you leave this page. Use Copy or Print / Save PDF if you want to keep the full receipt.</p>
+        <p class="receipt-note lang-ja">プライバシー保護のため、このページを離れた後に相談内容をブラウザ内へ保存しません。詳細な控えを残す場合は「控えをコピー」または「印刷 / PDF保存」をご利用ください。</p>
+      </section>
     </form>
   </div>
 </section>
@@ -336,7 +363,7 @@
       <span>|</span>
       <a href="legal.html?lang=en">Commerce Disclosure</a>
       <span>|</span>
-      <a href="changelog.html?lang=en">Version history <b>v53</b></a>
+      <a href="changelog.html?lang=en">Version history <b>v54</b></a>
     </div>
     <div class="lang-ja footer-legal-v51">
       <a href="privacy.html?lang=ja">プライバシーポリシー</a>
@@ -345,7 +372,7 @@
       <span>|</span>
       <a href="legal.html?lang=ja">特定商取引法に基づく表記</a>
       <span>|</span>
-      <a href="changelog.html?lang=ja">変更履歴 <b>v53</b></a>
+      <a href="changelog.html?lang=ja">変更履歴 <b>v54</b></a>
     </div>
   </div>
 </footer>
