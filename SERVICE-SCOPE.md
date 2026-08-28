@@ -1,12 +1,9 @@
-# SERVICE-SCOPE.md
-## Launch scope
-- Quick Help $45: up to 3 questions; usually within 2 business days; no video call.
-- Personal $199: trips up to 7 days / 2 main cities or regions; target delivery within 5 business days; 1 revision.
-- Premium $459: trips up to 14 days / 4 main cities or regions; target delivery within 7 business days; 2 revisions; one 7-day email support window.
-- Premium support hours: 09:00–18:00 JST; typical response target within 4 hours during support hours. Not an emergency service.
-- VIP $999+: individually quoted; launch default is 100% upfront after written scope and quote are accepted.
-- Research start for refund purposes: individualized research begins when Japan Insider sends the customer the work-start confirmation email.
-- Customers book and pay third-party travel providers directly.
+# LORUNEI service scope — v55
 
-## Public biography
-Masayasu Wakihama has more than 20 years of five-star hospitality experience, including InterContinental, began his career as a Nikkei journalist, and lived in Los Angeles, including Hollywood, for 10 years. Exact former residential street details are not published.
+- **Quick Help — $49**: one focused Japan travel issue; written answer with recommendation, reasoning, relevant cautions and next step; usually within 2 business days after required information is received; no call required.
+- **Japan Answer — $99**: one important travel decision treated as a Decision Brief; alternatives, priorities and trade-offs considered together; may include structured comparison, recommendation and next steps.
+- **Japan Research — $299**: deeper research brief for a defined topic; multiple-option comparison, practical constraints, shortlist/recommendation and backups where useful.
+- **Private Japan Planning — from $999**: custom whole-journey planning; scope, delivery timing, price and payment terms agreed in writing.
+
+## Quick Help upgrade credit
+If a Quick Help request is clearly better suited to Japan Answer, LORUNEI tells the customer before deeper individualized work begins. The customer may keep the request within Quick Help scope or apply the full $49 to Japan Answer, leaving $50 due. No upgrade charge without customer approval.

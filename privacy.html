@@ -55,9 +55,11 @@
     document.documentElement.lang=lang;
   }
   buttons.forEach(b=>b.addEventListener("click",()=>show(b.dataset.docLang)));
+  const qs=new URLSearchParams(location.search);
+  const requested=qs.get("lang");
   const stored=localStorage.getItem("japanInsiderLang");
-  show(allowed.includes(stored)?stored:"en");
+  show(allowed.includes(requested)?requested:(allowed.includes(stored)?stored:"en"));
 })();
 </script>
-<span class="site-build-version" aria-label="site build">v54</span>
+<span class="site-build-version" aria-label="site build">v55</span>
 </body></html>
