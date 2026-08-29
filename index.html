@@ -4,14 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LORUNEI — Personal Japan Trip Planning</title>
-<meta name="description" content="Thoughtful research and personal Japan trip planning for independent travelers.">
+<meta name="description" content="Personal Japan trip planning for first-time independent travelers who want clear choices, thoughtful pacing and a journey built around them.">
 <meta name="theme-color" content="#071d3b">
 <link rel="icon" href="assets/images/lorunei-logo-v41.png">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/v56.css">
-<script defer src="assets/js/v56.js"></script>
+<link rel="stylesheet" href="assets/css/v57b2.css">
+<script defer src="assets/js/v57b2.js"></script>
+<script defer src="assets/js/payments.js"></script>
 </head>
-<body class="v56-home">
+<body class="v57b2-home">
 <header class="site-header v39-header" id="top">
   <div class="container nav-wrap">
     <a class="brand v39-brand" href="#top" aria-label="LORUNEI home">
@@ -45,9 +46,9 @@
         </div>
         <p class="category-line">Personal Japan Trip Planning</p>
         <h1>Your Japan, Well Chosen.</h1>
-        <p class="hero-lede">Thoughtful research and trip planning for independent travelers who want to make better choices in Japan—without spending weeks figuring everything out.</p>
+        <p class="hero-lede">For first-time travelers who want the Japan they came for—without rushing, second-guessing every choice, or spending weeks planning it.</p>
         <div class="brand-manifesto"><span>Researched<br>like a journalist.</span><span>Chosen<br>like a hotelier.</span><span>Planned<br>around you.</span></div>
-        <div class="hero-actions"><a class="button hero-button" href="#inquiry" data-plan="quick">Try LORUNEI — $49</a><a class="button hero-button ghost" href="#deliverables">See What You Receive</a><span class="based">● Based in Japan · No call required</span></div>
+        <div class="hero-actions"><a class="button hero-button" id="quickCheckoutButtonHero" href="#inquiry" data-plan="quick" data-quick-checkout>Ask up to 3 questions — $49</a><a class="button hero-button ghost" href="#services">Compare the four options</a><span class="based">● Written guidance · Based in Japan · No call required</span></div>
       </div>
       <div class="lang-ja">
         <div class="hero-name-guide">
@@ -56,9 +57,9 @@
         </div>
         <p class="category-line">日本旅行のパーソナル・プランニング</p>
         <h1 class="ja-hero-title">あなたの日本を、<br>より良い選択で。</h1>
-        <p class="hero-lede">情報を探し続けるのではなく、あなたに合う選択へ。個人旅行を楽しみたい方のために、丁寧なリサーチと旅のプランニングを提供します。</p>
+        <p class="hero-lede">初めての日本旅行を、情報探しと迷いで終わらせないために。定番を大切にしながら、あなたに合う選択と無理のない旅を組み立てます。</p>
         <div class="brand-manifesto"><span>記者のように<br>調べる。</span><span>ホテルマンのように<br>選ぶ。</span><span>あなたを中心に<br>組み立てる。</span></div>
-        <div class="hero-actions"><a class="button hero-button" href="#inquiry" data-plan="quick">LORUNEIを試す — $49</a><a class="button hero-button ghost" href="#deliverables">届く内容を見る</a><span class="based">● 日本を拠点に対応 · 面談不要</span></div>
+        <div class="hero-actions"><a class="button hero-button" href="#inquiry" data-plan="quick" data-quick-checkout>質問3つまで相談 — $49</a><a class="button hero-button ghost" href="#services">4つの選択肢を比べる</a><span class="based">● 文章で回答 · 日本を拠点に対応 · 面談不要</span></div>
       </div>
     </div>
   </div>
@@ -71,8 +72,8 @@
       <div class="lang-ja"><h2>ただの一覧ではなく、<br>選ぶための答えを。</h2><p>考え抜いた提案をお届けします。</p></div>
     </div>
     <div class="v39-intro-copy reveal">
-      <div class="lang-en"><h3>Japan is easy to search. Harder to get right.</h3><p>There is no shortage of information about Japan. The harder part is knowing what is actually right for you.</p><p>LORUNEI helps you make those decisions with personal research, local knowledge, and real-world hospitality experience.</p><a href="#founder">Learn more about LORUNEI →</a></div>
-      <div class="lang-ja"><h3>日本は検索しやすい。でも、自分に合う答えを選ぶのは難しい。</h3><p>日本の情報はあふれています。難しいのは、その中から自分に本当に合うものを見極めることです。</p><p>LORUNEIは、丁寧なリサーチ、現地感覚、ホテルで培った判断力で、その選択をお手伝いします。</p><a href="#founder">LORUNEIについて →</a></div>
+      <div class="lang-en"><h3>Your first trip is too important for an endless list.</h3><p>Tokyo or Kyoto is not the hard part. The hard part is choosing the right neighborhood, the right pace, the stay worth paying more for—and knowing what to leave out.</p><p>LORUNEI turns those choices into a considered answer, using personal research, local knowledge and five-star hospitality experience.</p><a href="#founder">Why trust LORUNEI →</a></div>
+      <div class="lang-ja"><h3>初めての日本旅行を、情報の一覧だけで決めない。</h3><p>難しいのは、東京や京都を知ることではありません。どのエリアに泊まり、何にお金をかけ、どこを削れば、自分たちらしい旅になるのかを選ぶことです。</p><p>LORUNEIは、丁寧なリサーチ、現地感覚、5つ星ホテルで培った判断力で、その選択を一つの答えにまとめます。</p><a href="#founder">LORUNEIを信頼できる理由 →</a></div>
     </div>
     <div class="v39-intro-image reveal"><img src="assets/images/intro-side.jpg" alt="Traditional Japan street scene"></div>
   </div>
@@ -82,38 +83,45 @@
   <div class="container v39-services-grid">
     <div class="v39-services-lead reveal">
       <div class="lang-en">
-        <p class="v39-eyebrow">SERVICES</p><h2>Start with the decision<br>you need to make.</h2>
-        <p>Start with one focused topic and up to 3 related questions, move to a considered decision brief, commission deeper research, or plan the trip as a whole.</p>
+        <p class="v39-eyebrow">CHOOSE YOUR LEVEL</p><h2>How much of the decision<br>do you want us to solve?</h2>
+        <p>Choose by the size of the problem: up to 3 related questions, one connected decision, a researched shortlist, or the whole journey.</p>
         <a href="samples.html?lang=en">See sample deliverables →</a>
       </div>
       <div class="lang-ja">
-        <p class="v39-eyebrow">サービス</p><h2>必要な判断から、<br>始めましょう。</h2>
-        <p>まず1つのテーマについて関連する質問を3つまで相談し、必要なら判断レポート、深い調査、旅全体の設計へ進めます。</p>
+        <p class="v39-eyebrow">サービスを選ぶ</p><h2>どこまで一緒に<br>考えてほしいですか？</h2>
+        <p>関連する質問3つまで、1つの重要な判断、具体的な候補調査、旅全体。解決したい問題の大きさで選べます。</p>
         <a href="samples.html?lang=ja">納品サンプルを見る →</a>
       </div>
     </div>
 
+    <div class="v57-choice-strip reveal" aria-label="Plan guide">
+      <a href="#plan-quick"><strong>$49</strong><span class="lang-en">Up to 3 questions</span><span class="lang-ja">質問3つまで</span></a>
+      <a href="#plan-answer"><strong>$99</strong><span class="lang-en">One decision</span><span class="lang-ja">1つの判断</span></a>
+      <a href="#plan-research"><strong>$299</strong><span class="lang-en">A real shortlist</span><span class="lang-ja">実名候補を調査</span></a>
+      <a href="#plan-private"><strong>$999+</strong><span class="lang-en">The whole trip</span><span class="lang-ja">旅全体</span></a>
+    </div>
+
     <div class="v39-service-list">
-      <article class="v39-service-card quick reveal">
+      <article class="v39-service-card quick reveal" id="plan-quick">
         <img src="assets/images/service-answer.jpg" alt="Japan travel notes">
         <div class="v39-service-body">
-          <div class="lang-en"><span class="v55-start-badge">Best place to start</span><p class="v39-plan-kicker">QUICK HELP</p><h3>Try LORUNEI with one focused topic.</h3><p>For one focused Japan travel topic, with up to 3 closely related questions. You receive a clear, researched written answer. No call or appointment required.</p><p class="v55-upgrade-note"><strong>Not sure this is enough?</strong> If your request clearly needs Japan Answer, we’ll tell you before deeper work begins. You can keep it within Quick Help scope or apply the full $49 toward the $99 Japan Answer.</p></div>
-          <div class="lang-ja"><span class="v55-start-badge">最初におすすめ</span><p class="v39-plan-kicker">クイックヘルプ</p><h3>1つのテーマで、LORUNEIを試す。</h3><p>日本旅行の1つのテーマについて、関連する質問を3つまでまとめて相談できます。結論・理由・注意点・次の一歩を文章でお届けします。面談や予約は不要です。</p><p class="v55-upgrade-note"><strong>この範囲で足りるか迷っても大丈夫。</strong> ジャパン・アンサーの方が明らかに適している場合は、深い作業を始める前にお知らせします。クイックヘルプの範囲に収めるか、49ドル全額を99ドルのジャパン・アンサーへ充当できます。</p></div>
+          <div class="lang-en"><span class="v55-start-badge">Best place to start</span><p class="v39-plan-kicker">QUICK HELP</p><h3>Up to 3 related questions.<br>Clear written answers.</h3><p>Ask up to 3 closely related questions about one Japan travel topic—for example, choosing a Tokyo base, checking convenience and deciding exactly where to search.</p><p class="v57-service-proof">Recommendation · reasoning · caution · next step · usually within 2 business days</p></div>
+          <div class="lang-ja"><span class="v55-start-badge">最初におすすめ</span><p class="v39-plan-kicker">クイックヘルプ</p><h3>関連する質問3つまで。<br>明確な文章回答。</h3><p>日本旅行の1テーマについて、関連する質問を3つまで相談できます。例：東京の滞在エリア、利便性、具体的に探す場所。</p><p class="v57-service-proof">結論・理由・注意点・次の一歩／通常2営業日以内</p></div>
         </div>
         <div class="v39-service-action">
-          <div class="v39-price">$49<small class="lang-en">1 topic · up to 3 related questions</small><small class="lang-ja">1テーマ · 関連質問3つまで</small></div>
-          <a class="v39-btn lang-en" href="#inquiry" data-plan="quick">Try LORUNEI — $49</a>
-          <a class="v39-btn lang-ja" href="#inquiry" data-plan="quick">LORUNEIを試す — $49</a>
-          <a class="v39-btn alt lang-en" href="#deliverables">See exactly what arrives</a>
-          <a class="v39-btn alt lang-ja" href="#deliverables">実際に届く内容を見る</a>
+          <div class="v39-price">$49<small class="lang-en">Up to 3 related questions · 1 topic</small><small class="lang-ja">関連質問3つまで · 1テーマ</small></div>
+          <a class="v39-btn lang-en" id="quickCheckoutButton" href="#inquiry" data-plan="quick" data-quick-checkout>Get Quick Help — $49</a>
+          <a class="v39-btn lang-ja" href="#inquiry" data-plan="quick" data-quick-checkout>Quick Helpを購入 — $49</a>
+          <a class="v39-btn alt lang-en" href="samples.html?lang=en&plan=quick">See the $49 sample</a>
+          <a class="v39-btn alt lang-ja" href="samples.html?lang=ja&plan=quick">$49のサンプルを見る</a>
         </div>
       </article>
 
-      <article class="v39-service-card reveal">
+      <article class="v39-service-card reveal" id="plan-answer">
         <img src="assets/images/service-answer.jpg" alt="Japan travel answer">
         <div class="v39-service-body">
-          <div class="lang-en"><p class="v39-plan-kicker">JAPAN ANSWER</p><h3>One important decision.<br>A researched Decision Brief.</h3><p>For a decision where your priorities, alternatives and trade-offs need to be weighed together—not two Quick Helps combined.</p></div>
-          <div class="lang-ja"><p class="v39-plan-kicker">ジャパン・アンサー</p><h3>1つの重要な判断を、<br>判断レポートに。</h3><p>条件・候補・メリットとデメリットを一つの問題として比較し、あなたの旅に合う結論までまとめます。クイックヘルプを2件まとめたサービスではありません。</p></div>
+          <div class="lang-en"><p class="v39-plan-kicker">JAPAN ANSWER</p><h3>One important decision.<br>Options weighed together.</h3><p>Ideal for deciding whether to add Hakone, choosing between two route structures, or resolving one connected travel decision.</p><p class="v57-service-proof">Comparison · trade-offs · recommendation · practical next step</p></div>
+          <div class="lang-ja"><p class="v39-plan-kicker">ジャパン・アンサー</p><h3>1つの重要な判断を、<br>比較して結論まで。</h3><p>箱根を加えるべきか、2つの旅程のどちらが合うかなど、条件とトレードオフがつながった判断に向いています。</p><p class="v57-service-proof">候補比較・長所短所・おすすめ・実用的な次の一歩</p></div>
         </div>
         <div class="v39-service-action">
           <div class="v39-price">$99<small class="lang-en">one request</small><small class="lang-ja">1件</small></div>
@@ -124,11 +132,11 @@
         </div>
       </article>
 
-      <article class="v39-service-card research reveal">
+      <article class="v39-service-card research reveal" id="plan-research">
         <img src="assets/images/service-research.jpg" alt="Japan travel research">
         <div class="v39-service-body">
-          <div class="lang-en"><p class="v39-plan-kicker">JAPAN RESEARCH</p><h3>When the decision<br>deserves a deeper look.</h3><p>Compare options, understand trade-offs, and receive a focused research brief.</p></div>
-          <div class="lang-ja"><p class="v39-plan-kicker">ジャパン・リサーチ</p><h3>比較して、深く調べて、<br>判断材料を整理。</h3><p>複数の選択肢を比較し、違い・注意点・おすすめ理由を調査レポートとしてまとめます。</p></div>
+          <div class="lang-en"><p class="v39-plan-kicker">JAPAN RESEARCH</p><h3>Actual options.<br>A researched shortlist.</h3><p>Ideal for comparing named ryokan, hotels or experiences against your dates, budget and practical constraints.</p><p class="v57-service-proof">Defined scope · named options · practical checks · first choice + backups</p></div>
+          <div class="lang-ja"><p class="v39-plan-kicker">ジャパン・リサーチ</p><h3>実名候補を調べ、<br>選べるリストに。</h3><p>旅館、ホテル、体験などを、旅行日、予算、アクセス、注意点まで含めて比較します。</p><p class="v57-service-proof">調査範囲・実名比較・実務確認・第一候補＋代替案</p></div>
         </div>
         <div class="v39-service-action">
           <div class="v39-price">$299<small class="lang-en">one request</small><small class="lang-ja">1件</small></div>
@@ -139,11 +147,11 @@
         </div>
       </article>
 
-      <article class="v39-service-card private reveal">
+      <article class="v39-service-card private reveal" id="plan-private">
         <img src="assets/images/service-private.jpg" alt="Private Japan planning">
         <div class="v39-service-body">
-          <div class="lang-en"><p class="v39-plan-kicker">PRIVATE JAPAN PLANNING</p><h3>Japan, planned around you.</h3><p>For travelers who want the entire journey considered—destinations, stays, dining, experiences and logistics.</p></div>
-          <div class="lang-ja"><p class="v39-plan-kicker">プライベート・ジャパン・プランニング</p><h3>旅全体を、<br>あなたを中心に設計。</h3><p>行き先、滞在、食、体験、移動まで、旅全体を一つにつないで個別に組み立てます。</p></div>
+          <div class="lang-en"><p class="v39-plan-kicker">PRIVATE JAPAN PLANNING</p><h3>Your first Japan journey,<br>joined up from start to finish.</h3><p>Destinations, stays, day-by-day pacing, dining, experiences, transport and reservation priorities considered as one trip.</p><p class="v57-service-proof">Custom scope · day-by-day plan · booking roadmap · rain and fatigue backups</p></div>
+          <div class="lang-ja"><p class="v39-plan-kicker">プライベート・ジャパン・プランニング</p><h3>初めての日本旅行を、<br>最初から最後まで一つに。</h3><p>都市、宿泊、日別のペース、食、体験、移動、予約優先順位を、一つの旅として組み立てます。</p><p class="v57-service-proof">個別設計・日別プラン・予約手順・雨天／疲労時の代替案</p></div>
         </div>
         <div class="v39-service-action">
           <div class="v39-price"><small class="lang-en">From</small><small class="lang-ja">料金</small>$999<small class="lang-en">custom scope</small><small class="lang-ja">から</small></div>
@@ -157,54 +165,33 @@
   </div>
 </section>
 
-<section class="v55-deliverables" id="deliverables">
+<section class="v57-samples" id="deliverables">
   <div class="container">
-    <div class="v55-deliverables-head reveal">
-      <div class="lang-en"><p class="v39-eyebrow">WHAT YOU ACTUALLY RECEIVE</p><h2>See the difference before you buy.</h2></div>
-      <div class="lang-ja"><p class="v39-eyebrow">実際に届く内容</p><h2>同じテーマでも、<br>ここまで違います。</h2></div>
-      <div class="lang-en"><p>Quick Help gives you a concise answer to one focused topic, covering up to 3 related questions. Japan Answer treats an important choice as one connected decision—comparing the alternatives, trade-offs and fit for your trip.</p></div>
-      <div class="lang-ja"><p>クイックヘルプは1つのテーマについて、関連する質問を3つまでまとめて、すぐ使える答えを返します。ジャパン・アンサーは、重要な選択を一つの判断として扱い、候補・条件・トレードオフを比較して結論まで整理します。</p></div>
+    <div class="v57-samples-head reveal">
+      <div class="lang-en"><p class="v39-eyebrow">ONE COUPLE · FOUR LEVELS OF HELP</p><h2>See exactly what changes<br>as the scope grows.</h2><p>Every example follows the same first-time couple: mid-40s, 10 nights in October, celebrating an anniversary, seeking iconic Japan without a rushed itinerary.</p></div>
+      <div class="lang-ja"><p class="v39-eyebrow">同じ夫婦・4段階のサポート</p><h2>価格ではなく、<br>解決する問題の大きさで比べる。</h2><p>すべて、初訪日の40代夫婦による10月・10泊の結婚記念旅行を例にしています。定番の日本を大切にしながら、慌ただしくない旅を希望しています。</p></div>
     </div>
-    <div class="v55-example-question reveal">
-      <div class="lang-en"><strong>Same example topic:</strong> Choosing the right Tokyo base for a first trip.</div>
-      <div class="lang-ja"><strong>同じテーマで比較：</strong> 初めての東京旅行で、滞在エリアをどう選ぶか。</div>
+
+    <div class="v57-sample-ladder reveal">
+      <a href="samples.html?lang=en&plan=quick" data-sample-plan="quick">
+        <span class="v57-sample-price">$49</span><span><strong class="lang-en">Ginza or Shinjuku for our first four nights?</strong><strong class="lang-ja">最初の4泊は銀座と新宿、どちらがよい？</strong><small class="lang-en">A clear answer to one focused topic.</small><small class="lang-ja">1つのテーマに、明確な文章回答。</small></span><b aria-hidden="true">→</b>
+      </a>
+      <a href="samples.html?lang=en&plan=answer" data-sample-plan="answer">
+        <span class="v57-sample-price">$99</span><span><strong class="lang-en">Should we add Hakone—or keep Tokyo and Kyoto?</strong><strong class="lang-ja">箱根を加えるか、東京と京都だけにするか？</strong><small class="lang-en">One connected decision, with trade-offs weighed together.</small><small class="lang-ja">条件とトレードオフを比較する、1つの重要な判断。</small></span><b aria-hidden="true">→</b>
+      </a>
+      <a href="samples.html?lang=en&plan=research" data-sample-plan="research">
+        <span class="v57-sample-price">$299</span><span><strong class="lang-en">Which Hakone ryokan is worth one splurge night?</strong><strong class="lang-ja">箱根の特別な1泊に、どの旅館を選ぶ？</strong><small class="lang-en">Named options researched against the couple’s real priorities.</small><small class="lang-ja">実名候補を、予算・快適さ・アクセスまで調査。</small></span><b aria-hidden="true">→</b>
+      </a>
+      <a href="samples.html?lang=en&plan=private" data-sample-plan="private">
+        <span class="v57-sample-price">$999+</span><span><strong class="lang-en">Tokyo, Hakone and Kyoto—10 nights without the rush.</strong><strong class="lang-ja">東京・箱根・京都を、慌ただしくない10泊で。</strong><small class="lang-en">The full journey joined up from arrival to departure.</small><small class="lang-ja">到着から帰国までを一つにつなぐ、旅全体の設計。</small></span><b aria-hidden="true">→</b>
+      </a>
     </div>
-    <div class="v55-output-grid">
-      <article class="v55-output-card reveal">
-        <div class="v55-output-top"><div><p class="v55-output-type lang-en">Quick Help · concise answer</p><p class="v55-output-type lang-ja">クイックヘルプ · コンパクトな回答</p><h3 class="v55-output-title lang-en">LORUNEI Quick Answer</h3><h3 class="v55-output-title lang-ja">LORUNEI クイック回答</h3></div><div class="v55-output-price">$49</div></div>
-        <div class="v55-doc">
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Related questions</span><span class="v55-doc-label lang-ja">関連する質問</span><p class="lang-en">1. Shinjuku, Ginza or Asakusa?<br>2. If Shinjuku, which side is easiest?<br>3. Any area to avoid for a simple first trip?</p><p class="lang-ja">1. 新宿・銀座・浅草ならどこ？<br>2. 新宿ならどのエリア側が使いやすい？<br>3. 初めての旅行で避けた方がよい場所は？</p></div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Recommendation</span><span class="v55-doc-label lang-ja">結論</span><p class="v55-recommendation lang-en">Choose Shinjuku for a first trip if convenience and easy transport matter most.</p><p class="v55-recommendation lang-ja">初めての東京で、移動の便利さを最優先するなら新宿がおすすめです。</p></div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Why</span><span class="v55-doc-label lang-ja">理由</span><p class="lang-en">Strong rail access, broad dining choices, and an easy base for busy sightseeing days.</p><p class="lang-ja">鉄道アクセスが強く、食事の選択肢も多く、観光中心の日程で拠点にしやすいため。</p></div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Watch out</span><span class="v55-doc-label lang-ja">注意点</span><p class="lang-en">Shinjuku Station is huge; hotel location matters more than the neighborhood name alone.</p><p class="lang-ja">新宿駅は大きいため、「新宿」という名前だけでなくホテルの位置まで確認する必要があります。</p></div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Next step</span><span class="v55-doc-label lang-ja">次の一歩</span><p class="lang-en">Prioritize South Exit / West Exit options and compare walking distance to the station.</p><p class="lang-ja">南口・西口周辺を優先し、駅までの実際の徒歩距離でホテルを比較。</p></div>
-        </div>
-        <div class="v55-output-foot"><span class="lang-en">1 focused topic · up to 3 related questions · recommendation · reasoning · caution · next step</span><span class="lang-ja">1テーマ · 関連質問3つまで · 結論 · 理由 · 注意点 · 次の一歩</span></div>
-      </article>
-      <article class="v55-output-card answer reveal">
-        <div class="v55-output-top"><div><p class="v55-output-type lang-en">Japan Answer · decision brief</p><p class="v55-output-type lang-ja">ジャパン・アンサー · 判断レポート</p><h3 class="v55-output-title lang-en">Tokyo Base Decision</h3><h3 class="v55-output-title lang-ja">東京の滞在エリア 判断レポート</h3></div><div class="v55-output-price">$99</div></div>
-        <div class="v55-doc">
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">What we considered</span><span class="v55-doc-label lang-ja">今回の条件</span><p class="lang-en">First trip · 5 nights · family travel · good food · day trips · simple transport</p><p class="lang-ja">初訪日 · 5泊 · 家族旅行 · 食事重視 · 日帰り旅行あり · 移動を分かりやすく</p></div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Option comparison</span><span class="v55-doc-label lang-ja">候補比較</span>
-            <table class="v55-mini-table lang-en"><thead><tr><th></th><th>Shinjuku</th><th>Ginza</th><th>Asakusa</th></tr></thead><tbody><tr><td>Transit</td><td>Excellent</td><td>Good</td><td>Fair</td></tr><tr><td>Dining</td><td>Excellent</td><td>Excellent</td><td>Good</td></tr><tr><td>Pace</td><td>Busy</td><td>Polished</td><td>Relaxed</td></tr><tr><td>First trip</td><td>Best fit</td><td>Strong</td><td>Specific fit</td></tr></tbody></table>
-            <table class="v55-mini-table lang-ja"><thead><tr><th></th><th>新宿</th><th>銀座</th><th>浅草</th></tr></thead><tbody><tr><td>移動</td><td>◎</td><td>○</td><td>△</td></tr><tr><td>食事</td><td>◎</td><td>◎</td><td>○</td></tr><tr><td>雰囲気</td><td>活気</td><td>洗練</td><td>下町</td></tr><tr><td>初訪日</td><td>最適</td><td>良好</td><td>目的次第</td></tr></tbody></table>
-          </div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Our recommendation</span><span class="v55-doc-label lang-ja">おすすめ</span><p class="v55-recommendation lang-en">Shinjuku—because the full itinerary benefits more from transport flexibility than from Ginza’s polish or Asakusa’s atmosphere.</p><p class="v55-recommendation lang-ja">新宿。今回の旅全体では、銀座の洗練さや浅草の雰囲気よりも、移動の自由度が大きなメリットになるため。</p></div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Trade-offs</span><span class="v55-doc-label lang-ja">トレードオフ</span><p class="lang-en">Ginza is calmer and more refined; Asakusa has stronger old-Tokyo atmosphere. Neither wins this particular trip once day trips and family logistics are included.</p><p class="lang-ja">銀座は落ち着きと上質感、浅草は下町らしさが強み。ただし日帰り旅行と家族の移動まで含めると、今回は新宿が優位。</p></div>
-          <div class="v55-doc-row"><span class="v55-doc-label lang-en">Practical next step</span><span class="v55-doc-label lang-ja">実用的な次の一歩</span><p class="lang-en">Shortlist 3 hotels around South Exit / Shinjuku-sanchome, then compare room size and exact station access.</p><p class="lang-ja">南口〜新宿三丁目でホテルを3軒に絞り、客室サイズと駅への実アクセスを比較。</p></div>
-        </div>
-        <div class="v55-output-foot"><span class="lang-en">One decision in context · comparison · trade-offs · recommendation · practical next step</span><span class="lang-ja">1つの判断を文脈ごと整理 · 比較 · 長所短所 · おすすめ · 次の一歩</span></div>
-      </article>
-    </div>
-    <div class="v55-why99 reveal">
-      <div class="lang-en"><h3>Why not buy two Quick Helps?</h3></div><div class="lang-ja"><h3>「49ドルを2回」の方が得では？</h3></div>
-      <div class="lang-en"><p><strong>Because Japan Answer is not two answers placed side by side.</strong> Quick Help handles up to 3 related questions within one focused topic. Japan Answer evaluates the whole decision as one connected problem—your priorities, alternatives and trade-offs—and turns that into one recommendation you can act on.</p></div>
-      <div class="lang-ja"><p><strong>ジャパン・アンサーは、クイックヘルプを2件並べたものではありません。</strong> クイックヘルプは1つのテーマについて関連質問を3つまでまとめて回答します。ジャパン・アンサーは、条件・候補・メリットとデメリットを一つの判断として組み合わせ、実際に選べる結論まで作ります。</p></div>
-    </div>
-    <div class="v55-start-strip reveal">
-      <div class="lang-en"><h3>Not sure where to start? Start with $49.</h3><p>If your question clearly needs Japan Answer, we’ll tell you before deeper work begins. Keep it within Quick Help scope, or apply the full $49 toward Japan Answer and pay only the remaining $50.</p></div>
-      <div class="lang-ja"><h3>迷ったら、まず49ドルから。</h3><p>ジャパン・アンサーの方が明らかに適している場合は、深い作業の前にお知らせします。クイックヘルプの範囲に収めるか、49ドル全額をジャパン・アンサーへ充当して差額50ドルだけでアップグレードできます。</p></div>
-      <a class="v39-btn lang-en" href="#inquiry" data-plan="quick">Try LORUNEI — $49</a><a class="v39-btn lang-ja" href="#inquiry" data-plan="quick">LORUNEIを試す — $49</a>
+
+    <div class="v57-samples-cta reveal">
+      <div class="lang-en"><h3>Not sure where to begin?</h3><p>Start with Quick Help. If the request clearly needs Japan Answer, we will tell you before deeper work begins. With your approval, the full $49 can be credited toward the $99 service.</p></div>
+      <div class="lang-ja"><h3>どこから始めるか迷いますか？</h3><p>まずはクイックヘルプから。ジャパン・アンサーが明らかに適している場合は、深い作業前にお知らせします。同意いただいた場合、49ドル全額を99ドルのサービスへ充当できます。</p></div>
+      <a class="v39-btn lang-en" href="samples.html?lang=en">Explore all four samples</a>
+      <a class="v39-btn lang-ja" href="samples.html?lang=ja">4つのサンプルを詳しく見る</a>
     </div>
   </div>
 </section>
@@ -233,8 +220,8 @@
 
 <section class="v39-process" id="process">
   <div class="container">
-    <div class="lang-en"><p class="v39-eyebrow">PROCESS</p><div class="v39-process-row"><div><strong>01</strong><span>Tell me about your trip</span></div><div><strong>02</strong><span>I research and compare</span></div><div><strong>03</strong><span>You receive clear choices</span></div></div></div>
-    <div class="lang-ja"><p class="v39-eyebrow">ご利用の流れ</p><div class="v39-process-row"><div><strong>01</strong><span>旅の内容を送る</span></div><div><strong>02</strong><span>個別に調査・比較する</span></div><div><strong>03</strong><span>判断しやすい形で受け取る</span></div></div></div>
+    <div class="lang-en"><p class="v39-eyebrow">HOW IT WORKS</p><div class="v39-process-row v57-process-row"><div><strong>01</strong><span>Choose the level of help</span></div><div><strong>02</strong><span>Pay or confirm a custom scope</span></div><div><strong>03</strong><span>Send your trip details</span></div><div><strong>04</strong><span>Receive your written guidance</span></div></div></div>
+    <div class="lang-ja"><p class="v39-eyebrow">ご利用の流れ</p><div class="v39-process-row v57-process-row"><div><strong>01</strong><span>必要なサービスを選ぶ</span></div><div><strong>02</strong><span>決済または個別範囲を確認</span></div><div><strong>03</strong><span>旅行内容を送る</span></div><div><strong>04</strong><span>文章で提案を受け取る</span></div></div></div>
   </div>
 </section>
 
@@ -243,13 +230,15 @@
     <div class="lang-en">
       <p class="v39-eyebrow">FAQ</p>
       <details><summary>Is LORUNEI a travel agency?</summary><p>No. LORUNEI provides travel research, consultation, information and advisory support. You make and pay for third-party bookings directly.</p></details>
-      <details><summary>Can you help with a first trip to Japan?</summary><p>Yes. First-time travelers are a strong fit, especially when neighborhood choices, transport, pacing and reservations feel overwhelming.</p></details>
+      <details><summary>Is this mainly for a first trip to Japan?</summary><p>First-time travelers are our primary fit because the number of choices can be overwhelming. Returning travelers are also welcome when they need a specific decision, deeper research or a more personal route.</p></details>
+      <details><summary>What happens after I buy Quick Help?</summary><p>Stripe returns you to LORUNEI, where you send one focused topic, up to 3 related questions and the context that matters. After payment and details are confirmed, we send a work-start email. The written answer is usually delivered within 2 business days after the required information is received.</p></details>
       <details><summary>Do you support trips outside Tokyo?</summary><p>Yes. Research and planning can cover destinations throughout Japan depending on scope.</p></details><details><summary>Why not buy two Quick Helps instead of Japan Answer?</summary><p>Quick Help covers one focused topic and up to 3 related questions within that topic. Japan Answer treats a larger decision as one connected problem, comparing your priorities, alternatives and trade-offs before giving one recommendation. It is a different deliverable, not simply two Quick Help answers.</p></details><details><summary>What if I choose Quick Help but my question needs more depth?</summary><p>Before deeper individualized work begins, we will tell you if Japan Answer is clearly the better fit. You can keep the request within Quick Help scope or apply the full $49 toward the $99 Japan Answer. No upgrade charge is made without your approval.</p></details>
     </div>
     <div class="lang-ja">
       <p class="v39-eyebrow">よくある質問</p>
       <details><summary>LORUNEIは旅行会社ですか？</summary><p>いいえ。LORUNEIは旅行リサーチ、相談、情報提供、アドバイスを行うサービスです。ホテル、交通、レストラン等の予約・契約・支払いはお客様ご自身で行っていただきます。</p></details>
-      <details><summary>初めての日本旅行でも相談できますか？</summary><p>はい。エリア選び、移動、日程配分、予約の優先順位などが分かりにくい初訪日の方には特に向いています。</p></details>
+      <details><summary>主に初めての日本旅行向けですか？</summary><p>はい。選択肢が多く迷いやすい初訪日の方を主な対象にしています。再訪の方も、特定の判断、深い調査、より自分らしいルートを必要とする場合に利用できます。</p></details>
+      <details><summary>Quick Help購入後はどうなりますか？</summary><p>Stripe決済後にLORUNEIへ戻り、1つのテーマ、関連質問3つまで、必要な背景を送信します。決済と必要情報を確認後、作業開始メールを送ります。回答は、開始に必要な情報を受領後、通常2営業日以内を目安にメールでお届けします。</p></details>
       <details><summary>東京以外も対応できますか？</summary><p>はい。ご依頼内容に応じて、日本各地の調査・プランニングに対応します。</p></details><details><summary>クイックヘルプを2回買う方がジャパン・アンサーより得では？</summary><p>クイックヘルプは1つのテーマについて関連する質問を3つまで扱います。ジャパン・アンサーは、より大きな判断を一つの問題として扱い、条件・候補・メリットとデメリットを比較して1つの結論までまとめます。単にクイックヘルプを2件並べた納品物ではありません。</p></details><details><summary>クイックヘルプを選んだあと、もっと深い調査が必要だと分かったら？</summary><p>深い個別作業を始める前に、ジャパン・アンサーの方が明らかに適している場合はお知らせします。クイックヘルプの範囲に収めるか、49ドル全額を99ドルのジャパン・アンサーへ充当できます。お客様の承諾なく追加料金を請求することはありません。</p></details>
     </div>
   </div>
@@ -258,8 +247,8 @@
 <section class="v40-inquiry" id="inquiry">
   <div class="container v40-inquiry-grid">
     <div class="reveal">
-      <div class="lang-en"><p class="v39-eyebrow">START YOUR JAPAN PLAN</p><h2>Tell me about your Japan.</h2><p>Send your inquiry here. The form is submitted directly—your email app will not open.</p></div>
-      <div class="lang-ja"><p class="v39-eyebrow">相談をはじめる</p><h2>あなたの日本旅行について教えてください。</h2><p>このページから直接送信できます。メールアプリは起動しません。</p></div>
+      <div class="lang-en"><p class="v39-eyebrow">NOT SURE WHICH LEVEL FITS?</p><h2>Tell us the decision<br>you are trying to make.</h2><p>Share your dates, who is traveling, whether this is your first visit and the choice that feels hardest. We will recommend the smallest suitable scope.</p></div>
+      <div class="lang-ja"><p class="v39-eyebrow">どのサービスか迷ったら</p><h2>いま一番迷っていることを<br>教えてください。</h2><p>旅行日、人数、初訪日かどうか、難しいと感じている選択を送ってください。必要以上に大きくない、最適なサービスをご案内します。</p></div>
     </div>
     <form class="v40-form reveal" id="loruneiInquiry" action="https://formspree.io/f/xeajbpvn" method="POST" data-formspree-form>
       <input type="hidden" name="_subject" value="LORUNEI website inquiry">
@@ -286,7 +275,7 @@
           <option value="private">プライベート・ジャパン・プランニング — $999〜</option>
         </select>
       </label>
-      <label><span class="lang-en">Tell me about your trip</span><span class="lang-ja">旅行内容・相談したいこと</span><textarea name="message" rows="6" required></textarea></label>
+      <label><span class="lang-en">Tell us about your trip and hardest decision</span><span class="lang-ja">旅行内容と、いま一番迷っていること</span><textarea name="message" rows="6" required></textarea></label>
       <button class="v40-submit lang-en" type="submit">Send Inquiry</button>
       <button class="v40-submit lang-ja" type="submit">相談内容を送信</button>
       <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
@@ -415,7 +404,7 @@
       <span>|</span>
       <a href="legal.html?lang=en">Commerce Disclosure</a>
       <span>|</span>
-      <a href="changelog.html?lang=en">Version history <b>v56</b></a>
+      <a href="changelog.html?lang=en">Version history <b>v57b2</b></a>
     </div>
     <div class="lang-ja footer-legal-v51">
       <a href="privacy.html?lang=ja">プライバシーポリシー</a>
@@ -424,7 +413,7 @@
       <span>|</span>
       <a href="legal.html?lang=ja">特定商取引法に基づく表記</a>
       <span>|</span>
-      <a href="changelog.html?lang=ja">変更履歴 <b>v56</b></a>
+      <a href="changelog.html?lang=ja">変更履歴 <b>v57b2</b></a>
     </div>
   </div>
 </footer>

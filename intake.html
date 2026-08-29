@@ -87,6 +87,7 @@ textarea{min-height:115px;resize:vertical}
     <label><span data-t="email">Email</span><input name="email" type="email" required></label>
     <label><span data-t="dates">Travel dates</span><input name="dates" placeholder="e.g. Oct 10–18, 2026"></label>
     <label><span data-t="travelers">Travelers / ages</span><input name="travelers"></label>
+    <label><span data-t="firstVisit">Is this your first trip to Japan?</span><select name="first_visit"><option value="first" data-t="firstYes">Yes, first trip</option><option value="repeat" data-t="firstNo">No, we have visited before</option><option value="unsure" data-t="firstUnsure">Not sure / mixed group</option></select></label>
     <label class="full"><span data-t="cities">Cities / regions</span><input name="cities"></label>
     <label><span data-t="budget">Approximate trip budget</span><input name="budget" placeholder="USD / JPY"></label>
     <label class="full"><span data-t="interests">Interests</span><textarea name="interests"></textarea></label>
@@ -177,7 +178,7 @@ const copy = {
     purchase:"Purchase details", plan:"Purchased plan", order:"Stripe receipt / order reference",
     orderHelp:"If available, paste the Stripe receipt or payment reference.",
     basics:"About you & your trip", name:"Name", email:"Email", dates:"Travel dates",
-    travelers:"Travelers / ages", cities:"Cities / regions", budget:"Approximate trip budget",
+    travelers:"Travelers / ages", firstVisit:"Is this your first trip to Japan?", firstYes:"Yes, first trip", firstNo:"No, we have visited before", firstUnsure:"Not sure / mixed group", cities:"Cities / regions", budget:"Approximate trip budget",
     interests:"Interests", avoid:"Anything you want to avoid?",
     quickTitle:"Quick Help — one focused topic, up to 3 related questions",
     quickIntro:"No appointment or video call is required. Tell us one focused Japan travel topic and up to 3 closely related questions, plus the context that matters. We’ll provide a written answer, usually within 2 business days. If Japan Answer is clearly a better fit, we’ll tell you before deeper work begins; you can keep Quick Help scope or apply the full $49 toward Japan Answer.",
@@ -203,7 +204,7 @@ const copy = {
     purchase:"購入情報", plan:"購入済みプラン", order:"Stripe領収書 / 注文番号",
     orderHelp:"お持ちの場合はStripeの領収書番号や決済番号を入力してください。",
     basics:"お客様と旅行について", name:"お名前", email:"メールアドレス", dates:"旅行日程",
-    travelers:"人数 / 年齢層", cities:"訪問予定の都市・地域", budget:"旅行のおおよその予算",
+    travelers:"人数 / 年齢層", firstVisit:"日本旅行は初めてですか？", firstYes:"はい、初めてです", firstNo:"いいえ、訪日経験があります", firstUnsure:"未定 / 初訪日と経験者の混成", cities:"訪問予定の都市・地域", budget:"旅行のおおよその予算",
     interests:"興味・好きなこと", avoid:"避けたいことはありますか？",
     quickTitle:"クイックヘルプ｜1テーマ・関連質問3つまで",
     quickIntro:"予約・ビデオ通話は不要です。相談したい1つのテーマについて、関連する質問を3つまでと、判断に必要な背景をお送りください。通常2営業日以内を目安に文章で回答します。ジャパン・アンサーの方が明らかに適している場合は、深い作業前にお知らせし、クイックヘルプの範囲に収めるか49ドル全額をジャパン・アンサーへ充当できます。",
@@ -226,7 +227,7 @@ const copy = {
   },
 };
 
-let lang = localStorage.getItem("japanInsiderLang");
+let lang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("loruneiLang") || localStorage.getItem("japanInsiderLang");
 if (!["en","ja"].includes(lang)) {
   lang = navigator.language.toLowerCase().startsWith("ja") ? "ja" : "en";
 }
@@ -234,6 +235,7 @@ if (!["en","ja"].includes(lang)) {
 function applyLang(next) {
   if (!["en","ja"].includes(next)) next = "en";
   lang = next;
+  localStorage.setItem("loruneiLang", next);
   localStorage.setItem("japanInsiderLang", next);
   document.documentElement.lang = next;
   document.querySelectorAll("[data-t]").forEach(el => {
@@ -278,7 +280,7 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
   const prefix=prefixMap[selectedPlan]||selectedPlan.slice(0,3);
   const stamp=now.toISOString().slice(0,10).replaceAll("-","");
   const rand=Math.random().toString(36).slice(2,7).toUpperCase();
-  const ref="JI-"+prefix+"-"+stamp+"-"+rand;
+  const ref="LOR-"+prefix+"-"+stamp+"-"+rand;
   document.getElementById("intakeReferenceId").value=ref;
   document.getElementById("intakeSubmittedAt").value=now.toISOString();
   document.getElementById("intakeSubject").value="LORUNEI "+selectedPlan+" "+ref;
@@ -297,7 +299,7 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
 
   e.preventDefault();
   const form=e.currentTarget;
-  const langNow=(localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en")==="ja"?"ja":"en";
+  const langNow=(localStorage.getItem("loruneiLang")||localStorage.getItem("japanInsiderLang")||document.documentElement.lang||"en")==="ja"?"ja":"en";
   const msg={
     en:{sending:"Sending…",ok:"Thank you. Your trip details have been sent to LORUNEI.",err:"We couldn't send the form. Please try again or email infojapaninsider@gmail.com."},
     ja:{sending:"送信中…",ok:"ありがとうございます。旅行情報をLORUNEIへ送信しました。",err:"送信できませんでした。もう一度お試しいただくか、infojapaninsider@gmail.com までメールでご連絡ください。"}
@@ -365,6 +367,6 @@ document.getElementById("intakeForm").addEventListener("submit", async function(
 applyLang(lang);
 applyPlan();
 </script>
-<span class="site-build-version" aria-label="site build">v56</span>
+<span class="site-build-version" aria-label="site build">v57b2</span>
 </body>
 </html>

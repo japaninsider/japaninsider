@@ -1,33 +1,61 @@
-# Japan Insider — Delivery Template
+# LORUNEI — Delivery Template
 
-Use this as the internal structure for real client deliveries.
+Use only the modules included in the purchased scope.
 
 ## Cover
-JAPAN INSIDER — [PLAN]
-[Destination] · [Dates]
+
+LORUNEI — [SERVICE]
+[Decision / Destination] · [Travel dates]
 Prepared for [Client]
 
 ## Client brief
-Travelers · interests · pace · budget · priorities · constraints.
 
-## Day-by-day plan
-For each stop include:
-- Suggested time
-- Why it fits this client
-- Practical route / travel time
-- Current notes that matter
-- Food/activity recommendations where relevant
-- Booking guidance where relevant
-- Backup / rain option where useful
+Travelers · first/repeat Japan visit · interests · pace · budget · priorities · constraints.
 
-## Japan Insider Tip
-Add genuinely useful local context, not filler.
+## Executive answer
 
-## Important checks before delivery
-Verify date-sensitive opening hours, closures, prices, transport, reservation requirements and other material claims.
+Lead with the recommendation. State the most important reason and the main trade-off in plain language.
 
-## Premium / VIP support
-State the agreed support window and scope. Never invent live availability.
+## Quick Help module — $49
+
+- Focused topic and up to 3 closely related questions
+- Recommendation
+- Why it fits this traveler
+- One caution or uncertainty
+- Practical next step
+
+## Japan Answer module — $99
+
+- Decision to be made
+- Alternatives and relevant criteria
+- Comparison of trade-offs
+- Recommended direction
+- What would make the alternative preferable
+- Practical next step
+
+## Japan Research module — $299
+
+- Defined research question and assumptions
+- Named options with current material facts
+- Comparison against the agreed criteria
+- Shortlist, recommendation and backups
+- Booking / verification priorities
+- Date checked and sources where useful
+
+## Private Japan Planning module — from $999
+
+- Trip architecture and city sequence
+- Stay-area logic and named accommodation shortlist
+- Day-by-day pacing with realistic transfers
+- Dining and experience research
+- Transport, luggage and booking priorities
+- Backups, rain options and deliberate free time
+- Agreed revisions or support window
+
+## Final checks
+
+Verify date-sensitive opening hours, closures, prices, access, transport, reservation requirements and other material claims immediately before delivery. Never imply live availability unless it was checked and dated.
 
 ## Boundary
-Japan Insider provides research, information and consultation. Third-party bookings/purchases remain subject to the provider's terms unless the business model and legal setup are changed.
+
+LORUNEI provides research, comparison, information and planning. Third-party bookings, contracts and payments remain the customer's responsibility.

@@ -1,36 +1,51 @@
-# LORUNEI website
+# LORUNEI
 
-Current public build: **v55**
+Static bilingual (English / Japanese) website for **LORUNEI**, a personal Japan trip-planning service by **Masayasu Wakihama**.
 
-LORUNEI provides personal Japan trip research and planning in English and Japanese.
+- Live site: https://japaninsider.github.io/japaninsider/
+- Hosting: GitHub Pages
+- Form delivery: Formspree
+- Current build in this package: **v57b2**
+- Public/base pricing currency: USD
+- Primary audience: first-time U.S. travelers to Japan, led by couples in their 40s who value comfort, independent travel and clear choices
 
 ## Current services
-- Quick Help — **$49**
-- Japan Answer — **$99**
-- Japan Research — **$299**
-- Private Japan Planning — **from $999**
 
-Quick Help is the entry service: one focused Japan travel topic with up to 3 closely related questions, no call required. If a request is clearly better suited to Japan Answer before deeper individualized work begins, the customer may keep Quick Help scope or apply the full $49 toward Japan Answer, leaving $50 due. No upgrade is charged without customer approval.
+- **Quick Help — $49**: one focused Japan travel topic, up to 3 closely related questions, with recommendation, reasoning, caution and next step.
+- **Japan Answer — $99**: one connected decision evaluated as a Decision Brief, including alternatives and trade-offs.
+- **Japan Research — $299**: defined-scope research with named options, comparison, shortlist and backups.
+- **Private Japan Planning — from $999**: custom whole-journey planning, with scope, price and timing agreed in writing.
 
-## Current public experience
-- EN / 日本語 only
-- Navy LORUNEI header
-- Hero pronunciation: `lor-OO-nay` / `ロルーネイ`
-- Five-column footer
-- Concrete deliverable previews comparing Quick Help and Japan Answer
-- Formspree inquiry form with sender-facing submission receipt and shared reference number
-- Privacy, Terms, Commerce Disclosure / 特定商取引法に基づく表記
-- Optional Stripe Payment Link configuration; do not fabricate URLs
+If Quick Help is clearly too narrow, LORUNEI tells the customer before deeper work begins. The customer may keep the $49 scope or apply the full $49 toward Japan Answer, leaving $50 due. No upgrade happens without approval.
 
-## Forms
-General inquiry and intake forms submit to Formspree at `https://formspree.io/f/xeajbpvn`. The homepage displays a sender receipt after successful submission, including the same LORUNEI reference stored in the Formspree submission.
+## Purchase path
+
+1. Visitor compares the four services or opens the matching sample.
+2. Quick Help uses a Stripe Payment Link when a real link is configured. The other services begin with an inquiry and written scope confirmation.
+3. Stripe returns the customer to `thank-you.html?plan=quick`.
+4. The customer completes `intake.html?plan=quick`.
+5. LORUNEI checks payment and required details, then sends a work-start confirmation email.
+6. The promised delivery window begins as defined in the service terms.
+
+## Key files
+
+- `index.html` — bilingual homepage and inquiry form
+- `samples.html` — interactive EN/JA samples for all four services
+- `intake.html` — post-payment intake (`noindex`)
+- `thank-you.html` — post-payment next step (`noindex`)
+- `legal.html`, `terms.html`, `privacy.html` — commerce and policy pages
+- `assets/js/v57b2.js` / `assets/css/v57b2.css` — homepage behavior and visual layer
+- `assets/js/samples-v57b2.js` / `assets/css/samples-v57b2.css` — samples behavior and visual layer
+- `assets/js/payments.js` — Stripe Quick Help configuration
 
 ## Payment state
-The Quick Help Stripe Payment Link remains intentionally blank unless a real Stripe URL is supplied. When no real link is configured, the public CTA leads to the inquiry form rather than a fabricated checkout.
 
-## v55
-- Unified Quick Help at $49 across current public pages and current operating docs.
-- Repositioned Quick Help as the lowest-risk way to try LORUNEI with one focused topic and up to 3 related questions.
-- Added concrete Quick Help vs Japan Answer deliverable previews using the same example question.
-- Clarified that Japan Answer is a Decision Brief, not two Quick Helps combined.
-- Added a $49-to-$99 upgrade credit policy with explicit customer approval before any additional charge.
+`STRIPE_QUICK_PAYMENT_LINK` is intentionally blank. Until the real Stripe URL is added, all Quick Help purchase buttons become inquiry buttons. This prevents a broken or fabricated checkout.
+
+See `STRIPE-SETUP.md`, `ORDER-WORKFLOW.md`, `V57-QA.md` and `V57-REVISED-QA.md` before launch.
+
+## v57b2 cleanup
+- Preserves Quick Help at $49 for one focused topic with up to 3 closely related questions.
+- Samples CSS/JS are externalized to one versioned source each; the page no longer duplicates them inline.
+- `assets/js/main.js` is a retired placeholder and contains no active legacy pricing/runtime.
+- The real Quick Help Stripe Payment Link is still intentionally blank; inquiry fallback remains active until the real URL is supplied.

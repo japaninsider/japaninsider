@@ -24,7 +24,7 @@
   <section class="thanks-card">
     <p class="eyebrow" data-t="eyebrow">PAYMENT RECEIVED</p>
     <h1 data-t="title">Thank you.</h1>
-    <p data-t="intro">Your payment has been received. The next step is to send the trip details we need for your research.</p>
+    <p data-t="intro">Your payment is complete. Please allow 5–8 minutes now to send the trip details we need before work can begin.</p>
     <ol class="steps">
       <li data-t="s1">Complete the client intake form.</li>
       <li data-t="s2">Keep the reference number and save a copy of your submission.</li>
@@ -36,12 +36,12 @@
     <p class="muted" data-t="note">If you already submitted your intake, you do not need to send it again.</p>
   </section>
 </main>
-<span class="site-build-version" aria-label="site build">v56</span>
+<span class="site-build-version" aria-label="site build">v57b2</span>
 <script>
 const copy={
   en:{
     eyebrow:"PAYMENT RECEIVED",title:"Thank you.",
-    intro:"Your payment has been received. The next step is to send the trip details we need for your research.",
+    intro:"Your payment is complete. Please allow 5–8 minutes now to send the trip details we need before work can begin.",
     s1:"Complete the client intake form.",
     s2:"Keep the reference number and save a copy of your submission.",
     s3:"We confirm your payment and required details by email.",
@@ -52,7 +52,7 @@ const copy={
   },
   ja:{
     eyebrow:"お支払いを受け付けました",title:"ありがとうございます。",
-    intro:"お支払いを受け付けました。次に、リサーチに必要な旅行情報をご入力ください。",
+    intro:"お支払いが完了しました。作業開始に必要な旅行情報の入力に、このまま5〜8分ほどお時間をください。",
     s1:"購入後フォームに旅行情報を入力します。",
     s2:"送信後に表示される受付番号と控えを保存します。",
     s3:"LORUNEIから、お支払いと必要情報をメールで確認します。",
@@ -62,13 +62,17 @@ const copy={
     note:"すでに購入後フォームを送信済みの場合、再送する必要はありません。"
   }
 };
-let lang=localStorage.getItem("japanInsiderLang");
+const params=new URLSearchParams(location.search);
+let lang=params.get("lang")||localStorage.getItem("loruneiLang")||localStorage.getItem("japanInsiderLang");
 if(!["en","ja"].includes(lang)) lang=(navigator.language||"").toLowerCase().startsWith("ja")?"ja":"en";
 function apply(l){
   if(!["en","ja"].includes(l)) l="en";
-  lang=l; localStorage.setItem("japanInsiderLang",l); document.documentElement.lang=l;
+  lang=l; localStorage.setItem("loruneiLang",l); localStorage.setItem("japanInsiderLang",l); document.documentElement.lang=l;
   document.querySelectorAll("[data-t]").forEach(el=>{const v=copy[l][el.dataset.t];if(v!==undefined)el.textContent=v;});
   document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===l));
+  const intake=document.getElementById("intakeLink");
+  const plan=["quick","answer","research","private"].includes(params.get("plan"))?params.get("plan"):"quick";
+  if(intake) intake.href="intake.html?plan="+plan+"&lang="+l;
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>apply(b.dataset.lang)));
 apply(lang);

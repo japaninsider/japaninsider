@@ -1,4 +1,16 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LORUNEI — Version History</title><link rel="stylesheet" href="assets/css/style.css"><style>.subpage{background:#f5f1ea;color:#102c49;min-height:100vh}.sub-head{background:#071d3b;color:#fff;padding:18px 0}.sub-head .container{display:flex;justify-content:space-between;align-items:center}.sub-wrap{width:min(960px,calc(100% - 36px));margin:auto;padding:64px 0}.sub-card{background:#fff;border-radius:14px;padding:26px;margin:16px 0;border:1px solid rgba(7,29,59,.1)}.sub-title{font:400 3rem Georgia,serif}.lang-ja{display:none!important}html:lang(ja) .lang-en{display:none!important}html:lang(ja) .lang-ja{display:block!important}</style></head><body class="subpage"><header class="sub-head"><div class="container"><a href="index.html">LORUNEI</a><div><button data-lang="en">EN</button> <button data-lang="ja">日本語</button></div></div></header><main class="sub-wrap"><div class="lang-en"><h1 class="sub-title">Version history</h1><p>Major public-facing website changes.</p></div><div class="lang-ja"><h1 class="sub-title">変更履歴</h1><p>公開サイトの主な更新内容です。</p></div><section class="sub-card"><h2>v56 — 2026-08-28</h2>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LORUNEI — Version History</title><link rel="stylesheet" href="assets/css/style.css"><style>.subpage{background:#f5f1ea;color:#102c49;min-height:100vh}.sub-head{background:#071d3b;color:#fff;padding:18px 0}.sub-head .container{display:flex;justify-content:space-between;align-items:center}.sub-wrap{width:min(960px,calc(100% - 36px));margin:auto;padding:64px 0}.sub-card{background:#fff;border-radius:14px;padding:26px;margin:16px 0;border:1px solid rgba(7,29,59,.1)}.sub-title{font:400 3rem Georgia,serif}.lang-ja{display:none!important}html:lang(ja) .lang-en{display:none!important}html:lang(ja) .lang-ja{display:block!important}</style></head><body class="subpage"><header class="sub-head"><div class="container"><a href="index.html">LORUNEI</a><div><button data-lang="en">EN</button> <button data-lang="ja">日本語</button></div></div></header><main class="sub-wrap"><div class="lang-en"><h1 class="sub-title">Version history</h1><p>Major public-facing website changes.</p></div><div class="lang-ja"><h1 class="sub-title">変更履歴</h1><p>公開サイトの主な更新内容です。</p></div><section class="sub-card"><h2>v57b2 — 2026-08-29</h2><div class="lang-en"><ul>
+<li>Kept Quick Help at USD 49 for one Japan travel topic with up to 3 closely related questions.</li>
+<li>Removed duplicated inline Samples CSS/JS and made the versioned external assets the single source of truth.</li>
+<li>Retired the unused legacy main.js runtime so stale $45 and old Japan Insider plan constants are no longer present there.</li>
+<li>Kept the Quick Help checkout fallback safe while the real Stripe Payment Link remains unconfigured.</li>
+<li>Standardized current public build markers as v57b2.</li>
+</ul></div><div class="lang-ja"><ul>
+<li>Quick Helpは49ドル・1テーマ・関連質問3つまでの定義をそのまま維持。</li>
+<li>SamplesページのインラインCSS/JS重複を解消し、外部のバージョン付きCSS/JSを単一の管理元に整理。</li>
+<li>未使用の旧main.jsを退役化し、45ドルや旧Japan Insiderプラン定義を削除。</li>
+<li>Stripeの実Payment Link未設定中は、Quick Helpの安全な問い合わせフォールバックを維持。</li>
+<li>現行の公開ビルド表記をv57b2へ統一。</li>
+</ul></div></section><section class="sub-card"><h2>v57（改） — 2026-08-29</h2><div class="lang-en"><ul><li>Made the $49 Quick Help allowance of up to 3 related questions unmistakable in the hero, plan guide and service card.</li><li>Revised the $49 sample heading and question block to display all three example questions explicitly.</li><li>Kept the existing one-topic boundary so the $49 and $99 services remain clearly differentiated.</li></ul></div><div class="lang-ja"><ul><li>49ドルのQuick Helpが「関連する質問3つまで」であることを、ヒーロー、料金ガイド、サービスカードで明確化。</li><li>49ドルのサンプル見出しと質問欄を修正し、3つの質問を明示。</li><li>49ドルと99ドルの違いを保つため、3問は同一テーマ内という範囲を維持。</li></ul></div></section><section class="sub-card"><h2>v57 — 2026-08-29</h2><div class="lang-en"><ul><li>Rebuilt the purchase path around first-time U.S. travelers and four clearly different problem sizes.</li><li>Replaced unrelated examples with one mid-40s couple shown across all four price levels.</li><li>Rebuilt the samples as a one-panel-at-a-time bilingual comparison with concrete $299 and $999+ deliverables.</li><li>Connected every Quick Help CTA to the shared Stripe configuration, with a safe inquiry fallback until the real link is supplied.</li><li>Clarified the post-payment flow and added first-visit status to the intake form.</li></ul></div><div class="lang-ja"><ul><li>初訪日のアメリカ人旅行者を中心に、購入導線と4段階の違いを再設計。</li><li>ばらばらの例ではなく、同じ40代夫婦を4価格帯で比較できるサンプルへ変更。</li><li>サンプルを1つずつ開く日英対応ページに再構築し、299ドルと999ドル以上の具体的な納品例を追加。</li><li>すべてのQuick Helpボタンを共通のStripe設定へ接続し、実URL設定前は問い合わせへ安全に切り替える仕組みを追加。</li><li>決済後の流れを明確化し、購入後フォームに初訪日かどうかの項目を追加。</li></ul></div></section><section class="sub-card"><h2>v56 — 2026-08-28</h2>
 <div class="lang-en"><ul>
 <li>Changed Quick Help scope from one question/issue to one focused Japan travel topic with up to 3 closely related questions.</li>
 <li>Updated the concrete Quick Help sample to show three related questions under the same topic.</li>
@@ -10,37 +22,7 @@
 <li>Quick Helpの具体的な納品サンプルにも、同一テーマ内の関連質問3つを表示。</li>
 <li>購入後フォームに、中心となる質問＋任意の関連質問2つの入力欄を追加。</li>
 <li>Japan Answerは、Quick Helpの質問数を増やした商品ではなく、一つの重要な判断を比較・整理する判断レポートとして差別化を維持。</li>
-</ul></div></section><section class="sub-card"><h2>v55 — 2026-08-28</h2>
-<div class="lang-en"><ul>
-<li>Unified current Quick Help pricing at $49.</li>
-<li>Repositioned Quick Help as the simplest way to try LORUNEI with one focused travel issue.</li>
-<li>Added concrete side-by-side deliverable previews showing the same question as a $49 Quick Answer versus a $99 Japan Answer Decision Brief.</li>
-<li>Clarified why Japan Answer is not two Quick Helps combined.</li>
-<li>Added a customer-approved upgrade path: before deeper individualized work begins, the full $49 can be applied toward Japan Answer, leaving $50 due.</li>
-<li>Updated Terms, Commerce Disclosure, Intake, Samples, current operating docs and visible build markers.</li>
-</ul></div>
-<div class="lang-ja"><ul>
-<li>現行のQuick Help料金を49ドルへ統一。</li>
-<li>Quick Helpを、1つのピンポイントな旅行テーマでLORUNEIを試せる最も始めやすいサービスとして再設計。</li>
-<li>同じ質問に対する49ドルのクイック回答と99ドルのJapan Answer判断レポートを横並びで見せ、納品物の違いを具体化。</li>
-<li>Japan AnswerがQuick Helpを2件まとめたものではないことを明確化。</li>
-<li>深い個別作業の前に合意した場合、49ドル全額をJapan Answerへ充当し差額50ドルで変更できるアップグレード導線を追加。</li>
-<li>利用規約、特商法、購入後フォーム、納品サンプル、現行運用ドキュメント、表示バージョンを更新。</li>
-</ul></div></section><section class="sub-card"><h2>v54 — 2026-08-28</h2>
-<div class="lang-en"><ul>
-<li>Added a post-submit receipt with a shared LORUNEI reference number, submission time, name, email, service and message.</li>
-<li>The same reference number, JST submission timestamp and page language are submitted to Formspree for LORUNEI-side reconciliation.</li>
-<li>Added Copy receipt and Print / Save PDF actions so the sender can keep a record without relying on email autoresponse.</li>
-<li>For privacy, the detailed message is not stored in the browser after the visitor leaves the page.</li>
-<li>Reduced the footer version number from the oversized v53 treatment to the same visual size as the adjacent Version history / 変更履歴 text.</li>
-</ul></div>
-<div class="lang-ja"><ul>
-<li>送信成功後に、LORUNEI共通の受付番号・送信日時・お名前・Email・サービス・相談内容を表示する送信控えを追加。</li>
-<li>同じ受付番号、JST送信日時、表示言語をFormspree側にも送信し、LORUNEI側の記録と照合できるように変更。</li>
-<li>メール自動返信に依存せず控えを残せるよう、「控えをコピー」「印刷 / PDF保存」を追加。</li>
-<li>プライバシー保護のため、ページを離れた後に相談内容の詳細をブラウザへ保存しない設計。</li>
-<li>フッターのバージョン番号をv53の大きな表示から戻し、横の「Version history / 変更履歴」と同程度のサイズへ調整。</li>
-</ul></div></section><section class="sub-card"><h2>v53 — 2026-08-28</h2>
+</ul></div></section><section class="sub-card"><h2>v55 — 2026-08-28</h2><div class="lang-en"><ul><li>Unified current Quick Help pricing at $49.</li><li>Repositioned Quick Help as the simplest way to try LORUNEI with one focused travel issue.</li><li>Added concrete side-by-side deliverable previews showing the same question as a $49 Quick Answer versus a $99 Japan Answer Decision Brief.</li><li>Clarified why Japan Answer is not two Quick Helps combined.</li><li>Added a customer-approved upgrade path: the full $49 may be applied toward Japan Answer, leaving $50, when the request is identified before deeper work begins as better suited to the $99 service.</li><li>Updated Terms, Commerce Disclosure, Intake, Samples, current operating docs and visible build markers.</li></ul></div><div class="lang-ja"><ul><li>現行Quick Helpの価格を49ドルへ統一。</li><li>Quick Helpを「1つのピンポイントな旅行テーマでLORUNEIを試す」入口商品として再設計。</li><li>同じ質問を使い、49ドルのQuick Answerと99ドルのJapan Answer Decision Briefの具体的な納品物を横並びで表示。</li><li>Japan AnswerがQuick Helpを2件まとめたサービスではないことを成果物の違いで明確化。</li><li>深い作業前にJapan Answerが適切だと判断された場合、顧客の承諾を前提に49ドル全額を99ドルへ充当し、差額50ドルでアップグレードできる仕組みを追加。</li><li>利用規約・特商法・購入後フォーム・納品サンプル・現行運用資料・表示バージョンを更新。</li></ul></div></section><section class="sub-card"><h2>v54 — 2026-08-28</h2><div class="lang-en"><ul><li>Added a post-submit receipt with a shared LORUNEI reference number, submission time, name, email, service and message.</li><li>The same reference number, JST submission timestamp and page language are submitted to Formspree for LORUNEI-side reconciliation.</li><li>Added Copy receipt and Print / Save PDF actions so the sender can keep a record without relying on email autoresponse.</li><li>For privacy, the detailed message is not stored in the browser after the visitor leaves the page.</li><li>Reduced the footer version number from the oversized v53 treatment to the same visual size as the adjacent Version history / 変更履歴 text.</li></ul></div><div class="lang-ja"><ul><li>送信成功後に、LORUNEI共通の受付番号・送信日時・お名前・Email・サービス・相談内容を表示する送信控えを追加。</li><li>同じ受付番号、JST送信日時、表示言語をFormspree側にも送信し、LORUNEI側の記録と照合できるように変更。</li><li>メール自動返信に依存せず控えを残せるよう、「控えをコピー」「印刷 / PDF保存」を追加。</li><li>プライバシー保護のため、ページを離れた後に相談内容の詳細をブラウザへ保存しない設計。</li><li>フッターのバージョン番号をv53の大きな表示から戻し、横の「Version history / 変更履歴」と同程度のサイズへ調整。</li></ul></div></section><section class="sub-card"><h2>v53 — 2026-08-28</h2>
 <div class="lang-en"><ul>
 <li>Fixed the Formspree honeypot field so it remains available for spam protection but is no longer visible to guests.</li>
 <li>Doubled only the visible footer version number size while preserving its existing color and tone.</li>
