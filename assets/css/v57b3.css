@@ -617,4 +617,84 @@ html:lang(ja) .v57b3-home .v55-doc-label{text-transform:none;letter-spacing:.02e
 .v57b3-home .v57-samples-cta h3{margin:0 0 5px;font:500 1.35rem/1.2 Georgia,"Times New Roman",serif;color:#fff}
 .v57b3-home .v57-samples-cta p{margin:0;max-width:760px;color:#e7edf2;font-size:.78rem;line-height:1.65}
 .v57b3-home .v57-samples-cta .v39-btn{min-width:220px;background:#fff;color:#082b50}
-.v57b3-home .v57-process-row{grid-templat
+.v57b3-home .v57-process-row{grid-template-columns:repeat(4,minmax(0,1fr))}
+.v57b3-home .v40-form textarea{min-height:150px}
+
+@media(max-width:900px){
+  .v57b3-home .v39-services-lead,.v57b3-home .v57-choice-strip,.v57b3-home .v39-service-list{grid-column:1;grid-row:auto}
+  .v57b3-home .v57-choice-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .v57b3-home .v57-samples-head{grid-template-columns:1fr;gap:16px}
+  .v57b3-home .v57-samples-cta{grid-template-columns:1fr}
+  .v57b3-home .v57-samples-cta .v39-btn{width:100%;min-width:0}
+  .v57b3-home .v57-process-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:680px){
+  .v57b3-home .v57-samples{padding:56px 0}
+  .v57b3-home .v57-sample-ladder>a{grid-template-columns:74px minmax(0,1fr) 18px;gap:12px;min-height:96px;padding:18px 2px}
+  .v57b3-home .v57-sample-price{font-size:1.35rem}
+  .v57b3-home .v57-sample-ladder strong{font-size:1.02rem}
+  .v57b3-home .v57-samples-cta{padding:21px}
+  .v57b3-home .v57-process-row{grid-template-columns:1fr}
+}
+
+
+/* ==========================================================
+   LORUNEI v57 (Revised 2) — trust and scope clarity
+   ========================================================== */
+.v57b3-home .v57-kai2-judgement{
+  padding:64px 0;background:#071d3b;color:#fff
+}
+.v57b3-home .v57-kai2-judgement-grid{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center
+}
+.v57b3-home .v57-kai2-judgement .v39-eyebrow{color:#d8b36d}
+.v57b3-home .v57-kai2-judgement h2{
+  margin:0;font:500 clamp(2rem,3.3vw,3.35rem)/1.05 Georgia,"Times New Roman",serif;color:#fff
+}
+.v57b3-home .v57-kai2-judgement-copy>p{
+  margin:0;color:#e4eaf0;font-size:.9rem;line-height:1.8;max-width:720px
+}
+.v57b3-home .v57-kai2-proof-row{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;
+  margin-top:25px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18);border-radius:10px;overflow:hidden
+}
+.v57b3-home .v57-kai2-proof-row>span{
+  display:flex;min-height:82px;flex-direction:column;justify-content:center;gap:7px;padding:14px 16px;background:#0a284b
+}
+.v57b3-home .v57-kai2-proof-row b{
+  font:500 .72rem/1 Georgia,"Times New Roman",serif;color:#d8b36d;letter-spacing:.08em
+}
+.v57b3-home .v57-kai2-proof-row>span>span{font-size:.7rem;line-height:1.45;color:#f3f6f8}
+
+.v57b3-home .v57-kai2-booking-boundary{
+  padding:14px 18px;border:1px solid rgba(151,113,55,.28);border-left:4px solid #b18a4f;border-radius:9px;background:#fffaf1;color:#102c49
+}
+.v57b3-home .v57-kai2-booking-boundary>div{grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start}
+html:lang(en) .v57b3-home .v57-kai2-booking-boundary>.lang-en,
+html:lang(ja) .v57b3-home .v57-kai2-booking-boundary>.lang-ja{display:grid!important}
+.v57b3-home .v57-kai2-booking-boundary strong{font-size:.75rem;line-height:1.5;white-space:nowrap}
+.v57b3-home .v57-kai2-booking-boundary span{font-size:.69rem;line-height:1.55;color:#5a6570}
+.v57b3-home .v57-kai2-private-scope{
+  margin-top:6px!important;font-size:.62rem!important;line-height:1.45!important;color:#dce6ef!important
+}
+
+.v57b3-home .v57-kai2-quick-form-note{
+  margin-top:17px!important;padding:14px 16px;border-left:3px solid #b18a4f;background:rgba(255,255,255,.56);font-size:.78rem!important;line-height:1.65!important
+}
+.v57b3-home .v57-kai2-quick-form-note strong{color:#102c49}
+.v57b3-home .v57-kai2-field-help{
+  display:block;margin-top:7px;color:#667481;font-size:.69rem;line-height:1.5;font-weight:500
+}
+
+@media(max-width:900px){
+  .v57b3-home .v57-kai2-judgement-grid{grid-template-columns:1fr;gap:24px}
+  .v57b3-home .v57-kai2-judgement-copy>p{max-width:none}
+}
+@media(max-width:680px){
+  .v57b3-home .v57-kai2-judgement{padding:50px 0}
+  .v57b3-home .v57-kai2-judgement h2{font-size:2rem;line-height:1.18}
+  .v57b3-home .v57-kai2-proof-row{grid-template-columns:1fr}
+  .v57b3-home .v57-kai2-proof-row>span{min-height:66px}
+  .v57b3-home .v57-kai2-booking-boundary>div{grid-template-columns:1fr;gap:4px}
+  .v57b3-home .v57-kai2-booking-boundary strong{white-space:normal}
+}
