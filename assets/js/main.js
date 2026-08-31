@@ -1,6 +1,10 @@
-// LORUNEI legacy entry point — retired in v57b2.
-// No current public page loads assets/js/main.js.
-// Current scripts:
-// - Homepage: assets/js/v57b2.js + assets/js/payments.js
-// - Samples: assets/js/samples-v57b2.js + assets/js/payments.js
-// This placeholder intentionally contains no legacy pricing or Japan Insider runtime.
+// LORUNEI legacy main.js — retired in v57b3
+//
+// This file is intentionally kept as a harmless placeholder so old repository
+// references do not accidentally restore pre-LORUNEI pricing or plan logic.
+// Current public runtime:
+//   - assets/js/v57b3.js
+//   - assets/js/payments.js
+//   - assets/js/samples-v57b3.js
+//
+// No active site page should load this file.
