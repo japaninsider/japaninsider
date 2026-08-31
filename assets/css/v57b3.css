@@ -522,4 +522,99 @@ html:lang(ja) .v57b3-home .v55-output-type{text-transform:none;letter-spacing:.0
 .v57b3-home .v55-output-price{font:500 1.75rem/1 Georgia,"Times New Roman",serif;white-space:nowrap;color:#071d3b;flex:0 0 auto}
 .v57b3-home .v55-doc{padding:20px 21px}
 .v57b3-home .v55-doc-row{padding:11px 0;border-bottom:1px solid rgba(7,29,59,.08)}
-.v5
+.v57b3-home .v55-doc-row:last-child{border-bottom:0}
+.v57b3-home .v55-doc-label{display:block;margin-bottom:4px;font-size:.68rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase;color:#6d7780}
+html:lang(ja) .v57b3-home .v55-doc-label{text-transform:none;letter-spacing:.02em}
+.v57b3-home .v55-doc p{margin:0;font-size:.83rem;line-height:1.62;color:#334c60}
+.v57b3-home .v55-recommendation{font-weight:800;color:#102c49!important}
+.v57b3-home .v55-mini-table{width:100%;border-collapse:collapse;margin-top:6px;font-size:.74rem}
+.v57b3-home .v55-mini-table th,.v57b3-home .v55-mini-table td{padding:7px 5px;border-bottom:1px solid rgba(7,29,59,.08);text-align:left}
+.v57b3-home .v55-mini-table th{font-weight:800;color:#536170}
+.v57b3-home .v55-mini-table td:first-child{font-weight:800;color:#102c49}
+.v57b3-home .v55-output-foot{
+  padding:14px 21px;background:#faf8f4;border-top:1px solid rgba(7,29,59,.08);
+  color:#68727b;font-size:.72rem;line-height:1.5;
+}
+.v57b3-home .v55-why99{
+  margin-top:26px;display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:24px;
+  padding:25px;border:1px solid rgba(7,29,59,.13);border-radius:15px;background:#0a2b4e;color:#fff;
+}
+.v57b3-home .v55-why99 h3{margin:0;font:500 clamp(1.35rem,2.2vw,2rem)/1.25 Georgia,"Times New Roman",serif;color:#fff}
+.v57b3-home .v55-why99 p{margin:0;color:#eef2f5;font-size:.86rem;line-height:1.75}
+.v57b3-home .v55-why99 strong{color:#e2bd79}
+.v57b3-home .v55-start-strip{
+  margin-top:24px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;
+  padding:22px 24px;border-radius:15px;background:#fff;border:1px solid rgba(177,138,79,.32);
+}
+.v57b3-home .v55-start-strip h3{margin:0 0 5px;font:500 1.28rem/1.25 Georgia,"Times New Roman",serif}
+.v57b3-home .v55-start-strip p{margin:0;color:#596773;font-size:.82rem;line-height:1.6}
+.v57b3-home .v55-start-strip .v39-btn{min-width:190px;text-align:center}
+
+@media(max-width:900px){
+  .v57b3-home .v55-deliverables{padding:62px 0}
+  .v57b3-home .v55-deliverables-head,.v57b3-home .v55-output-grid,.v57b3-home .v55-why99{grid-template-columns:1fr}
+  .v57b3-home .v55-deliverables-head{gap:16px}
+  .v57b3-home .v55-output-grid{gap:18px}
+  .v57b3-home .v55-start-strip{grid-template-columns:1fr}
+  .v57b3-home .v55-start-strip .v39-btn{width:100%;min-width:0}
+}
+@media(max-width:560px){
+  .v57b3-home .v55-deliverables-head h2{font-size:2.15rem}
+  .v57b3-home .v55-output-price{font-size:1.45rem}
+  .v57b3-home .v55-output-title{font-size:1.08rem}
+  .v57b3-home .v55-output-type{font-size:.61rem}
+  .v57b3-home .v55-output-top{gap:10px}
+  .v57b3-home .v55-output-top{padding:17px}
+  .v57b3-home .v55-doc{padding:17px}
+  .v57b3-home .v55-mini-table{font-size:.68rem}
+  .v57b3-home .v55-why99,.v57b3-home .v55-start-strip{padding:19px}
+}
+
+/* ==========================================================
+   LORUNEI v57 — first-trip conversion path
+   ========================================================== */
+.v57b3-home .v39-services-grid{align-items:start}
+.v57b3-home .v39-services-lead{grid-row:1 / span 2}
+.v57b3-home .v57-choice-strip{grid-column:2;grid-row:1}
+.v57b3-home .v39-service-list{grid-column:2;grid-row:2}
+.v57b3-home .v57-choice-strip{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;
+  overflow:hidden;margin:0 0 12px;border-radius:12px;background:rgba(7,29,59,.14)
+}
+.v57b3-home .v57-choice-strip a{
+  display:flex;min-height:68px;flex-direction:column;justify-content:center;gap:3px;
+  padding:12px 14px;background:#fff;color:#102c49;text-decoration:none
+}
+.v57b3-home .v57-choice-strip a:hover{background:#f8f4ed}
+.v57b3-home .v57-choice-strip strong{font:500 1.28rem/1 Georgia,"Times New Roman",serif;color:#071d3b}
+.v57b3-home .v57-choice-strip span{font-size:.67rem;line-height:1.35;color:#596773}
+.v57b3-home .v57-service-proof{
+  margin-top:8px!important;padding-top:7px;border-top:1px solid rgba(7,29,59,.1);
+  font-size:.63rem!important;line-height:1.4!important;font-weight:700;color:#6a5a3f!important
+}
+.v57b3-home .v39-service-card.private .v57-service-proof{border-color:rgba(255,255,255,.17);color:#e6c88e!important}
+
+.v57b3-home .v57-samples{padding:76px 0;background:#f8f5ef;color:#102c49}
+.v57b3-home .v57-samples-head{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:end;margin-bottom:30px}
+.v57b3-home .v57-samples-head h2{margin:0;font:500 clamp(2.15rem,4vw,3.65rem)/1.02 Georgia,"Times New Roman",serif}
+.v57b3-home .v57-samples-head p{margin:0;color:#5b6874;font-size:.88rem;line-height:1.75}
+.v57b3-home .v57-samples-head .v39-eyebrow{margin-bottom:13px;font-size:.66rem;color:#8b6b35}
+.v57b3-home .v57-sample-ladder{border-top:1px solid rgba(7,29,59,.18)}
+.v57b3-home .v57-sample-ladder>a{
+  display:grid;grid-template-columns:110px minmax(0,1fr) 32px;gap:24px;align-items:center;
+  min-height:108px;padding:20px 8px;border-bottom:1px solid rgba(7,29,59,.18);
+  color:#102c49;text-decoration:none
+}
+.v57b3-home .v57-sample-ladder>a:hover{background:rgba(177,138,79,.08)}
+.v57b3-home .v57-sample-price{font:500 2rem/1 Georgia,"Times New Roman",serif;color:#967238}
+.v57b3-home .v57-sample-ladder strong{display:block;margin-bottom:6px;font:500 1.22rem/1.25 Georgia,"Times New Roman",serif}
+.v57b3-home .v57-sample-ladder small{display:block;font-size:.75rem;line-height:1.5;color:#687581}
+.v57b3-home .v57-sample-ladder b{font:400 1.3rem/1 Georgia,"Times New Roman",serif;color:#967238;text-align:right}
+.v57b3-home .v57-samples-cta{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;
+  margin-top:28px;padding:24px 26px;border-radius:14px;background:#071d3b;color:#fff
+}
+.v57b3-home .v57-samples-cta h3{margin:0 0 5px;font:500 1.35rem/1.2 Georgia,"Times New Roman",serif;color:#fff}
+.v57b3-home .v57-samples-cta p{margin:0;max-width:760px;color:#e7edf2;font-size:.78rem;line-height:1.65}
+.v57b3-home .v57-samples-cta .v39-btn{min-width:220px;background:#fff;color:#082b50}
+.v57b3-home .v57-process-row{grid-templat
