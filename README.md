@@ -5,7 +5,7 @@ Static bilingual (English / Japanese) website for **LORUNEI**, a personal Japan 
 - Live site: https://japaninsider.github.io/japaninsider/
 - Hosting: GitHub Pages
 - Form delivery: Formspree
-- Current build in this package: **v57b2**
+- Current build in this package: **v57b3**
 - Public/base pricing currency: USD
 - Primary audience: first-time U.S. travelers to Japan, led by couples in their 40s who value comfort, independent travel and clear choices
 
@@ -34,18 +34,22 @@ If Quick Help is clearly too narrow, LORUNEI tells the customer before deeper wo
 - `intake.html` — post-payment intake (`noindex`)
 - `thank-you.html` — post-payment next step (`noindex`)
 - `legal.html`, `terms.html`, `privacy.html` — commerce and policy pages
-- `assets/js/v57b2.js` / `assets/css/v57b2.css` — homepage behavior and visual layer
-- `assets/js/samples-v57b2.js` / `assets/css/samples-v57b2.css` — samples behavior and visual layer
+- `assets/js/v57b3.js` / `assets/css/v57b3.css` — current homepage behavior and consolidated visual layer
+- `assets/js/samples-v57b3.js` / `assets/css/samples-v57b3.css` — current Samples behavior and visual layer
 - `assets/js/payments.js` — Stripe Quick Help configuration
 
 ## Payment state
 
 `STRIPE_QUICK_PAYMENT_LINK` is intentionally blank. Until the real Stripe URL is added, all Quick Help purchase buttons become inquiry buttons. This prevents a broken or fabricated checkout.
 
-See `STRIPE-SETUP.md`, `ORDER-WORKFLOW.md`, `V57-QA.md` and `V57-REVISED-QA.md` before launch.
+See `STRIPE-SETUP.md`, `ORDER-WORKFLOW.md`, `V57-QA.md`, `V57-REVISED-QA.md` and `V57-REVISED-2-QA.md` before launch.
 
-## v57b2 cleanup
-- Preserves Quick Help at $49 for one focused topic with up to 3 closely related questions.
-- Samples CSS/JS are externalized to one versioned source each; the page no longer duplicates them inline.
-- `assets/js/main.js` is a retired placeholder and contains no active legacy pricing/runtime.
-- The real Quick Help Stripe Payment Link is still intentionally blank; inquiry fallback remains active until the real URL is supplied.
+
+## v57b3 technical cleanup
+- Preserves all customer-facing content from v57 (Revised 2).
+- Keeps Quick Help at $49 for one topic with up to 3 closely related questions.
+- Consolidates the homepage v57 + Revised 2 CSS into `v57b3.css`.
+- Externalizes Samples CSS/JS to one current source each; duplicate inline copies are removed.
+- Retires `assets/js/main.js` as a harmless placeholder with no legacy $45 / Personal / Premium / VIP runtime.
+- Makes the Japanese Commerce Disclosure explicitly state the Quick Help one-topic / up-to-3-related-questions scope.
+- Keeps the real Quick Help Stripe Payment Link intentionally blank until a verified live URL is supplied.
