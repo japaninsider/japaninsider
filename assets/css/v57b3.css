@@ -123,4 +123,111 @@ html:lang(ja) .v57b3-home .main-nav .nav-localized a{font-size:.73rem!important;
   padding-top:132px!important;padding-bottom:54px!important;margin:0 auto!important;
 }
 .v57b3-home .hero-copy{width:min(700px,100%)!important;max-width:100%!important}
-html:lang(ja) .v57b3-home .hero-c
+html:lang(ja) .v57b3-home .hero-copy{width:min(680px,100%)!important}
+html:lang(ja) .v57b3-home .category-line{
+  max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere!important;
+  font-size:1rem!important;line-height:1.5!important;
+}
+html:lang(ja) .v57b3-home .ja-hero-title{
+  max-width:100%!important;margin-right:0!important;
+  white-space:normal!important;word-break:keep-all!important;overflow-wrap:normal!important;
+  line-break:strict!important;
+  font-size:clamp(2.75rem,4.6vw,4.8rem)!important;line-height:1.14!important;letter-spacing:0!important;
+}
+html:lang(ja) .v57b3-home .hero-lede{
+  width:min(620px,100%)!important;max-width:100%!important;
+  font-size:.96rem!important;line-height:1.85!important;white-space:normal!important;
+}
+html:lang(ja) .v57b3-home .brand-manifesto span{
+  white-space:normal!important;overflow-wrap:anywhere!important;
+}
+
+/* Generic Japanese containment across cards/footer */
+html:lang(ja) .v57b3-home h1,
+html:lang(ja) .v57b3-home h2,
+html:lang(ja) .v57b3-home h3,
+html:lang(ja) .v57b3-home p,
+html:lang(ja) .v57b3-home a,
+html:lang(ja) .v57b3-home span,
+html:lang(ja) .v57b3-home div,
+html:lang(ja) .v57b3-home summary,
+html:lang(ja) .v57b3-home label,
+html:lang(ja) .v57b3-home button{
+  max-width:100%;white-space:normal;overflow-wrap:anywhere;
+}
+html:lang(ja) .v57b3-home .v39-service-card,
+html:lang(ja) .v57b3-home .v39-service-body,
+html:lang(ja) .v57b3-home .v39-service-action,
+html:lang(ja) .v57b3-home .v39-footer-top,
+html:lang(ja) .v57b3-home .v39-footer-bottom{min-width:0!important}
+
+/* Footer logo: same bright symbol on navy */
+.v57b3-home .footer-brand-lockup img{
+  width:60px!important;height:60px!important;flex:0 0 60px!important;
+  object-fit:contain!important;opacity:1!important;filter:none!important;
+}
+
+/* MID DESKTOP: avoid the cramped nav seen in screenshots */
+@media(max-width:1180px) and (min-width:901px){
+  .v57b3-home .nav-wrap{
+    width:calc(100% - 34px)!important;
+    grid-template-columns:245px minmax(0,1fr)!important;gap:16px!important;
+  }
+  .v57b3-home .v39-brand{width:235px!important;min-width:235px!important;gap:9px!important}
+  .v57b3-home .header-symbol{width:46px!important;height:46px!important;flex-basis:46px!important}
+  .v57b3-home .header-brand-name{font-size:1.22rem!important;letter-spacing:.13em!important}
+  .v57b3-home .main-nav,.v57b3-home .main-nav .nav-localized{gap:12px!important}
+  .v57b3-home .main-nav .nav-localized a{font-size:.72rem!important}
+  html:lang(ja) .v57b3-home .nav-wrap{grid-template-columns:225px minmax(0,1fr)!important}
+  html:lang(ja) .v57b3-home .v39-brand{width:215px!important;min-width:215px!important}
+  html:lang(ja) .v57b3-home .main-nav,html:lang(ja) .v57b3-home .main-nav .nav-localized{gap:9px!important}
+  html:lang(ja) .v57b3-home .main-nav .nav-localized a{font-size:.68rem!important}
+}
+
+/* MOBILE / TABLET */
+@media(max-width:900px){
+  .v57b3-home .nav-wrap{
+    width:calc(100% - 24px)!important;height:70px!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;
+  }
+  .v57b3-home .v39-brand{width:auto!important;min-width:0!important;gap:8px!important}
+  .v57b3-home .header-symbol{width:44px!important;height:44px!important;flex-basis:44px!important}
+  .v57b3-home .header-brand-name{font-size:1.15rem!important;letter-spacing:.11em!important}
+  .v57b3-home .menu-toggle{
+    display:flex!important;width:44px!important;height:44px!important;flex:0 0 44px!important;
+    flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;
+    padding:8px!important;border:1px solid rgba(255,255,255,.28)!important;border-radius:10px!important;
+    background:transparent!important;
+  }
+  .v57b3-home .menu-toggle span{display:block!important;width:22px!important;height:2px!important;background:#fff!important;margin:0!important;border-radius:2px!important}
+  .v57b3-home .main-nav{
+    position:absolute!important;top:70px!important;left:0!important;right:0!important;
+    display:none!important;flex-direction:column!important;align-items:stretch!important;gap:14px!important;
+    padding:20px 18px 24px!important;background:#071d3b!important;border-top:1px solid rgba(255,255,255,.12)!important;
+    white-space:normal!important;max-height:calc(100vh - 70px)!important;overflow-y:auto!important;
+  }
+  .v57b3-home .main-nav.open{display:flex!important}
+  .v57b3-home .main-nav .nav-localized{width:100%!important;flex-direction:column!important;align-items:stretch!important;gap:4px!important}
+  html:lang(en) .v57b3-home .main-nav .nav-localized.lang-en,
+  html:lang(ja) .v57b3-home .main-nav .nav-localized.lang-ja{display:flex!important}
+  .v57b3-home .main-nav .nav-localized a{
+    display:block!important;width:100%!important;padding:10px 8px!important;text-align:left!important;
+    font-size:.9rem!important;white-space:normal!important;
+  }
+  .v57b3-home .main-nav .button-sm{text-align:center!important;margin-top:4px!important}
+  .v57b3-home .lang-switch{justify-content:center!important;margin:4px 0 0!important;padding-top:10px!important;border-top:1px solid rgba(255,255,255,.12)!important}
+  .v57b3-home .v39-hero .hero-stage{
+    width:calc(100% - 24px)!important;padding-top:108px!important;padding-bottom:34px!important;
+  }
+  .v57b3-home .hero-copy{width:100%!important;max-width:100%!important}
+  html:lang(ja) .v57b3-home .category-line{font-size:.9rem!important;line-height:1.55!important}
+  html:lang(ja) .v57b3-home .ja-hero-title{
+    width:100%!important;max-width:100%!important;
+    font-size:clamp(1.95rem,9.4vw,2.65rem)!important;line-height:1.28!important;
+    word-break:keep-all!important;overflow-wrap:normal!important;
+  }
+  html:lang(ja) .v57b3-home .hero-lede{
+    width:100%!important;font-size:.84rem!important;line-height:1.8!important;
+  }
+  .v57b3-home .brand-manifesto{grid-template-columns:1fr!important;gap:7px!important;width:100%!important}
+  .v57b3-home .brand-manifesto span{border-left:0!im
