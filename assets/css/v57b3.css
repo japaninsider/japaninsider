@@ -230,4 +230,195 @@ html:lang(ja) .v57b3-home .v39-footer-bottom{min-width:0!important}
     width:100%!important;font-size:.84rem!important;line-height:1.8!important;
   }
   .v57b3-home .brand-manifesto{grid-template-columns:1fr!important;gap:7px!important;width:100%!important}
-  .v57b3-home .brand-manifesto span{border-left:0!im
+  .v57b3-home .brand-manifesto span{border-left:0!important;padding:0!important}
+  .v57b3-home .hero-actions{display:grid!important;grid-template-columns:1fr!important;width:100%!important;gap:9px!important}
+  .v57b3-home .hero-actions a{width:100%!important;max-width:100%!important;white-space:normal!important}
+  .v57b3-home .based{display:block!important;max-width:100%!important;white-space:normal!important}
+  .v57b3-home .v39-service-card{width:100%!important;grid-template-columns:minmax(0,1fr)!important;overflow:hidden!important}
+  .v57b3-home .v39-service-card>img{width:100%!important;height:140px!important}
+  .v57b3-home .v39-service-body,.v57b3-home .v39-service-action{width:100%!important;padding-left:16px!important;padding-right:16px!important}
+  .v57b3-home .v39-btn{width:100%!important;max-width:100%!important;white-space:normal!important}
+  .v57b3-home .v40-form{width:100%!important;max-width:100%!important;overflow:hidden!important}
+  .v57b3-home .v40-form input,.v57b3-home .v40-form select,.v57b3-home .v40-form textarea{width:100%!important;max-width:100%!important;min-width:0!important;font-size:16px!important}
+}
+
+@media(max-width:390px){
+  .v57b3-home .nav-wrap{width:calc(100% - 18px)!important}
+  .v57b3-home .header-symbol{width:40px!important;height:40px!important;flex-basis:40px!important}
+  .v57b3-home .header-brand-name{font-size:1.02rem!important;letter-spacing:.09em!important}
+  .v57b3-home .v39-hero .hero-stage{width:calc(100% - 20px)!important}
+  html:lang(ja) .v57b3-home .ja-hero-title{font-size:1.82rem!important;line-height:1.32!important}
+  html:lang(ja) .v57b3-home .category-line{font-size:.83rem!important}
+}
+
+/* ==========================================================
+   LORUNEI v51 — final isolated footer
+   This footer does NOT reuse the legacy v39 footer grid.
+   ========================================================== */
+.v57b3-home .site-footer-v51{
+  background:#071d3b;
+  color:#f7f1e7;
+  padding:58px 0 0;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.v57b3-home .footer-grid-v51{
+  width:min(1220px,calc(100% - 48px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.35fr 1fr 1fr 1fr .9fr;
+  gap:38px;
+  align-items:start;
+  padding-bottom:46px;
+}
+.v57b3-home .footer-grid-v51 > *{min-width:0}
+.v57b3-home .footer-brand-v51{min-width:0}
+.v57b3-home .footer-brand-lockup-v51{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+  white-space:nowrap;
+}
+.v57b3-home .footer-symbol-v51{
+  display:block;
+  width:62px;
+  height:62px;
+  flex:0 0 62px;
+  object-fit:contain;
+}
+.v57b3-home .footer-name-v51{
+  color:#fff;
+  font:500 1.52rem/1 Georgia,"Times New Roman",serif;
+  letter-spacing:.16em;
+  white-space:nowrap;
+}
+.v57b3-home .footer-brand-copy-v51{
+  max-width:270px;
+  color:#eef2f5;
+}
+.v57b3-home .footer-brand-copy-v51 p{
+  margin:0 0 7px;
+  font-size:.84rem;
+  line-height:1.65;
+}
+.v57b3-home .footer-brand-copy-v51 em{
+  display:block;
+  margin:0;
+  color:#fff;
+  font:italic 400 .9rem/1.5 Georgia,"Times New Roman",serif;
+}
+html:lang(ja) .v57b3-home .footer-brand-copy-v51 em{
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  font-style:normal;
+  font-size:.82rem;
+}
+.v57b3-home .footer-col-v51 h3{
+  margin:5px 0 18px;
+  color:#d5aa5c;
+  font-size:.78rem;
+  line-height:1.2;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+html:lang(ja) .v57b3-home .footer-col-v51 h3{
+  text-transform:none;
+  letter-spacing:.03em;
+  font-size:.84rem;
+}
+.v57b3-home .footer-links-v51{
+  display:grid;
+  gap:12px;
+}
+.v57b3-home .footer-links-v51 a{
+  color:#edf1f5;
+  text-decoration:none;
+  font-size:.78rem;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+}
+.v57b3-home .footer-links-v51 a:hover{text-decoration:underline}
+.v57b3-home .footer-language-v51{
+  display:flex;
+  gap:8px;
+  margin-top:22px;
+}
+.v57b3-home .footer-language-v51 .lang-btn{
+  border:1px solid rgba(255,255,255,.42);
+  color:#fff;
+  background:transparent;
+  border-radius:7px;
+  padding:8px 12px;
+  font-size:.76rem;
+  cursor:pointer;
+}
+.v57b3-home .footer-language-v51 .lang-btn.active{
+  background:#c9a45f;
+  color:#071d3b;
+  border-color:#c9a45f;
+}
+.v57b3-home .footer-bottom-v51{
+  width:min(1220px,calc(100% - 48px));
+  margin:0 auto;
+  border-top:1px solid rgba(255,255,255,.24);
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  color:#dce3e9;
+  font-size:.7rem;
+}
+.v57b3-home .footer-legal-v51{
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+html:lang(en) .v57b3-home .footer-legal-v51.lang-en{display:flex!important}
+html:lang(ja) .v57b3-home .footer-legal-v51.lang-ja{display:flex!important}
+.v57b3-home .footer-legal-v51 a{color:#dce3e9;text-decoration:none}
+.v57b3-home .footer-legal-v51 a:hover{text-decoration:underline}
+
+/* desktop Japanese gets a little more room in labels */
+@media(min-width:901px){
+  html:lang(ja) .v57b3-home .footer-grid-v51{
+    grid-template-columns:1.3fr 1fr .95fr 1.15fr .9fr;
+    gap:32px;
+  }
+  html:lang(ja) .v57b3-home .footer-links-v51 a{
+    font-size:.76rem;
+    line-height:1.55;
+    word-break:normal;
+    overflow-wrap:anywhere;
+  }
+}
+
+/* Tablet/mobile: deliberately simple and collision-proof */
+@media(max-width:900px){
+  .v57b3-home .site-footer-v51{padding-top:40px}
+  .v57b3-home .footer-grid-v51{
+    width:calc(100% - 32px);
+    grid-template-columns:1fr 1fr;
+    gap:32px 24px;
+    padding-bottom:34px;
+  }
+  .v57b3-home .footer-brand-v51{
+    grid-column:1 / -1;
+  }
+  .v57b3-home .footer-brand-copy-v51{max-width:100%}
+  .v57b3-home .footer-bottom-v51{
+    width:calc(100% - 32px);
+    min-height:0;
+    padding:22px 0 28px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .v57b3-home .footer-legal-v51{
+    flex-wrap:wrap;
+    white-space:normal;
+  }
+}
+@media(max-width:560px){
+  .v57b3-home .footer-grid-v51{grid-template-columns:1fr}
+  .v57b3-home .footer-brand-v51{grid-column:auto}
+  .v57b3-home .footer-brand-lockup-v51{gap:10px}
+  .v57b3-home .footer-symbol-v51{width:54px;h
